@@ -1,0 +1,1181 @@
+{
+ "id": "y302_long_orb",
+ "kind": "long",
+ "format": "landscape",
+ "tag": "Illustrative chart · education, not financial advice",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 100.52,
+     "h": 100.64,
+     "l": 100.38,
+     "c": 100.5,
+     "v": 1227
+    },
+    {
+     "o": 100.5,
+     "h": 101.2,
+     "l": 100.42,
+     "c": 101.05,
+     "v": 3502
+    },
+    {
+     "o": 101.05,
+     "h": 101.12,
+     "l": 100.77,
+     "c": 100.89,
+     "v": 2106
+    },
+    {
+     "o": 100.91,
+     "h": 101.01,
+     "l": 100.29,
+     "c": 100.4,
+     "v": 4502
+    },
+    {
+     "o": 100.39,
+     "h": 100.4,
+     "l": 100.0,
+     "c": 100.15,
+     "v": 2119
+    },
+    {
+     "o": 100.16,
+     "h": 100.89,
+     "l": 100.12,
+     "c": 100.7,
+     "v": 5068
+    },
+    {
+     "o": 100.66,
+     "h": 101.12,
+     "l": 100.52,
+     "c": 100.95,
+     "v": 2605
+    },
+    {
+     "o": 100.94,
+     "h": 101.05,
+     "l": 100.9,
+     "c": 101.0,
+     "v": 1141
+    },
+    {
+     "o": 101.0,
+     "h": 101.62,
+     "l": 100.92,
+     "c": 101.55,
+     "v": 4226
+    },
+    {
+     "o": 101.56,
+     "h": 101.7,
+     "l": 101.42,
+     "c": 101.5,
+     "v": 1697
+    },
+    {
+     "o": 101.46,
+     "h": 101.73,
+     "l": 101.17,
+     "c": 101.5,
+     "v": 1392
+    },
+    {
+     "o": 101.54,
+     "h": 102.02,
+     "l": 101.48,
+     "c": 101.76,
+     "v": 2398
+    },
+    {
+     "o": 101.75,
+     "h": 101.87,
+     "l": 101.61,
+     "c": 101.79,
+     "v": 1075
+    },
+    {
+     "o": 101.81,
+     "h": 101.9,
+     "l": 101.8,
+     "c": 101.85,
+     "v": 1481
+    },
+    {
+     "o": 101.86,
+     "h": 101.91,
+     "l": 101.63,
+     "c": 101.82,
+     "v": 1442
+    },
+    {
+     "o": 101.83,
+     "h": 102.05,
+     "l": 101.78,
+     "c": 101.86,
+     "v": 1062
+    },
+    {
+     "o": 101.83,
+     "h": 102.26,
+     "l": 101.54,
+     "c": 101.55,
+     "v": 2299
+    },
+    {
+     "o": 101.56,
+     "h": 102.17,
+     "l": 101.55,
+     "c": 102.09,
+     "v": 3835
+    },
+    {
+     "o": 102.09,
+     "h": 102.32,
+     "l": 101.98,
+     "c": 102.04,
+     "v": 1100
+    },
+    {
+     "o": 102.03,
+     "h": 102.52,
+     "l": 101.94,
+     "c": 102.42,
+     "v": 3281
+    },
+    {
+     "o": 102.4,
+     "h": 102.56,
+     "l": 102.27,
+     "c": 102.33,
+     "v": 1765
+    },
+    {
+     "o": 102.33,
+     "h": 102.35,
+     "l": 102.24,
+     "c": 102.33,
+     "v": 885
+    },
+    {
+     "o": 102.33,
+     "h": 102.62,
+     "l": 102.32,
+     "c": 102.6,
+     "v": 2432
+    },
+    {
+     "o": 102.6,
+     "h": 102.72,
+     "l": 102.44,
+     "c": 102.55,
+     "v": 933
+    },
+    {
+     "o": 102.54,
+     "h": 102.58,
+     "l": 102.25,
+     "c": 102.35,
+     "v": 2323
+    },
+    {
+     "o": 102.35,
+     "h": 102.52,
+     "l": 102.28,
+     "c": 102.35,
+     "v": 1300
+    },
+    {
+     "o": 102.37,
+     "h": 102.6,
+     "l": 102.31,
+     "c": 102.52,
+     "v": 1683
+    },
+    {
+     "o": 102.53,
+     "h": 102.76,
+     "l": 102.48,
+     "c": 102.67,
+     "v": 1674
+    },
+    {
+     "o": 102.67,
+     "h": 103.08,
+     "l": 102.59,
+     "c": 102.9,
+     "v": 2061
+    },
+    {
+     "o": 102.93,
+     "h": 103.15,
+     "l": 102.86,
+     "c": 103.15,
+     "v": 2137
+    },
+    {
+     "o": 103.14,
+     "h": 103.36,
+     "l": 103.04,
+     "c": 103.31,
+     "v": 2387
+    },
+    {
+     "o": 103.32,
+     "h": 103.38,
+     "l": 103.17,
+     "c": 103.27,
+     "v": 1440
+    },
+    {
+     "o": 103.25,
+     "h": 103.71,
+     "l": 103.19,
+     "c": 103.7,
+     "v": 3644
+    }
+   ],
+   "lines": [],
+   "bands": []
+  },
+  "b": {
+   "candles": [
+    {
+     "o": 100.53,
+     "h": 100.54,
+     "l": 100.41,
+     "c": 100.5,
+     "v": 1160
+    },
+    {
+     "o": 100.51,
+     "h": 101.2,
+     "l": 100.46,
+     "c": 101.05,
+     "v": 2956
+    },
+    {
+     "o": 101.03,
+     "h": 101.03,
+     "l": 100.74,
+     "c": 100.75,
+     "v": 2553
+    },
+    {
+     "o": 100.73,
+     "h": 100.98,
+     "l": 100.31,
+     "c": 100.4,
+     "v": 2103
+    },
+    {
+     "o": 100.4,
+     "h": 100.51,
+     "l": 100.0,
+     "c": 100.15,
+     "v": 2046
+    },
+    {
+     "o": 100.15,
+     "h": 100.72,
+     "l": 100.03,
+     "c": 100.7,
+     "v": 4150
+    },
+    {
+     "o": 100.71,
+     "h": 100.92,
+     "l": 100.58,
+     "c": 100.89,
+     "v": 1773
+    },
+    {
+     "o": 100.9,
+     "h": 101.16,
+     "l": 100.84,
+     "c": 101.0,
+     "v": 1291
+    },
+    {
+     "o": 101.0,
+     "h": 101.68,
+     "l": 100.92,
+     "c": 101.61,
+     "v": 5102
+    },
+    {
+     "o": 101.56,
+     "h": 101.76,
+     "l": 101.29,
+     "c": 101.4,
+     "v": 2126
+    },
+    {
+     "o": 101.42,
+     "h": 101.6,
+     "l": 101.04,
+     "c": 101.2,
+     "v": 2302
+    },
+    {
+     "o": 101.2,
+     "h": 101.21,
+     "l": 100.74,
+     "c": 100.95,
+     "v": 2303
+    },
+    {
+     "o": 100.97,
+     "h": 101.02,
+     "l": 100.68,
+     "c": 100.86,
+     "v": 1546
+    },
+    {
+     "o": 100.86,
+     "h": 100.89,
+     "l": 100.38,
+     "c": 100.52,
+     "v": 2801
+    },
+    {
+     "o": 100.52,
+     "h": 100.7,
+     "l": 100.32,
+     "c": 100.37,
+     "v": 2382
+    },
+    {
+     "o": 100.36,
+     "h": 100.43,
+     "l": 100.18,
+     "c": 100.3,
+     "v": 1746
+    },
+    {
+     "o": 100.28,
+     "h": 100.33,
+     "l": 100.05,
+     "c": 100.11,
+     "v": 1951
+    },
+    {
+     "o": 100.11,
+     "h": 100.28,
+     "l": 100.08,
+     "c": 100.19,
+     "v": 1506
+    },
+    {
+     "o": 100.19,
+     "h": 100.23,
+     "l": 99.81,
+     "c": 100.02,
+     "v": 2391
+    },
+    {
+     "o": 99.99,
+     "h": 100.14,
+     "l": 99.83,
+     "c": 99.85,
+     "v": 1706
+    },
+    {
+     "o": 99.87,
+     "h": 99.94,
+     "l": 99.67,
+     "c": 99.7,
+     "v": 1959
+    },
+    {
+     "o": 99.7,
+     "h": 99.85,
+     "l": 99.58,
+     "c": 99.77,
+     "v": 1467
+    },
+    {
+     "o": 99.75,
+     "h": 99.84,
+     "l": 99.67,
+     "c": 99.69,
+     "v": 1106
+    },
+    {
+     "o": 99.67,
+     "h": 99.73,
+     "l": 99.34,
+     "c": 99.55,
+     "v": 2000
+    },
+    {
+     "o": 99.59,
+     "h": 99.73,
+     "l": 99.54,
+     "c": 99.71,
+     "v": 1202
+    },
+    {
+     "o": 99.71,
+     "h": 100.04,
+     "l": 99.65,
+     "c": 100.04,
+     "v": 3109
+    },
+    {
+     "o": 100.04,
+     "h": 100.12,
+     "l": 99.83,
+     "c": 99.95,
+     "v": 1234
+    }
+   ],
+   "lines": [],
+   "bands": []
+  }
+ },
+ "thumb": {
+  "type": "thumb",
+  "kicker": "Full strategy",
+  "title": "Opening range breakout, step by step",
+  "chart": "a",
+  "state": {
+   "bars": 35,
+   "show": [],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right"
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right"
+    },
+    {
+     "price": 100.6,
+     "label": "Stop: midpoint",
+     "color": "coral",
+     "from": 8,
+     "below": true,
+     "labelPos": "right"
+    },
+    {
+     "price": 103.45,
+     "label": "Target 2R",
+     "color": "mint",
+     "from": 8,
+     "labelPos": "right"
+    }
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min"
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint"
+    }
+   ]
+  }
+ },
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "chapter": "Intro",
+   "headline": "The opening range breakout",
+   "big": true,
+   "reveal": [
+    3,
+    33
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    }
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "say": "The opening range breakout is one of the oldest day trading strategies there is. It's simple, the rules fit on one card, and the risk is defined before you enter. In this lesson we'll build it step by step: what the opening range is, the exact rules, a day when it works, a day when it doesn't, the filters traders add, and how to size it."
+  },
+  {
+   "type": "hook",
+   "kicker": "Before we start",
+   "text": "Education on illustrative charts. Not financial advice.",
+   "say": "Everything here is education, on illustrative charts. No strategy works every day, and you should test any idea on your own data before risking money on it."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "chapter": "What the opening range is",
+   "headline": "The first 30 minutes",
+   "reveal": [
+    1,
+    6
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.5
+    }
+   ],
+   "say": "Start with the idea. The first minutes after the open are when the most orders hit the market: overnight news, orders waiting from the day before, funds rebalancing. That burst of activity sets a high and a low."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "High and low of the range",
+   "reveal": [
+    6,
+    6
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.2
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.2
+    }
+   ],
+   "say": "Here we use the first thirty minutes, six five-minute candles. Their highest high is the range high, 101.20. Their lowest low is the range low, 100.00. Some traders use five or fifteen minutes instead. What matters is choosing one and always using the same one."
+  },
+  {
+   "type": "hook",
+   "kicker": "The logic",
+   "text": "A close outside the range shows who won the open.",
+   "say": "The logic is this. While price stays inside the range, buyers and sellers are still fighting over the open. When a candle closes outside it, one side has won that first battle, and the move often continues in that direction. Often, not always."
+  },
+  {
+   "type": "rows",
+   "chapter": "The rules",
+   "title": "One version of the rules",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Entry",
+      "",
+      "Close above range high"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "Stop",
+      "",
+      "Range midpoint"
+     ],
+     "hl": true
+    },
+    {
+     "cells": [
+      "Target",
+      "",
+      "2× the risk (2R)"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "Time limit",
+      "",
+      "Flat by midday"
+     ]
+    }
+   ],
+   "say": "Here's one version of the rules. Entry: a five-minute candle closes above the range high, and we buy at that close. For shorts, it's the mirror image below the range low. Stop: the middle of the range. If price falls back to the midpoint, the breakout has failed. Target: two times what we risk. And a time limit: if neither the stop nor the target is hit by midday, we close the trade."
+  },
+  {
+   "type": "hook",
+   "kicker": "Why the midpoint",
+   "text": "Back in the middle of the range, the breakout has failed.",
+   "say": "Why the midpoint and not the range low? Because a stop at the range low can be very far away, and a wide stop means a small position. The midpoint is a compromise: far enough to survive a normal retest of the breakout, close enough to keep the risk reasonable."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "chapter": "A day when it works",
+   "headline": "The breakout",
+   "reveal": [
+    6,
+    9
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint",
+     "at": 0.6
+    }
+   ],
+   "say": "Let's see it on a chart. Price spends two more candles inside the range. Then this candle closes above the range high, at 101.55. That's our entry."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Stop and target",
+   "reveal": [
+    9,
+    9
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.25
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.25
+    },
+    {
+     "price": 100.6,
+     "label": "Stop: midpoint",
+     "color": "coral",
+     "from": 8,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.25
+    },
+    {
+     "price": 103.45,
+     "label": "Target 2R",
+     "color": "mint",
+     "from": 8,
+     "labelPos": "right",
+     "at": 0.25
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint",
+     "at": 0.0
+    }
+   ],
+   "say": "The stop goes at the midpoint, 100.60. So the risk is 0.95 points. Two times that, added to the entry, gives the target: 103.45. All of this is decided before the trade, not during it."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Patience",
+   "pin": true,
+   "reveal": [
+    9,
+    33
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.6,
+     "label": "Stop: midpoint",
+     "color": "coral",
+     "from": 8,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 103.45,
+     "label": "Target 2R",
+     "color": "mint",
+     "from": 8,
+     "labelPos": "right",
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint",
+     "at": 0.0
+    }
+   ],
+   "say": "Now the hard part: doing nothing. Price pulls back, but never reaches the midpoint. It takes twenty-four candles, about two hours, to reach the target. Plenty of traders would have taken a small profit long before, and that habit quietly destroys the math of a two R strategy."
+  },
+  {
+   "type": "chart",
+   "chart": "b",
+   "chapter": "A day when it doesn't",
+   "headline": "Same setup, different day",
+   "reveal": [
+    6,
+    9
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint",
+     "at": 0.6
+    }
+   ],
+   "say": "Now another day. The same range, the same kind of candle closing above the high. Same entry rules, same stop, same target."
+  },
+  {
+   "type": "chart",
+   "chart": "b",
+   "headline": "The breakout fails",
+   "reveal": [
+    9,
+    27
+   ],
+   "zones": [
+    {
+     "from": 0,
+     "to": 5,
+     "lo": 100.0,
+     "hi": 101.2,
+     "color": "blue",
+     "label": "First 30 min",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 101.2,
+     "label": "Range high",
+     "color": "mint",
+     "from": 0,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "coral",
+     "from": 0,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 100.6,
+     "label": "Stop: midpoint",
+     "color": "coral",
+     "from": 8,
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 8,
+     "dir": "up",
+     "text": "Close above",
+     "color": "mint",
+     "at": 0.0
+    },
+    {
+     "bar": 13,
+     "dir": "down",
+     "text": "Stopped",
+     "color": "coral",
+     "at": 0.4
+    }
+   ],
+   "say": "This time, buyers can't hold it. Price falls back into the range, and five candles later it hits the midpoint. We lose one R. And notice what happens next: price keeps falling. Without the stop, a normal loss would have become a big one."
+  },
+  {
+   "type": "hook",
+   "kicker": "Break-even win rate at 2R",
+   "text": "1 ÷ (1 + 2) ≈ 33%, before costs.",
+   "say": "This is the point of the whole structure. With a target twice the size of the stop, you break even, before costs, if one trade in three reaches the target. You can be wrong most of the time and still not lose money. But only if the losses really stay at one R, and the winners really get to two."
+  },
+  {
+   "type": "rows",
+   "chapter": "Filters traders add",
+   "title": "Common filters",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Range too wide",
+      "",
+      "Skip: stop too far"
+     ]
+    },
+    {
+     "cells": [
+      "Against the trend",
+      "",
+      "Skip or smaller"
+     ]
+    },
+    {
+     "cells": [
+      "News inside the window",
+      "",
+      "Wait for it"
+     ]
+    },
+    {
+     "cells": [
+      "After midday",
+      "",
+      "No new entries"
+     ],
+     "hl": true
+    }
+   ],
+   "say": "Most traders add filters, and these are the common ones. First, range size. If today's opening range is much wider than usual, the stop is far and the position tiny, so many skip the day. Second, direction. Taking long breakouts only when price is above VWAP and the moving averages point up. Third, news. A big data release at ten o'clock can whip price through both sides of the range, so some wait for it. And fourth, time. Breakouts late in the morning tend to have less volume behind them."
+  },
+  {
+   "type": "hook",
+   "kicker": "One rule about filters",
+   "text": "Add them before you test, not after.",
+   "say": "One warning about filters. It's easy to look at past charts and add a filter for every losing day until the results look perfect. That's called curve fitting, and it usually stops working the moment you go live. Choose a few filters that make sense, then test them."
+  },
+  {
+   "type": "hook",
+   "chapter": "Sizing and risk",
+   "kicker": "Contracts = $ risk ÷ $ risk per contract",
+   "text": "$200 ÷ (8 pts × $5) = 5 MES",
+   "say": "Now, sizing. Decide the dollars you risk per trade first. Say two hundred dollars. If the stop is eight points away and you trade the micro E-mini, at five dollars a point, one contract risks forty dollars. Two hundred divided by forty is five contracts. On a wider day, with a stop twice as far, you'd trade half as many. The dollar risk stays the same."
+  },
+  {
+   "type": "rows",
+   "title": "Daily limits",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Trades per day",
+      "",
+      "1, maybe 2"
+     ]
+    },
+    {
+     "cells": [
+      "After a loss",
+      "",
+      "Same size, no revenge"
+     ],
+     "hl": true
+    },
+    {
+     "cells": [
+      "Daily max loss",
+      "",
+      "Decided before the open"
+     ],
+     "good": true
+    }
+   ],
+   "say": "And limit the day. The opening range breakout is usually one trade, maybe two if the first one stops out and the other side breaks. Never re-enter bigger to win it back, and decide your maximum daily loss before the open."
+  },
+  {
+   "type": "rows",
+   "chapter": "Test it yourself",
+   "title": "How to test it",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "1. Write the rules",
+      "",
+      "Before looking"
+     ]
+    },
+    {
+     "cells": [
+      "2. Go back 50+ days",
+      "",
+      "Same rules, every day"
+     ]
+    },
+    {
+     "cells": [
+      "3. Log every trade",
+      "",
+      "Entry, stop, result in R"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "4. Then trade small",
+      "",
+      "Micros, real fills"
+     ]
+    }
+   ],
+   "say": "Before trading it, test it. Write the rules down first. Then go back at least fifty trading days on your market and apply them to every single day, including the ugly ones. Log each trade in R: plus two, minus one, or the time exit. Then trade it small, with micros, to see real fills and your own discipline."
+  },
+  {
+   "type": "hook",
+   "kicker": "What you're measuring",
+   "text": "Win rate, average R, and how you feel on losing streaks.",
+   "say": "What you're looking for is simple: the win rate, the average result in R, and the longest losing streak. If the numbers work and you can follow the rules through five losses in a row, then you have something."
+  },
+  {
+   "type": "rows",
+   "chapter": "Summary",
+   "title": "The opening range breakout",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Range",
+      "",
+      "First 30 minutes"
+     ]
+    },
+    {
+     "cells": [
+      "Entry",
+      "",
+      "Close outside the range"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "Stop",
+      "",
+      "Back inside: midpoint"
+     ],
+     "hl": true
+    },
+    {
+     "cells": [
+      "Target",
+      "",
+      "2R, flat by midday"
+     ],
+     "good": true
+    }
+   ],
+   "say": "To sum up. Mark the high and low of the first thirty minutes. Enter on a close outside the range. Stop at the midpoint, target two R, and be flat by midday. Size from the stop, and test it before you trust it. It won't work every day, and it doesn't need to."
+  },
+  {
+   "type": "follow",
+   "text": "Subscribe for a new trading lesson every week.",
+   "button": "Subscribe",
+   "say": "If this helped, subscribe for a new trading lesson every week, and short lessons every day. See you in the next one."
+  }
+ ],
+ "post": {
+  "youtube": {
+   "title": "Opening Range Breakout Strategy: complete rules, examples and risk management",
+   "description": "The opening range breakout explained step by step: how to mark the opening range, entry, stop and target rules, a day when it works and a day when it fails, the filters traders add, position sizing from the stop, and how to test it on your own data before trading it.\n\n{chapters}\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/\nShort lessons every day: @calmedgeofficial on Instagram and TikTok.\n\nEducational content on illustrative charts. Not financial advice; trading involves risk of loss.\n\n#openingrangebreakout #daytradingstrategy #futurestrading #tradingeducation #daytrading #technicalanalysis",
+   "tags": [
+    "trading",
+    "day trading",
+    "technical analysis",
+    "trading for beginners",
+    "indicators",
+    "risk management"
+   ]
+  },
+  "facebook": "The opening range breakout explained step by step: how to mark the opening range, entry, stop and target rules, a day when it works and a day when it fails, the filters traders add, position sizing from the stop, and how to test it on your own data before trading it.\n\nNew full lesson: Opening Range Breakout Strategy: complete rules, examples and risk management. Follow for one trading concept a day.\n\nEducational content on illustrative charts. Not financial advice; trading involves risk of loss.",
+  "pinterest": {
+   "title": "Opening Range Breakout Strategy: complete rules, examples and risk management",
+   "description": "The opening range breakout explained step by step: how to mark the opening range, entry, stop and target rules, a day when it works and a day when it fails, the filters traders add, position sizing from the stop, and how to test it on your own data before trading it. Full video lesson.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  }
+ },
+ "voice": "andrew_up"
+}

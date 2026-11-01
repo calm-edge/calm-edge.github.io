@@ -34,7 +34,8 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--canv
 .rows { background:var(--card); border-radius:30px; border:3px solid var(--line); overflow:hidden; }
 .rows .hd, .rows .r { display:grid; grid-template-columns: 1.6fr 1fr 1.2fr; align-items:center; padding:0 34px; }
 .rows .hd { background:var(--card2); color:var(--muted); font-size:32px; font-weight:700; height:86px; }
-.rows.two .hd, .rows.two .r { grid-template-columns: 3fr 1.2fr; }
+.rows.two .hd, .rows.two .r { grid-template-columns: 1fr auto; gap:28px; }
+.rows.two .r > :last-child, .rows.two .hd > :last-child { white-space:nowrap; }
 .rows .r:first-child { border-top:0; }
 .rows .r { height:118px; font-size:44px; border-top:2px solid var(--line); }
 .rows .r > :not(:first-child), .rows .hd > :not(:first-child) { text-align:right; }

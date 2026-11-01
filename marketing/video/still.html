@@ -54,6 +54,15 @@ html, body { overflow:hidden; background:var(--canvas); font-family:Inter, sans-
 <script>
 const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
 const LOGO = (s) => `<svg width="${s}" height="${s}" viewBox="0 0 1024 1024"><circle cx="512" cy="512" r="470" fill="#16212D" stroke="#2A3A4C" stroke-width="24"/><path d="M236 640 C 330 640, 360 560, 430 575 S 520 650, 590 540 S 700 420, 790 380" fill="none" stroke="#5FD3A0" stroke-width="64" stroke-linecap="round"/></svg>`;
+const ICONS = {  // simple 24x24 line icons
+  start: '<path d="M5 3l14 9-14 9z"/>',
+  lessons: '<path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/>',
+  strategies: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',
+  risk: '<path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  tools: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h2M12 18h2M16 15v3"/>',
+  links: '<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
+  chart: '<path d="M3 20h18"/><path d="M5 16l4-5 4 3 6-8"/>',
+};
 const rich = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
 
 function rowsHtml(s) {
@@ -70,14 +79,15 @@ function rowsHtml(s) {
 window.renderSlide = (spec, i, W, H) => {
   document.documentElement.style.width = document.body.style.width = W + "px";
   document.documentElement.style.height = document.body.style.height = H + "px";
-  const s = spec.slides[i], N = spec.slides.length, land = W > H;
-  const pad = land ? 80 : 76, footH = land ? 0 : 70, top = land ? 70 : 90;
-  const footTop = H - pad - footH;
+  const s = spec.slides[i], N = spec.slides.length, land = W > H, story = H / W > 1.7;
+  // stories: Instagram covers about 250px at the top (progress bar, name) and at the bottom (reply bar)
+  const pad = land ? 80 : 76, footH = land ? 0 : 70, top = land ? 70 : story ? 300 : 90;
+  const footTop = H - pad - footH - (story ? 220 : 0);
   let html = "";
   const body = (inner) => `<div class="content" id="ct" style="left:${pad}px;right:${pad}px;top:${top}px;bottom:${H - footTop + 26}px">${inner}</div>`;
   const chartDiv = (h) => `<div class="chartbox" id="cb" style="height:${h}px;width:100%"><svg id="cv" width="${W - 2 * pad}" height="${h}"></svg></div>`;
   if (s.type === "cover") html = body(`${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title">${esc(s.title)}</div>
-      ${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}${s.chart ? chartDiv(s.chartH || 470) : ""}<div class="swipe">Swipe →</div>`);
+      ${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}${s.chart ? chartDiv(story ? 640 : s.chartH || 470) : ""}<div class="swipe">${story ? s.button ?? "New post · on our profile" : "Swipe →"}</div>`.replace('<div class="swipe"></div>', ""));
   if (s.type === "chart") html = body(`<div class="title mid">${esc(s.title)}</div>${chartDiv(s.chartH || 560)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
   if (s.type === "points") html = body(`<div class="title mid">${esc(s.title)}</div><div class="points">${s.points.map((p, k) =>
       `<div class="pt"><div class="n" style="--c:var(--${p.color || "mint"})">${p.icon || k + 1}</div><div class="t">${p.b ? `<b>${esc(p.b)}</b>` : ""}${rich(p.t || "")}</div></div>`).join("")}</div>`);
@@ -85,12 +95,16 @@ window.renderSlide = (spec, i, W, H) => {
   if (s.type === "rows") html = body(`<div class="title mid">${esc(s.title)}</div>${rowsHtml(s)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
   if (s.type === "end") html = body(`<div class="kicker">Key takeaway</div><div class="title">${esc(s.title)}</div>${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}
       <div class="save">Save this · Follow ${esc(spec.handle || "@calmedgeofficial")}</div>`);
+  // highlight cover: Instagram shows the centre as a circle, so the icon sits in the middle and nothing else matters
+  if (s.type === "hlcover") html = `<div id="ct" style="position:absolute;inset:${pad}px;display:flex;align-items:center;justify-content:center">
+      <div style="width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 35% 30%, #1F3B37, #121B25 70%);border:6px solid var(--line);display:flex;align-items:center;justify-content:center">
+      <svg width="300" height="300" viewBox="0 0 24 24" fill="none" stroke="var(--${s.color || "mint"})" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ICONS[s.icon]}</svg></div></div>`;
   if (s.type === "thumb") html = `<div class="content thumb" id="ct" style="left:${pad}px;top:${pad}px;bottom:${pad}px;width:${W * 0.5}px;justify-content:center">
       ${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title">${esc(s.title)}</div></div>
       <div class="chartbox" id="cb" style="position:absolute;left:${W * 0.54}px;top:${pad}px;width:${W * 0.46 - pad}px;height:${H - 2 * pad}px"><svg id="cv" width="${W * 0.46 - pad}" height="${H - 2 * pad}"></svg></div>`;
-  if (!land) html += `<div class="foot" style="left:${pad}px;right:${pad}px;top:${footTop}px;height:${footH}px">${LOGO(56)}<div><b>Calm Edge</b> · trading, explained</div>
-      <div class="pg">${i + 1}/${N}</div></div>`;
-  if (spec.tag && !land) html += `<div class="tag" style="left:${pad}px;top:${top - 50}px">${esc(spec.tag)}</div>`;
+  if (!land && s.type !== "hlcover") html += `<div class="foot" style="left:${pad}px;right:${pad}px;top:${footTop}px;height:${footH}px">${LOGO(56)}<div><b>Calm Edge</b> · trading, explained</div>
+      ${story ? "" : `<div class="pg">${i + 1}/${N}</div>`}</div>`;
+  if (spec.tag && !land && s.type !== "hlcover") html += `<div class="tag" style="left:${pad}px;top:${top - 50}px">${esc(spec.tag)}</div>`;
   document.getElementById("slide").innerHTML = html;
   const probs = [];
   // formulas stay on one line: shrink the font until it fits

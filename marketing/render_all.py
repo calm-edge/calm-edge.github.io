@@ -21,7 +21,7 @@ def outputs(spec, media):
     """Files a spec must produce: reels -> mp4 + pin; carousels -> slides + pin; long lessons -> mp4 + thumbnail + pin."""
     d = json.loads(spec.read_text()); vid = spec.stem; kind = d.get("kind", "reel")
     if kind == "carousel":
-        return kind, [media / f"{vid}_{i + 1}.jpg" for i in range(len(d["slides"]))] + [media / f"{vid}_pin.jpg"]
+        return kind, [media / f"{vid}_{i + 1}.jpg" for i in range(len(d["slides"]))] + [media / f"{vid}_pin.jpg", media / f"{vid}_story.jpg"]
     files = [media / f"{vid}.mp4", media / f"{vid}_pin.jpg"]
     return kind, files + ([media / f"{vid}_thumb.jpg"] if kind == "long" else [])
 

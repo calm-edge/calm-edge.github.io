@@ -365,10 +365,12 @@ import sys as _sys
 _sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import edu as _edu
 V.extend(_edu.V)
-import carousels as _car
-V.extend(_car.C)
-import longform as _long
-V.extend(_long.Y)
+import carousels as _car  # first carousels mirrored the reels: retired, only the published one stays online
+V.extend(c for c in _car.C if c["id"] in ("c202_car_20ema",))
+import longform as _long  # y301 (same topics as the reels) retired; long lessons now live in strategies.py
+import strategies as _strat  # strategies, market mechanics and routines: topics the reels don't cover
+V.extend(_strat.C)
+V.extend(_strat.Y)
 import quiz as _quiz  # after carousels/longform, which read the original lesson scenes
 
 if __name__ == "__main__":

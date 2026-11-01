@@ -161,6 +161,25 @@ def pinterest(item, spec, video_url, cover_url):
 
 
 CHANNELS = {"instagram": instagram, "facebook": facebook, "youtube": youtube, "pinterest": pinterest}
+def ig_story(media_url, video):
+    """Instagram story pointing people to the new post: the reel itself, or the carousel cover at 9:16."""
+    creds = env("IG_USER_ID", "META_TOKEN")
+    if not creds:
+        return None, "missing IG_USER_ID / META_TOKEN"
+    ig, token = creds
+    _, r, _ = http("POST", f"{GRAPH}/{ig}/media", {"media_type": "STORIES", ("video_url" if video else "image_url"): media_url, "access_token": token})
+    cid = r["id"]
+    for _ in range(60):
+        _, st, _ = http("GET", f"{GRAPH}/{cid}?fields=status_code,status&access_token={token}")
+        if st.get("status_code") == "FINISHED":
+            break
+        if st.get("status_code") == "ERROR":
+            raise RuntimeError(f"Instagram story error: {st.get('status')}")
+        time.sleep(5)
+    _, pub, _ = http("POST", f"{GRAPH}/{ig}/media_publish", {"creation_id": cid, "access_token": token})
+    return f"story:{pub['id']}", None
+
+
 CAROUSEL_CHANNELS = {"instagram": ig_carousel, "facebook": fb_photos}
 
 
@@ -203,6 +222,18 @@ def main():
                 entry.update({"url": url} if url else {"skipped": skipped})
             except Exception as e:  # keep going with the other channels
                 entry = {"id": item["id"], "channel": ch, "time": now.isoformat(timespec="minutes"), "error": str(e)[:500]}
+            log.append(entry); report.append(entry)
+            logp.write_text(json.dumps(log, indent=1))
+        # after the Instagram post, the same content goes to the story, so profile visitors and followers see it twice
+        posted_ig = any(e["id"] == item["id"] and e["channel"] == "instagram" and e.get("url") for e in log)
+        if posted_ig and (item["id"], "instagram_story") not in done and not a.dry_run and (not only or "instagram" in only):
+            try:
+                media = f"{a.media_base.rstrip('/')}/{item['id']}_story.jpg" if carousel else video_url
+                url, skipped = ig_story(media, not carousel)
+                entry = {"id": item["id"], "channel": "instagram_story", "time": now.isoformat(timespec="minutes")}
+                entry.update({"url": url} if url else {"skipped": skipped})
+            except Exception as e:
+                entry = {"id": item["id"], "channel": "instagram_story", "time": now.isoformat(timespec="minutes"), "error": str(e)[:500]}
             log.append(entry); report.append(entry)
             logp.write_text(json.dumps(log, indent=1))
     print(json.dumps(report, indent=1))

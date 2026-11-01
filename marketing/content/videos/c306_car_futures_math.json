@@ -1,0 +1,144 @@
+{
+ "id": "c306_car_futures_math",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {},
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Futures basics",
+   "title": "What one point is worth on ES, NQ and the micros.",
+   "text": "Know this **before** your first trade. It decides your position size."
+  },
+  {
+   "type": "rows",
+   "title": "Dollars per point",
+   "head": [
+    "Contract",
+    "Per point",
+    "Per tick (0.25)"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ES (S&P 500)",
+      "$50",
+      "$12.50"
+     ]
+    },
+    {
+     "cells": [
+      "MES (micro)",
+      "$5",
+      "$1.25"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "NQ (Nasdaq 100)",
+      "$20",
+      "$5.00"
+     ]
+    },
+    {
+     "cells": [
+      "MNQ (micro)",
+      "$2",
+      "$0.50"
+     ],
+     "good": true
+    }
+   ]
+  },
+  {
+   "type": "rows",
+   "title": "The same 10-point move",
+   "head": [
+    "Contract",
+    "",
+    "1 contract"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ES",
+      "",
+      "$500"
+     ]
+    },
+    {
+     "cells": [
+      "MES",
+      "",
+      "$50"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "NQ",
+      "",
+      "$200"
+     ]
+    },
+    {
+     "cells": [
+      "MNQ",
+      "",
+      "$20"
+     ],
+     "good": true
+    }
+   ],
+   "text": "Micros are **one tenth** of the full contract. Same chart, a tenth of the risk."
+  },
+  {
+   "type": "formula",
+   "title": "Risk per trade",
+   "formula": "Risk = stop (points) × $ per point × contracts",
+   "small": "Example: 8-point stop on 3 MES = 8 × $5 × 3 = $120"
+  },
+  {
+   "type": "points",
+   "title": "Why it matters",
+   "points": [
+    {
+     "b": "Size from the stop, not from a feeling",
+     "t": "Decide the dollars you risk, then compute contracts.",
+     "color": "mint"
+    },
+    {
+     "b": "Start with micros",
+     "t": "Learn with a tenth of the risk on the same market.",
+     "color": "blue"
+    },
+    {
+     "b": "NQ moves more points than ES",
+     "t": "Same stop in points is not the same risk.",
+     "color": "coral"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Know the point value before you click.",
+   "text": "Points × dollars per point × contracts = the money on the line."
+  }
+ ],
+ "post": {
+  "instagram": "Dollars per point: ES $50, MES $5, NQ $20, MNQ $2. A 10-point move is $500 on one ES and $50 on one MES. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational content. Not financial advice; trading involves risk of loss.\n\n#futurestrading #es #nq #microfutures #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Dollars per point: ES $50, MES $5, NQ $20, MNQ $2. A 10-point move is $500 on one ES and $50 on one MES. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Dollars per point: ES $50, MES $5, NQ $20, MNQ $2. A 10-point move is $500 on one ES and $50 on one MES. Risk = stop in points × $ per point × contracts. Contract specs from CME Group. Follow for one trading concept a day. #futurestrading #es #nq #microfutures #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Futures point values explained: ES, MES, NQ, MNQ",
+   "description": "Dollars per point: ES $50, MES $5, NQ $20, MNQ $2. A 10-point move is $500 on one ES and $50 on one MES. Risk = stop in points × $ per point × contracts. Contract specs from CME Group. Trading concepts explained simply.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  },
+  "title": "Futures point values: ES, MES, NQ, MNQ"
+ },
+ "voice": "andrew_up"
+}

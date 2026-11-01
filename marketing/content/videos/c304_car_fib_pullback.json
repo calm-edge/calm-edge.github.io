@@ -1,0 +1,492 @@
+{
+ "id": "c304_car_fib_pullback",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 101.05,
+     "h": 101.06,
+     "l": 100.85,
+     "c": 101.0,
+     "v": 1160
+    },
+    {
+     "o": 101.01,
+     "h": 101.04,
+     "l": 100.52,
+     "c": 100.6,
+     "v": 1726
+    },
+    {
+     "o": 100.57,
+     "h": 100.57,
+     "l": 100.53,
+     "c": 100.54,
+     "v": 1077
+    },
+    {
+     "o": 100.52,
+     "h": 100.92,
+     "l": 100.1,
+     "c": 100.24,
+     "v": 1385
+    },
+    {
+     "o": 100.25,
+     "h": 100.43,
+     "l": 99.93,
+     "c": 100.0,
+     "v": 1537
+    },
+    {
+     "o": 100.0,
+     "h": 100.79,
+     "l": 99.79,
+     "c": 100.75,
+     "v": 3535
+    },
+    {
+     "o": 100.77,
+     "h": 101.42,
+     "l": 100.56,
+     "c": 101.37,
+     "v": 2656
+    },
+    {
+     "o": 101.38,
+     "h": 102.67,
+     "l": 101.28,
+     "c": 102.41,
+     "v": 3647
+    },
+    {
+     "o": 102.4,
+     "h": 102.73,
+     "l": 102.28,
+     "c": 102.6,
+     "v": 1897
+    },
+    {
+     "o": 102.52,
+     "h": 102.88,
+     "l": 102.35,
+     "c": 102.55,
+     "v": 1207
+    },
+    {
+     "o": 102.59,
+     "h": 102.88,
+     "l": 101.74,
+     "c": 102.0,
+     "v": 3035
+    },
+    {
+     "o": 102.0,
+     "h": 102.66,
+     "l": 101.64,
+     "c": 102.64,
+     "v": 3035
+    },
+    {
+     "o": 102.68,
+     "h": 103.54,
+     "l": 102.39,
+     "c": 103.45,
+     "v": 3354
+    },
+    {
+     "o": 103.46,
+     "h": 103.86,
+     "l": 103.22,
+     "c": 103.82,
+     "v": 2076
+    },
+    {
+     "o": 103.82,
+     "h": 104.81,
+     "l": 103.74,
+     "c": 104.51,
+     "v": 4339
+    },
+    {
+     "o": 104.5,
+     "h": 105.18,
+     "l": 104.29,
+     "c": 105.07,
+     "v": 3796
+    },
+    {
+     "o": 105.03,
+     "h": 106.09,
+     "l": 104.91,
+     "c": 106.0,
+     "v": 4359
+    },
+    {
+     "o": 105.99,
+     "h": 106.14,
+     "l": 105.71,
+     "c": 105.75,
+     "v": 1868
+    },
+    {
+     "o": 105.75,
+     "h": 105.82,
+     "l": 104.84,
+     "c": 105.21,
+     "v": 3498
+    },
+    {
+     "o": 105.15,
+     "h": 105.4,
+     "l": 104.57,
+     "c": 104.6,
+     "v": 2739
+    },
+    {
+     "o": 104.62,
+     "h": 105.42,
+     "l": 104.57,
+     "c": 105.3,
+     "v": 3305
+    },
+    {
+     "o": 105.3,
+     "h": 105.44,
+     "l": 104.9,
+     "c": 105.1,
+     "v": 1804
+    },
+    {
+     "o": 105.08,
+     "h": 105.22,
+     "l": 104.08,
+     "c": 104.1,
+     "v": 3481
+    },
+    {
+     "o": 104.07,
+     "h": 104.18,
+     "l": 102.63,
+     "c": 102.97,
+     "v": 5666
+    },
+    {
+     "o": 103.03,
+     "h": 103.07,
+     "l": 102.53,
+     "c": 102.6,
+     "v": 1751
+    },
+    {
+     "o": 102.61,
+     "h": 103.29,
+     "l": 102.51,
+     "c": 103.29,
+     "v": 3568
+    },
+    {
+     "o": 103.3,
+     "h": 103.74,
+     "l": 103.09,
+     "c": 103.61,
+     "v": 1650
+    },
+    {
+     "o": 103.66,
+     "h": 104.17,
+     "l": 103.61,
+     "c": 104.0,
+     "v": 2130
+    },
+    {
+     "o": 104.0,
+     "h": 104.19,
+     "l": 103.94,
+     "c": 104.08,
+     "v": 953
+    },
+    {
+     "o": 104.05,
+     "h": 104.13,
+     "l": 103.79,
+     "c": 104.06,
+     "v": 1222
+    },
+    {
+     "o": 104.06,
+     "h": 104.26,
+     "l": 103.35,
+     "c": 103.6,
+     "v": 2050
+    },
+    {
+     "o": 103.55,
+     "h": 104.24,
+     "l": 103.51,
+     "c": 104.1,
+     "v": 3702
+    },
+    {
+     "o": 104.07,
+     "h": 104.69,
+     "l": 103.78,
+     "c": 104.64,
+     "v": 2785
+    },
+    {
+     "o": 104.63,
+     "h": 104.95,
+     "l": 104.58,
+     "c": 104.9,
+     "v": 1700
+    },
+    {
+     "o": 104.89,
+     "h": 106.01,
+     "l": 104.52,
+     "c": 105.87,
+     "v": 3855
+    },
+    {
+     "o": 105.85,
+     "h": 106.65,
+     "l": 105.78,
+     "c": 106.52,
+     "v": 2301
+    },
+    {
+     "o": 106.51,
+     "h": 107.01,
+     "l": 106.05,
+     "c": 106.79,
+     "v": 2042
+    },
+    {
+     "o": 106.85,
+     "h": 107.63,
+     "l": 106.8,
+     "c": 107.32,
+     "v": 2622
+    },
+    {
+     "o": 107.34,
+     "h": 107.48,
+     "l": 107.06,
+     "c": 107.4,
+     "v": 1143
+    }
+   ],
+   "lines": [],
+   "bands": []
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Strategy breakdown",
+   "title": "Buying the pullback with Fibonacci levels.",
+   "chart": "a",
+   "state": {
+    "bars": 27,
+    "show": [],
+    "levels": [
+     {
+      "price": 102.97,
+      "label": "50%",
+      "color": "gold",
+      "from": 17,
+      "labelPos": "right"
+     },
+     {
+      "price": 102.22,
+      "label": "61.8%",
+      "color": "gold",
+      "from": 17,
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [
+     {
+      "from": 17,
+      "to": 38,
+      "lo": 102.22,
+      "hi": 102.97,
+      "color": "gold"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 5,
+      "dir": "up",
+      "text": "A (low)",
+      "color": "blue"
+     },
+     {
+      "bar": 17,
+      "dir": "down",
+      "text": "B (high)",
+      "color": "blue"
+     }
+    ]
+   }
+  },
+  {
+   "type": "formula",
+   "title": "How the levels are drawn",
+   "formula": "Level = B − (B − A) × ratio",
+   "small": "Here: A = 99.79, B = 106.14 → 50% = 102.97, 61.8% = 102.22",
+   "text": "A is the start of the move, B its end. The common ratios **38.2%, 50% and 61.8%** mark how much of the move a pullback gives back."
+  },
+  {
+   "type": "points",
+   "title": "The idea",
+   "points": [
+    {
+     "b": "Trends move in waves",
+     "t": "A push, a pullback, another push.",
+     "color": "mint"
+    },
+    {
+     "b": "Many traders watch 50–61.8%",
+     "t": "A deep but normal pullback in a healthy trend.",
+     "color": "gold"
+    },
+    {
+     "b": "The level is not the signal",
+     "t": "Wait for price to react there.",
+     "color": "coral"
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "title": "Pullback into the zone, then a reaction",
+   "chart": "a",
+   "chartH": 600,
+   "state": {
+    "bars": 37,
+    "show": [],
+    "levels": [
+     {
+      "price": 102.97,
+      "label": "50%",
+      "color": "gold",
+      "from": 17,
+      "labelPos": "right"
+     },
+     {
+      "price": 102.22,
+      "label": "61.8%",
+      "color": "gold",
+      "from": 17,
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [
+     {
+      "from": 17,
+      "to": 38,
+      "lo": 102.22,
+      "hi": 102.97,
+      "color": "gold"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 25,
+      "dir": "up",
+      "text": "Low in zone",
+      "color": "gold"
+     },
+     {
+      "bar": 26,
+      "dir": "down",
+      "text": "Entry",
+      "color": "mint"
+     }
+    ]
+   },
+   "text": "Low **102.51** inside the zone. Entry **103.61** on the first close above the low bar's high, stop **102.31**, first target the old high **106.14**."
+  },
+  {
+   "type": "rows",
+   "title": "This trade in numbers",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Risk",
+      "",
+      "1.30"
+     ]
+    },
+    {
+     "cells": [
+      "Reward to B",
+      "",
+      "2.53"
+     ]
+    },
+    {
+     "cells": [
+      "Reward ÷ risk",
+      "",
+      "1.9R"
+     ],
+     "good": true,
+     "hl": true
+    }
+   ]
+  },
+  {
+   "type": "points",
+   "title": "Common mistakes",
+   "points": [
+    {
+     "b": "Picking A and B after the fact",
+     "t": "Use clear swing points, the same way every time.",
+     "color": "coral"
+    },
+    {
+     "b": "Buying the level blindly",
+     "t": "No reaction, no trade. Levels break.",
+     "color": "gold"
+    },
+    {
+     "b": "Using it against the trend",
+     "t": "It's a tool for joining a trend, not for catching tops.",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Zone first, reaction second.",
+   "text": "Fibonacci levels show where to look. The candle that reacts there tells you when."
+  }
+ ],
+ "post": {
+  "instagram": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R). Follow for one trading concept a day. #fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Fibonacci pullback trading strategy",
+   "description": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R). Trading concepts explained simply.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  },
+  "title": "Fibonacci pullback strategy"
+ },
+ "voice": "andrew_up"
+}

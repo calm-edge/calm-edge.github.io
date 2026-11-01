@@ -1,0 +1,445 @@
+{
+ "id": "c302_car_gap_fill",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 99.17,
+     "h": 99.29,
+     "l": 99.16,
+     "c": 99.2,
+     "v": 841
+    },
+    {
+     "o": 99.18,
+     "h": 99.28,
+     "l": 99.07,
+     "c": 99.28,
+     "v": 1887
+    },
+    {
+     "o": 99.31,
+     "h": 99.39,
+     "l": 99.18,
+     "c": 99.37,
+     "v": 1497
+    },
+    {
+     "o": 99.36,
+     "h": 99.68,
+     "l": 99.29,
+     "c": 99.47,
+     "v": 1511
+    },
+    {
+     "o": 99.45,
+     "h": 99.73,
+     "l": 99.36,
+     "c": 99.66,
+     "v": 1858
+    },
+    {
+     "o": 99.64,
+     "h": 99.8,
+     "l": 99.62,
+     "c": 99.75,
+     "v": 1454
+    },
+    {
+     "o": 99.74,
+     "h": 99.89,
+     "l": 99.6,
+     "c": 99.65,
+     "v": 1336
+    },
+    {
+     "o": 99.63,
+     "h": 99.87,
+     "l": 99.41,
+     "c": 99.51,
+     "v": 1835
+    },
+    {
+     "o": 99.49,
+     "h": 99.61,
+     "l": 99.19,
+     "c": 99.5,
+     "v": 744
+    },
+    {
+     "o": 99.52,
+     "h": 99.57,
+     "l": 99.34,
+     "c": 99.49,
+     "v": 882
+    },
+    {
+     "o": 99.48,
+     "h": 99.97,
+     "l": 99.36,
+     "c": 99.84,
+     "v": 3047
+    },
+    {
+     "o": 99.85,
+     "h": 100.05,
+     "l": 99.79,
+     "c": 100.0,
+     "v": 2440
+    },
+    {
+     "o": 101.1,
+     "h": 101.25,
+     "l": 101.0,
+     "c": 101.25,
+     "v": 8583
+    },
+    {
+     "o": 101.24,
+     "h": 101.6,
+     "l": 101.13,
+     "c": 101.56,
+     "v": 2997
+    },
+    {
+     "o": 101.61,
+     "h": 101.73,
+     "l": 101.56,
+     "c": 101.6,
+     "v": 1237
+    },
+    {
+     "o": 101.63,
+     "h": 101.64,
+     "l": 101.09,
+     "c": 101.42,
+     "v": 2962
+    },
+    {
+     "o": 101.39,
+     "h": 101.61,
+     "l": 101.1,
+     "c": 101.17,
+     "v": 2931
+    },
+    {
+     "o": 101.17,
+     "h": 101.21,
+     "l": 101.03,
+     "c": 101.15,
+     "v": 865
+    },
+    {
+     "o": 101.14,
+     "h": 101.38,
+     "l": 101.12,
+     "c": 101.17,
+     "v": 968
+    },
+    {
+     "o": 101.17,
+     "h": 101.5,
+     "l": 101.11,
+     "c": 101.4,
+     "v": 2203
+    },
+    {
+     "o": 101.41,
+     "h": 101.42,
+     "l": 100.83,
+     "c": 100.96,
+     "v": 5025
+    },
+    {
+     "o": 100.95,
+     "h": 101.08,
+     "l": 100.78,
+     "c": 100.8,
+     "v": 1581
+    },
+    {
+     "o": 100.81,
+     "h": 100.85,
+     "l": 100.52,
+     "c": 100.62,
+     "v": 2496
+    },
+    {
+     "o": 100.62,
+     "h": 100.73,
+     "l": 100.49,
+     "c": 100.6,
+     "v": 989
+    },
+    {
+     "o": 100.61,
+     "h": 100.69,
+     "l": 100.17,
+     "c": 100.44,
+     "v": 1888
+    },
+    {
+     "o": 100.44,
+     "h": 100.47,
+     "l": 100.42,
+     "c": 100.43,
+     "v": 1233
+    },
+    {
+     "o": 100.45,
+     "h": 100.63,
+     "l": 100.16,
+     "c": 100.38,
+     "v": 1790
+    },
+    {
+     "o": 100.38,
+     "h": 100.54,
+     "l": 100.0,
+     "c": 100.05,
+     "v": 3129
+    },
+    {
+     "o": 100.02,
+     "h": 100.45,
+     "l": 100.01,
+     "c": 100.31,
+     "v": 2264
+    },
+    {
+     "o": 100.32,
+     "h": 100.43,
+     "l": 100.18,
+     "c": 100.3,
+     "v": 881
+    },
+    {
+     "o": 100.29,
+     "h": 100.43,
+     "l": 100.12,
+     "c": 100.23,
+     "v": 1425
+    },
+    {
+     "o": 100.21,
+     "h": 100.32,
+     "l": 100.15,
+     "c": 100.3,
+     "v": 1924
+    },
+    {
+     "o": 100.31,
+     "h": 100.55,
+     "l": 100.18,
+     "c": 100.32,
+     "v": 1328
+    },
+    {
+     "o": 100.33,
+     "h": 100.35,
+     "l": 99.95,
+     "c": 100.02,
+     "v": 3982
+    },
+    {
+     "o": 100.01,
+     "h": 100.11,
+     "l": 99.88,
+     "c": 100.08,
+     "v": 1316
+    },
+    {
+     "o": 100.08,
+     "h": 100.18,
+     "l": 99.67,
+     "c": 99.99,
+     "v": 1420
+    },
+    {
+     "o": 99.98,
+     "h": 100.04,
+     "l": 99.82,
+     "c": 99.9,
+     "v": 2011
+    }
+   ],
+   "lines": [],
+   "bands": []
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Strategy breakdown",
+   "title": "Gap fill: trading back to yesterday's close.",
+   "chart": "a",
+   "state": {
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Yesterday's close",
+      "color": "gold"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 12,
+      "dir": "up",
+      "text": "Gap up",
+      "color": "mint"
+     }
+    ],
+    "bars": 16
+   }
+  },
+  {
+   "type": "points",
+   "title": "What a gap is",
+   "points": [
+    {
+     "b": "Today opens away from yesterday's close",
+     "t": "News or overnight trading moved the price.",
+     "color": "blue"
+    },
+    {
+     "b": "\"Filling the gap\"",
+     "t": "Price trades back to yesterday's close.",
+     "color": "gold"
+    },
+    {
+     "b": "Not every gap fills",
+     "t": "Strong news gaps can run all day. You need a trigger.",
+     "color": "coral"
+    }
+   ]
+  },
+  {
+   "type": "rows",
+   "title": "One version of the rules",
+   "head": [
+    "",
+    "",
+    ""
+   ],
+   "rows": [
+    {
+     "cells": [
+      "Wait",
+      "",
+      "First 15 minutes"
+     ]
+    },
+    {
+     "cells": [
+      "Entry",
+      "",
+      "Close below their low"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "Stop",
+      "",
+      "Above the day's high"
+     ],
+     "hl": true
+    },
+    {
+     "cells": [
+      "Target",
+      "",
+      "Yesterday's close"
+     ],
+     "good": true
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "title": "The open fails, then the fill",
+   "chart": "a",
+   "chartH": 600,
+   "state": {
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Yesterday's close",
+      "color": "gold"
+     },
+     {
+      "price": 101.0,
+      "label": "First 15 min low",
+      "color": "blue",
+      "from": 12,
+      "below": true,
+      "labelAt": 0.5
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 20,
+      "dir": "down",
+      "text": "Close below",
+      "color": "coral"
+     },
+     {
+      "bar": 27,
+      "dir": "up",
+      "text": "Gap filled",
+      "color": "gold"
+     }
+    ],
+    "bars": 30
+   },
+   "text": "Gap of **1.1%**. Entry **100.96**, stop **101.73** (risk 0.77), target **100.00** (reward 0.96)."
+  },
+  {
+   "type": "points",
+   "title": "When to skip it",
+   "points": [
+    {
+     "b": "Big news behind the gap",
+     "t": "Earnings or major data can keep the move going.",
+     "color": "coral"
+    },
+    {
+     "b": "The open keeps making highs",
+     "t": "No failure, no trade.",
+     "color": "gold"
+    },
+    {
+     "b": "Reward smaller than risk",
+     "t": "If the fill is closer than the stop, pass.",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Let the open fail first.",
+   "text": "A gap is a reason to watch, not a reason to fade. Trade the failure, target the close."
+  }
+ ],
+ "post": {
+  "instagram": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first. Follow for one trading concept a day. #gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Gap fill trading strategy explained",
+   "description": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first. Trading concepts explained simply.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  },
+  "title": "Gap fill strategy explained"
+ },
+ "voice": "andrew_up"
+}

@@ -20,6 +20,9 @@ def main():
         n = len(spec["slides"])
         jobs += [(spec, i, 1080, 1350, f"{spec['id']}_{i + 1}.jpg") for i in range(n)]
         jobs.append((spec, 0, 1000, 1500, f"{spec['id']}_pin.jpg"))
+        jobs.append((spec, 0, 1080, 1920, f"{spec['id']}_story.jpg"))  # Instagram story announcing the post
+    if spec.get("kind") == "stories":  # story frames (1080x1920): highlight covers and highlight content
+        jobs = [(spec, i, 1080, 1920, f"{spec['id']}_{i + 1}.jpg") for i in range(len(spec["slides"]))]
     if spec.get("thumb"):
         jobs.append(({**spec, "slides": [spec["thumb"]]}, 0, 1280, 720, f"{spec['id']}_thumb.jpg"))
     problems = []
