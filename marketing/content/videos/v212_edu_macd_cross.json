@@ -436,49 +436,81 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Why MACD crosses always feel late.",
+   "headline": "Did MACD catch this bottom?",
    "big": true,
+   "options": [
+    "Yes",
+    "No, late"
+   ],
    "reveal": [
     6,
-    8
-   ],
-   "show": [
-    "macd"
-   ],
-   "say": "Why MACD crosses always feel late."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Built from moving averages.",
-   "reveal": [
-    8,
     12
    ],
    "show": [
     "macd"
    ],
+   "grow": 0.95,
    "marks": [
     {
      "bar": 10,
      "dir": "up",
      "text": "The low",
      "color": "mint",
-     "at": 0.3
+     "at": 0.0
     }
    ],
-   "say": "MACD is the twelve EMA minus the twenty-six EMA, and the signal line is a nine EMA of MACD. Averages need time to turn."
+   "say": "Here's the low. Did MACD catch it? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "The cross came 3 bars later.",
+   "headline": "Did MACD catch this bottom?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No, late"
+   ],
    "reveal": [
     12,
-    39
+    12
    ],
    "show": [
     "macd"
+   ],
+   "zoom": [
+    14,
+    9
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "marks": [
+    {
+     "bar": 10,
+     "dir": "up",
+     "text": "The low",
+     "color": "mint",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Did MACD catch this bottom?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No, late"
+   ],
+   "show": [
+    "macd"
+   ],
+   "answer": 1,
+   "reveal": [
+    12,
+    39
    ],
    "marks": [
     {
@@ -497,48 +529,9 @@
      "at": 0.2
     }
    ],
-   "say": "Here the bullish cross came three bars after the low, when price was already one percent off the bottom."
-  },
-  {
-   "type": "rows",
-   "title": "Reading a MACD cross",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "In a trend",
-      "",
-      "Confirms momentum"
-     ],
-     "good": true,
-     "hl": true
-    },
-    {
-     "cells": [
-      "In a range",
-      "",
-      "Often noise"
-     ]
-    },
-    {
-     "cells": [
-      "At the exact turn",
-      "",
-      "Almost never"
-     ],
-     "hl": true
-    }
-   ],
-   "say": "So use it to confirm momentum, not to catch the exact turn."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "Here the bullish cross came three bars after the low, when price was already one percent off the bottom. MACD is built from moving averages, so it confirms momentum. It doesn't catch the exact turn. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -555,5 +548,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

@@ -273,12 +273,18 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Wrong 60% of the time, still profitable.",
+   "headline": "You win only 40%. Profitable?",
    "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
    "reveal": [
     8,
     19
    ],
+   "show": [],
+   "grow": 0.95,
    "zones": [
     {
      "from": 18,
@@ -287,7 +293,7 @@
      "hi": 102.0,
      "color": "mint",
      "label": "Reward 2R",
-     "at": 0.45
+     "at": 0.0
     },
     {
      "from": 18,
@@ -295,18 +301,76 @@
      "lo": 99.0,
      "hi": 100.0,
      "color": "coral",
-     "at": 0.45
+     "at": 0.0
     }
    ],
-   "say": "You can be wrong sixty percent of the time and still make money. Here's the math."
+   "say": "You win only forty percent of your trades. Can you still make money? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Risk 1 to make 2.",
+   "headline": "You win only 40%. Profitable?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "reveal": [
+    19,
+    19
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "zones": [
+    {
+     "from": 18,
+     "to": 36,
+     "lo": 100.0,
+     "hi": 102.0,
+     "color": "mint",
+     "label": "Reward 2R",
+     "at": 0.0
+    },
+    {
+     "from": 18,
+     "to": 36,
+     "lo": 99.0,
+     "hi": 100.0,
+     "color": "coral",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "You win only 40%. Profitable?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "show": [],
+   "answer": 0,
    "reveal": [
     19,
     37
+   ],
+   "levels": [
+    {
+     "price": 99.0,
+     "from": 18,
+     "label": "Stop: 1R",
+     "color": "coral",
+     "below": true
+    }
    ],
    "zones": [
     {
@@ -325,54 +389,18 @@
      "color": "coral"
     }
    ],
-   "levels": [
-    {
-     "price": 99.0,
-     "from": 18,
-     "label": "Stop: 1R",
-     "color": "coral",
-     "below": true
-    }
-   ],
-   "say": "Risk one unit to make two. That's a reward to risk of two to one."
+   "say": "Yes, if every win is twice the size of every loss.",
+   "sfx": "reveal",
+   "cont": true
   },
   {
    "type": "rows",
-   "title": "Win rate you need to break even",
-   "head": [
-    "Reward : risk",
-    "",
-    "Break-even"
-   ],
-   "rows": [
-    {
-     "cells": [
-      "1 : 1",
-      "",
-      "50%"
-     ]
-    },
-    {
-     "cells": [
-      "2 : 1",
-      "",
-      "33.3%"
-     ],
-     "good": true,
-     "hl": true
-    },
-    {
-     "cells": [
-      "3 : 1",
-      "",
-      "25%"
-     ]
-    }
-   ],
-   "say": "At two to one you only need to win one trade in three to break even, before costs."
-  },
-  {
-   "type": "rows",
+   "chart": "a",
+   "headline": null,
+   "big": true,
+   "options": null,
+   "show": [],
+   "answer": 0,
    "title": "Win 40% at 2 : 1",
    "head": [
     "",
@@ -404,12 +432,7 @@
      "hl": true
     }
    ],
-   "say": "Win four out of ten: plus eight R, minus six R. Plus two R every ten trades."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "Four wins at two R is plus eight. Six losses cost six. That's plus two R every ten trades, before costs. Follow for tomorrow's chart."
   }
  ],
  "post": {
@@ -426,5 +449,7 @@
    "link": "https://amirkallas2cs-gif.github.io/tools/r-multiple-calculator/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

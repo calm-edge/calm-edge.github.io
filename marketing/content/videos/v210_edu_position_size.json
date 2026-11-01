@@ -259,11 +259,94 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "How many contracts? Three numbers.",
+   "headline": "4-point stop. How many micros?",
    "big": true,
+   "options": [
+    "5",
+    "25",
+    "50"
+   ],
    "reveal": [
     8,
     21
+   ],
+   "show": [],
+   "grow": 0.95,
+   "levels": [
+    {
+     "price": 5821,
+     "from": 20,
+     "label": "Entry",
+     "color": "blue",
+     "at": 0.0
+    },
+    {
+     "price": 5817,
+     "from": 20,
+     "label": "Stop: 4 points",
+     "color": "coral",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "say": "Fifty thousand dollar account, one percent risk, four point stop. How many micro contracts? Decide before the reveal."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "4-point stop. How many micros?",
+   "big": true,
+   "options": [
+    "5",
+    "25",
+    "50"
+   ],
+   "reveal": [
+    21,
+    21
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 5821,
+     "from": 20,
+     "label": "Entry",
+     "color": "blue",
+     "at": 0.0
+    },
+    {
+     "price": 5817,
+     "from": 20,
+     "label": "Stop: 4 points",
+     "color": "coral",
+     "below": true,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "4-point stop. How many micros?",
+   "big": true,
+   "options": [
+    "5",
+    "25",
+    "50"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    21,
+    35
    ],
    "levels": [
     {
@@ -282,71 +365,18 @@
      "at": 0.65
     }
    ],
-   "say": "How many contracts should you trade? You only need three numbers."
+   "say": "Twenty-five. One percent of fifty thousand is five hundred dollars, and a four point stop on the micro risks twenty dollars per contract.",
+   "sfx": "reveal",
+   "cont": true
   },
   {
    "type": "rows",
-   "title": "1. How much you can lose",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Account",
-      "",
-      "$50,000"
-     ]
-    },
-    {
-     "cells": [
-      "Risk per trade",
-      "",
-      "1%"
-     ]
-    },
-    {
-     "cells": [
-      "Max loss",
-      "",
-      "$500"
-     ],
-     "good": true,
-     "hl": true
-    }
-   ],
-   "say": "One: how much you can lose. One percent of fifty thousand dollars is five hundred."
-  },
-  {
-   "type": "rows",
-   "title": "2. What one contract risks",
-   "head": [
-    "Contract",
-    "$ per point",
-    "4-point stop"
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Micro (MES)",
-      "$5",
-      "$20"
-     ]
-    },
-    {
-     "cells": [
-      "E-mini (ES)",
-      "$50",
-      "$200"
-     ]
-    }
-   ],
-   "say": "Two: what one contract loses at your stop. Four points is twenty dollars on the micro, two hundred on the E-mini."
-  },
-  {
-   "type": "rows",
+   "chart": "a",
+   "headline": null,
+   "big": true,
+   "options": null,
+   "show": [],
+   "answer": 1,
    "title": "3. Divide",
    "head": [
     "",
@@ -371,12 +401,7 @@
      ]
     }
    ],
-   "say": "Three: divide. Twenty-five micros, or two E-minis. Always round down."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "Five hundred divided by twenty is twenty-five. On the E-mini it's two. Always round down. Follow for tomorrow's chart."
   }
  ],
  "post": {
@@ -393,5 +418,7 @@
    "link": "https://amirkallas2cs-gif.github.io/tools/position-size-calculator/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

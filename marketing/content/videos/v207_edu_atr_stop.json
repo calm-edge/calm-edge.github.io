@@ -329,27 +329,72 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Why your stop keeps getting hit.",
+   "headline": "Where does your stop go?",
    "big": true,
+   "options": [
+    "Tight",
+    "1.5 ATR"
+   ],
    "reveal": [
     6,
     26
    ],
+   "show": [],
+   "grow": 0.95,
    "levels": [
     {
      "price": 104.0,
      "from": 25,
      "label": "Entry",
      "color": "blue",
-     "at": 0.6
+     "at": 0.0
     }
    ],
-   "say": "Why your stop keeps getting hit, right before price goes your way."
+   "say": "You're long here. Tight stop, or one and a half ATR? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "A stop inside normal noise.",
+   "headline": "Where does your stop go?",
+   "big": true,
+   "options": [
+    "Tight",
+    "1.5 ATR"
+   ],
+   "reveal": [
+    26,
+    26
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 104.0,
+     "from": 25,
+     "label": "Entry",
+     "color": "blue",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Where does your stop go?",
+   "big": true,
+   "options": [
+    "Tight",
+    "1.5 ATR"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
     26,
     33
@@ -358,7 +403,7 @@
     {
      "price": 104.0,
      "from": 25,
-     "label": "Entry",
+     "label": "",
      "color": "blue"
     },
     {
@@ -379,12 +424,21 @@
      "at": 0.45
     }
    ],
-   "say": "This stop sits half an ATR below entry. ATR is the average true range, how far price normally moves in one bar. An ordinary dip takes it out."
+   "say": "The tight stop, half an ATR below entry, got taken out by an ordinary dip.",
+   "sfx": "reveal",
+   "cont": true
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Stop at 1.5 ATR, smaller size.",
+   "headline": "Where does your stop go?",
+   "big": true,
+   "options": [
+    "Tight",
+    "1.5 ATR"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
     33,
     45
@@ -404,12 +458,8 @@
      "below": true
     }
    ],
-   "say": "At one and a half ATR, the same dip is just noise. Make the stop wider and the position smaller, so the dollar risk stays the same."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "The wider one survived the noise. Wider stop, smaller size, same dollar risk. Follow for tomorrow's chart.",
+   "cont": true
   }
  ],
  "post": {
@@ -426,5 +476,7 @@
    "link": "https://amirkallas2cs-gif.github.io/tools/position-size-calculator/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

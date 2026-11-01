@@ -231,37 +231,25 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "One candle that swallows the last.",
+   "headline": "Buy this candle?",
    "big": true,
+   "options": [
+    "Buy it",
+    "Depends"
+   ],
    "reveal": [
     6,
-    18
+    22
    ],
+   "show": [],
+   "grow": 0.95,
    "levels": [
     {
      "price": 100.0,
      "label": "Support",
      "color": "gold",
      "below": true,
-     "at": 0.3
-    }
-   ],
-   "say": "One candle that swallows the one before it."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "The bullish engulfing candle.",
-   "reveal": [
-    18,
-    22
-   ],
-   "levels": [
-    {
-     "price": 100.0,
-     "label": "Support",
-     "color": "gold",
-     "below": true
+     "at": 0.0
     }
    ],
    "marks": [
@@ -270,15 +258,63 @@
      "dir": "up",
      "text": "Engulfing",
      "color": "mint",
-     "at": 0.6
+     "at": 0.0
     }
    ],
-   "say": "Its green body completely covers the previous red body. Sellers had control, and buyers took all of it back."
+   "say": "A big green candle swallows the red one. Do you buy it? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Location matters more than the candle.",
+   "headline": "Buy this candle?",
+   "big": true,
+   "options": [
+    "Buy it",
+    "Depends"
+   ],
+   "reveal": [
+    22,
+    22
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Support",
+     "color": "gold",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 21,
+     "dir": "up",
+     "text": "Engulfing",
+     "color": "mint",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Buy this candle?",
+   "big": true,
+   "options": [
+    "Buy it",
+    "Depends"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
     22,
     31
@@ -291,40 +327,9 @@
      "below": true
     }
    ],
-   "say": "It tends to mean more at support after a pullback, like here, than in the middle of a range."
-  },
-  {
-   "type": "rows",
-   "title": "A bullish engulfing candle…",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "At support",
-      "",
-      "Worth noticing"
-     ],
-     "good": true,
-     "hl": true
-    },
-    {
-     "cells": [
-      "Mid-range",
-      "",
-      "Often noise"
-     ]
-    }
-   ],
-   "say": "Read it with its location, never on its own."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "It depends where it is. A bullish engulfing candle tends to mean more at support after a pullback, like here, than in the middle of a range. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -341,5 +346,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

@@ -273,29 +273,73 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "This candle traps buyers every day.",
+   "headline": "Breakout! Buy it?",
    "big": true,
+   "options": [
+    "Buy",
+    "Wait"
+   ],
    "reveal": [
     6,
-    21
+    23
    ],
+   "show": [],
+   "grow": 0.95,
    "levels": [
     {
      "price": 105,
      "label": "Resistance",
      "color": "coral",
-     "at": 0.2
+     "at": 0.0
     }
    ],
-   "say": "This candle traps buyers every single day."
+   "say": "Price just broke above resistance. Do you buy it? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "A wick above is not a breakout.",
+   "headline": "Breakout! Buy it?",
+   "big": true,
+   "options": [
+    "Buy",
+    "Wait"
+   ],
    "reveal": [
-    21,
+    23,
     23
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 105,
+     "label": "Resistance",
+     "color": "coral",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Breakout! Buy it?",
+   "big": true,
+   "options": [
+    "Buy",
+    "Wait"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    23,
+    30
    ],
    "levels": [
     {
@@ -313,14 +357,23 @@
      "at": 0.55
     }
    ],
-   "say": "Price pokes above resistance, buyers jump in, and the candle closes back below the level. That's a failed breakout."
+   "say": "Wait. The candle poked above resistance but closed back below it. That's a failed breakout, and it trapped everyone who bought the poke.",
+   "sfx": "reveal",
+   "cont": true
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Trapped buyers become sellers.",
+   "headline": "Breakout! Buy it?",
+   "big": true,
+   "options": [
+    "Buy",
+    "Wait"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
-    23,
+    30,
     37
    ],
    "levels": [
@@ -330,48 +383,8 @@
      "color": "coral"
     }
    ],
-   "say": "Everyone who bought the poke is now losing, and their stops add fuel to the drop."
-  },
-  {
-   "type": "rows",
-   "title": "Before you buy a breakout",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Wick above the level",
-      "",
-      "Not yet"
-     ],
-     "hl": true
-    },
-    {
-     "cells": [
-      "Close above the level",
-      "",
-      "Breakout"
-     ],
-     "good": true,
-     "hl": true
-    },
-    {
-     "cells": [
-      "Close back below",
-      "",
-      "Failed"
-     ]
-    }
-   ],
-   "say": "So wait for a candle to close above the level, not just a wick."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "Their stops below the level add fuel to the drop. Wait for a close above, not a wick. Follow for tomorrow's chart.",
+   "cont": true
   }
  ],
  "post": {
@@ -388,5 +401,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

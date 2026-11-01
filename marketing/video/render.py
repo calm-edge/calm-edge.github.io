@@ -20,7 +20,7 @@ CHECK = """() => {
   const L = 60, R = land ? W - 60 : W - 120, T = land ? 15 : 200, B = land ? H - 30 : H - 420;
   document.querySelectorAll('.layer').forEach(l => {
     if (l.style.display === 'none' || +l.style.opacity < 0.98) return;
-    l.querySelectorAll('.big, .mid, .label, .statv, .bubble, .cta, .kicker, .rows .r > div, .rows .hd > div, .tag, .chip').forEach(e => {
+    l.querySelectorAll('.big, .mid, .label, .statv, .bubble, .cta, .kicker, .rows .r > div, .rows .hd > div, .tag, .chip, .opt').forEach(e => {
       const r = e.getBoundingClientRect();
       if (r.left < L || r.right > R || r.top < T || r.bottom > B) bad.push('outside safe area: ' + e.textContent.trim().slice(0, 40));
       if (e.scrollWidth > e.clientWidth + 1) bad.push('text overflow: ' + e.textContent.trim().slice(0, 40));
@@ -32,7 +32,7 @@ CHECK = """() => {
   if (cr && (cr.left < L || cr.right > R)) bad.push('captions too wide');
   (window.__problems || []).forEach(p => bad.push(p)); window.__problems = [];
   document.querySelectorAll('.layer').forEach(l => { if (l.style.display === 'none' || +l.style.opacity < 0.98) return;
-    l.querySelectorAll('svg.chart rect, svg.chart text').forEach(e => { const r = e.getBoundingClientRect();
+    l.querySelectorAll('svg.chart text').forEach(e => { const r = e.getBoundingClientRect();
       if (cr && r.width && r.bottom > cr.top + 2 && r.top < cr.bottom && r.right > cr.left && r.left < cr.right) bad.push('chart under captions'); }); });
   // Nothing may overlap the demo-data tag.
   const tg = document.querySelector('.tag');
@@ -90,6 +90,28 @@ def main():
                 with wave.open(str(work / f"line{i}.wav")) as r:
                     data = b"\0\0" * int(LEAD * tts.RATE) + r.readframes(r.getnframes())
             data = data[: n * 2]; W.writeframes(data + b"\0\0" * (n - len(data) // 2))
+
+    # 2b. Sound effects: a tick each second of a countdown, a soft "pop" on a reveal (synthesised, no files needed).
+    import array, math
+    fx = [(sum(x["duration"] for x in spec["scenes"][:i]), s["sfx"]) for i, s in enumerate(spec["scenes"]) if s.get("sfx")]
+    if fx:
+        with wave.open(str(track)) as r:
+            pcm = array.array("h", r.readframes(r.getnframes()))
+        def tone(at, freq, dur, vol, decay):
+            start = int(at * tts.RATE)
+            for k in range(int(dur * tts.RATE)):
+                if start + k >= len(pcm):
+                    break
+                v = vol * math.exp(-k / (decay * tts.RATE)) * math.sin(2 * math.pi * freq * k / tts.RATE)
+                pcm[start + k] = max(-32768, min(32767, pcm[start + k] + int(v * 32767)))
+        for at, kind in fx:
+            if kind == "countdown":
+                for sec in range(3):
+                    tone(at + sec, 1320, 0.09, 0.22, 0.03)
+            elif kind == "reveal":
+                tone(at, 660, 0.25, 0.20, 0.08); tone(at + 0.06, 990, 0.25, 0.16, 0.08)
+        with wave.open(str(track), "wb") as W:
+            W.setnchannels(1); W.setsampwidth(2); W.setframerate(tts.RATE); W.writeframes(pcm.tobytes())
 
     # 3. Frames -> ffmpeg.
     frames = int(round(total * FPS))

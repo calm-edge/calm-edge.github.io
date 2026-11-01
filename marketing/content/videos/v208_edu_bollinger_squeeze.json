@@ -452,53 +452,69 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "When the bands pinch, get ready.",
+   "headline": "Bands this tight. Which way next?",
    "big": true,
+   "options": [
+    "Up",
+    "Down",
+    "No idea"
+   ],
    "reveal": [
     8,
-    18
-   ],
-   "add": [
-    "bb",
-    "mid"
-   ],
-   "addAt": 0.15,
-   "say": "When these bands pinch together, get ready."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Low volatility: the squeeze.",
-   "reveal": [
-    18,
     32
    ],
    "show": [
     "bb",
     "mid"
    ],
-   "marks": [
-    {
-     "bar": 30,
-     "dir": "down",
-     "text": "Squeeze",
-     "color": "gold",
-     "at": 0.7
-    }
-   ],
-   "say": "Bollinger Bands sit two standard deviations around a twenty bar average. When price goes quiet, they squeeze together."
+   "grow": 0.95,
+   "say": "The bands are this tight. Which way does it break? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Quiet markets don't stay quiet.",
+   "headline": "Bands this tight. Which way next?",
+   "big": true,
+   "options": [
+    "Up",
+    "Down",
+    "No idea"
+   ],
    "reveal": [
     32,
-    42
+    32
    ],
    "show": [
     "bb",
     "mid"
+   ],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Bands this tight. Which way next?",
+   "big": true,
+   "options": [
+    "Up",
+    "Down",
+    "No idea"
+   ],
+   "show": [
+    "bb",
+    "mid"
+   ],
+   "answer": 2,
+   "reveal": [
+    32,
+    42
    ],
    "marks": [
     {
@@ -509,12 +525,9 @@
      "at": 0.85
     }
    ],
-   "say": "Low volatility tends to be followed by expansion. Here the bands ended up more than twelve times wider. But the squeeze tells you a move may come, not which way."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "Trick question. A squeeze tells you a big move may be coming, not its direction. Here the bands ended up more than twelve times wider. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -531,5 +544,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

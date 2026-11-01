@@ -369,6 +369,7 @@ import carousels as _car
 V.extend(_car.C)
 import longform as _long
 V.extend(_long.Y)
+import quiz as _quiz  # after carousels/longform, which read the original lesson scenes
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)

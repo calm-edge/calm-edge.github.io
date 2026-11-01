@@ -315,19 +315,25 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Down 50%, up 50%, still losing.",
+   "headline": "Down 50%, up 50%. Back to even?",
    "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
    "reveal": [
     6,
     27
    ],
+   "show": [],
+   "grow": 0.95,
    "levels": [
     {
      "price": 100.0,
      "label": "Start",
      "color": "muted",
      "below": true,
-     "at": 0.1
+     "at": 0.0
     }
    ],
    "marks": [
@@ -336,15 +342,63 @@
      "dir": "up",
      "text": "−50%",
      "color": "coral",
-     "at": 0.85
+     "at": 0.0
     }
    ],
-   "say": "Down fifty percent, then up fifty percent, and you're still losing."
+   "say": "Your account drops fifty percent, then gains fifty percent. Are you back to even? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Still 25% below the start.",
+   "headline": "Down 50%, up 50%. Back to even?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "reveal": [
+    27,
+    27
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Start",
+     "color": "muted",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "marks": [
+    {
+     "bar": 26,
+     "dir": "up",
+     "text": "−50%",
+     "color": "coral",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Down 50%, up 50%. Back to even?",
+   "big": true,
+   "options": [
+    "Yes",
+    "No"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
     27,
     43
@@ -373,46 +427,9 @@
      "at": 0.5
     }
    ],
-   "say": "A hundred falls to fifty. A fifty percent gain from fifty only gets back to seventy-five, still twenty-five percent below where it started."
-  },
-  {
-   "type": "rows",
-   "title": "Gain needed to get back",
-   "head": [
-    "Loss",
-    "",
-    "Gain needed"
-   ],
-   "rows": [
-    {
-     "cells": [
-      "−10%",
-      "",
-      "+11.1%"
-     ]
-    },
-    {
-     "cells": [
-      "−25%",
-      "",
-      "+33.3%"
-     ]
-    },
-    {
-     "cells": [
-      "−50%",
-      "",
-      "+100%"
-     ],
-     "hl": true
-    }
-   ],
-   "say": "Losses and recoveries aren't symmetric. A fifty percent loss needs a one hundred percent gain just to get back to even."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "A hundred falls to fifty. A fifty percent gain from fifty only gets back to seventy-five, still twenty-five percent below where it started. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -429,5 +446,7 @@
    "link": "https://amirkallas2cs-gif.github.io/learn/max-drawdown-explained/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

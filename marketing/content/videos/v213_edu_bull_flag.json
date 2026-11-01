@@ -301,12 +301,18 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "This pattern is a pause, not a top.",
+   "headline": "Top, or just a pause?",
    "big": true,
+   "options": [
+    "Top",
+    "Pause"
+   ],
    "reveal": [
     5,
-    15
+    27
    ],
+   "show": [],
+   "grow": 0.95,
    "zones": [
     {
      "from": 5,
@@ -315,27 +321,7 @@
      "hi": 106.3,
      "color": "mint",
      "label": "Pole",
-     "at": 0.35
-    }
-   ],
-   "say": "This pattern looks like a top, but it's often just a pause."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Strong pole. Slow, tight flag.",
-   "reveal": [
-    15,
-    27
-   ],
-   "zones": [
-    {
-     "from": 5,
-     "to": 14,
-     "lo": 99.79,
-     "hi": 106.3,
-     "color": "mint",
-     "label": "Pole"
+     "at": 0.0
     },
     {
      "from": 15,
@@ -344,15 +330,65 @@
      "hi": 106.3,
      "color": "gold",
      "label": "Flag",
-     "at": 0.3
+     "at": 0.0
     }
    ],
-   "say": "A bull flag is a sharp move up, then a slow, tight drift lower on smaller candles, as buyers take a breather."
+   "say": "A sharp move up, then this slow drift lower. Is it the top, or just a pause? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Breakout, then the classic target.",
+   "headline": "Top, or just a pause?",
+   "big": true,
+   "options": [
+    "Top",
+    "Pause"
+   ],
+   "reveal": [
+    27,
+    27
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "zones": [
+    {
+     "from": 5,
+     "to": 14,
+     "lo": 99.79,
+     "hi": 106.3,
+     "color": "mint",
+     "label": "Pole",
+     "at": 0.0
+    },
+    {
+     "from": 15,
+     "to": 26,
+     "lo": 104.39,
+     "hi": 106.3,
+     "color": "gold",
+     "label": "Flag",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Top, or just a pause?",
+   "big": true,
+   "options": [
+    "Top",
+    "Pause"
+   ],
+   "show": [],
+   "answer": 1,
    "reveal": [
     27,
     41
@@ -383,12 +419,9 @@
      "at": 0.15
     }
    ],
-   "say": "It's confirmed by a close above the flag. The classic target adds the pole's height to the breakout. Here price got there, but plenty of flags fail."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "It's confirmed by a close above the flag. The classic target adds the pole's height to the breakout. Here price got there, but plenty of flags fail. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -405,5 +438,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

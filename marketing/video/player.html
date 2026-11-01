@@ -27,7 +27,7 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--canv
 .ai { background:var(--card); border:3px solid var(--line); }
 .ai b { color:#fff; } .m { color:var(--mint); font-weight:700; } .c { color:var(--coral); font-weight:700; }
 .caption { position:absolute; left:80px; right:140px; bottom:470px; display:flex; justify-content:center; }
-.caption span.box { background:rgba(10,15,22,.86); border:2px solid var(--line); border-radius:22px; padding:18px 30px; font-size:52px; font-weight:700;
+.caption span.box { background:rgba(10,15,22,.86); border:2px solid var(--line); border-radius:22px; padding:18px 30px; font-size:60px; font-weight:700;
   line-height:1.25; text-align:center; max-width:100%; }
 .caption .on { color:var(--mint); }
 .tag { position:absolute; left:80px; top:240px; font-size:26px; color:var(--muted); background:rgba(22,33,45,.8); border:2px solid var(--line); border-radius:30px; padding:8px 20px; }
@@ -56,6 +56,11 @@ body.land .tag { left:150px; top:26px; }
 body.land .big { font-size:96px; }
 body.land .mid { font-size:58px; }
 body.land .chapter { font-size:40px; color:var(--muted); font-weight:700; letter-spacing:4px; text-transform:uppercase; }
+.opts { display:flex; gap:22px; margin-top:26px; }
+.opt { flex:1; text-align:center; background:var(--card); border:4px solid var(--line); border-radius:24px; padding:18px 10px; font-size:52px; font-weight:700; }
+.opt.right { border-color:var(--mint); background:rgba(95,211,160,.16); color:var(--mint); }
+.opt.wrong { opacity:.45; }
+.count { position:absolute; left:0; right:0; text-align:center; font-size:300px; font-weight:700; color:#fff; text-shadow:0 10px 60px rgba(0,0,0,.6); }
 .cta { background:var(--mint); color:#0F1720; font-weight:700; font-size:50px; border-radius:24px; padding:26px 44px; display:inline-block; }
 </style></head>
 <body>
@@ -92,8 +97,9 @@ window.load = (spec) => {
 };
 
 function build(s, i) {
-  if (s.type === "chart") return `${s.headline ? `<div class="head" id="hd${i}">${s.kicker ? `<div class="kicker" style="margin-bottom:18px">${esc(s.kicker)}</div>` : ""}<div class="${s.big ? "big" : "mid"}">${esc(s.headline)}</div></div>` : ""}
-      <svg class="chart" id="cv${i}" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>`;
+  if (s.type === "chart") return `${s.headline ? `<div class="head" id="hd${i}">${s.kicker ? `<div class="kicker" style="margin-bottom:18px">${esc(s.kicker)}</div>` : ""}<div class="${s.big ? "big" : "mid"}">${esc(s.headline)}</div>${s.options ? `<div class="opts">${s.options.map((o, k) => `<div class="opt ${s.answer === undefined ? "" : s.answer === k ? "right" : "wrong"}">${esc(o)}</div>`).join("")}</div>` : ""}</div>` : ""}
+      <svg class="chart" id="cv${i}" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
+      ${s.countdown ? `<div class="count" id="cd${i}"></div>` : ""}`;
   if (s.type === "follow") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:44px">
       <div class="logo">${LOGO(130)}<div><div style="font-size:64px;font-weight:700;letter-spacing:-1px">${esc(s.handle || "@calmedgeofficial")}</div>
       <div class="label" style="font-size:36px">${esc(s.sub || "Calm Edge · trading, explained")}</div></div></div>
@@ -180,10 +186,17 @@ function drawScene(i, s, local, d) {
   (s.show || []).forEach((id) => (show[id] = 1));
   (s.add || []).forEach((id) => (show[id] = ease((p - (s.addAt || 0.12)) / 0.4)));
   const fade = (x) => ease((p - (x.at || 0)) / 0.12);
-  const st = { bars, show, readout: s.readout,
+  // follow-camera: s.zoom = [bars visible at start, at end] -> push-in on the newest candles
+  let view = null;
+  if (s.zoom) { const z = s.zoom[0] + (s.zoom[1] - s.zoom[0]) * inout(clamp(p / 0.9)); view = [Math.max(0, bars + 1.2 - z), Math.max(z, bars + 1.2)]; }
+  const st = { bars, show, view, readout: s.readout,
     levels: (s.levels || []).map((l) => ({ ...l, alpha: fade(l) })), zones: (s.zones || []).map((z) => ({ ...z, alpha: fade(z) })),
     marks: (s.marks || []).map((m) => ({ ...m, alpha: m.bar < bars - 0.2 ? fade(m) : 0 })) };
   const probs = drawChart(document.getElementById(`cv${i}`), ch, box, st);
+  const cd = document.getElementById(`cd${i}`);
+  if (cd) { const k = Math.max(1, s.countdown - Math.floor(local)); cd.textContent = local < s.countdown ? k : "";
+    const f = local - Math.floor(local); cd.style.top = box.y + box.h / 2 - 190 + "px"; cd.style.opacity = 1 - ease((f - 0.6) / 0.4);
+    cd.style.transform = `scale(${1.25 - 0.25 * ease(f / 0.25)})`; }
   if (+document.getElementById(`s${i}`).style.opacity > 0.98) probs.forEach((x) => window.__problems.push(x));
   if (box.h < (land ? 480 : 520)) window.__problems.push("chart too small: headline too long");
 }
@@ -194,12 +207,14 @@ window.render = (t) => {
   SPEC.scenes.forEach((s, i) => {
     const [a, b] = TIMES[i], el = document.getElementById(`s${i}`);
     const d = b - a, local = t - a, p = local / d;
-    const fadeIn = i === 0 ? 1 : ease(local / 0.22), fadeOut = i === SPEC.scenes.length - 1 ? 1 : 1 - ease((local - d + 0.12) / 0.12);
+    // `cont`: the scene continues the previous one (same chart, same question), so it cuts in place instead of fading.
+    const next = SPEC.scenes[i + 1];
+    const fadeIn = i === 0 || s.cont ? 1 : ease(local / 0.22), fadeOut = i === SPEC.scenes.length - 1 || (next && next.cont) ? (local < d ? 1 : 0) : 1 - ease((local - d + 0.12) / 0.12);
     const vis = t >= a - 0.001 && t < b + 0.3;
     el.style.display = vis ? "block" : "none";
     if (!vis) return;
     el.style.opacity = Math.min(fadeIn, fadeOut);
-    el.style.transform = `translateY(${(1 - ease(local / 0.45)) * 40}px)`;
+    el.style.transform = s.cont ? "none" : `translateY(${(1 - ease(local / 0.45)) * 40}px)`;
     if (s.type === "hook") el.querySelectorAll(".w").forEach((w, k, all) => {
       const st = (k / all.length) * Math.min(1.1, d * 0.45); w.style.opacity = ease((local - st) / 0.22);
       w.style.transform = `translateY(${(1 - ease((local - st) / 0.3)) * 26}px)`; });
@@ -219,6 +234,7 @@ window.render = (t) => {
         e.style.opacity = ease((local - st) / 0.3); e.style.transform = `translateY(${(1 - ease((local - st) / 0.35)) * 30}px)`; });
     }
   });
+  const tg = document.querySelector(".tag"); if (tg) tg.style.opacity = SPEC.tagFrom ? clamp((t - SPEC.tagFrom) / 0.4) : 1;
   // Captions: the line being spoken, a few words at a time, current word in mint.
   const i = Math.max(0, TIMES.findIndex(([a, b]) => t >= a && t < b));
   const s = SPEC.scenes[i === -1 ? SPEC.scenes.length - 1 : i], [a] = TIMES[i];

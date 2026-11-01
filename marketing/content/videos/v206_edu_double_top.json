@@ -315,36 +315,32 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "The double top, and when it's real.",
+   "headline": "Two tops. Short it now?",
    "big": true,
-   "reveal": [
-    8,
-    20
+   "options": [
+    "Short now",
+    "Wait"
    ],
-   "say": "The double top, and the moment it actually becomes real."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Two highs. One neckline.",
    "reveal": [
-    20,
+    6,
     28
    ],
+   "show": [],
+   "grow": 0.95,
    "marks": [
     {
      "bar": 12,
      "dir": "down",
      "text": "Top 1",
      "color": "coral",
-     "at": 0.05
+     "at": 0.0
     },
     {
      "bar": 26,
      "dir": "down",
      "text": "Top 2",
      "color": "coral",
-     "at": 0.6
+     "at": 0.0
     }
    ],
    "levels": [
@@ -353,17 +349,107 @@
      "label": "Neckline",
      "color": "gold",
      "below": true,
-     "at": 0.3
+     "at": 0.0
     }
    ],
-   "say": "Two highs at about the same price, with a low between them. That low is the neckline."
+   "say": "Two tops at the same price. Do you short it now? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Confirmed only below the neckline.",
+   "headline": "Two tops. Short it now?",
+   "big": true,
+   "options": [
+    "Short now",
+    "Wait"
+   ],
    "reveal": [
     28,
+    28
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "marks": [
+    {
+     "bar": 12,
+     "dir": "down",
+     "text": "Top 1",
+     "color": "coral",
+     "at": 0.0
+    },
+    {
+     "bar": 26,
+     "dir": "down",
+     "text": "Top 2",
+     "color": "coral",
+     "at": 0.0
+    }
+   ],
+   "levels": [
+    {
+     "price": 106.0,
+     "label": "Neckline",
+     "color": "gold",
+     "below": true,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Two tops. Short it now?",
+   "big": true,
+   "options": [
+    "Short now",
+    "Wait"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    28,
+    34
+   ],
+   "levels": [
+    {
+     "price": 106.0,
+     "label": "Neckline",
+     "color": "gold"
+    }
+   ],
+   "marks": [
+    {
+     "bar": 31,
+     "dir": "down",
+     "text": "Close below",
+     "color": "coral",
+     "at": 0.12
+    }
+   ],
+   "say": "Wait. It's only a double top once a candle closes below the neckline, the low between the two tops.",
+   "sfx": "reveal",
+   "cont": true
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Two tops. Short it now?",
+   "big": true,
+   "options": [
+    "Short now",
+    "Wait"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    34,
     43
    ],
    "levels": [
@@ -389,12 +475,8 @@
      "at": 0.12
     }
    ],
-   "say": "It only counts when a candle closes below the neckline. The classic target is the pattern's height, measured down from the neckline. In this example price got there, but many double tops don't."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "From there, the classic target is the pattern's height measured down. Here it got there, but many double tops don't. Follow for tomorrow's chart.",
+   "cont": true
   }
  ],
  "post": {
@@ -411,5 +493,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }

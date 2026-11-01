@@ -15,13 +15,14 @@
 
   // The "camera" frames what is visible now: the candles drawn so far (the forming one included, so the view moves
   // smoothly), the indicator values drawn so far, and this scene's levels and zones.
-  function scaleFor(chart, state, upto, formed) {
+  function scaleFor(chart, state, upto, formed, v0) {
     let lo = Infinity, hi = -Infinity;
     const take = (v) => { if (v === null || v === undefined || isNaN(v)) return; lo = Math.min(lo, v); hi = Math.max(hi, v); };
-    for (let i = 0; i < upto; i++) { const b = i === upto - 1 && formed ? formed : chart.candles[i]; take(b.h); take(b.l); }
+    const a = Math.max(0, Math.floor(v0 || 0));
+    for (let i = a; i < upto; i++) { const b = i === upto - 1 && formed ? formed : chart.candles[i]; take(b.h); take(b.l); }
     const show = state.show || {};
-    (chart.lines || []).forEach((l) => { if (show[l.id]) l.values.slice(0, Math.floor(state.bars)).forEach(take); });
-    (chart.bands || []).forEach((b) => { if (show[b.id]) { b.upper.slice(0, Math.floor(state.bars)).forEach(take); b.lower.slice(0, Math.floor(state.bars)).forEach(take); } });
+    (chart.lines || []).forEach((l) => { if (show[l.id]) l.values.slice(a, Math.floor(state.bars)).forEach(take); });
+    (chart.bands || []).forEach((b) => { if (show[b.id]) { b.upper.slice(a, Math.floor(state.bars)).forEach(take); b.lower.slice(a, Math.floor(state.bars)).forEach(take); } });
     (state.levels || []).forEach((l) => take(l.price));
     (state.zones || []).forEach((z) => { take(z.lo); take(z.hi); });
     const span = Math.max(hi - lo, (hi + lo) / 2 * 0.004);
@@ -38,9 +39,13 @@
     if (frac0 > 0 && full0 < n) { const b = chart.candles[full0], c = b.o + (b.c - b.o) * frac0;
       formed = { h: Math.max(b.o, c) + (b.h - Math.max(b.o, b.c)) * frac0, l: Math.min(b.o, c) - (Math.min(b.o, b.c) - b.l) * frac0 }; }
     const upto = Math.max(1, full0 + (formed ? 1 : 0));
-    const [lo, hi] = scaleFor(chart, state, upto, formed);
-    const slots = Math.max(state.minBars || 16, bars0 + 1.5), step = box.w / Math.min(n + 0.5, slots), bw = Math.max(4, step * 0.62);
-    const X = (i) => box.x + step * (i + 0.5);
+    // Camera: state.view = [first, last] bar shown (fractions allowed, for smooth push-ins); default = everything so far.
+    const v0 = state.view ? Math.max(0, state.view[0]) : 0;
+    const [lo, hi] = scaleFor(chart, state, upto, formed, v0);
+    const slots = state.view ? Math.max(4, state.view[1] - v0) : Math.max(state.minBars || 16, bars0 + 1.5);
+    const step = box.w / (state.view ? slots : Math.min(n + 0.5, slots)), bw = Math.max(4, step * 0.62);
+    const X = (i) => box.x + step * (i - v0 + 0.5);
+    const inView = (i) => X(i) > box.x - step && X(i) < box.x + box.w + step;
     const pad = chart._marked ? Math.min(112, mainH * 0.24) : 30; // room for arrows and their labels above the highs and below the lows
     const Y = (p) => box.y + pad + (mainH - 2 * pad) * (1 - (p - lo) / (hi - lo));
     const py0 = box.y + mainH + gap;
@@ -62,7 +67,7 @@
       const k = (state.show || {})[b.id] || 0; if (!k) return;
       const upto = Math.min(full, Math.round(n * k));
       const up = [], dn = [];
-      for (let i = 0; i < upto; i++) if (b.upper[i] !== null) { up.push(`${X(i)},${Y(b.upper[i])}`); dn.unshift(`${X(i)},${Y(b.lower[i])}`); }
+      for (let i = 0; i < upto; i++) if (b.upper[i] !== null && inView(i)) { up.push(`${X(i)},${Y(b.upper[i])}`); dn.unshift(`${X(i)},${Y(b.lower[i])}`); }
       if (up.length > 1) {
         s += `<polygon points="${up.concat(dn).join(" ")}" fill="${col(b.color)}" opacity="0.10"/>`;
         s += `<polyline points="${up.join(" ")}" fill="none" stroke="${col(b.color)}" stroke-width="4" opacity="0.85"/>`;
@@ -77,6 +82,7 @@
     });
     // candles
     for (let i = 0; i < Math.min(n, full + (frac > 0 ? 1 : 0)); i++) {
+      if (!inView(i)) continue;
       const b = chart.candles[i];
       let o = b.o, c = b.c, h = b.h, l = b.l;
       if (i === full) { // the forming candle grows from its open
@@ -91,7 +97,7 @@
     (chart.lines || []).forEach((ln) => {
       const k = (state.show || {})[ln.id] || 0; if (!k) return;
       const upto = Math.min(full, Math.round(n * k)), pts = [];
-      for (let i = 0; i < upto; i++) if (ln.values[i] !== null) pts.push(`${X(i)},${Y(ln.values[i])}`);
+      for (let i = 0; i < upto; i++) if (ln.values[i] !== null && inView(i)) pts.push(`${X(i)},${Y(ln.values[i])}`);
       if (pts.length > 1) s += `<polyline points="${pts.join(" ")}" fill="none" stroke="${col(ln.color)}" stroke-width="6" stroke-linejoin="round" ${ln.dash ? 'stroke-dasharray="14 10"' : ""}/>`;
     });
     // lower panel
@@ -105,10 +111,10 @@
             `<text x="${box.x + box.w - 21}" y="${PY(lv.y) + 9}" text-anchor="middle" font-size="24" font-weight="700" fill="${col(lv.color || "muted")}">${lv.label || lv.y}</text>`;
         });
         const upto = Math.min(full, Math.round(n * k));
-        if (panel.hist) for (let i = 0; i < upto; i++) { const v = panel.hist.values[i]; if (v === null) continue;
+        if (panel.hist) for (let i = 0; i < upto; i++) { const v = panel.hist.values[i]; if (v === null || !inView(i)) continue;
           const y0 = PY(0), y1 = PY(v); s += `<rect x="${X(i) - bw / 2}" y="${Math.min(y0, y1)}" width="${bw}" height="${Math.abs(y1 - y0)}" fill="${v >= 0 ? C.mint : C.coral}" opacity="0.55"/>`; }
         (panel.lines || []).forEach((ln) => {
-          const pts = []; for (let i = 0; i < upto; i++) if (ln.values[i] !== null) { pts.push(`${X(i)},${PY(ln.values[i])}`); }
+          const pts = []; for (let i = 0; i < upto; i++) if (ln.values[i] !== null && inView(i)) { pts.push(`${X(i)},${PY(ln.values[i])}`); }
           if (pts.length > 1) s += `<polyline points="${pts.join(" ")}" fill="none" stroke="${col(ln.color)}" stroke-width="5" stroke-linejoin="round"/>`;
         });
         const main = (panel.lines || [])[0];
@@ -116,7 +122,8 @@
         s += `<text x="${box.x}" y="${py0 + 40}" font-size="28" font-weight="700" fill="${C.muted}">${panel.label}${panelVal !== null && state.readout !== false ? ` <tspan fill="${col((panel.lines[0] || {}).color)}">${panelVal.toFixed(1)}</tspan>` : ""}</text>`;
       }
     }
-    host.innerHTML = s;
+    const cid = "clip_" + (host.id || "c") + "_" + Math.round(box.x) + "_" + Math.round(box.y);  // unique per scene: an id shared with a hidden scene would not clip
+    host.innerHTML = `<defs><clipPath id="${cid}"><rect x="${box.x - 18}" y="${box.y}" width="${box.w + 36}" height="${box.h}" rx="26"/></clipPath></defs><g clip-path="url(#${cid})">${s}</g>`;
     // legend for visible price lines, measured so items never collide
     let lx = box.x + 6;
     [...(chart.lines || []), ...(chart.bands || [])].forEach((ln) => {
@@ -131,10 +138,12 @@
     // labels (levels, zones, marks): text with a dark plate, measured to stay inside the chart
     const plates = [], arrows = [];
     const label = (x, y, text, color, alpha, anchor) => {
+      if (!text) return;  // a line without a label (e.g. already named in an earlier scene)
       const t = document.createElementNS(NS, "text");
       t.setAttribute("font-size", "34"); t.setAttribute("font-weight", "700"); t.setAttribute("fill", col(color)); t.textContent = text;
       host.appendChild(t);
       const w = t.getBBox().width, hgt = 44;
+      y = Math.max(box.y + hgt / 2 + 10, Math.min(box.y + box.h - hgt / 2 - 10, y));  // a label never leaves the card, even for one frame
       let x0 = anchor === "middle" ? x - w / 2 : anchor === "end" ? x - w - 24 : anchor === "end-left" ? x - 60 - w - 24 : anchor === "start-right" ? x + 52 : x;
       const minX = box.x - 6, maxX = box.x + box.w + 6 - w - 24;
       x0 = Math.max(minX + 12, Math.min(maxX, x0));
@@ -150,8 +159,11 @@
     (state.zones || []).forEach((z) => { if (!z.alpha || !z.label) return;
       const above = Y(z.hi) - 40; label((X(z.from) + Math.min(box.x + box.w, X(Math.min(z.to, n - 1)))) / 2, above - 30 > box.y ? above : Y(z.hi) + 40, z.label, z.color, z.alpha, "middle"); });
     (state.marks || []).forEach((m) => {
-      if (!m.alpha) return;
-      const x = X(m.bar), b = chart.candles[m.bar], c = col(m.color), a = m.alpha;
+      if (!m.alpha || !inView(m.bar)) return;
+      const x = X(m.bar), b = chart.candles[m.bar], c = col(m.color);
+      // while the camera pushes in, a mark sliding off the left edge fades out before its label can leave the chart
+      const a = m.alpha * Math.max(0, Math.min(1, (x - box.x - 40) / 110));
+      if (a <= 0.02) return;
       if (m.panel) { // a dot on the indicator line, label beside it
         const y = PY(m.value);
         host.insertAdjacentHTML("beforeend", `<circle cx="${x}" cy="${y}" r="13" fill="${c}" stroke="#0F1720" stroke-width="4" opacity="${a}"/>`);

@@ -329,72 +329,116 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "A trend is just two rules.",
+   "headline": "Is this uptrend still alive?",
    "big": true,
+   "options": [
+    "Yes",
+    "It's over"
+   ],
    "reveal": [
     6,
-    12
+    36
    ],
-   "say": "Forget indicators. A trend is just two simple rules."
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Higher highs. Higher lows.",
-   "reveal": [
-    12,
-    32
-   ],
+   "show": [],
+   "grow": 0.95,
    "marks": [
-    {
-     "bar": 6,
-     "dir": "down",
-     "color": "mint",
-     "at": 0.0
-    },
-    {
-     "bar": 10,
-     "dir": "up",
-     "color": "mint",
-     "at": 0.05
-    },
     {
      "bar": 16,
      "dir": "down",
      "text": "HH",
      "color": "mint",
-     "at": 0.25
+     "at": 0.0
     },
     {
      "bar": 20,
      "dir": "up",
      "text": "HL",
      "color": "mint",
-     "at": 0.4
+     "at": 0.0
     },
     {
      "bar": 26,
      "dir": "down",
      "text": "HH",
      "color": "mint",
-     "at": 0.6
+     "at": 0.0
     },
     {
      "bar": 30,
      "dir": "up",
      "text": "HL",
      "color": "mint",
-     "at": 0.8
+     "at": 0.0
     }
    ],
-   "say": "In an uptrend, each high is above the last one, and each pullback stops above the previous low."
+   "say": "Higher highs, higher lows. Is this uptrend still alive? Decide before the reveal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Lower high, then a break.",
+   "headline": "Is this uptrend still alive?",
+   "big": true,
+   "options": [
+    "Yes",
+    "It's over"
+   ],
    "reveal": [
-    32,
+    36,
+    36
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    11
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "marks": [
+    {
+     "bar": 16,
+     "dir": "down",
+     "text": "HH",
+     "color": "mint",
+     "at": 0.0
+    },
+    {
+     "bar": 20,
+     "dir": "up",
+     "text": "HL",
+     "color": "mint",
+     "at": 0.0
+    },
+    {
+     "bar": 26,
+     "dir": "down",
+     "text": "HH",
+     "color": "mint",
+     "at": 0.0
+    },
+    {
+     "bar": 30,
+     "dir": "up",
+     "text": "HL",
+     "color": "mint",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Is this uptrend still alive?",
+   "big": true,
+   "options": [
+    "Yes",
+    "It's over"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    36,
     45
    ],
    "levels": [
@@ -423,12 +467,9 @@
      "at": 0.5
     }
    ],
-   "say": "When price makes a lower high and then closes below the last higher low, the structure is broken. That's often the first warning that the trend is changing."
-  },
-  {
-   "type": "follow",
-   "text": "Follow for one trading concept a day.",
-   "say": "Save this, and follow for one trading concept a day."
+   "say": "A lower high, then a close below the last higher low. The structure is broken, and that's often the first warning that the trend is changing. Follow for tomorrow's chart.",
+   "sfx": "reveal",
+   "cont": true
   }
  ],
  "post": {
@@ -445,5 +486,7 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "tagFrom": 7,
+ "format_v": 2,
  "voice": "andrew_up"
 }
