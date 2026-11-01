@@ -208,5 +208,35 @@
   "channel": "facebook",
   "time": "2026-11-01T09:32+01:00",
   "url": "https://www.facebook.com/1470032662849525_122107227213520033"
+ },
+ {
+  "id": "v014_habit",
+  "channel": "instagram_story",
+  "time": "2026-11-01T15:53+01:00",
+  "url": "story:18116346029020543"
+ },
+ {
+  "id": "v201_edu_rsi_70",
+  "channel": "instagram_story",
+  "time": "2026-11-01T15:53+01:00",
+  "url": "story:18097018094696698"
+ },
+ {
+  "id": "v202_edu_20ema",
+  "channel": "instagram_story",
+  "time": "2026-11-01T15:53+01:00",
+  "url": "story:17894921271614560"
+ },
+ {
+  "id": "v203_edu_vwap",
+  "channel": "instagram_story",
+  "time": "2026-11-01T15:53+01:00",
+  "url": "story:17903933502371907"
+ },
+ {
+  "id": "c202_car_20ema",
+  "channel": "instagram_story",
+  "time": "2026-11-01T15:53+01:00",
+  "error": "POST https://graph.facebook.com/v21.0/17841457576495166/media -> 400: {\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"type\":\"OAuthException\",\"code\":9004,\"error_subcode\":2207052,\"is_transient\":false,\"error_user_title\":\"Il download del contenuto multimediale non \\u00e8 riuscito. L'URI del contenuto multimediale non rispetta i nostri requisiti.\",\"error_user_msg\":\"Non \\u00e8 stato possibile recuperare il contenuto multimediale da questo URI: ht"
  }
 ]
