@@ -73,5 +73,5 @@ jobs:
       - name: Save the log
         if: always()
         run: |
-          git add marketing/published.json marketing/status.json 2>/dev/null || true
+          git add marketing/published.json marketing/status.json marketing/insights.json 2>/dev/null || true
           git diff --cached --quiet || (git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Published $(date -u +%F)" && git pull -q --rebase && git push)
