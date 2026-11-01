@@ -219,5 +219,23 @@
    "facebook",
    "youtube"
   ]
+ },
+ {
+  "id": "c202_car_20ema",
+  "date": "2026-11-01",
+  "time": "09:30",
+  "channels": [
+   "instagram",
+   "facebook"
+  ]
+ },
+ {
+  "id": "c209_car_risk_reward",
+  "date": "2026-11-02",
+  "time": "09:30",
+  "channels": [
+   "instagram",
+   "facebook"
+  ]
  }
 ]
