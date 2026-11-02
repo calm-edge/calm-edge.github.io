@@ -314,13 +314,13 @@
     "levels": [
      {
       "price": 103.0,
-      "label": "Range high",
+      "label": "",
       "color": "coral",
       "labelPos": "right"
      },
      {
       "price": 100.0,
-      "label": "Range low",
+      "label": "",
       "color": "mint",
       "below": true,
       "labelAt": 19.5
@@ -560,6 +560,10 @@
    "link": "https://amirkallas2cs-gif.github.io/learn/"
   },
   "title": "How to trade a range in 4 steps"
+ },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
  },
  "voice": "andrew_up"
 }

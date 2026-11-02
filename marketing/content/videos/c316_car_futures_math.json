@@ -335,5 +335,9 @@
   },
   "title": "Futures point values: ES, MES, NQ, MNQ"
  },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
  "voice": "andrew_up"
 }

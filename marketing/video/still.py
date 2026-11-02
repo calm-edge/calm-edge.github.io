@@ -15,6 +15,8 @@ def main():
     for f in ("still.html", "chart.js"):
         shutil.copy(HERE / f, work / f)
     shutil.copytree(FONTS, work / "fonts")
+    if (HERE.parent / "shots" / "presenter").exists():
+        shutil.copytree(HERE.parent / "shots" / "presenter", work / "shots" / "presenter")
     jobs = []  # (slide spec, slide index, W, H, file)
     if spec.get("slides"):
         n = len(spec["slides"])
@@ -34,6 +36,7 @@ def main():
             pg.goto((work / "still.html").as_uri()); pg.evaluate("() => Promise.all(['400', '600', '700'].map((w) => document.fonts.load(w + ' 30px Inter')))")  # load every weight before measuring text
             probs = pg.evaluate("([s, i, W, H]) => renderSlide(s, i, W, H)", [sp, i, W, H])
             problems += [f"{name}: {x}" for x in probs]
+            pg.evaluate("() => Promise.all([...document.images].map((im) => im.complete ? 0 : new Promise((r) => { im.onload = im.onerror = r; })))")
             pg.screenshot(path=str(out / name), type="jpeg", quality=92)
             pg.close()
         b.close()

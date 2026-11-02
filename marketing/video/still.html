@@ -85,15 +85,18 @@ window.renderSlide = (spec, i, W, H) => {
   const footTop = H - pad - footH - (story ? 220 : 0);
   let html = "";
   const body = (inner) => `<div class="content" id="ct" style="left:${pad}px;right:${pad}px;top:${top}px;bottom:${H - footTop + 26}px">${inner}</div>`;
-  const chartDiv = (h) => `<div class="chartbox" id="cb" style="height:${h}px;width:100%"><svg id="cv" width="${W - 2 * pad}" height="${h}"></svg></div>`;
+  const chartDiv = (h, f = 1) => `<div class="chartbox" id="cb" style="height:${h}px;width:${f * 100}%"><svg id="cv" width="${(W - 2 * pad) * f}" height="${h}"></svg></div>`;
+  // presenter: on the cover (side view, gesturing at the chart) and on the takeaway (front view)
+  const host = spec.presenter && !land && (s.type === "cover" || s.type === "end");
+  const hostH = s.type === "cover" ? (story ? 900 : H > 1400 ? 700 : 640) : (story ? 1000 : H > 1400 ? 860 : 760);
   if (s.type === "cover") html = body(`${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title">${esc(s.title)}</div>
-      ${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}${s.chart ? chartDiv(story ? 640 : s.chartH || 470) : ""}<div class="swipe">${story ? s.button ?? "New post · on our profile" : "Swipe →"}</div>`.replace('<div class="swipe"></div>', ""));
+      ${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}${s.chart ? chartDiv(story ? 640 : s.chartH || 470, host ? 0.66 : 1) : ""}<div class="swipe">${story ? s.button ?? "New post · on our profile" : "Swipe →"}</div>`.replace('<div class="swipe"></div>', ""));
   if (s.type === "chart") html = body(`${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title mid">${esc(s.title)}</div>${chartDiv(s.chartH || 560)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
   if (s.type === "points") html = body(`<div class="title mid">${esc(s.title)}</div><div class="points">${s.points.map((p, k) =>
       `<div class="pt"><div class="n" style="--c:var(--${p.color || "mint"})">${p.icon || k + 1}</div><div class="t">${p.b ? `<b>${esc(p.b)}</b>` : ""}${rich(p.t || "")}</div></div>`).join("")}</div>`);
   if (s.type === "formula") html = body(`<div class="title mid">${esc(s.title)}</div><div class="formula"><span class="fx" style="white-space:nowrap">${esc(s.formula)}</span>${s.small ? `<small>${esc(s.small)}</small>` : ""}</div>${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
   if (s.type === "rows") html = body(`<div class="title mid">${esc(s.title)}</div>${rowsHtml(s)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
-  if (s.type === "end") html = body(`<div class="kicker">Key takeaway</div><div class="title">${esc(s.title)}</div>${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}
+  if (s.type === "end") html = (host ? (x) => body(x).replace(`right:${pad}px`, `right:${Math.round(W * 0.43)}px`) : body)(`<div class="kicker">Key takeaway</div><div class="title">${esc(s.title)}</div>${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}
       <div class="save">Save this · Follow ${esc(spec.handle || "@calmedgeofficial")}</div>`);
   // highlight cover: Instagram shows the centre as a circle, so the icon sits in the middle and nothing else matters
   if (s.type === "hlcover") html = `<div id="ct" style="position:absolute;inset:${pad}px;display:flex;align-items:center;justify-content:center">
@@ -105,6 +108,7 @@ window.renderSlide = (spec, i, W, H) => {
   if (!land && s.type !== "hlcover") html += `<div class="foot" style="left:${pad}px;right:${pad}px;top:${footTop}px;height:${footH}px">${LOGO(56)}<div><b>Calm Edge</b> · trading, explained</div>
       ${story ? "" : `<div class="pg">${i + 1}/${N}</div>`}</div>`;
   if (spec.tag && !land && s.type !== "hlcover") html += `<div class="tag" style="left:${pad}px;top:${top - 50}px">${esc(spec.tag)}</div>`;
+  if (host) html += `<img id="host" src="${s.type === "cover" ? spec.presenter.side : spec.presenter.front}" style="position:absolute;right:${pad - 20}px;bottom:${H - footTop + 8}px;height:${hostH}px">`;
   document.getElementById("slide").innerHTML = html;
   const probs = [];
   // formulas stay on one line: shrink the font until it fits
@@ -121,6 +125,10 @@ window.renderSlide = (spec, i, W, H) => {
       levels: (st.levels || []).map((l) => ({ ...l, alpha: 1 })), zones: (st.zones || []).map((z) => ({ ...z, alpha: 1 })), marks: (st.marks || []).map((m) => ({ ...m, alpha: 1 })) };
     drawChart(g, ch, { x: 20, y: 0, w: w - 40, h }, state).forEach((p) => probs.push(p));
   }
+  const hostEl = document.getElementById("host");
+  if (hostEl) { const hb = { left: W - (pad - 20) - hostH * (s.type === "cover" ? 0.325 : 0.5), top: footTop - 8 - hostH, right: W - pad + 20, bottom: footTop - 8 };
+    document.querySelectorAll("#ct .title, #ct .text, #ct .kicker, #ct .swipe, #ct .save, #cb").forEach((e) => { const r = e.getBoundingClientRect();
+      if (r.right > hb.left + 10 && r.left < hb.right && r.bottom > hb.top + 10 && r.top < hb.bottom) probs.push("presenter covers: " + (e.textContent || e.id).trim().slice(0, 30)); }); }
   // layout checks: nothing overflows, the content stays above the footer, inside the canvas
   const ct = document.getElementById("ct").getBoundingClientRect();
   document.querySelectorAll("#slide *").forEach((e) => {

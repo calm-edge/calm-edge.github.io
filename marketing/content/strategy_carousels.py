@@ -126,7 +126,7 @@ Z_buy = {"from": 0, "to": 30, "lo": 100.0, "hi": 100.45, "color": "mint", "label
 Z_sell = {"from": 0, "to": 30, "lo": 102.55, "hi": 103.0, "color": "coral", "label": "Sell zone"}
 carousel("c314_car_range_trading", S.rch, [
     {"type": "cover", "kicker": "Strategy · 4 steps", "title": "Price bounced here 6 times. Here's the plan.", "chart": "a", "chartH": 640,
-     "state": st(31, [R_hi, R_lo], marks=touch)},
+     "state": st(31, [{**R_hi, "label": ""}, {**R_lo, "label": ""}], marks=touch)},  # narrow cover chart: lines only
     step(1, 4, "Confirm it's a range", st(31, [R_hi, R_lo], marks=touch),
          "At least **2 touches per side** and flat highs and lows. Here: **3 and 3**."),
     step(2, 4, "Trade only the edges", st(31, zones=[Z_sell, Z_buy]),

@@ -485,14 +485,7 @@
       "label": "First 30 min"
      }
     ],
-    "marks": [
-     {
-      "bar": 8,
-      "dir": "up",
-      "text": "Close above",
-      "color": "mint"
-     }
-    ]
+    "marks": []
    }
   },
   {
@@ -716,6 +709,10 @@
    "link": "https://amirkallas2cs-gif.github.io/learn/"
   },
   "title": "Opening range breakout: the full strategy"
+ },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
  },
  "voice": "andrew_up"
 }

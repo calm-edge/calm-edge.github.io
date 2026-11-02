@@ -493,5 +493,9 @@
   },
   "title": "Gap fill strategy in 4 steps"
  },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
  "voice": "andrew_up"
 }

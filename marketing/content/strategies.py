@@ -67,7 +67,8 @@ win_state = orb_state(ORB, ORB["t_hit"] + 3)
 fail_state = orb_state(ORF, len(ORF["c"]), target=False)
 fail_state["marks"].append({"bar": ORF["s_hit"], "dir": "down", "text": "Stopped", "color": "coral"})
 carousel("c301_car_orb", orb_charts, [
-    {"type": "cover", "kicker": "Strategy breakdown", "title": "The opening range breakout, step by step.", "chart": "a", "state": orb_state(ORB, ORB["brk"] + 4, target=False, stop=False)},
+    {"type": "cover", "kicker": "Strategy breakdown", "title": "The opening range breakout, step by step.", "chart": "a",
+     "state": {**orb_state(ORB, ORB["brk"] + 4, target=False, stop=False), "marks": []}},  # narrow cover chart (presenter): no arrow
     {"type": "points", "title": "The idea", "points": [
         {"b": "Mark the first 30 minutes", "t": "Their high and low are the opening range.", "color": "blue"},
         {"b": "Wait for a close outside it", "t": "A close above the high: long. Below the low: short.", "color": "mint"},

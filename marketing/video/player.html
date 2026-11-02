@@ -34,6 +34,11 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--canv
 body.host .caption { right:530px; left:60px; }
 body.host .caption span.box { font-size:50px; padding:16px 24px; }
 .presenter { position:absolute; top:1205px; height:1100px; transform-origin:50% 100%; will-change:transform, opacity; opacity:0; }
+body.host .safe { bottom:720px; }
+/* landscape lessons: the presenter stands on the right, everything else moves left */
+body.land .presenter { top:250px; height:1180px; }
+body.land.host .safe, body.land.host .head { right:600px; }
+body.land.host .caption { right:600px; }
 .tag { position:absolute; left:80px; top:240px; font-size:26px; color:var(--muted); background:rgba(22,33,45,.8); border:2px solid var(--line); border-radius:30px; padding:8px 20px; }
 .rows { background:var(--card); border-radius:30px; border:3px solid var(--line); overflow:hidden; }
 .rows .hd, .rows .r { display:grid; grid-template-columns: 1.6fr 1fr 1.2fr; align-items:center; padding:0 34px; }
@@ -149,7 +154,7 @@ function build(s, i) {
 function placeShot(i, s, p) {
   const sh = document.getElementById(`sh${i}`), img = sh.querySelector("img");
   const iw = img.naturalWidth, ih = img.naturalHeight;
-  const W = 860, top0 = s.title ? 600 : 360, avail = 1920 - top0 - 660 - (s.chips ? 190 : 0);
+  const W = 860, top0 = s.title ? 600 : 360, avail = 1920 - top0 - 660 - (s.chips ? 190 : 0) - (SPEC.presenter ? 90 : 0);
   const baseScale = Math.min(W / iw, avail / ih);
   let scale = baseScale, cx = iw / 2, cy = ih / 2;
   if (s.focus) {
@@ -188,7 +193,7 @@ function drawScene(i, s, local, d) {
   const hd = document.getElementById(`hd${i}`);
   const top = hd ? hd.getBoundingClientRect().bottom + 44 : 380;
   const land = SPEC.format === "landscape";
-  const box = land ? { x: 170, y: hd ? top : 110, w: 1580, h: 1080 - 190 - (hd ? top : 110) } : { x: 98, y: top, w: 824, h: (SPEC.presenter ? 1185 : 1270) - top };  // leave room for the presenter
+  const box = land ? { x: 170, y: hd ? top : 110, w: SPEC.presenter ? 1130 : 1580, h: 1080 - 190 - (hd ? top : 110) } : { x: 98, y: top, w: 824, h: (SPEC.presenter ? 1185 : 1270) - top };  // leave room for the presenter
   const [r0, r1] = s.reveal || [n, n];
   const grow = s.grow || 0.85;
   const bars = r0 + (r1 - r0) * clamp(local / Math.max(0.5, d * grow));

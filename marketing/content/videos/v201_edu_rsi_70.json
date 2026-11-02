@@ -519,5 +519,9 @@
    "link": "https://amirkallas2cs-gif.github.io/"
   }
  },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
  "voice": "andrew_up"
 }
