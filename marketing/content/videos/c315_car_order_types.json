@@ -1,0 +1,439 @@
+{
+ "id": "c315_car_order_types",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 100.41,
+     "h": 100.48,
+     "l": 100.33,
+     "c": 100.4,
+     "v": 1227
+    },
+    {
+     "o": 100.4,
+     "h": 100.43,
+     "l": 100.32,
+     "c": 100.36,
+     "v": 1170
+    },
+    {
+     "o": 100.36,
+     "h": 100.43,
+     "l": 100.3,
+     "c": 100.39,
+     "v": 1349
+    },
+    {
+     "o": 100.4,
+     "h": 100.46,
+     "l": 100.29,
+     "c": 100.36,
+     "v": 1672
+    },
+    {
+     "o": 100.35,
+     "h": 100.36,
+     "l": 100.15,
+     "c": 100.25,
+     "v": 1884
+    },
+    {
+     "o": 100.25,
+     "h": 100.42,
+     "l": 100.23,
+     "c": 100.31,
+     "v": 2053
+    },
+    {
+     "o": 100.29,
+     "h": 100.39,
+     "l": 100.02,
+     "c": 100.1,
+     "v": 2933
+    },
+    {
+     "o": 100.09,
+     "h": 100.33,
+     "l": 100.07,
+     "c": 100.3,
+     "v": 2681
+    },
+    {
+     "o": 100.3,
+     "h": 100.38,
+     "l": 100.25,
+     "c": 100.34,
+     "v": 1436
+    },
+    {
+     "o": 100.34,
+     "h": 100.42,
+     "l": 100.21,
+     "c": 100.25,
+     "v": 2454
+    },
+    {
+     "o": 100.23,
+     "h": 100.38,
+     "l": 100.06,
+     "c": 100.25,
+     "v": 1330
+    },
+    {
+     "o": 100.27,
+     "h": 100.42,
+     "l": 100.09,
+     "c": 100.12,
+     "v": 2661
+    },
+    {
+     "o": 100.12,
+     "h": 100.16,
+     "l": 99.84,
+     "c": 99.92,
+     "v": 2740
+    },
+    {
+     "o": 99.92,
+     "h": 99.95,
+     "l": 99.86,
+     "c": 99.86,
+     "v": 1982
+    },
+    {
+     "o": 99.86,
+     "h": 99.9,
+     "l": 99.43,
+     "c": 99.55,
+     "v": 5330
+    },
+    {
+     "o": 99.55,
+     "h": 99.84,
+     "l": 99.52,
+     "c": 99.73,
+     "v": 2611
+    },
+    {
+     "o": 99.71,
+     "h": 100.14,
+     "l": 99.7,
+     "c": 99.89,
+     "v": 2585
+    },
+    {
+     "o": 99.9,
+     "h": 99.94,
+     "l": 99.74,
+     "c": 99.75,
+     "v": 2436
+    },
+    {
+     "o": 99.75,
+     "h": 100.08,
+     "l": 99.71,
+     "c": 99.94,
+     "v": 2734
+    },
+    {
+     "o": 99.93,
+     "h": 100.22,
+     "l": 99.88,
+     "c": 100.16,
+     "v": 3479
+    },
+    {
+     "o": 100.15,
+     "h": 100.24,
+     "l": 100.1,
+     "c": 100.13,
+     "v": 1518
+    },
+    {
+     "o": 100.13,
+     "h": 100.21,
+     "l": 100.08,
+     "c": 100.2,
+     "v": 1527
+    },
+    {
+     "o": 100.2,
+     "h": 100.42,
+     "l": 100.2,
+     "c": 100.41,
+     "v": 3069
+    },
+    {
+     "o": 100.41,
+     "h": 100.59,
+     "l": 100.34,
+     "c": 100.52,
+     "v": 1628
+    },
+    {
+     "o": 100.51,
+     "h": 100.63,
+     "l": 100.45,
+     "c": 100.61,
+     "v": 2272
+    },
+    {
+     "o": 100.6,
+     "h": 100.9,
+     "l": 100.56,
+     "c": 100.8,
+     "v": 3969
+    },
+    {
+     "o": 100.81,
+     "h": 100.9,
+     "l": 100.78,
+     "c": 100.85,
+     "v": 1252
+    },
+    {
+     "o": 100.85,
+     "h": 100.94,
+     "l": 100.82,
+     "c": 100.89,
+     "v": 1239
+    },
+    {
+     "o": 100.88,
+     "h": 101.07,
+     "l": 100.84,
+     "c": 100.96,
+     "v": 1645
+    },
+    {
+     "o": 100.98,
+     "h": 101.06,
+     "l": 100.94,
+     "c": 101.05,
+     "v": 1686
+    },
+    {
+     "o": 101.05,
+     "h": 101.13,
+     "l": 100.99,
+     "c": 101.1,
+     "v": 1867
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "tf": "5m"
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Trading basics",
+   "title": "3 buy orders. Where does each one fill?",
+   "chart": "a",
+   "chartH": 640,
+   "state": {
+    "bars": 10,
+    "show": [],
+    "levels": [
+     {
+      "price": 99.5,
+      "label": "Buy limit 99.50",
+      "color": "blue",
+      "from": 9,
+      "below": true,
+      "labelPos": "right"
+     },
+     {
+      "price": 100.5,
+      "label": "Buy stop 100.50",
+      "color": "orange",
+      "from": 9,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 9,
+      "dir": "up",
+      "text": "Price now",
+      "color": "ink"
+     }
+    ],
+    "lastPrice": false
+   }
+  },
+  {
+   "type": "chart",
+   "kicker": "Order 1",
+   "title": "Market order: fills now",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 10,
+    "show": [],
+    "levels": [],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 9,
+      "dir": "up",
+      "text": "Filled ~100.25",
+      "color": "ink"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Fills **immediately** at the best price available. Fast, but the price is **not guaranteed**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Order 2",
+   "title": "Buy limit: below the price",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 15,
+    "show": [],
+    "levels": [
+     {
+      "price": 99.5,
+      "label": "Buy limit 99.50",
+      "color": "blue",
+      "from": 9,
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 14,
+      "dir": "down",
+      "text": "Filled 99.50",
+      "color": "blue"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "You wait for a **better price**. Here it came. If it never comes, **no fill**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Order 3",
+   "title": "Buy stop: above the price",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 24,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.5,
+      "label": "Buy stop 100.50",
+      "color": "orange",
+      "from": 9,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 23,
+      "dir": "up",
+      "text": "Triggered 100.50",
+      "color": "orange"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Used for **breakouts** and **stop losses**. It becomes a market order, so it can **slip**."
+  },
+  {
+   "type": "points",
+   "title": "And the stop-limit?",
+   "points": [
+    {
+     "b": "A stop that becomes a limit order",
+     "t": "You cap the worst price you accept.",
+     "color": "blue"
+    },
+    {
+     "b": "In a fast move it can be skipped",
+     "t": "Price jumps past your limit: no fill.",
+     "color": "coral"
+    },
+    {
+     "b": "So don't use it as a stop loss",
+     "t": "That's exactly when you need to be out.",
+     "color": "gold"
+    }
+   ]
+  },
+  {
+   "type": "rows",
+   "title": "Quick guide",
+   "head": [
+    "You want…",
+    "",
+    "Use"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "In right now",
+      "",
+      "Market"
+     ]
+    },
+    {
+     "cells": [
+      "A better price",
+      "",
+      "Limit"
+     ]
+    },
+    {
+     "cells": [
+      "Out if wrong",
+      "",
+      "Stop"
+     ],
+     "good": true,
+     "hl": true
+    },
+    {
+     "cells": [
+      "A capped breakout entry",
+      "",
+      "Stop-limit"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Your stop loss should be a stop order.",
+   "text": "Limit to get a better price. Stop to get **out, no matter what**."
+  }
+ ],
+ "post": {
+  "instagram": "Market order: fills now, price not guaranteed. Buy limit: below the price, fills only if price comes to you. Buy stop: above the price, for breakouts and stop losses, can slip. Stop-limit: can be skipped in a fast move, so don't use it as your protective stop.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#ordertypes #tradingbasics #stoploss #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Market order: fills now, price not guaranteed. Buy limit: below the price, fills only if price comes to you. Buy stop: above the price, for breakouts and stop losses, can slip. Stop-limit: can be skipped in a fast move, so don't use it as your protective stop.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Market order: fills now, price not guaranteed. Buy limit: below the price, fills only if price comes to you. Buy stop: above the price, for breakouts and stop losses, can slip. Stop-limit: can be skipped in a fast move, so don't use it as your protective stop. Follow for one trading concept a day. #ordertypes #tradingbasics #stoploss #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Market, limit, stop and stop-limit orders explained on a chart",
+   "description": "Market order: fills now, price not guaranteed. Buy limit: below the price, fills only if price comes to you. Buy stop: above the price, for breakouts and stop losses, can slip. Stop-limit: can be skipped in a fast move, so don't use it as your protective stop. Trading concepts explained simply.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  },
+  "title": "Market, limit and stop orders on one chart"
+ },
+ "voice": "andrew_up"
+}

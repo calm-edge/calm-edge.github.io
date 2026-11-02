@@ -1,0 +1,339 @@
+{
+ "id": "c316_car_futures_math",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 5000.13,
+     "h": 5000.17,
+     "l": 4999.54,
+     "c": 5000.0,
+     "v": 1160
+    },
+    {
+     "o": 5000.04,
+     "h": 5000.26,
+     "l": 4999.78,
+     "c": 5000.2,
+     "v": 857
+    },
+    {
+     "o": 5000.12,
+     "h": 5001.31,
+     "l": 5000.08,
+     "c": 5001.31,
+     "v": 2408
+    },
+    {
+     "o": 5001.24,
+     "h": 5003.0,
+     "l": 5000.81,
+     "c": 5001.78,
+     "v": 1202
+    },
+    {
+     "o": 5001.8,
+     "h": 5003.67,
+     "l": 5001.58,
+     "c": 5003.13,
+     "v": 2210
+    },
+    {
+     "o": 5003.14,
+     "h": 5003.25,
+     "l": 5002.37,
+     "c": 5003.0,
+     "v": 1172
+    },
+    {
+     "o": 5003.06,
+     "h": 5003.19,
+     "l": 5002.04,
+     "c": 5002.7,
+     "v": 1277
+    },
+    {
+     "o": 5002.72,
+     "h": 5004.05,
+     "l": 5002.42,
+     "c": 5003.24,
+     "v": 1341
+    },
+    {
+     "o": 5003.23,
+     "h": 5003.62,
+     "l": 5001.13,
+     "c": 5001.5,
+     "v": 3587
+    },
+    {
+     "o": 5001.29,
+     "h": 5004.19,
+     "l": 5000.76,
+     "c": 5003.19,
+     "v": 3712
+    },
+    {
+     "o": 5003.3,
+     "h": 5004.47,
+     "l": 5002.52,
+     "c": 5003.62,
+     "v": 1397
+    },
+    {
+     "o": 5003.6,
+     "h": 5004.48,
+     "l": 5002.53,
+     "c": 5004.43,
+     "v": 1927
+    },
+    {
+     "o": 5004.53,
+     "h": 5006.07,
+     "l": 5003.67,
+     "c": 5005.81,
+     "v": 2409
+    },
+    {
+     "o": 5005.85,
+     "h": 5006.14,
+     "l": 5005.14,
+     "c": 5006.01,
+     "v": 1118
+    },
+    {
+     "o": 5006.01,
+     "h": 5008.4,
+     "l": 5005.76,
+     "c": 5007.5,
+     "v": 3692
+    },
+    {
+     "o": 5007.45,
+     "h": 5007.79,
+     "l": 5005.65,
+     "c": 5006.27,
+     "v": 3190
+    },
+    {
+     "o": 5006.16,
+     "h": 5006.47,
+     "l": 5005.82,
+     "c": 5006.19,
+     "v": 1053
+    },
+    {
+     "o": 5006.16,
+     "h": 5006.62,
+     "l": 5005.88,
+     "c": 5006.0,
+     "v": 1235
+    },
+    {
+     "o": 5006.0,
+     "h": 5007.42,
+     "l": 5004.91,
+     "c": 5007.18,
+     "v": 3058
+    },
+    {
+     "o": 5007.02,
+     "h": 5008.51,
+     "l": 5006.93,
+     "c": 5007.75,
+     "v": 1823
+    },
+    {
+     "o": 5007.81,
+     "h": 5009.98,
+     "l": 5007.64,
+     "c": 5009.62,
+     "v": 3270
+    },
+    {
+     "o": 5009.63,
+     "h": 5010.05,
+     "l": 5008.69,
+     "c": 5009.31,
+     "v": 1500
+    },
+    {
+     "o": 5009.24,
+     "h": 5010.43,
+     "l": 5009.17,
+     "c": 5010.0,
+     "v": 1568
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "tf": "5m"
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Futures basics",
+   "title": "10 points on this chart: $500 or $50?",
+   "chart": "a",
+   "chartH": 640,
+   "state": {
+    "bars": 23,
+    "show": [],
+    "levels": [
+     {
+      "price": 5000.0,
+      "label": "Start 5,000",
+      "color": "blue",
+      "below": true,
+      "labelAt": 6
+     },
+     {
+      "price": 5010.0,
+      "label": "+10 points",
+      "color": "mint",
+      "labelAt": 4
+     }
+    ],
+    "zones": [],
+    "marks": [],
+    "lastPrice": false
+   }
+  },
+  {
+   "type": "rows",
+   "title": "The same 10-point move",
+   "head": [
+    "Contract",
+    "",
+    "1 contract"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ES (S&P 500)",
+      "",
+      "$500"
+     ]
+    },
+    {
+     "cells": [
+      "MES (micro)",
+      "",
+      "$50"
+     ],
+     "good": true,
+     "hl": true
+    },
+    {
+     "cells": [
+      "NQ (Nasdaq 100)",
+      "",
+      "$200"
+     ]
+    },
+    {
+     "cells": [
+      "MNQ (micro)",
+      "",
+      "$20"
+     ],
+     "good": true,
+     "hl": true
+    }
+   ],
+   "text": "Same chart, same move. **The contract decides the money.**"
+  },
+  {
+   "type": "rows",
+   "title": "Dollars per point",
+   "head": [
+    "Contract",
+    "Per point",
+    "Per tick"
+   ],
+   "rows": [
+    {
+     "cells": [
+      "ES",
+      "$50",
+      "$12.50"
+     ]
+    },
+    {
+     "cells": [
+      "MES",
+      "$5",
+      "$1.25"
+     ],
+     "good": true
+    },
+    {
+     "cells": [
+      "NQ",
+      "$20",
+      "$5.00"
+     ]
+    },
+    {
+     "cells": [
+      "MNQ",
+      "$2",
+      "$0.50"
+     ],
+     "good": true
+    }
+   ],
+   "text": "One tick = **0.25** points. Micros are **one tenth** of the full contract."
+  },
+  {
+   "type": "formula",
+   "title": "Your risk, in dollars",
+   "formula": "Stop × $ per point × contracts",
+   "small": "8-point stop on 3 MES = 8 × $5 × 3 = $120"
+  },
+  {
+   "type": "points",
+   "title": "Why it matters",
+   "points": [
+    {
+     "b": "Size from the stop",
+     "t": "Decide the dollars first, then the contracts.",
+     "color": "mint"
+    },
+    {
+     "b": "Start with micros",
+     "t": "Same market, a tenth of the risk.",
+     "color": "blue"
+    },
+    {
+     "b": "NQ moves more points than ES",
+     "t": "The same stop in points is not the same risk.",
+     "color": "coral"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Know the point value before you click.",
+   "text": "Points × $ per point × contracts = **the money on the line**."
+  }
+ ],
+ "post": {
+  "instagram": "The same 10-point move is $500 on one ES, $50 on one MES, $200 on one NQ and $20 on one MNQ. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#futurestrading #es #nq #microfutures #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "The same 10-point move is $500 on one ES, $50 on one MES, $200 on one NQ and $20 on one MNQ. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "The same 10-point move is $500 on one ES, $50 on one MES, $200 on one NQ and $20 on one MNQ. Risk = stop in points × $ per point × contracts. Contract specs from CME Group. Follow for one trading concept a day. #futurestrading #es #nq #microfutures #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Futures point values explained: ES, MES, NQ, MNQ",
+   "description": "The same 10-point move is $500 on one ES, $50 on one MES, $200 on one NQ and $20 on one MNQ. Risk = stop in points × $ per point × contracts. Contract specs from CME Group. Trading concepts explained simply.",
+   "link": "https://amirkallas2cs-gif.github.io/learn/"
+  },
+  "title": "Futures point values: ES, MES, NQ, MNQ"
+ },
+ "voice": "andrew_up"
+}

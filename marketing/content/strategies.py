@@ -62,7 +62,7 @@ def orb_state(d, bars, target=True, stop=True):
             "marks": [{"bar": d["brk"], "dir": "up", "text": "Close above", "color": "mint"}]}
 
 
-orb_charts = {"a": export(ORB["c"]), "b": export(ORF["c"])}
+orb_charts = {"a": {**export(ORB["c"]), "tf": "5m", "time": {"start": "09:30", "step": 5}}, "b": {**export(ORF["c"]), "tf": "5m", "time": {"start": "09:30", "step": 5}}}
 win_state = orb_state(ORB, ORB["t_hit"] + 3)
 fail_state = orb_state(ORF, len(ORF["c"]), target=False)
 fail_state["marks"].append({"bar": ORF["s_hit"], "dir": "down", "text": "Stopped", "color": "coral"})
@@ -112,30 +112,13 @@ def _gap(seed):
 
 G = pick(_gap, lambda d: d["ok"])
 gap_pct = (G["c"][G["pre"]]["o"] / G["prior"] - 1) * 100
-gch = {"a": export(G["c"])}
+gch = {"a": {**export(G["c"]), "tf": "5m"}}
 gap_base = {"show": [], "levels": [{"price": G["prior"], "label": "Yesterday's close", "color": "gold"}], "zones": [],  # label on the left, above yesterday's candles
             "marks": [{"bar": G["pre"], "dir": "up", "text": "Gap up", "color": "mint"}]}
 gap_trade = {**gap_base, "bars": G["fill"] + 3,
              "levels": gap_base["levels"] + [{"price": G["ib_lo"], "label": "First 15 min low", "color": "blue", "from": G["pre"], "below": True, "labelAt": 0.5}],
              "marks": [{"bar": G["trig"], "dir": "down", "text": "Close below", "color": "coral"}, {"bar": G["fill"], "dir": "up", "text": "Gap filled", "color": "gold"}]}
-carousel("c302_car_gap_fill", gch, [
-    {"type": "cover", "kicker": "Strategy breakdown", "title": "Gap fill: trading back to yesterday's close.", "chart": "a", "state": {**gap_base, "bars": G["pre"] + 4}},
-    {"type": "points", "title": "What a gap is", "points": [
-        {"b": "Today opens away from yesterday's close", "t": "News or overnight trading moved the price.", "color": "blue"},
-        {"b": "\"Filling the gap\"", "t": "Price trades back to yesterday's close.", "color": "gold"},
-        {"b": "Not every gap fills", "t": "Strong news gaps can run all day. You need a trigger.", "color": "coral"}]},
-    {"type": "rows", "title": "One version of the rules", "head": ["", "", ""], "rows": [
-        {"cells": ["Wait", "", "First 15 minutes"]}, {"cells": ["Entry", "", "Close below their low"], "good": True},
-        {"cells": ["Stop", "", "Above the day's high"], "hl": True}, {"cells": ["Target", "", "Yesterday's close"], "good": True}]},
-    {"type": "chart", "title": "The open fails, then the fill", "chart": "a", "chartH": 600, "state": gap_trade,
-     "text": f"Gap of **{gap_pct:.1f}%**. Entry **{G['entry']:.2f}**, stop **{G['hod']:.2f}** (risk {G['risk']:.2f}), target **{G['prior']:.2f}** (reward {G['reward']:.2f})."},
-    {"type": "points", "title": "When to skip it", "points": [
-        {"b": "Big news behind the gap", "t": "Earnings or major data can keep the move going.", "color": "coral"},
-        {"b": "The open keeps making highs", "t": "No failure, no trade.", "color": "gold"},
-        {"b": "Reward smaller than risk", "t": "If the fill is closer than the stop, pass.", "color": "blue"}]},
-    {"type": "end", "title": "Let the open fail first.", "text": "A gap is a reason to watch, not a reason to fade. Trade the failure, target the close."},
-], post_car("Gap fill strategy explained", f"A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a {gap_pct:.1f}% gap, entry {G['entry']:.2f}, stop {G['hod']:.2f}, target {G['prior']:.2f}. Big news gaps often don't fill, so you need the failure first.",
-            ["#gapfill", "#daytradingstrategy", "#gaptrading"], "Gap fill trading strategy explained"))
+# c302 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
 # ================================================================== 3. Inside bar breakout (daily chart)
 
@@ -158,34 +141,12 @@ def _inside(seed):
 
 IB = pick(_inside, lambda d: d["ok"])
 IS = 12  # the chart starts at bar 12: the pattern gets more room
-ich = {"a": export(IB["c"], IS)}
+ich = {"a": {**export(IB["c"], IS), "tf": "1D"}}
 IM, IT = IB["m"] - IS, IB["t_hit"] - IS
 ib_lv = [{"price": IB["entry"], "label": "Buy stop", "color": "mint", "from": IM + 1, "labelPos": "right"},
          {"price": IB["stop"], "label": "Stop", "color": "coral", "from": IM + 1, "below": True, "labelPos": "right"}]
 ib_marks = [{"bar": IM, "dir": "down", "text": "Mother bar", "color": "blue"}, {"bar": IM + 1, "dir": "up", "text": "Inside bar", "color": "gold"}]
-carousel("c303_car_inside_bar", ich, [
-    {"type": "cover", "kicker": "Strategy breakdown", "title": "The inside bar breakout.", "chart": "a", "state": {"bars": IM + 2, "show": [], "levels": [], "zones": [], "marks": ib_marks}},
-    {"type": "points", "title": "What an inside bar is", "points": [
-        {"b": "A candle inside the previous one", "t": "Lower high and higher low than the bar before it.", "color": "gold"},
-        {"b": "The bar before is the \"mother bar\"", "t": "It sets the range the market is pausing in.", "color": "blue"},
-        {"b": "A pause, often before a push", "t": "It shows indecision. Direction comes from the break.", "color": "mint"}]},
-    {"type": "rows", "title": "One version of the rules", "head": ["", "", ""], "rows": [
-        {"cells": ["Trend filter", "", "Trade with the trend"]}, {"cells": ["Entry", "", "Buy stop above inside bar"], "good": True},
-        {"cells": ["Stop", "", "Below inside bar"], "hl": True}, {"cells": ["Target", "", "2R"], "good": True}]},
-    {"type": "chart", "title": "Pause, then continuation", "chart": "a", "chartH": 600,
-     "state": {"bars": IT + 1, "show": [], "zones": [], "marks": ib_marks, "levels": ib_lv + [{"price": IB["target"], "label": "Target 2R", "color": "mint", "from": IM + 1, "labelPos": "right"}]},
-     "text": f"Entry **{IB['entry']:.2f}**, stop **{IB['stop']:.2f}**: risk **{IB['risk']:.2f}**, small because the inside bar is small. Target **{IB['target']:.2f}**."},
-    {"type": "points", "title": "Why traders like it", "points": [
-        {"b": "Tight, logical stop", "t": "If price breaks the other side, the idea is wrong.", "color": "mint"},
-        {"b": "Works on any timeframe", "t": "Cleaner on daily and 4-hour charts.", "color": "blue"},
-        {"b": "Easy to scan for", "t": "Two candles, one rule.", "color": "gold"}]},
-    {"type": "points", "title": "Where it goes wrong", "points": [
-        {"b": "Against the trend", "t": "Inside bars in a downtrend breaking up often fail.", "color": "coral"},
-        {"b": "In a choppy range", "t": "Price can break one side, then the other.", "color": "coral"},
-        {"b": "Huge mother bar", "t": "The pause can last for days. Be patient or skip it.", "color": "gold"}]},
-    {"type": "end", "title": "Small bar, small risk, clear trigger.", "text": "Trade it with the trend, place the stop on the other side, and let the break decide."},
-], post_car("Inside bar breakout strategy", f"An inside bar has a lower high and a higher low than the candle before it: a pause. One way to trade it: with the trend, a buy stop just above the inside bar, a stop just below it, target 2R. Example: entry {IB['entry']:.2f}, stop {IB['stop']:.2f}, target {IB['target']:.2f}.",
-            ["#insidebar", "#priceaction", "#swingtrading"], "Inside bar breakout strategy explained"))
+# c303 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
 # ================================================================== 4. Fibonacci pullback
 
@@ -211,35 +172,12 @@ def _fib(seed):
 
 
 FB = pick(_fib, lambda d: d["ok"])
-fch = {"a": export(FB["c"])}
+fch = {"a": {**export(FB["c"]), "tf": "15m"}}
 fib_lv = [{"price": FB["lv"][0.5], "label": "50%", "color": "gold", "from": FB["b"], "labelPos": "right"},
           {"price": FB["lv"][0.618], "label": "61.8%", "color": "gold", "from": FB["b"], "below": True, "labelPos": "right"}]
 fib_marks = [{"bar": FB["a"], "dir": "up", "text": "A (low)", "color": "blue"}, {"bar": FB["b"], "dir": "down", "text": "B (high)", "color": "blue"}]
 fib_zone = [{"from": FB["b"], "to": len(FB["c"]) - 1, "lo": FB["lv"][0.618], "hi": FB["lv"][0.5], "color": "gold"}]
-carousel("c304_car_fib_pullback", fch, [
-    {"type": "cover", "kicker": "Strategy breakdown", "title": "Buying the pullback with Fibonacci levels.", "chart": "a",
-     "state": {"bars": FB["low_bar"] + 2, "show": [], "levels": fib_lv, "zones": fib_zone, "marks": fib_marks}},
-    {"type": "formula", "title": "How the levels are drawn", "formula": "Level = B − (B − A) × ratio",
-     "small": f"Here: A = {FB['A']:.2f}, B = {FB['B']:.2f} → 50% = {FB['lv'][0.5]:.2f}, 61.8% = {FB['lv'][0.618]:.2f}",
-     "text": "A is the start of the move, B its end. The common ratios **38.2%, 50% and 61.8%** mark how much of the move a pullback gives back."},
-    {"type": "points", "title": "The idea", "points": [
-        {"b": "Trends move in waves", "t": "A push, a pullback, another push.", "color": "mint"},
-        {"b": "Many traders watch 50–61.8%", "t": "A deep but normal pullback in a healthy trend.", "color": "gold"},
-        {"b": "The level is not the signal", "t": "Wait for price to react there.", "color": "coral"}]},
-    {"type": "chart", "title": "Pullback into the zone, then a reaction", "chart": "a", "chartH": 600,
-     "state": {"bars": FB["t_hit"] + 2, "show": [], "levels": fib_lv, "zones": fib_zone,
-               "marks": [{"bar": FB["low_bar"], "dir": "up", "text": "Low in zone", "color": "gold"}, {"bar": FB["trig"], "dir": "down", "text": "Entry", "color": "mint"}]},
-     "text": f"Low **{FB['low']:.2f}** inside the zone. Entry **{FB['entry']:.2f}** on the first close above the low bar's high, stop **{FB['stop']:.2f}**, first target the old high **{FB['B']:.2f}**."},
-    {"type": "rows", "title": "This trade in numbers", "head": ["", "", ""], "rows": [
-        {"cells": ["Risk", "", f"{FB['risk']:.2f}"]}, {"cells": ["Reward to B", "", f"{FB['reward']:.2f}"]},
-        {"cells": ["Reward ÷ risk", "", f"{FB['reward'] / FB['risk']:.1f}R"], "good": True, "hl": True}]},
-    {"type": "points", "title": "Common mistakes", "points": [
-        {"b": "Picking A and B after the fact", "t": "Use clear swing points, the same way every time.", "color": "coral"},
-        {"b": "Buying the level blindly", "t": "No reaction, no trade. Levels break.", "color": "gold"},
-        {"b": "Using it against the trend", "t": "It's a tool for joining a trend, not for catching tops.", "color": "blue"}]},
-    {"type": "end", "title": "Zone first, reaction second.", "text": "Fibonacci levels show where to look. The candle that reacts there tells you when."},
-], post_car("Fibonacci pullback strategy", f"Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low {FB['low']:.2f} inside the zone, entry {FB['entry']:.2f}, stop {FB['stop']:.2f}, first target {FB['B']:.2f} ({FB['reward'] / FB['risk']:.1f}R).",
-            ["#fibonacci", "#pullback", "#daytradingstrategy"], "Fibonacci pullback trading strategy"))
+# c304 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
 # ================================================================== 5. Range trading
 
@@ -257,28 +195,10 @@ def _range(seed):
 
 
 RG = pick(_range, lambda d: d["ok"])
-rch = {"a": export(RG["c"])}
+rch = {"a": {**export(RG["c"]), "tf": "5m"}}
 rlv = [{"price": 103.0, "label": "Range high", "color": "coral", "labelAt": 14.5}, {"price": 100.0, "label": "Range low", "color": "mint", "below": True, "labelAt": 19.5}]  # labels between the touches
 r_touch = [{"bar": i, "dir": "down", "color": "coral"} for i in (4, 13, 23)] + [{"bar": i, "dir": "up", "color": "mint"} for i in (8, 18, 30)]
-carousel("c305_car_range_trading", rch, [
-    {"type": "cover", "kicker": "Strategy breakdown", "title": "How to trade a range (and when to stop).", "chart": "a", "state": {"bars": 31, "show": [], "levels": [{**rlv[0], "labelPos": "right"}, rlv[1]], "zones": [], "marks": r_touch}},  # nothing above the high at the right end yet
-    {"type": "points", "title": "Is it really a range?", "points": [
-        {"b": "At least two touches per side", "t": "Here: three at the high, three at the low.", "color": "blue"},
-        {"b": "Flat highs and lows", "t": "Not higher lows or lower highs.", "color": "gold"},
-        {"b": "Room inside", "t": "Enough distance for a reward bigger than the risk.", "color": "mint"}]},
-    {"type": "rows", "title": "One version of the rules", "head": ["", "", ""], "rows": [
-        {"cells": ["Buy", "", "Rejection near the low"], "good": True}, {"cells": ["Sell", "", "Rejection near the high"], "good": True},
-        {"cells": ["Stop", "", "Just outside the range"], "hl": True}, {"cells": ["Target", "", "Middle or other side"]}]},
-    {"type": "chart", "title": "Every range ends", "chart": "a", "chartH": 600,
-     "state": {"bars": len(RG["c"]), "show": [], "levels": rlv, "zones": [], "marks": [{"bar": RG["brk"], "dir": "up", "text": "Close outside", "color": "mint"}]},
-     "text": "After six touches, a candle **closes above** the high and price never comes back in. The stop just outside is what limits the damage."},
-    {"type": "points", "title": "Rules that keep you safe", "points": [
-        {"b": "The stop is not optional", "t": "A range trade without one turns into a breakout loss.", "color": "coral"},
-        {"b": "Don't trade the middle", "t": "Entries in the middle have no edge and no clear stop.", "color": "gold"},
-        {"b": "Switch modes on a close outside", "t": "Stop fading. Start watching the breakout and retest.", "color": "blue"}]},
-    {"type": "end", "title": "Fade the edges, respect the break.", "text": "Ranges pay the patient trader until they don't. The close outside is your signal to stop."},
-], post_car("How to trade a range", "A range needs at least two touches on each side and flat highs and lows. One way to trade it: buy rejections near the low, sell rejections near the high, stop just outside, target the middle or the other side. Every range ends: a close outside means stop fading and start watching the breakout.",
-            ["#rangetrading", "#supportandresistance", "#priceaction"], "Range trading strategy explained"))
+# c305 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
 # ================================================================== 6-10. Market knowledge and routines (no chart)
 
@@ -287,106 +207,15 @@ SPEC = {"ES": 50, "MES": 5, "NQ": 20, "MNQ": 2}
 TICK = 0.25
 assert SPEC["ES"] * TICK == 12.5 and SPEC["MES"] * TICK == 1.25 and SPEC["NQ"] * TICK == 5 and SPEC["MNQ"] * TICK == 0.5
 move = 10
-carousel("c306_car_futures_math", {}, [
-    {"type": "cover", "kicker": "Futures basics", "title": "What one point is worth on ES, NQ and the micros.",
-     "text": "Know this **before** your first trade. It decides your position size."},
-    {"type": "rows", "title": "Dollars per point", "head": ["Contract", "Per point", "Per tick (0.25)"], "rows": [
-        {"cells": ["ES (S&P 500)", f"${SPEC['ES']}", f"${SPEC['ES'] * TICK:.2f}"]}, {"cells": ["MES (micro)", f"${SPEC['MES']}", f"${SPEC['MES'] * TICK:.2f}"], "good": True},
-        {"cells": ["NQ (Nasdaq 100)", f"${SPEC['NQ']}", f"${SPEC['NQ'] * TICK:.2f}"]}, {"cells": ["MNQ (micro)", f"${SPEC['MNQ']}", f"${SPEC['MNQ'] * TICK:.2f}"], "good": True}]},
-    {"type": "rows", "title": f"The same {move}-point move", "head": ["Contract", "", "1 contract"], "rows": [
-        {"cells": ["ES", "", f"${SPEC['ES'] * move:,}"]}, {"cells": ["MES", "", f"${SPEC['MES'] * move:,}"], "good": True},
-        {"cells": ["NQ", "", f"${SPEC['NQ'] * move:,}"]}, {"cells": ["MNQ", "", f"${SPEC['MNQ'] * move:,}"], "good": True}],
-     "text": "Micros are **one tenth** of the full contract. Same chart, a tenth of the risk."},
-    {"type": "formula", "title": "Risk per trade", "formula": "Risk = stop (points) × $ per point × contracts",
-     "small": f"Example: 8-point stop on 3 MES = 8 × ${SPEC['MES']} × 3 = ${8 * SPEC['MES'] * 3}"},
-    {"type": "points", "title": "Why it matters", "points": [
-        {"b": "Size from the stop, not from a feeling", "t": "Decide the dollars you risk, then compute contracts.", "color": "mint"},
-        {"b": "Start with micros", "t": "Learn with a tenth of the risk on the same market.", "color": "blue"},
-        {"b": "NQ moves more points than ES", "t": "Same stop in points is not the same risk.", "color": "coral"}]},
-    {"type": "end", "title": "Know the point value before you click.", "text": "Points × dollars per point × contracts = the money on the line."},
-], post_car("Futures point values: ES, MES, NQ, MNQ", f"Dollars per point: ES ${SPEC['ES']}, MES ${SPEC['MES']}, NQ ${SPEC['NQ']}, MNQ ${SPEC['MNQ']}. A {move}-point move is ${SPEC['ES'] * move} on one ES and ${SPEC['MES'] * move} on one MES. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.",
-            ["#futurestrading", "#es", "#nq", "#microfutures"], "Futures point values explained: ES, MES, NQ, MNQ"))
+# c306 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
-carousel("c307_car_order_types", {}, [
-    {"type": "cover", "kicker": "Trading basics", "title": "4 order types every trader must know.", "text": "Using the wrong one costs money on **every** trade."},
-    {"type": "points", "title": "Market order", "points": [
-        {"b": "Fills now, at the best available price", "t": "Speed is guaranteed. The price is not.", "color": "blue"},
-        {"b": "Risk: slippage", "t": "In fast markets you can fill worse than the price you saw.", "color": "coral"}]},
-    {"type": "points", "title": "Limit order", "points": [
-        {"b": "Fills at your price or better", "t": "Buy limit below the market, sell limit above it.", "color": "mint"},
-        {"b": "Risk: no fill", "t": "If price never reaches it, you're not in the trade.", "color": "gold"}]},
-    {"type": "points", "title": "Stop order", "points": [
-        {"b": "Becomes a market order at your price", "t": "Used for stop losses and breakout entries.", "color": "coral"},
-        {"b": "Risk: slippage through the level", "t": "In a gap or a spike it fills beyond the stop.", "color": "gold"}]},
-    {"type": "points", "title": "Stop-limit order", "points": [
-        {"b": "Becomes a limit order at your price", "t": "You control the worst price.", "color": "blue"},
-        {"b": "Risk: it can skip you", "t": "A stop-limit used as a stop loss may never fill.", "color": "coral"}]},
-    {"type": "rows", "title": "Quick guide", "head": ["You want…", "", "Use"], "rows": [
-        {"cells": ["In right now", "", "Market"]}, {"cells": ["A better price", "", "Limit"]},
-        {"cells": ["Out if wrong, guaranteed", "", "Stop"], "good": True, "hl": True}, {"cells": ["A breakout entry, capped", "", "Stop-limit"]}]},
-    {"type": "end", "title": "Your stop loss should be a stop order.", "text": "A stop-limit can be skipped in a fast move. That's exactly when you need to be out."},
-], post_car("4 order types every trader must know", "Market: fills now, price not guaranteed. Limit: your price or better, fill not guaranteed. Stop: becomes a market order at your price, used for stop losses. Stop-limit: becomes a limit order, and can be skipped in a fast move, so don't use it as your protective stop.",
-            ["#ordertypes", "#tradingbasics", "#stoploss"], "Market, limit, stop and stop-limit orders explained"))
+# c307 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
-carousel("c308_car_sessions", {}, [
-    {"type": "cover", "kicker": "Market timing", "title": "When the market actually moves.", "text": "Futures trade almost 24 hours. **Volume doesn't.**"},
-    {"type": "rows", "title": "Main sessions (New York time)", "head": ["Session", "", "Hours (ET)"], "rows": [
-        {"cells": ["Asia (Tokyo)", "", "7 pm – 4 am"]}, {"cells": ["London", "", "3 am – 11:30 am"]},
-        {"cells": ["New York stocks", "", "9:30 am – 4 pm"], "good": True, "hl": True}, {"cells": ["CME daily break", "", "5 pm – 6 pm"]}],
-     "text": "Approximate, standard time. Shifts by an hour when daylight saving changes."},
-    {"type": "points", "title": "The busiest windows", "points": [
-        {"b": "The New York open", "t": "9:30–11:00 ET: the most volume and the biggest moves for US index futures.", "color": "mint"},
-        {"b": "London / New York overlap", "t": "Both centers open: liquidity peaks for currencies.", "color": "blue"},
-        {"b": "The close", "t": "15:00–16:00 ET: volume picks up again into the end of the day.", "color": "gold"}]},
-    {"type": "points", "title": "The slow windows", "points": [
-        {"b": "Midday (about 11:30–14:00 ET)", "t": "Lunch hours: thinner volume, more chop.", "color": "coral"},
-        {"b": "Overnight for US indexes", "t": "Moves happen, but with a fraction of the day's volume.", "color": "coral"}]},
-    {"type": "points", "title": "What to do with this", "points": [
-        {"b": "Trade when your market is active", "t": "Breakout strategies need volume.", "color": "mint"},
-        {"b": "Check the calendar", "t": "8:30 and 10:00 ET data releases move markets in seconds.", "color": "gold"},
-        {"b": "Track your results by hour", "t": "Many traders find one window does most of their damage.", "color": "blue"}]},
-    {"type": "end", "title": "Same market, different hours, different behaviour.", "text": "Pick the window that fits your strategy, and log which hours actually work for you."},
-], post_car("Trading sessions: when the market actually moves", "Futures trade almost 24 hours, but volume doesn't. For US index futures the New York open (9:30–11:00 ET) is the busiest window, midday is often slow and choppy, and volume picks up again into the close. Check 8:30 and 10:00 ET data releases, and track your own results by hour.",
-            ["#tradingsessions", "#daytrading", "#futurestrading"], "Trading sessions explained: when markets move"))
+# c308 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
-carousel("c309_car_premarket_routine", {}, [
-    {"type": "cover", "kicker": "Trading routine", "title": "A 15-minute pre-market routine.", "text": "Most bad trades are decided **before** the open."},
-    {"type": "points", "title": "1. The calendar (2 min)", "points": [
-        {"b": "News times today", "t": "Data releases, central bank speakers, earnings.", "color": "gold"},
-        {"b": "Decide in advance", "t": "Flat before big releases, or smaller size.", "color": "blue"}]},
-    {"type": "points", "title": "2. The levels (5 min)", "points": [
-        {"b": "Yesterday's high, low and close", "t": "The reference points most traders watch.", "color": "mint"},
-        {"b": "Overnight high and low", "t": "Where the market went while you slept.", "color": "blue"}]},
-    {"type": "points", "title": "3. The plan (5 min)", "points": [
-        {"b": "Two scenarios", "t": "\"If price holds above X, I look for longs. If it loses Y, shorts.\"", "color": "mint"},
-        {"b": "Which setups you'll take", "t": "Write them down. Everything else is a pass.", "color": "gold"}]},
-    {"type": "points", "title": "4. The limits (3 min)", "points": [
-        {"b": "Max loss for the day", "t": "Hit it and you're done. No exceptions.", "color": "coral"},
-        {"b": "Max number of trades", "t": "Stops overtrading before it starts.", "color": "coral"},
-        {"b": "Risk per trade", "t": "In dollars, decided now, not in the moment.", "color": "blue"}]},
-    {"type": "end", "title": "Plan the trade before the market tempts you.", "text": "Calendar, levels, plan, limits. Fifteen minutes that save the rest of the day."},
-], post_car("A 15-minute pre-market routine", "1. Calendar: news times today. 2. Levels: yesterday's high, low and close, overnight high and low. 3. Plan: two scenarios and the setups you'll take. 4. Limits: max daily loss, max number of trades, dollar risk per trade. Decided before the open, not in the moment.",
-            ["#tradingroutine", "#tradingpsychology", "#daytrading"], "Pre-market routine checklist for day traders"))
+# c309 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
-carousel("c310_car_revenge_trading", {}, [
-    {"type": "cover", "kicker": "Trading psychology", "title": "Revenge trading: how one loss becomes five.", "text": "It's not a strategy problem. It's a **rules** problem."},
-    {"type": "points", "title": "What it looks like", "points": [
-        {"b": "Re-entering right after a stop", "t": "Same direction, no new setup.", "color": "coral"},
-        {"b": "Doubling the size", "t": "\"I just need to get it back.\"", "color": "coral"},
-        {"b": "Moving or removing the stop", "t": "Because another loss feels unbearable.", "color": "coral"}]},
-    {"type": "points", "title": "Why it happens", "points": [
-        {"b": "Losses feel bigger than wins", "t": "A loss hurts more than an equal win feels good.", "color": "gold"},
-        {"b": "The account becomes the goal", "t": "You stop trading setups and start trading your P&L.", "color": "gold"}]},
-    {"type": "rows", "title": "Rules that stop it", "head": ["", "", ""], "rows": [
-        {"cells": ["2 losses in a row", "", "10-minute break"], "hl": True}, {"cells": ["Daily loss limit hit", "", "Done for the day"], "good": True, "hl": True},
-        {"cells": ["Size after a loss", "", "Same or smaller"]}, {"cells": ["New trade", "", "Only from your plan"]}]},
-    {"type": "points", "title": "Make the rules automatic", "points": [
-        {"b": "Set the limit in your platform", "t": "Many platforms and prop firms can lock you out at a loss.", "color": "blue"},
-        {"b": "Write the reason before every entry", "t": "If you can't, it's probably revenge.", "color": "mint"},
-        {"b": "Review the bad days", "t": "Count how much came after the first loss.", "color": "gold"}]},
-    {"type": "end", "title": "The first loss is a cost. The next five are a choice.", "text": "Decide your stop-trading rules before the open, and make them hard to break."},
-], post_car("Revenge trading: how one loss becomes five", "Re-entering right after a stop, doubling the size, moving the stop: that's revenge trading. Rules that stop it: a break after 2 losses in a row, a daily loss limit that ends the day, same or smaller size after a loss, and new trades only from your plan.",
-            ["#tradingpsychology", "#revengetrading", "#riskmanagement"], "Revenge trading: rules to stop it"))
+# c310 retired (2 Nov 2026): replaced by the clearer step-by-step carousels in strategy_carousels.py
 
 
 # ================================================================== YouTube: Opening range breakout, the complete strategy

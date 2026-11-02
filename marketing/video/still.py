@@ -31,7 +31,7 @@ def main():
         b = p.chromium.launch(executable_path=exe if os.path.exists(exe) else None, args=["--allow-file-access-from-files"])
         for sp, i, W, H, name in jobs:
             pg = b.new_page(viewport={"width": W, "height": H})
-            pg.goto((work / "still.html").as_uri()); pg.evaluate("document.fonts.ready")
+            pg.goto((work / "still.html").as_uri()); pg.evaluate("() => Promise.all(['400', '600', '700'].map((w) => document.fonts.load(w + ' 30px Inter')))")  # load every weight before measuring text
             probs = pg.evaluate("([s, i, W, H]) => renderSlide(s, i, W, H)", [sp, i, W, H])
             problems += [f"{name}: {x}" for x in probs]
             pg.screenshot(path=str(out / name), type="jpeg", quality=92)

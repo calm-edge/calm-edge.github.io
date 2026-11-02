@@ -273,18 +273,16 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "You win only 40%. Profitable?",
+   "kicker": "Myth",
+   "kickerColor": "coral",
+   "headline": "You must win most trades.",
    "big": true,
-   "options": [
-    "Yes",
-    "No"
-   ],
+   "show": [],
+   "grow": 0.95,
    "reveal": [
     8,
     19
    ],
-   "show": [],
-   "grow": 0.95,
    "zones": [
     {
      "from": 18,
@@ -304,61 +302,23 @@
      "at": 0.0
     }
    ],
-   "say": "You win only forty percent of your trades. Can you still make money? Decide before the reveal."
+   "stamp": {
+    "text": "FALSE",
+    "at": 0.62
+   },
+   "sfx": "stamp",
+   "sfx_at": 0.62,
+   "hold": 0.4,
+   "say": "Myth: to make money, you need to win most of your trades."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "You win only 40%. Profitable?",
+   "kicker": "Truth",
+   "kickerColor": "mint",
+   "headline": "Win 40%, still profitable.",
    "big": true,
-   "options": [
-    "Yes",
-    "No"
-   ],
-   "reveal": [
-    19,
-    19
-   ],
    "show": [],
-   "zoom": [
-    22,
-    11
-   ],
-   "countdown": 3,
-   "duration": 3,
-   "sfx": "countdown",
-   "cont": true,
-   "zones": [
-    {
-     "from": 18,
-     "to": 36,
-     "lo": 100.0,
-     "hi": 102.0,
-     "color": "mint",
-     "label": "Reward 2R",
-     "at": 0.0
-    },
-    {
-     "from": 18,
-     "to": 36,
-     "lo": 99.0,
-     "hi": 100.0,
-     "color": "coral",
-     "at": 0.0
-    }
-   ]
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "You win only 40%. Profitable?",
-   "big": true,
-   "options": [
-    "Yes",
-    "No"
-   ],
-   "show": [],
-   "answer": 0,
    "reveal": [
     19,
     37
@@ -389,18 +349,16 @@
      "color": "coral"
     }
    ],
-   "say": "Yes, if every win is twice the size of every loss.",
-   "sfx": "reveal",
-   "cont": true
+   "say": "Not true. Risk one unit to make two, and you break even winning just one trade in three, before costs."
   },
   {
    "type": "rows",
    "chart": "a",
-   "headline": null,
+   "kicker": "Truth",
+   "kickerColor": "mint",
+   "headline": "Win 40%, still profitable.",
    "big": true,
-   "options": null,
    "show": [],
-   "answer": 0,
    "title": "Win 40% at 2 : 1",
    "head": [
     "",
@@ -432,7 +390,7 @@
      "hl": true
     }
    ],
-   "say": "Four wins at two R is plus eight. Six losses cost six. That's plus two R every ten trades, before costs. Follow for tomorrow's chart."
+   "say": "Win four out of ten: four wins at two R is plus eight, six losses cost six. Plus two R every ten trades. Follow for tomorrow's chart."
   }
  ],
  "post": {
@@ -451,5 +409,6 @@
  },
  "tagFrom": 7,
  "format_v": 2,
+ "hook": "myth",
  "voice": "andrew_up"
 }

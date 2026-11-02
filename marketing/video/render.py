@@ -20,8 +20,9 @@ CHECK = """() => {
   const L = 60, R = land ? W - 60 : W - 120, T = land ? 15 : 200, B = land ? H - 30 : H - 420;
   document.querySelectorAll('.layer').forEach(l => {
     if (l.style.display === 'none' || +l.style.opacity < 0.98) return;
-    l.querySelectorAll('.big, .mid, .label, .statv, .bubble, .cta, .kicker, .rows .r > div, .rows .hd > div, .tag, .chip, .opt').forEach(e => {
+    l.querySelectorAll('.big, .mid, .label, .statv, .bubble, .cta, .kicker, .rows .r > div, .rows .hd > div, .tag, .chip, .opt, .ovl, .stamp').forEach(e => {
       const r = e.getBoundingClientRect();
+      if (+getComputedStyle(e).opacity < 0.05) return;  // not shown yet (e.g. a stamp before it lands)
       if (r.left < L || r.right > R || r.top < T || r.bottom > B) bad.push('outside safe area: ' + e.textContent.trim().slice(0, 40));
       if (e.scrollWidth > e.clientWidth + 1) bad.push('text overflow: ' + e.textContent.trim().slice(0, 40));
       if (cr && r.bottom > cr.top + 2 && r.top < cr.bottom && r.right > cr.left && r.left < cr.right) bad.push('under captions: ' + e.textContent.trim().slice(0, 40));
@@ -93,7 +94,7 @@ def main():
 
     # 2b. Sound effects: a tick each second of a countdown, a soft "pop" on a reveal (synthesised, no files needed).
     import array, math
-    fx = [(sum(x["duration"] for x in spec["scenes"][:i]), s["sfx"]) for i, s in enumerate(spec["scenes"]) if s.get("sfx")]
+    fx = [(sum(x["duration"] for x in spec["scenes"][:i]) + s.get("sfx_at", 0) * s["duration"], s["sfx"]) for i, s in enumerate(spec["scenes"]) if s.get("sfx")]
     if fx:
         with wave.open(str(track)) as r:
             pcm = array.array("h", r.readframes(r.getnframes()))
@@ -110,6 +111,17 @@ def main():
                     tone(at + sec, 1320, 0.09, 0.22, 0.03)
             elif kind == "reveal":
                 tone(at, 660, 0.25, 0.20, 0.08); tone(at + 0.06, 990, 0.25, 0.16, 0.08)
+            elif kind == "stamp":  # a low thud with a click on top, when a stamp slams onto the screen
+                tone(at, 110, 0.35, 0.35, 0.09); tone(at, 2200, 0.03, 0.10, 0.01)
+            elif kind == "riser":  # rising sweep while the camera zooms out or the chart waits
+                start, dur = int(at * tts.RATE), 1.4
+                phase = 0.0
+                for k in range(int(dur * tts.RATE)):
+                    if start + k >= len(pcm):
+                        break
+                    x = k / (dur * tts.RATE); phase += 2 * math.pi * (260 + 700 * x * x) / tts.RATE
+                    v = 0.13 * math.sin(math.pi * x) * math.sin(phase)
+                    pcm[start + k] = max(-32768, min(32767, pcm[start + k] + int(v * 32767)))
         with wave.open(str(track), "wb") as W:
             W.setnchannels(1); W.setsampwidth(2); W.setframerate(tts.RATE); W.writeframes(pcm.tobytes())
 
@@ -127,6 +139,7 @@ def main():
         land = spec.get("format") == "landscape"
         pg = b.new_page(viewport={"width": 1920, "height": 1080} if land else {"width": 1080, "height": 1920})
         pg.goto((work / "player.html").as_uri())
+        pg.evaluate("() => Promise.all(['400', '600', '700'].map((w) => document.fonts.load(w + ' 30px Inter')))")  # load every weight before measuring text
         pg.evaluate("spec => window.load(spec)", spec)
         for f in range(frames):
             t = f / FPS

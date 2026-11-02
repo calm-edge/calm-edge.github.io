@@ -371,6 +371,8 @@ import longform as _long  # y301 (same topics as the reels) retired; long lesson
 import strategies as _strat  # strategies, market mechanics and routines: topics the reels don't cover
 V.extend(_strat.C)
 V.extend(_strat.Y)
+import strategy_carousels as _scar  # carousels v2: step by step on TradingView-style charts
+V.extend(_scar.C)
 import quiz as _quiz  # after carousels/longform, which read the original lesson scenes
 
 if __name__ == "__main__":

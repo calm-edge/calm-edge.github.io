@@ -61,6 +61,8 @@ body.land .chapter { font-size:40px; color:var(--muted); font-weight:700; letter
 .opt { flex:1; text-align:center; background:var(--card); border:4px solid var(--line); border-radius:24px; padding:18px 10px; font-size:52px; font-weight:700; }
 .opt.right { border-color:var(--mint); background:rgba(95,211,160,.16); color:var(--mint); }
 .opt.wrong { opacity:.45; }
+.ovl { position:absolute; left:80px; right:140px; text-align:center; font-size:88px; font-weight:700; color:#fff; line-height:1.05; text-shadow:0 10px 60px rgba(0,0,0,.7); }
+.stamp { position:absolute; right:190px; top:250px; font-size:60px; font-weight:700; letter-spacing:6px; padding:10px 28px; border:7px solid; border-radius:18px; transform-origin:center; background:rgba(15,23,32,.82); }
 .count { position:absolute; left:0; right:0; text-align:center; font-size:300px; font-weight:700; color:#fff; text-shadow:0 10px 60px rgba(0,0,0,.6); }
 .cta { background:var(--mint); color:#0F1720; font-weight:700; font-size:50px; border-radius:24px; padding:26px 44px; display:inline-block; }
 </style></head>
@@ -98,9 +100,10 @@ window.load = (spec) => {
 };
 
 function build(s, i) {
-  if (s.type === "chart") return `${s.headline ? `<div class="head" id="hd${i}">${s.kicker ? `<div class="kicker" style="margin-bottom:18px">${esc(s.kicker)}</div>` : ""}<div class="${s.big ? "big" : "mid"}">${esc(s.headline)}</div>${s.options ? `<div class="opts">${s.options.map((o, k) => `<div class="opt ${s.answer === undefined ? "" : s.answer === k ? "right" : "wrong"}">${esc(o)}</div>`).join("")}</div>` : ""}</div>` : ""}
+  if (s.type === "chart") return `${s.headline ? `<div class="head" id="hd${i}">${s.kicker ? `<div class="kicker" style="margin-bottom:18px${s.kickerColor ? `;color:var(--${s.kickerColor})` : ""}">${esc(s.kicker)}</div>` : ""}<div class="${s.big ? "big" : "mid"}">${esc(s.headline)}</div>${s.options ? `<div class="opts">${s.options.map((o, k) => `<div class="opt ${s.answer === undefined ? "" : s.answer === k ? "right" : "wrong"}">${esc(o)}</div>`).join("")}</div>` : ""}</div>` : ""}
       <svg class="chart" id="cv${i}" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
-      ${s.countdown ? `<div class="count" id="cd${i}"></div>` : ""}`;
+      ${s.countdown ? `<div class="count" id="cd${i}"></div>` : ""}${s.overlay ? `<div class="ovl" id="ov${i}">${esc(s.overlay)}</div>` : ""}
+      ${s.stamp ? `<div class="stamp" id="st${i}" style="color:var(--${s.stamp.color || "coral"});border-color:var(--${s.stamp.color || "coral"})">${esc(s.stamp.text)}</div>` : ""}`;
   if (s.type === "follow") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:44px">
       <div class="logo">${LOGO(130)}<div><div style="font-size:64px;font-weight:700;letter-spacing:-1px">${esc(s.handle || "@calmedgeofficial")}</div>
       <div class="label" style="font-size:36px">${esc(s.sub || "Calm Edge · trading, explained")}</div></div></div>
@@ -198,6 +201,15 @@ function drawScene(i, s, local, d) {
   if (cd) { const k = Math.max(1, s.countdown - Math.floor(local)); cd.textContent = local < s.countdown ? k : "";
     const f = local - Math.floor(local); cd.style.top = box.y + box.h / 2 - 190 + "px"; cd.style.opacity = 1 - ease((f - 0.6) / 0.4);
     cd.style.transform = `scale(${1.25 - 0.25 * ease(f / 0.25)})`; }
+  // overlay: a pulsing line over the chart while the viewer waits ("Watch what happens next")
+  const ov = document.getElementById(`ov${i}`);
+  if (ov) { ov.style.top = box.y + box.h / 2 - ov.offsetHeight / 2 + "px"; ov.style.opacity = ease(local / 0.3) * (0.75 + 0.25 * Math.sin(local * 6));
+    ov.style.transform = `scale(${1 + 0.04 * Math.sin(local * 6)})`; }
+  // stamp: a label that slams onto the headline at s.stamp.at (0..1 of the scene): MYTH, MISTAKE, ...
+  const sp = document.getElementById(`st${i}`);
+  if (sp) { const q = clamp((p - (s.stamp.at || 0)) / 0.08); sp.style.opacity = q;
+    sp.style.top = box.y - 34 + "px";
+    sp.style.transform = `rotate(-8deg) scale(${1.3 - 0.3 * ease(q)})`; }
   if (+document.getElementById(`s${i}`).style.opacity > 0.98) probs.forEach((x) => window.__problems.push(x));
   if (box.h < (land ? 480 : 520)) window.__problems.push("chart too small: headline too long");
 }

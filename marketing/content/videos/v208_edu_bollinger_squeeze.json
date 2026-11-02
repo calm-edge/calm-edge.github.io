@@ -452,13 +452,8 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Bands this tight. Which way next?",
+   "headline": "The bands are pinching.",
    "big": true,
-   "options": [
-    "Up",
-    "Down",
-    "No idea"
-   ],
    "reveal": [
     8,
     32
@@ -468,18 +463,13 @@
     "mid"
    ],
    "grow": 0.95,
-   "say": "The bands are this tight. Which way does it break? Decide before the reveal."
+   "say": "When Bollinger Bands pinch this tight, price has gone quiet. Watch what happens next."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Bands this tight. Which way next?",
+   "headline": "The bands are pinching.",
    "big": true,
-   "options": [
-    "Up",
-    "Down",
-    "No idea"
-   ],
    "reveal": [
     32,
     32
@@ -490,28 +480,22 @@
    ],
    "zoom": [
     22,
-    11
+    13
    ],
-   "countdown": 3,
-   "duration": 3,
-   "sfx": "countdown",
+   "overlay": "Wait for it…",
+   "duration": 2.4,
+   "sfx": "riser",
    "cont": true
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Bands this tight. Which way next?",
+   "headline": "Quiet markets don't stay quiet.",
    "big": true,
-   "options": [
-    "Up",
-    "Down",
-    "No idea"
-   ],
    "show": [
     "bb",
     "mid"
    ],
-   "answer": 2,
    "reveal": [
     32,
     42
@@ -525,9 +509,9 @@
      "at": 0.85
     }
    ],
-   "say": "Trick question. A squeeze tells you a big move may be coming, not its direction. Here the bands ended up more than twelve times wider. Follow for tomorrow's chart.",
-   "sfx": "reveal",
-   "cont": true
+   "say": "The bands ended up more than twelve times wider. But notice: the squeeze told you a move might come, not which way. Follow for tomorrow's chart.",
+   "cont": true,
+   "sfx": "reveal"
   }
  ],
  "post": {
@@ -546,5 +530,6 @@
  },
  "tagFrom": 7,
  "format_v": 2,
+ "hook": "next",
  "voice": "andrew_up"
 }

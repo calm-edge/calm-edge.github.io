@@ -1,5 +1,5 @@
 {
- "id": "c304_car_fib_pullback",
+ "id": "c313_car_fib_pullback",
  "kind": "carousel",
  "lesson": null,
  "tag": "Illustrative chart · education, not financial advice",
@@ -283,15 +283,17 @@
     }
    ],
    "lines": [],
-   "bands": []
+   "bands": [],
+   "tf": "15m"
   }
  },
  "slides": [
   {
    "type": "cover",
-   "kicker": "Strategy breakdown",
-   "title": "Buying the pullback with Fibonacci levels.",
+   "kicker": "Strategy · 4 steps",
+   "title": "Where do pullbacks usually stop?",
    "chart": "a",
+   "chartH": 640,
    "state": {
     "bars": 27,
     "show": [],
@@ -301,7 +303,7 @@
       "label": "50%",
       "color": "gold",
       "from": 17,
-      "labelPos": "right"
+      "labelAt": 1
      },
      {
       "price": 102.22,
@@ -309,7 +311,75 @@
       "color": "gold",
       "from": 17,
       "below": true,
-      "labelPos": "right"
+      "labelAt": 1
+     }
+    ],
+    "zones": [
+     {
+      "from": 17,
+      "to": 38,
+      "lo": 102.22,
+      "hi": 102.97,
+      "color": "gold"
+     }
+    ],
+    "marks": [],
+    "lastPrice": false
+   }
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 1 of 4",
+   "title": "Find the move: A to B",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 18,
+    "show": [],
+    "levels": [],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 5,
+      "dir": "up",
+      "text": "A",
+      "color": "blue"
+     },
+     {
+      "bar": 17,
+      "dir": "down",
+      "text": "B",
+      "color": "blue"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "A = where the move started (**99.79**). B = where it ended (**106.14**)."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 2 of 4",
+   "title": "Draw 50% and 61.8%",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 20,
+    "show": [],
+    "levels": [
+     {
+      "price": 102.97,
+      "label": "50%",
+      "color": "gold",
+      "from": 17,
+      "labelAt": 1
+     },
+     {
+      "price": 102.22,
+      "label": "61.8%",
+      "color": "gold",
+      "from": 17,
+      "below": true,
+      "labelAt": 1
      }
     ],
     "zones": [
@@ -325,53 +395,28 @@
      {
       "bar": 5,
       "dir": "up",
-      "text": "A (low)",
+      "text": "A",
       "color": "blue"
      },
      {
       "bar": 17,
       "dir": "down",
-      "text": "B (high)",
+      "text": "B",
       "color": "blue"
      }
-    ]
-   }
-  },
-  {
-   "type": "formula",
-   "title": "How the levels are drawn",
-   "formula": "Level = B − (B − A) × ratio",
-   "small": "Here: A = 99.79, B = 106.14 → 50% = 102.97, 61.8% = 102.22",
-   "text": "A is the start of the move, B its end. The common ratios **38.2%, 50% and 61.8%** mark how much of the move a pullback gives back."
-  },
-  {
-   "type": "points",
-   "title": "The idea",
-   "points": [
-    {
-     "b": "Trends move in waves",
-     "t": "A push, a pullback, another push.",
-     "color": "mint"
-    },
-    {
-     "b": "Many traders watch 50–61.8%",
-     "t": "A deep but normal pullback in a healthy trend.",
-     "color": "gold"
-    },
-    {
-     "b": "The level is not the signal",
-     "t": "Wait for price to react there.",
-     "color": "coral"
-    }
-   ]
+    ],
+    "lastPrice": false
+   },
+   "text": "How much of the move a pullback gives back: **102.97** and **102.22**."
   },
   {
    "type": "chart",
-   "title": "Pullback into the zone, then a reaction",
+   "kicker": "Step 3 of 4",
+   "title": "Wait for a reaction there",
    "chart": "a",
-   "chartH": 600,
+   "chartH": 700,
    "state": {
-    "bars": 37,
+    "bars": 27,
     "show": [],
     "levels": [
      {
@@ -379,7 +424,7 @@
       "label": "50%",
       "color": "gold",
       "from": 17,
-      "labelPos": "right"
+      "labelAt": 1
      },
      {
       "price": 102.22,
@@ -387,7 +432,7 @@
       "color": "gold",
       "from": 17,
       "below": true,
-      "labelPos": "right"
+      "labelAt": 1
      }
     ],
     "zones": [
@@ -412,81 +457,88 @@
       "text": "Entry",
       "color": "mint"
      }
-    ]
+    ],
+    "lastPrice": false
    },
-   "text": "Low **102.51** inside the zone. Entry **103.61** on the first close above the low bar's high, stop **102.31**, first target the old high **106.14**."
+   "text": "The level is not the signal. Entry **103.61** on the first strong close."
   },
   {
-   "type": "rows",
-   "title": "This trade in numbers",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Risk",
-      "",
-      "1.30"
-     ]
-    },
-    {
-     "cells": [
-      "Reward to B",
-      "",
-      "2.53"
-     ]
-    },
-    {
-     "cells": [
-      "Reward ÷ risk",
-      "",
-      "1.9R"
-     ],
-     "good": true,
-     "hl": true
-    }
-   ]
+   "type": "chart",
+   "kicker": "Step 4 of 4",
+   "title": "Stop below, target the old high",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 37,
+    "show": [],
+    "levels": [
+     {
+      "price": 102.31,
+      "label": "Stop",
+      "color": "coral",
+      "from": 26,
+      "below": true,
+      "labelPos": "right"
+     },
+     {
+      "price": 106.14,
+      "label": "Target: B",
+      "color": "mint",
+      "from": 26,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [
+     {
+      "from": 17,
+      "to": 38,
+      "lo": 102.22,
+      "hi": 102.97,
+      "color": "gold"
+     }
+    ],
+    "marks": [],
+    "lastPrice": false
+   },
+   "text": "Risk **1.30**, reward to B **2.53**: about **1.9R**."
   },
   {
    "type": "points",
    "title": "Common mistakes",
    "points": [
     {
-     "b": "Picking A and B after the fact",
+     "b": "Choosing A and B after the fact",
      "t": "Use clear swing points, the same way every time.",
      "color": "coral"
     },
     {
-     "b": "Buying the level blindly",
+     "b": "Buying the line blindly",
      "t": "No reaction, no trade. Levels break.",
      "color": "gold"
     },
     {
      "b": "Using it against the trend",
-     "t": "It's a tool for joining a trend, not for catching tops.",
+     "t": "It's for joining a trend, not catching tops.",
      "color": "blue"
     }
    ]
   },
   {
    "type": "end",
-   "title": "Zone first, reaction second.",
-   "text": "Fibonacci levels show where to look. The candle that reacts there tells you when."
+   "title": "Zone first. Reaction second.",
+   "text": "Fibonacci shows **where** to look. The candle that reacts there tells you **when**."
   }
  ],
  "post": {
-  "instagram": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
-  "facebook": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
-  "tiktok": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R). Follow for one trading concept a day. #fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading",
+  "instagram": "Fibonacci pullback in 4 steps: 1) find the move from A to B, 2) draw 50% and 61.8% of it, 3) wait for a reaction in that zone, 4) stop below the low, target the old high. Example: entry 103.61, stop 102.31, target 106.14 (about 1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Fibonacci pullback in 4 steps: 1) find the move from A to B, 2) draw 50% and 61.8% of it, 3) wait for a reaction in that zone, 4) stop below the low, target the old high. Example: entry 103.61, stop 102.31, target 106.14 (about 1.9R).\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Fibonacci pullback in 4 steps: 1) find the move from A to B, 2) draw 50% and 61.8% of it, 3) wait for a reaction in that zone, 4) stop below the low, target the old high. Example: entry 103.61, stop 102.31, target 106.14 (about 1.9R). Follow for one trading concept a day. #fibonacci #pullback #daytradingstrategy #tradingeducation #technicalanalysis #daytrading",
   "pinterest": {
-   "title": "Fibonacci pullback trading strategy",
-   "description": "Fibonacci retracements measure how much of a move a pullback gives back: Level = B − (B − A) × ratio. Many traders watch 50–61.8% in a trend and wait for a reaction there. Example: low 102.51 inside the zone, entry 103.61, stop 102.31, first target 106.14 (1.9R). Trading concepts explained simply.",
+   "title": "Fibonacci pullback strategy in 4 steps",
+   "description": "Fibonacci pullback in 4 steps: 1) find the move from A to B, 2) draw 50% and 61.8% of it, 3) wait for a reaction in that zone, 4) stop below the low, target the old high. Example: entry 103.61, stop 102.31, target 106.14 (about 1.9R). Trading concepts explained simply.",
    "link": "https://amirkallas2cs-gif.github.io/learn/"
   },
-  "title": "Fibonacci pullback strategy"
+  "title": "Fibonacci pullback in 4 steps"
  },
  "voice": "andrew_up"
 }

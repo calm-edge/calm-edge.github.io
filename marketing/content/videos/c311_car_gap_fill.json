@@ -1,5 +1,5 @@
 {
- "id": "c302_car_gap_fill",
+ "id": "c311_car_gap_fill",
  "kind": "carousel",
  "lesson": null,
  "tag": "Illustrative chart · education, not financial advice",
@@ -269,16 +269,19 @@
     }
    ],
    "lines": [],
-   "bands": []
+   "bands": [],
+   "tf": "5m"
   }
  },
  "slides": [
   {
    "type": "cover",
-   "kicker": "Strategy breakdown",
-   "title": "Gap fill: trading back to yesterday's close.",
+   "kicker": "Strategy · 4 steps",
+   "title": "Gap up at the open. Fade it or follow it?",
    "chart": "a",
+   "chartH": 640,
    "state": {
+    "bars": 16,
     "show": [],
     "levels": [
      {
@@ -296,78 +299,46 @@
       "color": "mint"
      }
     ],
-    "bars": 16
+    "lastPrice": false
    }
   },
   {
-   "type": "points",
-   "title": "What a gap is",
-   "points": [
-    {
-     "b": "Today opens away from yesterday's close",
-     "t": "News or overnight trading moved the price.",
-     "color": "blue"
-    },
-    {
-     "b": "\"Filling the gap\"",
-     "t": "Price trades back to yesterday's close.",
-     "color": "gold"
-    },
-    {
-     "b": "Not every gap fills",
-     "t": "Strong news gaps can run all day. You need a trigger.",
-     "color": "coral"
-    }
-   ]
-  },
-  {
-   "type": "rows",
-   "title": "One version of the rules",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Wait",
-      "",
-      "First 15 minutes"
-     ]
-    },
-    {
-     "cells": [
-      "Entry",
-      "",
-      "Close below their low"
-     ],
-     "good": true
-    },
-    {
-     "cells": [
-      "Stop",
-      "",
-      "Above the day's high"
-     ],
-     "hl": true
-    },
-    {
-     "cells": [
-      "Target",
-      "",
-      "Yesterday's close"
-     ],
-     "good": true
-    }
-   ]
+   "type": "chart",
+   "kicker": "Step 1 of 4",
+   "title": "Mark yesterday's close",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 13,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Yesterday's close",
+      "color": "gold"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 12,
+      "dir": "up",
+      "text": "Gap up",
+      "color": "mint"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Today opened **1.1% higher**. Yesterday's close is where the gap would **fill**."
   },
   {
    "type": "chart",
-   "title": "The open fails, then the fill",
+   "kicker": "Step 2 of 4",
+   "title": "Let 15 minutes trade",
    "chart": "a",
-   "chartH": 600,
+   "chartH": 700,
    "state": {
+    "bars": 15,
     "show": [],
     "levels": [
      {
@@ -381,14 +352,95 @@
       "color": "blue",
       "from": 12,
       "below": true,
-      "labelAt": 0.5
+      "labelAt": 3
+     }
+    ],
+    "zones": [
+     {
+      "from": 12,
+      "to": 14,
+      "lo": 101.0,
+      "hi": 101.73,
+      "color": "blue"
+     }
+    ],
+    "marks": [],
+    "lastPrice": false
+   },
+   "text": "Don't trade the open. Mark the **low** of the first three 5-minute candles."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 3 of 4",
+   "title": "Enter on a close below it",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 21,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Yesterday's close",
+      "color": "gold"
+     },
+     {
+      "price": 101.0,
+      "label": "",
+      "color": "blue",
+      "from": 12,
+      "below": true,
+      "labelAt": 3
+     },
+     {
+      "price": 101.73,
+      "label": "Stop: day's high",
+      "color": "coral",
+      "from": 20,
+      "labelPos": "right"
      }
     ],
     "zones": [],
     "marks": [
      {
       "bar": 20,
-      "dir": "down",
+      "dir": "up",
+      "text": "Close below",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "The open failed. Entry **100.96**, stop above the day's high **101.73**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 4 of 4",
+   "title": "Target: yesterday's close",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 29,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Yesterday's close",
+      "color": "gold"
+     },
+     {
+      "price": 101.73,
+      "label": "Stop: day's high",
+      "color": "coral",
+      "from": 20,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 20,
+      "dir": "up",
       "text": "Close below",
       "color": "coral"
      },
@@ -399,17 +451,17 @@
       "color": "gold"
      }
     ],
-    "bars": 30
+    "lastPrice": false
    },
-   "text": "Gap of **1.1%**. Entry **100.96**, stop **101.73** (risk 0.77), target **100.00** (reward 0.96)."
+   "text": "Risk **0.77** to make **0.96**. Here the gap filled."
   },
   {
    "type": "points",
-   "title": "When to skip it",
+   "title": "Skip it when…",
    "points": [
     {
-     "b": "Big news behind the gap",
-     "t": "Earnings or major data can keep the move going.",
+     "b": "Big news caused the gap",
+     "t": "Earnings or major data can keep the move going all day.",
      "color": "coral"
     },
     {
@@ -418,8 +470,8 @@
      "color": "gold"
     },
     {
-     "b": "Reward smaller than risk",
-     "t": "If the fill is closer than the stop, pass.",
+     "b": "The fill is closer than the stop",
+     "t": "Reward smaller than risk: pass.",
      "color": "blue"
     }
    ]
@@ -427,19 +479,19 @@
   {
    "type": "end",
    "title": "Let the open fail first.",
-   "text": "A gap is a reason to watch, not a reason to fade. Trade the failure, target the close."
+   "text": "A gap is a reason to watch, not a reason to fade. **Trade the failure, target the close.**"
   }
  ],
  "post": {
-  "instagram": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
-  "facebook": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
-  "tiktok": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first. Follow for one trading concept a day. #gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading",
+  "instagram": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) enter on a close below their low with a stop above the day's high, 4) target yesterday's close. Example: 1.1% gap, entry 100.96, stop 101.73, target 100.00. Skip it when big news caused the gap.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) enter on a close below their low with a stop above the day's high, 4) target yesterday's close. Example: 1.1% gap, entry 100.96, stop 101.73, target 100.00. Skip it when big news caused the gap.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) enter on a close below their low with a stop above the day's high, 4) target yesterday's close. Example: 1.1% gap, entry 100.96, stop 101.73, target 100.00. Skip it when big news caused the gap. Follow for one trading concept a day. #gapfill #daytradingstrategy #gaptrading #tradingeducation #technicalanalysis #daytrading",
   "pinterest": {
-   "title": "Gap fill trading strategy explained",
-   "description": "A gap fill means price trades back to yesterday's close. One way to trade it: wait for the first 15 minutes, enter on a close below their low, stop above the day's high, target yesterday's close. Example: a 1.1% gap, entry 100.96, stop 101.73, target 100.00. Big news gaps often don't fill, so you need the failure first. Trading concepts explained simply.",
+   "title": "Gap fill trading strategy in 4 steps",
+   "description": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) enter on a close below their low with a stop above the day's high, 4) target yesterday's close. Example: 1.1% gap, entry 100.96, stop 101.73, target 100.00. Skip it when big news caused the gap. Trading concepts explained simply.",
    "link": "https://amirkallas2cs-gif.github.io/learn/"
   },
-  "title": "Gap fill strategy explained"
+  "title": "Gap fill strategy in 4 steps"
  },
  "voice": "andrew_up"
 }

@@ -1,5 +1,5 @@
 {
- "id": "c305_car_range_trading",
+ "id": "c314_car_range_trading",
  "kind": "carousel",
  "lesson": null,
  "tag": "Illustrative chart · education, not financial advice",
@@ -297,15 +297,17 @@
     }
    ],
    "lines": [],
-   "bands": []
+   "bands": [],
+   "tf": "5m"
   }
  },
  "slides": [
   {
    "type": "cover",
-   "kicker": "Strategy breakdown",
-   "title": "How to trade a range (and when to stop).",
+   "kicker": "Strategy · 4 steps",
+   "title": "Price bounced here 6 times. Here's the plan.",
    "chart": "a",
+   "chartH": 640,
    "state": {
     "bars": 31,
     "show": [],
@@ -314,7 +316,6 @@
       "price": 103.0,
       "label": "Range high",
       "color": "coral",
-      "labelAt": 14.5,
       "labelPos": "right"
      },
      {
@@ -357,77 +358,140 @@
       "dir": "up",
       "color": "mint"
      }
-    ]
+    ],
+    "lastPrice": false
    }
   },
   {
-   "type": "points",
-   "title": "Is it really a range?",
-   "points": [
-    {
-     "b": "At least two touches per side",
-     "t": "Here: three at the high, three at the low.",
-     "color": "blue"
-    },
-    {
-     "b": "Flat highs and lows",
-     "t": "Not higher lows or lower highs.",
-     "color": "gold"
-    },
-    {
-     "b": "Room inside",
-     "t": "Enough distance for a reward bigger than the risk.",
-     "color": "mint"
-    }
-   ]
-  },
-  {
-   "type": "rows",
-   "title": "One version of the rules",
-   "head": [
-    "",
-    "",
-    ""
-   ],
-   "rows": [
-    {
-     "cells": [
-      "Buy",
-      "",
-      "Rejection near the low"
-     ],
-     "good": true
-    },
-    {
-     "cells": [
-      "Sell",
-      "",
-      "Rejection near the high"
-     ],
-     "good": true
-    },
-    {
-     "cells": [
-      "Stop",
-      "",
-      "Just outside the range"
-     ],
-     "hl": true
-    },
-    {
-     "cells": [
-      "Target",
-      "",
-      "Middle or other side"
-     ]
-    }
-   ]
+   "type": "chart",
+   "kicker": "Step 1 of 4",
+   "title": "Confirm it's a range",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 31,
+    "show": [],
+    "levels": [
+     {
+      "price": 103.0,
+      "label": "Range high",
+      "color": "coral",
+      "labelPos": "right"
+     },
+     {
+      "price": 100.0,
+      "label": "Range low",
+      "color": "mint",
+      "below": true,
+      "labelAt": 19.5
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 4,
+      "dir": "down",
+      "color": "coral"
+     },
+     {
+      "bar": 13,
+      "dir": "down",
+      "color": "coral"
+     },
+     {
+      "bar": 23,
+      "dir": "down",
+      "color": "coral"
+     },
+     {
+      "bar": 8,
+      "dir": "up",
+      "color": "mint"
+     },
+     {
+      "bar": 18,
+      "dir": "up",
+      "color": "mint"
+     },
+     {
+      "bar": 30,
+      "dir": "up",
+      "color": "mint"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "At least **2 touches per side** and flat highs and lows. Here: **3 and 3**."
   },
   {
    "type": "chart",
+   "kicker": "Step 2 of 4",
+   "title": "Trade only the edges",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 31,
+    "show": [],
+    "levels": [],
+    "zones": [
+     {
+      "from": 0,
+      "to": 30,
+      "lo": 102.55,
+      "hi": 103.0,
+      "color": "coral",
+      "label": "Sell zone"
+     },
+     {
+      "from": 0,
+      "to": 30,
+      "lo": 100.0,
+      "hi": 100.45,
+      "color": "mint",
+      "label": "Buy zone"
+     }
+    ],
+    "marks": [],
+    "lastPrice": false
+   },
+   "text": "Buy rejections near the low, sell rejections near the high. **The middle has no edge.**"
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 3 of 4",
+   "title": "Stop just outside",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 31,
+    "show": [],
+    "levels": [
+     {
+      "price": 103.0,
+      "label": "Short stop above",
+      "color": "coral",
+      "labelPos": "right"
+     },
+     {
+      "price": 100.0,
+      "label": "Long stop below",
+      "color": "mint",
+      "below": true,
+      "labelAt": 19.5
+     }
+    ],
+    "zones": [],
+    "marks": [],
+    "lastPrice": false
+   },
+   "text": "If price **closes outside** the range, the idea is wrong. Get out."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 4 of 4",
    "title": "Every range ends",
    "chart": "a",
-   "chartH": 600,
+   "chartH": 700,
    "state": {
     "bars": 41,
     "show": [],
@@ -436,7 +500,7 @@
       "price": 103.0,
       "label": "Range high",
       "color": "coral",
-      "labelAt": 14.5
+      "labelPos": "right"
      },
      {
       "price": 100.0,
@@ -454,47 +518,48 @@
       "text": "Close outside",
       "color": "mint"
      }
-    ]
+    ],
+    "lastPrice": false
    },
-   "text": "After six touches, a candle **closes above** the high and price never comes back in. The stop just outside is what limits the damage."
+   "text": "After 6 touches, a close above the high and price never comes back. **The stop saves you.**"
   },
   {
    "type": "points",
-   "title": "Rules that keep you safe",
+   "title": "3 rules",
    "points": [
     {
-     "b": "The stop is not optional",
-     "t": "A range trade without one turns into a breakout loss.",
+     "b": "No stop, no range trade",
+     "t": "Without one, a breakout becomes a big loss.",
      "color": "coral"
     },
     {
-     "b": "Don't trade the middle",
-     "t": "Entries in the middle have no edge and no clear stop.",
+     "b": "Skip the middle",
+     "t": "No edge and no clear stop there.",
      "color": "gold"
     },
     {
-     "b": "Switch modes on a close outside",
-     "t": "Stop fading. Start watching the breakout and retest.",
+     "b": "A close outside? Switch",
+     "t": "Stop fading. Watch the breakout and the retest.",
      "color": "blue"
     }
    ]
   },
   {
    "type": "end",
-   "title": "Fade the edges, respect the break.",
-   "text": "Ranges pay the patient trader until they don't. The close outside is your signal to stop."
+   "title": "Fade the edges. Respect the break.",
+   "text": "Ranges pay the patient trader **until they don't**."
   }
  ],
  "post": {
-  "instagram": "A range needs at least two touches on each side and flat highs and lows. One way to trade it: buy rejections near the low, sell rejections near the high, stop just outside, target the middle or the other side. Every range ends: a close outside means stop fading and start watching the breakout.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#rangetrading #supportandresistance #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
-  "facebook": "A range needs at least two touches on each side and flat highs and lows. One way to trade it: buy rejections near the low, sell rejections near the high, stop just outside, target the middle or the other side. Every range ends: a close outside means stop fading and start watching the breakout.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
-  "tiktok": "A range needs at least two touches on each side and flat highs and lows. One way to trade it: buy rejections near the low, sell rejections near the high, stop just outside, target the middle or the other side. Every range ends: a close outside means stop fading and start watching the breakout. Follow for one trading concept a day. #rangetrading #supportandresistance #priceaction #tradingeducation #technicalanalysis #daytrading",
+  "instagram": "Range trading in 4 steps: 1) confirm it's a range (2+ touches per side, flat highs and lows), 2) trade only the edges, 3) stop just outside, 4) when a candle closes outside, the range is over. The stop is what saves you when it breaks.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#rangetrading #supportandresistance #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "Range trading in 4 steps: 1) confirm it's a range (2+ touches per side, flat highs and lows), 2) trade only the edges, 3) stop just outside, 4) when a candle closes outside, the range is over. The stop is what saves you when it breaks.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://amirkallas2cs-gif.github.io/learn/",
+  "tiktok": "Range trading in 4 steps: 1) confirm it's a range (2+ touches per side, flat highs and lows), 2) trade only the edges, 3) stop just outside, 4) when a candle closes outside, the range is over. The stop is what saves you when it breaks. Follow for one trading concept a day. #rangetrading #supportandresistance #priceaction #tradingeducation #technicalanalysis #daytrading",
   "pinterest": {
-   "title": "Range trading strategy explained",
-   "description": "A range needs at least two touches on each side and flat highs and lows. One way to trade it: buy rejections near the low, sell rejections near the high, stop just outside, target the middle or the other side. Every range ends: a close outside means stop fading and start watching the breakout. Trading concepts explained simply.",
+   "title": "Range trading strategy in 4 steps",
+   "description": "Range trading in 4 steps: 1) confirm it's a range (2+ touches per side, flat highs and lows), 2) trade only the edges, 3) stop just outside, 4) when a candle closes outside, the range is over. The stop is what saves you when it breaks. Trading concepts explained simply.",
    "link": "https://amirkallas2cs-gif.github.io/learn/"
   },
-  "title": "How to trade a range"
+  "title": "How to trade a range in 4 steps"
  },
  "voice": "andrew_up"
 }

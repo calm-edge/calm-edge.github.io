@@ -239,7 +239,12 @@
     }
    ],
    "lines": [],
-   "bands": []
+   "bands": [],
+   "tf": "5m",
+   "time": {
+    "start": "09:30",
+    "step": 5
+   }
   },
   "b": {
    "candles": [
@@ -434,7 +439,12 @@
     }
    ],
    "lines": [],
-   "bands": []
+   "bands": [],
+   "tf": "5m",
+   "time": {
+    "start": "09:30",
+    "step": 5
+   }
   }
  },
  "thumb": {

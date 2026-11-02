@@ -329,15 +329,11 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Is this uptrend still alive?",
+   "headline": "Higher highs. Higher lows.",
    "big": true,
-   "options": [
-    "Yes",
-    "It's over"
-   ],
    "reveal": [
     6,
-    36
+    32
    ],
    "show": [],
    "grow": 0.95,
@@ -371,29 +367,25 @@
      "at": 0.0
     }
    ],
-   "say": "Higher highs, higher lows. Is this uptrend still alive? Decide before the reveal."
+   "say": "Higher highs, higher lows: a clean uptrend. Watch what happens next."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Is this uptrend still alive?",
+   "headline": "Higher highs. Higher lows.",
    "big": true,
-   "options": [
-    "Yes",
-    "It's over"
-   ],
    "reveal": [
-    36,
-    36
+    32,
+    32
    ],
    "show": [],
    "zoom": [
     22,
-    11
+    13
    ],
-   "countdown": 3,
-   "duration": 3,
-   "sfx": "countdown",
+   "overlay": "What happens next?",
+   "duration": 2.4,
+   "sfx": "riser",
    "cont": true,
    "marks": [
     {
@@ -429,16 +421,11 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Is this uptrend still alive?",
+   "headline": "Lower high, then a break.",
    "big": true,
-   "options": [
-    "Yes",
-    "It's over"
-   ],
    "show": [],
-   "answer": 1,
    "reveal": [
-    36,
+    32,
     45
    ],
    "levels": [
@@ -468,8 +455,8 @@
     }
    ],
    "say": "A lower high, then a close below the last higher low. The structure is broken, and that's often the first warning that the trend is changing. Follow for tomorrow's chart.",
-   "sfx": "reveal",
-   "cont": true
+   "cont": true,
+   "sfx": "reveal"
   }
  ],
  "post": {
@@ -488,5 +475,6 @@
  },
  "tagFrom": 7,
  "format_v": 2,
+ "hook": "next",
  "voice": "andrew_up"
 }

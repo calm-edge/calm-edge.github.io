@@ -231,18 +231,16 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Buy this candle?",
+   "kicker": "Myth",
+   "kickerColor": "coral",
+   "headline": "Engulfing = buy signal.",
    "big": true,
-   "options": [
-    "Buy it",
-    "Depends"
-   ],
+   "show": [],
+   "grow": 0.95,
    "reveal": [
     6,
     22
    ],
-   "show": [],
-   "grow": 0.95,
    "levels": [
     {
      "price": 100.0,
@@ -261,60 +259,23 @@
      "at": 0.0
     }
    ],
-   "say": "A big green candle swallows the red one. Do you buy it? Decide before the reveal."
+   "stamp": {
+    "text": "FALSE",
+    "at": 0.62
+   },
+   "sfx": "stamp",
+   "sfx_at": 0.62,
+   "hold": 0.4,
+   "say": "Myth: a bullish engulfing candle is a buy signal."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Buy this candle?",
+   "kicker": "Truth",
+   "kickerColor": "mint",
+   "headline": "Location matters more.",
    "big": true,
-   "options": [
-    "Buy it",
-    "Depends"
-   ],
-   "reveal": [
-    22,
-    22
-   ],
    "show": [],
-   "zoom": [
-    22,
-    11
-   ],
-   "countdown": 3,
-   "duration": 3,
-   "sfx": "countdown",
-   "cont": true,
-   "levels": [
-    {
-     "price": 100.0,
-     "label": "Support",
-     "color": "gold",
-     "below": true,
-     "at": 0.0
-    }
-   ],
-   "marks": [
-    {
-     "bar": 21,
-     "dir": "up",
-     "text": "Engulfing",
-     "color": "mint",
-     "at": 0.0
-    }
-   ]
-  },
-  {
-   "type": "chart",
-   "chart": "a",
-   "headline": "Buy this candle?",
-   "big": true,
-   "options": [
-    "Buy it",
-    "Depends"
-   ],
-   "show": [],
-   "answer": 1,
    "reveal": [
     22,
     31
@@ -327,9 +288,7 @@
      "below": true
     }
    ],
-   "say": "It depends where it is. A bullish engulfing candle tends to mean more at support after a pullback, like here, than in the middle of a range. Follow for tomorrow's chart.",
-   "sfx": "reveal",
-   "cont": true
+   "say": "Its green body swallows the previous red one, so buyers took control for a bar. But it tends to mean more at support after a pullback, like here, than in the middle of a range. Follow for tomorrow's chart."
   }
  ],
  "post": {
@@ -348,5 +307,6 @@
  },
  "tagFrom": 7,
  "format_v": 2,
+ "hook": "myth",
  "voice": "andrew_up"
 }

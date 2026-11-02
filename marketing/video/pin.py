@@ -88,7 +88,7 @@ h1 {{ font-size:84px; line-height:1.05; letter-spacing:-2px; font-weight:700; te
     with sync_playwright() as p:
         exe = os.environ.get("CHROME_PATH") or "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
         b = p.chromium.launch(executable_path=exe if os.path.exists(exe) else None)
-        pg = b.new_page(viewport={"width": 1000, "height": 1500}); pg.goto((work / "pin.html").as_uri()); pg.evaluate("document.fonts.ready")
+        pg = b.new_page(viewport={"width": 1000, "height": 1500}); pg.goto((work / "pin.html").as_uri()); pg.evaluate("() => Promise.all(['400', '600', '700'].map((w) => document.fonts.load(w + ' 30px Inter')))")
         chart_bad = []
         if chart_state:
             chart_bad = pg.evaluate("""([ch, st]) => { const svg = document.getElementById('pc'); const r = svg.getBoundingClientRect();

@@ -88,7 +88,7 @@ window.renderSlide = (spec, i, W, H) => {
   const chartDiv = (h) => `<div class="chartbox" id="cb" style="height:${h}px;width:100%"><svg id="cv" width="${W - 2 * pad}" height="${h}"></svg></div>`;
   if (s.type === "cover") html = body(`${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title">${esc(s.title)}</div>
       ${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}${s.chart ? chartDiv(story ? 640 : s.chartH || 470) : ""}<div class="swipe">${story ? s.button ?? "New post · on our profile" : "Swipe →"}</div>`.replace('<div class="swipe"></div>', ""));
-  if (s.type === "chart") html = body(`<div class="title mid">${esc(s.title)}</div>${chartDiv(s.chartH || 560)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
+  if (s.type === "chart") html = body(`${s.kicker ? `<div class="kicker">${esc(s.kicker)}</div>` : ""}<div class="title mid">${esc(s.title)}</div>${chartDiv(s.chartH || 560)}${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
   if (s.type === "points") html = body(`<div class="title mid">${esc(s.title)}</div><div class="points">${s.points.map((p, k) =>
       `<div class="pt"><div class="n" style="--c:var(--${p.color || "mint"})">${p.icon || k + 1}</div><div class="t">${p.b ? `<b>${esc(p.b)}</b>` : ""}${rich(p.t || "")}</div></div>`).join("")}</div>`);
   if (s.type === "formula") html = body(`<div class="title mid">${esc(s.title)}</div><div class="formula"><span class="fx" style="white-space:nowrap">${esc(s.formula)}</span>${s.small ? `<small>${esc(s.small)}</small>` : ""}</div>${s.text ? `<div class="text">${rich(s.text)}</div>` : ""}`);
@@ -117,7 +117,7 @@ window.renderSlide = (spec, i, W, H) => {
     const svg = document.getElementById("cv"), w = +svg.getAttribute("width"), h = +svg.getAttribute("height");
     const g = document.createElementNS("http://www.w3.org/2000/svg", "g"); svg.appendChild(g);
     const show = {}; (st.show || []).forEach((id) => (show[id] = 1));
-    const state = { bars: st.bars || n, show, minBars: st.minBars, readout: st.readout,
+    const state = { bars: st.bars || n, show, minBars: st.minBars, readout: st.readout, view: st.view, lastPrice: st.lastPrice,
       levels: (st.levels || []).map((l) => ({ ...l, alpha: 1 })), zones: (st.zones || []).map((z) => ({ ...z, alpha: 1 })), marks: (st.marks || []).map((m) => ({ ...m, alpha: 1 })) };
     drawChart(g, ch, { x: 20, y: 0, w: w - 40, h }, state).forEach((p) => probs.push(p));
   }

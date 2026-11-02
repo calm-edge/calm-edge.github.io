@@ -329,12 +329,8 @@
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Where does your stop go?",
+   "headline": "Find the mistake in this trade.",
    "big": true,
-   "options": [
-    "Tight",
-    "1.5 ATR"
-   ],
    "reveal": [
     6,
     26
@@ -348,19 +344,24 @@
      "label": "Entry",
      "color": "blue",
      "at": 0.0
+    },
+    {
+     "price": 103.58,
+     "from": 25,
+     "label": "Tight stop",
+     "color": "coral",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
     }
    ],
-   "say": "You're long here. Tight stop, or one and a half ATR? Decide before the reveal."
+   "say": "Long here, with the stop right below. Find the mistake before the countdown ends."
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Where does your stop go?",
+   "headline": "Find the mistake in this trade.",
    "big": true,
-   "options": [
-    "Tight",
-    "1.5 ATR"
-   ],
    "reveal": [
     26,
     26
@@ -368,7 +369,7 @@
    "show": [],
    "zoom": [
     22,
-    11
+    12
    ],
    "countdown": 3,
    "duration": 3,
@@ -381,20 +382,24 @@
      "label": "Entry",
      "color": "blue",
      "at": 0.0
+    },
+    {
+     "price": 103.58,
+     "from": 25,
+     "label": "Tight stop",
+     "color": "coral",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.0
     }
    ]
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Where does your stop go?",
+   "headline": "Find the mistake in this trade.",
    "big": true,
-   "options": [
-    "Tight",
-    "1.5 ATR"
-   ],
    "show": [],
-   "answer": 1,
    "reveal": [
     26,
     33
@@ -424,21 +429,21 @@
      "at": 0.45
     }
    ],
-   "say": "The tight stop, half an ATR below entry, got taken out by an ordinary dip.",
-   "sfx": "reveal",
-   "cont": true
+   "say": "The stop. Half an ATR below entry is inside normal noise, and an ordinary dip takes it out.",
+   "cont": true,
+   "stamp": {
+    "text": "MISTAKE",
+    "at": 0.04
+   },
+   "sfx": "stamp",
+   "sfx_at": 0.04
   },
   {
    "type": "chart",
    "chart": "a",
-   "headline": "Where does your stop go?",
+   "headline": "Find the mistake in this trade.",
    "big": true,
-   "options": [
-    "Tight",
-    "1.5 ATR"
-   ],
    "show": [],
-   "answer": 1,
    "reveal": [
     33,
     45
@@ -458,7 +463,7 @@
      "below": true
     }
    ],
-   "say": "The wider one survived the noise. Wider stop, smaller size, same dollar risk. Follow for tomorrow's chart.",
+   "say": "ATR is how far price normally moves in one bar. At one and a half ATR, the same dip is just noise. Wider stop, smaller size, same dollar risk. Follow for tomorrow's chart.",
    "cont": true
   }
  ],
@@ -478,5 +483,6 @@
  },
  "tagFrom": 7,
  "format_v": 2,
+ "hook": "spot",
  "voice": "andrew_up"
 }
