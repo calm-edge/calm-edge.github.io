@@ -6,7 +6,7 @@ from charts import path, closes, ema, rsi, vwap, atr, bollinger, macd, r2
 HANDLE = "@calmedgeofficial"
 EDU_TAG = "Illustrative chart · education, not financial advice"
 EDU_TAGS = ["#tradingeducation", "#technicalanalysis", "#daytrading", "#trading", "#learntotrade"]
-SITE = "https://amirkallas2cs-gif.github.io"
+SITE = "https://calm-edge.github.io"
 FOLLOW = {"type": "follow", "text": "Follow for one trading concept a day.", "say": "Save this, and follow for one trading concept a day."}
 
 

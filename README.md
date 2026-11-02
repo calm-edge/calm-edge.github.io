@@ -1,6 +1,6 @@
 # Calm Edge
 
-Source of https://amirkallas2cs-gif.github.io: free trading calculators, guides, and the marketing engine
+Source of https://calm-edge.github.io: free trading calculators, guides, and the marketing engine
 for [Trading Journal AI](https://kallas8.gumroad.com/l/axltbh).
 
 - `site/`: static site (Markdown articles, calculators, templates). `python site/build.py out/`

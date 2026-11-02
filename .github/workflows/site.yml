@@ -1,7 +1,7 @@
 name: Site and videos
 
 # Builds the site, renders new or changed videos (unchanged ones come from the cache)
-# and publishes everything on GitHub Pages: https://amirkallas2cs-gif.github.io
+# and publishes everything on GitHub Pages: https://calm-edge.github.io
 on:
   push:
     branches: [main]
