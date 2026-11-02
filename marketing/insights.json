@@ -1,13 +1,23 @@
 {
- "checked_at": "2026-11-01T14:52Z",
+ "checked_at": "2026-11-02T07:21Z",
  "media": [
+  {
+   "id": "17941588125379386",
+   "permalink": "https://www.instagram.com/reel/DfNNzwWieZg/",
+   "type": "REELS",
+   "timestamp": "2026-11-01T16:59:14+0000",
+   "first_line": "A level that rejected price three times breaks, and on the retest it holds from above. Buy",
+   "likes": 1,
+   "comments": 0,
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
   {
    "id": "17885511978523328",
    "permalink": "https://www.instagram.com/p/DfMT8cgF1yg/",
    "type": "FEED",
    "timestamp": "2026-11-01T08:33:13+0000",
    "first_line": "The 20 EMA is an average of recent closes that weighs the newest ones more. Rising with pr",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
