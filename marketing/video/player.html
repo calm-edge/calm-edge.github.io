@@ -31,7 +31,8 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--canv
   line-height:1.25; text-align:center; max-width:100%; }
 .caption .on { color:var(--mint); }
 /* presenter mode: a character on the right "explains" while the chart moves */
-body.host .caption { right:430px; }
+body.host .caption { right:530px; left:60px; }
+body.host .caption span.box { font-size:50px; padding:16px 24px; }
 .presenter { position:absolute; top:1205px; height:1100px; transform-origin:50% 100%; will-change:transform, opacity; opacity:0; }
 .tag { position:absolute; left:80px; top:240px; font-size:26px; color:var(--muted); background:rgba(22,33,45,.8); border:2px solid var(--line); border-radius:30px; padding:8px 20px; }
 .rows { background:var(--card); border-radius:30px; border:3px solid var(--line); overflow:hidden; }
@@ -93,7 +94,7 @@ window.load = (spec) => {
   TIMES = spec.scenes.map((s) => { const st = t; t += s.duration; return [st, t]; });
   const stage = document.getElementById("stage");
   stage.innerHTML = spec.scenes.map((s, i) => `<div class="layer" id="s${i}">${build(s, i)}</div>`).join("") +
-    (spec.presenter ? `<img class="presenter" id="pfront" src="${spec.presenter.front}" style="right:-40px"><img class="presenter" id="pside" src="${spec.presenter.side}" style="right:-6px">` : "") +
+    (spec.presenter ? `<img class="presenter" id="pfront" src="${spec.presenter.front}" style="right:0px"><img class="presenter" id="pside" src="${spec.presenter.side}" style="right:-6px">` : "") +
     `<div class="caption"><span class="box" id="cap"></span></div>${spec.tag ? `<div class="tag">${esc(spec.tag)}</div>` : ""}`;
   if (spec.presenter) document.body.classList.add("host");
   const fit = () => spec.scenes.forEach((s, i) => { if (s.type !== "stat") return; // size the number for its final value
@@ -252,16 +253,14 @@ window.render = (t) => {
         e.style.opacity = ease((local - st) / 0.3); e.style.transform = `translateY(${(1 - ease((local - st) / 0.35)) * 30}px)`; });
     }
   });
-  // presenter: front view on the first and last scene, side view (gesturing at the chart) in between; it sways and
-  // bobs with the loudness of the voice, so it looks like it is talking
+  // presenter: front view on the first and last scene, side view (gesturing at the chart) in between.
+  // It stands still (a smooth cross-fade between the two views); the chart is what moves.
   if (SPEC.presenter) {
     const si = Math.max(0, TIMES.findIndex(([a, b]) => t >= a && t < b)), last = SPEC.scenes.length - 1;
     const pose = (j) => SPEC.scenes[j].pose || (j === 0 || j === last ? "front" : "side");
-    const cur = pose(si), prev = si > 0 ? pose(si - 1) : cur, k = (SPEC.env || [])[Math.round(t * 30)] || 0;
-    const sw = cur === prev ? 1 : ease((t - TIMES[si][0]) / 0.25);
-    const tr = `translateY(${(-k * 14).toFixed(1)}px) rotate(${(Math.sin(t * 1.9) * 0.6 + k * 1.3).toFixed(2)}deg) scale(${(1 + 0.008 * Math.sin(t * 1.3)).toFixed(4)})`;
-    ["front", "side"].forEach((pz) => { const im = document.getElementById("p" + pz);
-      im.style.opacity = pz === cur ? sw : pz === prev ? 1 - sw : 0; im.style.transform = tr; });
+    const cur = pose(si), prev = si > 0 ? pose(si - 1) : cur;
+    const sw = cur === prev ? 1 : ease((t - TIMES[si][0]) / 0.4);
+    ["front", "side"].forEach((pz) => { document.getElementById("p" + pz).style.opacity = pz === cur ? sw : pz === prev ? 1 - sw : 0; });
   }
   const tg = document.querySelector(".tag"); if (tg) tg.style.opacity = SPEC.tagFrom ? clamp((t - SPEC.tagFrom) / 0.4) : 1;
   // Captions: the line being spoken, a few words at a time, current word in mint.

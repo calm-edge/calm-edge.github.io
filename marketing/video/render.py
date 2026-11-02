@@ -125,19 +125,6 @@ def main():
         with wave.open(str(track), "wb") as W:
             W.setnchannels(1); W.setsampwidth(2); W.setframerate(tts.RATE); W.writeframes(pcm.tobytes())
 
-    # 2c. Presenter: loudness of the voice per video frame, so the character moves while it talks.
-    if spec.get("presenter"):
-        import array as _a
-        with wave.open(str(track)) as r:
-            pcm = _a.array("h", r.readframes(r.getnframes()))
-        hop = tts.RATE // FPS
-        rms = [(sum(x * x for x in pcm[i:i + hop]) / max(1, len(pcm[i:i + hop]))) ** 0.5 for i in range(0, len(pcm), hop)]
-        top = sorted(rms)[int(len(rms) * 0.95)] or 1
-        env, e = [], 0.0
-        for v in rms:  # fast attack, slow release
-            v = min(1.0, v / top); e = v if v > e else e * 0.82 + v * 0.18; env.append(round(e, 3))
-        spec["env"] = env
-
     # 3. Frames -> ffmpeg.
     frames = int(round(total * FPS))
     mp4 = out / f"{vid}.mp4"
