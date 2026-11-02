@@ -374,6 +374,11 @@ V.extend(_strat.Y)
 import strategy_carousels as _scar  # carousels v2: step by step on TradingView-style charts
 V.extend(_scar.C)
 import quiz as _quiz  # after carousels/longform, which read the original lesson scenes
+import copy as _copy
+# presenter version (test): the same lesson explained by the Calm Edge character, charts unchanged
+_h = _copy.deepcopy(next(v for v in V if v["id"] == "v206_edu_double_top"))
+_h.update(id="v206h_edu_double_top_host", presenter={"front": "shots/presenter/front.png", "side": "shots/presenter/side.png"})
+V.append(_h)
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)
