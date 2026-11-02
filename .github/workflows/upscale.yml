@@ -16,7 +16,7 @@ jobs:
         with: { python-version: "3.12" }
       - name: Tools
         run: |
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
           pip install spandrel pillow numpy
           curl -sSfL -o model.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
       - name: Upscale
