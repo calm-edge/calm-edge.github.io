@@ -237,5 +237,44 @@
    "instagram",
    "facebook"
   ]
+ },
+ {
+  "id": "c311_car_gap_fill",
+  "date": "2026-11-03",
+  "time": "09:30",
+  "channels": [
+   "instagram",
+   "facebook"
+  ]
+ },
+ {
+  "id": "v209_edu_risk_reward",
+  "date": "2026-11-06",
+  "time": "17:30",
+  "channels": [
+   "instagram",
+   "facebook",
+   "youtube"
+  ]
+ },
+ {
+  "id": "v101_pfm_one_screen",
+  "date": "2026-11-14",
+  "time": "12:30",
+  "channels": [
+   "instagram",
+   "facebook",
+   "youtube"
+  ]
+ },
+ {
+  "id": "v105_pfm_payout",
+  "date": "2026-11-16",
+  "time": "12:30",
+  "channels": [
+   "instagram",
+   "facebook",
+   "youtube"
+  ]
  }
 ]
