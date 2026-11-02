@@ -1,0 +1,27 @@
+name: Upscale artwork
+
+# Manual: upscales marketing/tools/presenter_source.png x4 with Real-ESRGAN (anime model, made for drawn art)
+# and commits the result next to it as presenter_source_x4.png.
+on: workflow_dispatch
+
+permissions: { contents: write }
+
+jobs:
+  upscale:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Tools
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install spandrel pillow numpy
+          curl -sSfL -o model.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth
+      - name: Upscale
+        run: python marketing/tools/upscale.py model.pth marketing/tools/presenter_source.png marketing/tools/presenter_source_x4.png
+      - name: Save
+        run: |
+          git add marketing/tools/presenter_source_x4.png
+          git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Upscaled presenter artwork" && git pull -q --rebase && git push

@@ -5,7 +5,7 @@ name: Site and videos
 on:
   push:
     branches: [main]
-    paths-ignore: ["marketing/engage/**", ".github/workflows/engage.yml", "marketing/published.json", "marketing/status.json", "marketing/schedule.json", "marketing/publish/**", ".github/workflows/publish.yml"]
+    paths-ignore: ["marketing/engage/**", "marketing/tools/**", ".github/workflows/upscale.yml", ".github/workflows/engage.yml", "marketing/published.json", "marketing/status.json", "marketing/schedule.json", "marketing/publish/**", ".github/workflows/publish.yml"]
   schedule:
     - cron: "13 4 * * *"
     - cron: "52 16 * * *"  # after the 17:30 post, so the Pinterest feed picks it up the same day
