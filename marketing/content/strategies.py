@@ -407,7 +407,7 @@ def lvl(d, *names, at=0.0):
 orb_zone = lambda d, at=0.0: [{**orb_state(d, 0)["zones"][0], "at": at}]
 brk_mark = lambda d, at=0.3: [{"bar": d["brk"], "dir": "up", "text": "Close above", "color": "mint", "at": at}]
 Y.append({"id": "y302_long_orb", "kind": "long", "format": "landscape", "tag": EDU_TAG, "charts": orb_charts,
-          "thumb": {"type": "thumb", "kicker": "Full strategy", "title": "Opening range breakout, step by step", "chart": "a", "state": win_state},
+          "thumb": {"type": "thumb", "kicker": "Full strategy", "title": "Opening range breakout, step by step", "chart": "a", "state": orb_state(ORB, ORB["t_hit"] + 3, stop=False)},  # no stop line: on the short 16:9 chart its label collides with "Range low"
           "scenes": [
     {"type": "chart", "chart": "a", "chapter": "Intro", "headline": "The opening range breakout", "big": True, "reveal": [3, n_a], "levels": lvl(ORB, "hi", "lo"), "zones": orb_zone(ORB),
      "say": "The opening range breakout is one of the oldest day trading strategies there is. It's simple, the rules fit on one card, and the risk is defined before you enter. In this lesson we'll build it step by step: what the opening range is, the exact rules, a day when it works, a day when it doesn't, the filters traders add, and how to size it."},
