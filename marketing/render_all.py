@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 ROOT = pathlib.Path(__file__).parent
 SPECS = sorted((ROOT / "content" / "videos").glob("*.json"))
 ENGINE = [ROOT / "video" / f for f in ("player.html", "chart.js", "render.py", "tts.py", "pin.py", "still.py", "still.html")]
-SHOTS = sorted((ROOT / "shots").glob("*"))
+SHOTS = sorted(p for p in (ROOT / "shots").rglob("*") if p.is_file())  # files only (shots/presenter/ is a folder)
 
 
 def digest(spec):
