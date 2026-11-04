@@ -1,0 +1,609 @@
+{
+ "run": "41858995468",
+ "items": {
+  "c202_car_20ema": {
+   "id": "c202_car_20ema",
+   "kind": "carousel",
+   "slides": 6,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c301_car_orb": {
+   "id": "c301_car_orb",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c311_car_gap_fill": {
+   "id": "c311_car_gap_fill",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c312_car_inside_bar": {
+   "id": "c312_car_inside_bar",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c313_car_fib_pullback": {
+   "id": "c313_car_fib_pullback",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c314_car_range_trading": {
+   "id": "c314_car_range_trading",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c315_car_order_types": {
+   "id": "c315_car_order_types",
+   "kind": "carousel",
+   "slides": 7,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "c316_car_futures_math": {
+   "id": "c316_car_futures_math",
+   "kind": "carousel",
+   "slides": 6,
+   "problems": [],
+   "seconds": 0,
+   "engines": [],
+   "status": "cached"
+  },
+  "v001_rule_breaks": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v001_rule_breaks",
+   "rendered_at": "2026-11-04T14:28:38Z",
+   "seconds": 33.69,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v002_best_setup": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v002_best_setup",
+   "rendered_at": "2026-11-04T14:28:18Z",
+   "seconds": 27.24,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v003_emotions": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v003_emotions",
+   "rendered_at": "2026-11-04T14:30:13Z",
+   "seconds": 24.51,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v004_profit_factor": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v004_profit_factor",
+   "rendered_at": "2026-11-04T14:30:23Z",
+   "seconds": 22.42,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v005_r_multiple": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v005_r_multiple",
+   "rendered_at": "2026-11-04T14:32:45Z",
+   "seconds": 22.42,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v006_time_of_day": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v006_time_of_day",
+   "rendered_at": "2026-11-04T14:32:09Z",
+   "seconds": 22.66,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v007_drawdown": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v007_drawdown",
+   "rendered_at": "2026-11-04T15:36:45Z",
+   "seconds": 20.81,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "rendered"
+  },
+  "v008_ai_review": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v008_ai_review",
+   "rendered_at": "2026-11-04T15:36:41Z",
+   "seconds": 21.39,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "rendered"
+  },
+  "v009_calendar": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v009_calendar",
+   "rendered_at": "2026-11-04T14:36:26Z",
+   "seconds": 14.74,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v010_position_size": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v010_position_size",
+   "rendered_at": "2026-11-04T14:38:50Z",
+   "seconds": 20.14,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v011_weekday": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v011_weekday",
+   "rendered_at": "2026-11-04T14:38:58Z",
+   "seconds": 22.52,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v012_privacy": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v012_privacy",
+   "rendered_at": "2026-11-04T14:40:33Z",
+   "seconds": 15.73,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v013_long_short": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v013_long_short",
+   "rendered_at": "2026-11-04T14:40:43Z",
+   "seconds": 20.6,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v014_habit": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v014_habit",
+   "rendered_at": "2026-11-04T15:38:01Z",
+   "seconds": 19.18,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "rendered"
+  },
+  "v101_pfm_one_screen": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v101_pfm_one_screen",
+   "rendered_at": "2026-11-04T14:43:17Z",
+   "seconds": 22.83,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v102_pfm_eod_trailing": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v102_pfm_eod_trailing",
+   "rendered_at": "2026-11-04T14:45:03Z",
+   "seconds": 29.04,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v103_pfm_intraday": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v103_pfm_intraday",
+   "rendered_at": "2026-11-04T14:45:50Z",
+   "seconds": 26.93,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v104_pfm_consistency": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v104_pfm_consistency",
+   "rendered_at": "2026-11-04T14:47:13Z",
+   "seconds": 23.7,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v105_pfm_payout": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v105_pfm_payout",
+   "rendered_at": "2026-11-04T14:48:06Z",
+   "seconds": 25.23,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v106_pfm_is_it_paying": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v106_pfm_is_it_paying",
+   "rendered_at": "2026-11-04T14:49:08Z",
+   "seconds": 21.65,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v107_pfm_alerts_ai": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v107_pfm_alerts_ai",
+   "rendered_at": "2026-11-04T14:50:01Z",
+   "seconds": 19.11,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v108_pfm_rules": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v108_pfm_rules",
+   "rendered_at": "2026-11-04T14:50:43Z",
+   "seconds": 20.77,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v201_edu_rsi_70": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v201_edu_rsi_70",
+   "rendered_at": "2026-11-04T14:53:30Z",
+   "seconds": 31.95,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v202_edu_20ema": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v202_edu_20ema",
+   "rendered_at": "2026-11-04T14:52:50Z",
+   "seconds": 28.25,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v203_edu_vwap": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v203_edu_vwap",
+   "rendered_at": "2026-11-04T14:55:33Z",
+   "seconds": 29.16,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v204_edu_sr_flip": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v204_edu_sr_flip",
+   "rendered_at": "2026-11-04T14:55:28Z",
+   "seconds": 21.51,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v205_edu_failed_breakout": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v205_edu_failed_breakout",
+   "rendered_at": "2026-11-04T14:58:02Z",
+   "seconds": 24.04,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v206_edu_double_top": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v206_edu_double_top",
+   "rendered_at": "2026-11-04T14:57:28Z",
+   "seconds": 23.05,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v207_edu_atr_stop": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v207_edu_atr_stop",
+   "rendered_at": "2026-11-04T15:00:06Z",
+   "seconds": 27.88,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v208_edu_bollinger_squeeze": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v208_edu_bollinger_squeeze",
+   "rendered_at": "2026-11-04T14:59:17Z",
+   "seconds": 17.08,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v209_edu_risk_reward": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v209_edu_risk_reward",
+   "rendered_at": "2026-11-04T15:00:54Z",
+   "seconds": 21.24,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v210_edu_position_size": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v210_edu_position_size",
+   "rendered_at": "2026-11-04T15:03:03Z",
+   "seconds": 26.65,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v211_edu_trend_structure": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v211_edu_trend_structure",
+   "rendered_at": "2026-11-04T15:02:21Z",
+   "seconds": 17.99,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v212_edu_macd_cross": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v212_edu_macd_cross",
+   "rendered_at": "2026-11-04T15:04:42Z",
+   "seconds": 21.06,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v213_edu_bull_flag": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v213_edu_bull_flag",
+   "rendered_at": "2026-11-04T15:05:09Z",
+   "seconds": 25.94,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v214_edu_engulfing": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v214_edu_engulfing",
+   "rendered_at": "2026-11-04T15:06:09Z",
+   "seconds": 16.35,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v215_edu_drawdown_math": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v215_edu_drawdown_math",
+   "rendered_at": "2026-11-04T15:07:44Z",
+   "seconds": 20.22,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "y302_long_orb": {
+   "chapters": [
+    {
+     "t": 0.0,
+     "title": "Intro"
+    },
+    {
+     "t": 30.81,
+     "title": "What the opening range is"
+    },
+    {
+     "t": 78.05,
+     "title": "The rules"
+    },
+    {
+     "t": 117.67,
+     "title": "A day when it works"
+    },
+    {
+     "t": 159.87,
+     "title": "A day when it doesn't"
+    },
+    {
+     "t": 198.19,
+     "title": "Filters traders add"
+    },
+    {
+     "t": 244.79,
+     "title": "Sizing and risk"
+    },
+    {
+     "t": 280.83,
+     "title": "Test it yourself"
+    },
+    {
+     "t": 312.55,
+     "title": "Summary"
+    }
+   ],
+   "kind": "long",
+   "id": "y302_long_orb",
+   "rendered_at": "2026-11-04T15:50:56Z",
+   "seconds": 335.36,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "rendered"
+  }
+ },
+ "failed": []
+}
