@@ -1,6 +1,26 @@
 {
- "checked_at": "2026-11-03T07:03Z",
+ "checked_at": "2026-11-04T07:09Z",
  "media": [
+  {
+   "id": "18083682656687799",
+   "permalink": "https://www.instagram.com/reel/DfSVLg3Cc8Q/",
+   "type": "REELS",
+   "timestamp": "2026-11-03T16:39:40+0000",
+   "first_line": "Two highs at about the same price and a low between them, the neckline. The pattern is onl",
+   "likes": 1,
+   "comments": 0,
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
+  {
+   "id": "17879591259633244",
+   "permalink": "https://www.instagram.com/p/DfRfaORDfnu/",
+   "type": "FEED",
+   "timestamp": "2026-11-03T08:49:32+0000",
+   "first_line": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) ente",
+   "likes": 1,
+   "comments": 0,
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
   {
    "id": "18120815851964839",
    "permalink": "https://www.instagram.com/reel/DfPxaEQj2YU/",
@@ -8,7 +28,7 @@
    "timestamp": "2026-11-02T16:48:46+0000",
    "first_line": "Price pokes above resistance, buyers jump in, and the candle closes back below: a failed b",
    "likes": 1,
-   "comments": 1,
+   "comments": 2,
    "insights_error": "(#10) Application does not have permission for this action"
   },
   {
@@ -17,7 +37,7 @@
    "type": "REELS",
    "timestamp": "2026-11-02T12:16:17+0000",
    "first_line": "Rank your setups by average R, not by feel. In this example journal, one setup made +0.89R",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -27,7 +47,7 @@
    "type": "FEED",
    "timestamp": "2026-11-02T09:30:31+0000",
    "first_line": "The opening range breakout in 7 slides. Mark the high and low of the first 30 minutes, wai",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -57,7 +77,7 @@
    "type": "REELS",
    "timestamp": "2026-10-31T16:59:30+0000",
    "first_line": "VWAP is the average price everyone paid today, weighted by volume. Above it, today's avera",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -67,7 +87,7 @@
    "type": "REELS",
    "timestamp": "2026-10-31T11:58:16+0000",
    "first_line": "Ten fields per trade, about 30 seconds. Dashboard, calendar, setups and mistakes fill in b",
-   "likes": 2,
+   "likes": 3,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -77,7 +97,7 @@
    "type": "REELS",
    "timestamp": "2026-10-30T17:07:26+0000",
    "first_line": "The 20 EMA is an average of recent closes that weighs the newest ones more. Price above a ",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
