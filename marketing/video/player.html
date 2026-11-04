@@ -71,7 +71,7 @@ body.land .chapter { font-size:40px; color:var(--muted); font-weight:700; letter
 .opt.right { border-color:var(--mint); background:rgba(95,211,160,.16); color:var(--mint); }
 .opt.wrong { opacity:.45; }
 .ovl { position:absolute; left:80px; right:140px; text-align:center; font-size:88px; font-weight:700; color:#fff; line-height:1.05; text-shadow:0 10px 60px rgba(0,0,0,.7); }
-.stamp { position:absolute; right:190px; top:250px; font-size:60px; font-weight:700; letter-spacing:6px; padding:10px 28px; border:7px solid; border-radius:18px; transform-origin:center; background:rgba(15,23,32,.82); }
+.stamp { position:absolute; left:0; top:0; font-size:54px; font-weight:700; letter-spacing:5px; padding:8px 24px; white-space:nowrap; border:7px solid; border-radius:18px; transform-origin:center; background:rgba(15,23,32,.82); }
 .count { position:absolute; left:0; right:0; text-align:center; font-size:300px; font-weight:700; color:#fff; text-shadow:0 10px 60px rgba(0,0,0,.6); }
 .cta { background:var(--mint); color:#0F1720; font-weight:700; font-size:50px; border-radius:24px; padding:26px 44px; display:inline-block; }
 </style></head>
@@ -218,11 +218,37 @@ function drawScene(i, s, local, d) {
     ov.style.transform = `scale(${1 + 0.04 * Math.sin(local * 6)})`; }
   // stamp: a label that slams onto the headline at s.stamp.at (0..1 of the scene): MYTH, MISTAKE, ...
   const sp = document.getElementById(`st${i}`);
-  if (sp) { const q = clamp((p - (s.stamp.at || 0)) / 0.08); sp.style.opacity = q;
-    sp.style.top = box.y - 34 + "px";
-    sp.style.transform = `rotate(-8deg) scale(${1.3 - 0.3 * ease(q)})`; }
+  if (sp) { const q = clamp((p - (s.stamp.at || 0)) / 0.08);
+    // placed once, after the scene has stopped sliding in (a cut-in-place scene never slides); hidden until then
+    if (!sp.dataset.placed && q > 0 && (s.cont || local > 0.45)) placeStamp(sp, i, box);
+    sp.style.opacity = sp.dataset.placed ? q : 0;
+    sp.style.transform = `rotate(-6deg) scale(${1.3 - 0.3 * ease(q)})`; }
   if (+document.getElementById(`s${i}`).style.opacity > 0.98) probs.forEach((x) => window.__problems.push(x));
   if (box.h < (land ? 480 : SPEC.presenter ? 440 : 520)) window.__problems.push("chart too small: headline too long");
+}
+
+// Where the stamp lands: next to the headline when there is room (it never covers the chart there);
+// otherwise on the empty part of the plot that covers the fewest labels and candles.
+function placeStamp(sp, i, box) {
+  const land = SPEC.format === "landscape", W = document.body.clientWidth, w = sp.offsetWidth, h = sp.offsetHeight, M = 40, RM = W - (land ? 60 : 120);
+  const put = (x, y) => { sp.style.left = Math.round(x) + "px"; sp.style.top = Math.round(y) + "px"; sp.dataset.placed = 1; };
+  const big = document.querySelector(`#hd${i} .big, #hd${i} .mid`);
+  if (big && big.firstChild) {
+    const rg = document.createRange(); rg.selectNodeContents(big);
+    const lines = [...rg.getClientRects()].filter((r) => r.width > 4);
+    for (const r of [lines[lines.length - 1], lines[0]].filter(Boolean)) {
+      const x = r.right + M; if (x + w <= RM) return put(x, r.top + r.height / 2 - h / 2);
+    }
+  }
+  const svg = document.getElementById(`cv${i}`), texts = [...svg.querySelectorAll("text")].map((e) => e.getBoundingClientRect()),
+        bodies = [...svg.querySelectorAll("rect")].map((e) => e.getBoundingClientRect()).filter((r) => r.width < 60);
+  const ov = (a, x, y) => Math.max(0, Math.min(a.right, x + w) - Math.max(a.left, x)) * Math.max(0, Math.min(a.bottom, y + h) - Math.max(a.top, y));
+  let best = null;
+  for (let y = box.y + 60; y + h <= box.y + box.h * 0.8; y += 20) for (let x = box.x + 20; x + w <= Math.min(RM, box.x + box.w - 120); x += 20) {
+    const score = texts.reduce((a, r) => a + ov(r, x - 10, y - 10) * 50, 0) + bodies.reduce((a, r) => a + ov(r, x, y), 0);
+    if (!best || score < best[0]) best = [score, x, y];
+  }
+  if (best) put(best[1], best[2]); else put(RM - w, box.y + 20);
 }
 
 const fmtNum = (v, s) => `${v < 0 ? "−" : s.plus && v > 0 ? "+" : ""}${s.prefix || ""}${Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: s.decimals || 0, maximumFractionDigits: s.decimals || 0 })}${s.suffix || ""}`;
@@ -233,7 +259,8 @@ window.render = (t) => {
     const d = b - a, local = t - a, p = local / d;
     // `cont`: the scene continues the previous one (same chart, same question), so it cuts in place instead of fading.
     const next = SPEC.scenes[i + 1];
-    const fadeIn = i === 0 || s.cont ? 1 : ease(local / 0.22), fadeOut = i === SPEC.scenes.length - 1 || (next && next.cont) ? (local < d ? 1 : 0) : 1 - ease((local - d + 0.12) / 0.12);
+    // Otherwise the two scenes cross-fade (0.16 s), so there is never an empty frame between them.
+    const fadeIn = i === 0 || s.cont ? 1 : ease(local / 0.16), fadeOut = i === SPEC.scenes.length - 1 || (next && next.cont) ? (local < d ? 1 : 0) : 1 - ease((local - d) / 0.16);
     const vis = t >= a - 0.001 && t < b + 0.3;
     el.style.display = vis ? "block" : "none";
     if (!vis) return;

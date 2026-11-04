@@ -31,6 +31,13 @@ CHECK = """() => {
       if (cr && r.bottom > cr.top + 2 && r.top < cr.bottom) bad.push('screenshot under captions'); });
   });
   if (cr && (cr.left < L || cr.right > R)) bad.push('captions too wide');
+  // A stamp must not cover the headline, the answers or any chart text (labels, prices, OHLC).
+  document.querySelectorAll('.layer').forEach(l => { if (l.style.display === 'none' || +l.style.opacity < 0.98) return;
+    l.querySelectorAll('.stamp').forEach(st => { if (+getComputedStyle(st).opacity < 0.5) return; const a = st.getBoundingClientRect();
+      l.querySelectorAll('svg.chart text, .big, .mid, .kicker, .opt').forEach(e => { if (e.textContent.trim() === '') return;
+        const rg = document.createRange(); rg.selectNodeContents(e);  // the text's own lines, not the full-width block
+        const hit = [...rg.getClientRects()].some(r => { const ox = Math.min(a.right, r.right) - Math.max(a.left, r.left), oy = Math.min(a.bottom, r.bottom) - Math.max(a.top, r.top); return ox > 4 && oy > 4; });
+        if (hit) bad.push('stamp covers: ' + e.textContent.trim().slice(0, 30)); }); }); });
   (window.__problems || []).forEach(p => bad.push(p)); window.__problems = [];
   document.querySelectorAll('.layer').forEach(l => { if (l.style.display === 'none' || +l.style.opacity < 0.98) return;
     l.querySelectorAll('svg.chart text').forEach(e => { const r = e.getBoundingClientRect();

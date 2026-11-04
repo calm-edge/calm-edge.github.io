@@ -159,9 +159,6 @@ def meta():
     if first:
         s, r = jget(f"{GRAPH}/{first}/insights?metric=reach,saved&access_token={tok}")
         rec("OK" if s == 200 else "WARN", "Instagram insights (copertura, salvataggi)", "funziona" if s == 200 else r.get("error", {}).get("message", r))
-    # hashtag search used by marketing/engage
-    s, r = jget(f"{GRAPH}/ig_hashtag_search?user_id={ig}&q=daytrader&access_token={tok}")
-    rec("OK" if s == 200 else "WARN", "Instagram ricerca hashtag (engage)", "funziona" if s == 200 else r.get("error", r))
 
 
 def youtube():
@@ -202,8 +199,6 @@ def youtube():
 
 
 def engage_sources():
-    s, b, _ = fetch("https://www.reddit.com/r/Daytrading/new.json?limit=5", headers={"User-Agent": "calm-edge-health/1.0"})
-    rec("OK" if s == 200 else "WARN", "Reddit leggibile da GitHub (engage)", f"HTTP {s}")
     key = os.environ.get("YT_API_KEY", "")
     if key:
         s, r = jget(f"https://www.googleapis.com/youtube/v3/search?part=snippet&q=day+trading&type=video&maxResults=1&key={key}")
@@ -227,6 +222,8 @@ if os.environ.get("GITHUB_STEP_SUMMARY"):
         f.write(f"## Controllo motore Calm Edge: {summary}\n\n| Esito | Controllo | Dettaglio |\n|---|---|---|\n")
         for s, n, d in rows:
             f.write(f"| {s} | {n} | {d.replace('|', '/')} |\n")
+(ROOT / "marketing/health.json").write_text(json.dumps({"checked_at": NOW.isoformat(timespec="minutes"), "summary": summary,
+    "checks": [{"status": s, "check": n, "detail": d} for s, n, d in rows]}, indent=1, ensure_ascii=False))
 for s, n, d in fails + warns:
     print(f"::{'error' if s == 'FAIL' else 'warning'} title={n}::{d}")
 print(f"::notice title=health::{summary}")

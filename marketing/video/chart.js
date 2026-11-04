@@ -198,6 +198,7 @@
       `<rect x="${box.x - 18}" y="${box.y}" width="${box.w + 36}" height="${box.h}" rx="14" fill="${TV.bg}" stroke="${TV.border}" stroke-width="2"/>` +
       `<g clip-path="url(#${cid})">${s}</g>${axis}`;
     // header (symbol, timeframe, OHLC) and indicator legend, like the top-left of a TradingView chart
+    let hdr = null;  // the header text area: labels never sit on it
     if (header) {
       const t = document.createElementNS(NS, "text");
       Object.entries({ x: box.x, y: box.y + fs * 1.35, "font-size": fs, fill: TV.ink }).forEach(([k, v]) => t.setAttribute(k, v));
@@ -218,6 +219,7 @@
         lx += u.getBBox().width + fs * 1.2;
         if (lx > plotR + 10) problems.push("chart legend too wide");
       });
+      hdr = { x0: box.x - 4, x1: Math.max(box.x + t.getBBox().width, lx) + 8, y0: box.y, y1: box.y + headH };
     }
     // labels (levels, zones, marks): text on a dark plate, measured to stay inside the drawing area
     const plates = [], arrows = [];
@@ -232,6 +234,7 @@
       let x0 = anchor === "middle" ? x - w / 2 - 12 : anchor === "end" ? x - w - 24 : anchor === "end-left" ? x - 60 - w - 24 : anchor === "start-right" ? x + 52 : x;
       const minX = box.x - 6, maxX = plotR - 6 - w - 24;
       x0 = Math.max(minX, Math.min(maxX, x0));
+      if (hdr && x0 < hdr.x1 && x0 + w + 24 > hdr.x0 && y - hgt / 2 - 3 < hdr.y1) y = hdr.y1 + hgt / 2 + 6;  // never on the OHLC header
       t.setAttribute("x", x0 + 12); t.setAttribute("y", y + lfs * 0.36);
       const r = document.createElementNS(NS, "rect");
       Object.entries({ x: x0, y: y - hgt / 2 - 3, width: w + 24, height: hgt + 6, rx: 6, fill: TV.bg, opacity: 0.92 * alpha, stroke: col(color), "stroke-width": 2 }).forEach(([k, v]) => r.setAttribute(k, v));
@@ -240,7 +243,8 @@
     };
     (state.levels || []).forEach((l) => { if (!l.alpha || !l.label) return;
       const right = l.labelPos === "right", xr = Math.min(plotR, X(l.to === undefined ? n - 1 : l.to) + step / 2);
-      label(right ? xr + 18 : X(l.from || 0) - step / 2 + 6 + (l.labelAt || 0) * step, Y(l.price) - (l.below ? -lfs * 1.15 : lfs * 1.15), l.label, l.color, l.alpha, right ? "end" : "start"); });
+      const below = l.below || (Y(l.price) - lfs * 1.15 - lfs * 0.7 < box.y + headH + 4);
+      label(right ? xr + 18 : X(l.from || 0) - step / 2 + 6 + (l.labelAt || 0) * step, Y(l.price) - (below ? -lfs * 1.15 : lfs * 1.15), l.label, l.color, l.alpha, right ? "end" : "start"); });
     (state.zones || []).forEach((z) => { if (!z.alpha || !z.label) return;
       const above = Y(z.hi) - lfs * 1.15; label((X(z.from) + Math.min(plotR, X(Math.min(z.to, n - 1)))) / 2, above - lfs > box.y + headH ? above : Y(z.hi) + lfs * 1.15, z.label, z.color, z.alpha, "middle"); });
     (state.marks || []).forEach((m) => {
@@ -270,6 +274,7 @@
     const top = box.y, bottom = box.y + innerH;
     plates.forEach((p, i) => {
       if (p.x0 < box.x - 20 || p.x1 > plotR + 4 || p.y0 < top || p.y1 > bottom) problems.push("chart label outside the chart: " + p.text);
+      if (hdr && p.x0 < hdr.x1 && hdr.x0 < p.x1 && p.y0 < hdr.y1 - 2) problems.push("chart label covers the header: " + p.text);
       arrows.forEach((q) => { if (p.x0 < q.x1 && q.x0 < p.x1 && p.y0 < q.y1 && q.y0 < p.y1) problems.push(`chart label covered by an arrow: ${p.text}`); });
       plates.slice(i + 1).forEach((q) => { if (p.x0 < q.x1 && q.x0 < p.x1 && p.y0 < q.y1 && q.y0 < p.y1) problems.push(`chart labels overlap: ${p.text} / ${q.text}`); });
     });

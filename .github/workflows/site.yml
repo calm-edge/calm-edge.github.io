@@ -5,7 +5,7 @@ name: Site and videos
 on:
   push:
     branches: [main]
-    paths-ignore: ["marketing/engage/**", "marketing/tools/**", ".github/workflows/upscale.yml", ".github/workflows/health.yml", ".github/workflows/engage.yml", "marketing/published.json", "marketing/status.json", "marketing/schedule.json", "marketing/publish/**", ".github/workflows/publish.yml"]
+    paths-ignore: ["marketing/engage/**", "marketing/tools/**", ".github/workflows/upscale.yml", ".github/workflows/health.yml", ".github/workflows/engage.yml", "marketing/published.json", "marketing/rendered.json", "marketing/health.json", "marketing/status.json", "marketing/schedule.json", "marketing/publish/**", ".github/workflows/publish.yml"]
   schedule:
     - cron: "13 4 * * *"
     - cron: "52 16 * * *"  # after the 17:30 post, so the Pinterest feed picks it up the same day
@@ -59,6 +59,10 @@ jobs:
           python site/tests/site_test.py build/site
       - uses: actions/upload-pages-artifact@v3
         with: { path: build/site }
+      - name: Render status for the daily routine
+        run: python -c "import json,pathlib;m=pathlib.Path('build/media');pathlib.Path('rendered.json').write_text(json.dumps({'run':'${{ github.run_id }}','items':json.loads((m/'index.json').read_text()),'failed':json.loads((m/'failed.json').read_text())},indent=1))"
+      - uses: actions/upload-artifact@v4
+        with: { name: render-status, path: rendered.json }
 
   deploy:
     needs: build
@@ -67,3 +71,19 @@ jobs:
     steps:
       - id: d
         uses: actions/deploy-pages@v4
+
+  # The daily routine can't always reach the Actions API, so the render result is also committed to the
+  # repo (marketing/rendered.json): which items rendered cleanly and which failed.
+  record:
+    needs: [build, deploy]
+    runs-on: ubuntu-24.04
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: render-status }
+      - name: Commit render status
+        run: |
+          mv rendered.json marketing/rendered.json
+          git add marketing/rendered.json
+          git diff --cached --quiet || (git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Render status $(date -u +%F)" && git pull -q --rebase && git push)

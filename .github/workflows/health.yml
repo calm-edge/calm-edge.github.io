@@ -8,7 +8,7 @@ on:
     - cron: "41 5 * * *"
   workflow_dispatch:
 
-permissions: { contents: read }
+permissions: { contents: write }
 
 jobs:
   check:
@@ -27,3 +27,8 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
         run: python3 marketing/tools/healthcheck.py
+      - name: Save the result for the daily routine
+        if: always()
+        run: |
+          git add marketing/health.json
+          git diff --cached --quiet || (git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Health check $(date -u +%F)" && git pull -q --rebase && git push)

@@ -102,7 +102,10 @@ def main():
     result = {"generated_at": NOW.isoformat(timespec="minutes"), "targets": [], "notes": {}}
     # Reddit is not read automatically: its Responsible Builder Policy requires approved API access for any
     # automated reading. Reddit threads come from the daily routine's web search and are answered by hand.
-    for name, fn in (("youtube", youtube), ("instagram", instagram)):
+    # Instagram hashtag search needs Meta's "Instagram Public Content Access" app review (refused with error #10
+    # without it), so Instagram targets come from the "Creator da seguire" list in Notion instead.
+    result["notes"]["instagram"] = "non usato: la ricerca hashtag richiede l'approvazione Meta (Instagram Public Content Access)"
+    for name, fn in (("youtube", youtube),):
         try:
             items, note = fn()
         except Exception as e:
