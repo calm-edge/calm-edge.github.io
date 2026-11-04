@@ -44,7 +44,7 @@ def jget(url, headers=None):
 
 # ---------- site ----------
 def site():
-    for path, must in [("/", "Calm Edge"), ("/prop-firm-manager/", "Prop Firm Manager"), ("/articles/", ""),
+    for path, must in [("/", "Calm Edge"), ("/trading-journal-ai/", "Trading Journal"), ("/prop-firm-manager/", "Prop Firm Manager"), ("/learn/", ""),
                        ("/prop/rules.json", ""), ("/media/index.json", ""), ("/pins.xml", "<rss")]:
         s, b, h = fetch(SITE + path)
         ok = s == 200 and (must.encode() in b if must else True)
@@ -54,10 +54,11 @@ def site():
         r = json.loads(b); rec("OK", "rules.json valido", f"{len(r.get('firms', r)) if isinstance(r, dict) else len(r)} voci")
     except Exception as e:
         rec("FAIL", "rules.json valido", e)
-    # old address: must send people (and app 1.0.1) to the new site
-    for path, what in [("/", b"calm-edge.github.io"), ("/prop-firm-manager/", b"calm-edge.github.io"), ("/prop/rules.json", None)]:
+    # old address: must send people (and app 1.0.1) to the new site. Old sub-pages are answered by the
+    # bridge's 404 page, which forwards to the same path on the new site (GitHub Pages can't send a 301).
+    for path, what in [("/", b"calm-edge.github.io"), ("/prop-firm-manager/", b'location.replace("https://calm-edge.github.io" + location.pathname'), ("/prop/rules.json", None)]:
         s, b, _ = fetch(OLD + path)
-        ok = s == 200 and (what in b if what else b.strip().startswith((b"{", b"[")))
+        ok = s in (200, 404) and what in b if what else s == 200 and b.strip().startswith((b"{", b"["))
         rec("OK" if ok else "FAIL", f"vecchio indirizzo {path}", f"HTTP {s}" + ("" if ok else f" {b[:120]!r}"))
 
 
@@ -124,16 +125,14 @@ def meta():
     ig, tok, page, ptok = (os.environ.get(k, "") for k in ("IG_USER_ID", "META_TOKEN", "FB_PAGE_ID", "META_PAGE_TOKEN"))
     if not (ig and tok and page and ptok):
         rec("FAIL", "credenziali Meta", "mancano IG_USER_ID / META_TOKEN / FB_PAGE_ID / META_PAGE_TOKEN"); return
-    s, me = jget(f"{GRAPH}/me/permissions?access_token={tok}")
-    granted = sorted(p["permission"] for p in me.get("data", []) if p.get("status") == "granted")
-    rec("OK" if s == 200 else "FAIL", "token Meta: permessi concessi", ", ".join(granted) or me)
+    s, dbg = jget(f"{GRAPH}/debug_token?input_token={tok}&access_token={tok}")
+    d = dbg.get("data", {})
+    granted = sorted(d.get("scopes", []))
+    rec("OK" if granted else "FAIL", "token Meta: permessi concessi", f"tipo {d.get('type')}: " + (", ".join(granted) or str(dbg)))
     for need, why in [("instagram_content_publish", "pubblicare su Instagram"), ("instagram_manage_insights", "leggere visualizzazioni e tempo di visione"),
                       ("pages_manage_posts", "pubblicare su Facebook"), ("pages_read_engagement", "leggere la pagina Facebook")]:
         if granted:
             rec("OK" if need in granted else "WARN", f"permesso {need}", why + ("" if need in granted else ": NON concesso"))
-    s, dbg = jget(f"{GRAPH}/debug_token?input_token={tok}&access_token={tok}")
-    d = dbg.get("data", {})
-    exp = d.get("expires_at") or d.get("data_access_expires_at")
     if d:
         when = "mai" if not d.get("expires_at") else dt.datetime.fromtimestamp(d["expires_at"], ROME).strftime("%d/%m/%Y")
         dae = d.get("data_access_expires_at")
@@ -178,23 +177,28 @@ def youtube():
         return
     auth = {"Authorization": f"Bearer {tok}"}
     s, ch = jget("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&mine=true", auth)
-    c = (ch.get("items") or [{}])[0]
-    rec("OK" if s == 200 and c else "FAIL", "YouTube: canale", f"{c.get('snippet', {}).get('title')}, iscritti {c.get('statistics', {}).get('subscriberCount')}, video {c.get('statistics', {}).get('videoCount')}")
+    c = (ch.get("items") or [None])[0]
+    if c:
+        rec("OK", "YouTube: canale (OAuth)", f"{c['snippet']['title']}, iscritti {c['statistics'].get('subscriberCount')}, video {c['statistics'].get('videoCount')}")
+    else:
+        rec("WARN", "YouTube: canale (OAuth)", f"HTTP {s}: {str(ch.get('error', ch))[:250]}")
     ids = {}
     for e in recent_posts():
         if e["channel"] == "youtube":
-            vid = e["url"].rstrip("/").split("/")[-1].split("v=")[-1]
-            ids[vid] = e["id"]
-    if ids:
-        s, r = jget("https://www.googleapis.com/youtube/v3/videos?part=status,statistics&id=" + ",".join(ids), auth)
+            ids[e["url"].rstrip("/").split("/")[-1].split("v=")[-1]] = e["id"]
+    key = os.environ.get("YT_API_KEY", "")
+    if ids and key:  # public view: is each video online and public for everyone?
+        s, r = jget("https://www.googleapis.com/youtube/v3/videos?part=status,statistics,snippet&id=" + ",".join(ids) + f"&key={key}")
+        if s != 200:
+            rec("FAIL", "YouTube: lettura video pubblici", str(r)[:300]); return
         found = {v["id"]: v for v in r.get("items", [])}
         for vid, name in ids.items():
             v = found.get(vid)
             if not v:
-                rec("FAIL", f"YouTube {name}", f"{vid} non trovato"); continue
+                rec("FAIL", f"YouTube {name}", f"{vid} non esiste o non è pubblico"); continue
             st = v["status"]
             ok = st.get("privacyStatus") == "public" and st.get("uploadStatus") == "processed"
-            rec("OK" if ok else "FAIL", f"YouTube {name}", f"{st.get('privacyStatus')}/{st.get('uploadStatus')}, views {v.get('statistics', {}).get('viewCount')}")
+            rec("OK" if ok else "FAIL", f"YouTube {name}", f"{st.get('privacyStatus')}/{st.get('uploadStatus')}, canale {v['snippet'].get('channelTitle')}, views {v.get('statistics', {}).get('viewCount')}")
 
 
 def engage_sources():
