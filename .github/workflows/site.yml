@@ -86,4 +86,5 @@ jobs:
         run: |
           mv rendered.json marketing/rendered.json
           git add marketing/rendered.json
-          git diff --cached --quiet || (git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Render status $(date -u +%F)" && git pull -q --rebase && git push)
+          git config user.name "Calm Edge bot" && git config user.email "bot@users.noreply.github.com"
+          git diff --cached --quiet || (git commit -qm "Render status $(date -u +%F)" && git pull -q --rebase && git push)

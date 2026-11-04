@@ -31,4 +31,5 @@ jobs:
         if: always()
         run: |
           git add marketing/health.json
-          git diff --cached --quiet || (git -c user.name="Calm Edge bot" -c user.email="bot@users.noreply.github.com" commit -qm "Health check $(date -u +%F)" && git pull -q --rebase && git push)
+          git config user.name "Calm Edge bot" && git config user.email "bot@users.noreply.github.com"
+          git diff --cached --quiet || (git commit -qm "Health check $(date -u +%F)" && git pull -q --rebase && git push)
