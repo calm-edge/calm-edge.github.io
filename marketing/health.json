@@ -1,0 +1,396 @@
+{
+ "checked_at": "2026-11-04T17:25+01:00",
+ "summary": "75 OK, 3 WARN, 0 FAIL",
+ "checks": [
+  {
+   "status": "OK",
+   "check": "sito /",
+   "detail": "HTTP 200, 7742 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /trading-journal-ai/",
+   "detail": "HTTP 200, 6454 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /prop-firm-manager/",
+   "detail": "HTTP 200, 6910 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /learn/",
+   "detail": "HTTP 200, 5808 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /prop/rules.json",
+   "detail": "HTTP 200, 110133 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /media/index.json",
+   "detail": "HTTP 200, 11270 byte"
+  },
+  {
+   "status": "OK",
+   "check": "sito /pins.xml",
+   "detail": "HTTP 200, 14564 byte"
+  },
+  {
+   "status": "OK",
+   "check": "rules.json valido",
+   "detail": "5 voci"
+  },
+  {
+   "status": "OK",
+   "check": "vecchio indirizzo /",
+   "detail": "HTTP 200"
+  },
+  {
+   "status": "OK",
+   "check": "vecchio indirizzo /prop-firm-manager/",
+   "detail": "HTTP 404"
+  },
+  {
+   "status": "OK",
+   "check": "vecchio indirizzo /prop/rules.json",
+   "detail": "HTTP 200"
+  },
+  {
+   "status": "OK",
+   "check": "Gumroad Trading Journal AI",
+   "detail": "HTTP 200, 35881 byte"
+  },
+  {
+   "status": "OK",
+   "check": "Gumroad Prop Firm Manager",
+   "detail": "HTTP 200, 38164 byte"
+  },
+  {
+   "status": "OK",
+   "check": "Gumroad Bundle",
+   "detail": "HTTP 200, 29832 byte"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-06 12:30 v006_time_of_day",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-08 12:30 v009_calendar",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-10 12:30 v010_position_size",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-12 12:30 v013_long_short",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-04 17:30 v207_edu_atr_stop",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-05 17:30 v210_edu_position_size",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-06 17:30 v209_edu_risk_reward",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-14 12:30 v101_pfm_one_screen",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "media 2026-11-16 12:30 v105_pfm_payout",
+   "detail": "3 file presenti"
+  },
+  {
+   "status": "OK",
+   "check": "feed Pinterest pins.xml",
+   "detail": "19 pin; ultimi titoli: Profit factor explained for traders | Double top pattern explained | Gap fill trading strategy in 4 steps"
+  },
+  {
+   "status": "OK",
+   "check": "token Meta: permessi concessi",
+   "detail": "tipo PAGE: business_management, instagram_basic, instagram_content_publish, pages_manage_posts, pages_read_engagement, pages_show_list, public_profile"
+  },
+  {
+   "status": "OK",
+   "check": "permesso instagram_content_publish",
+   "detail": "pubblicare su Instagram"
+  },
+  {
+   "status": "WARN",
+   "check": "permesso instagram_manage_insights",
+   "detail": "leggere visualizzazioni e tempo di visione: NON concesso"
+  },
+  {
+   "status": "OK",
+   "check": "permesso pages_manage_posts",
+   "detail": "pubblicare su Facebook"
+  },
+  {
+   "status": "OK",
+   "check": "permesso pages_read_engagement",
+   "detail": "leggere la pagina Facebook"
+  },
+  {
+   "status": "OK",
+   "check": "token Meta: validità",
+   "detail": "valido=True, scade=mai, accesso dati fino al 21/01/2027"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram: lettura post dell'account",
+   "detail": "19 post"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v008_ai_review",
+   "detail": "https://www.instagram.com/reel/DfATDl8iX0p/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v008_ai_review",
+   "detail": "https://www.facebook.com/1470032662849525/videos/29288849837469868"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v011_weekday",
+   "detail": "https://www.instagram.com/reel/DfC8cE7jn5f/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v011_weekday",
+   "detail": "https://www.facebook.com/1470032662849525/videos/2175633230047996"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v012_privacy",
+   "detail": "https://www.instagram.com/reel/DfE97uTEUHB/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v012_privacy",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1096719402981793"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v201_edu_rsi_70",
+   "detail": "https://www.instagram.com/reel/DfFhfHplVfQ/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v201_edu_rsi_70",
+   "detail": "https://www.facebook.com/1470032662849525/videos/4388581488118529"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v202_edu_20ema",
+   "detail": "https://www.instagram.com/reel/DfIFJ3rFf2q/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v202_edu_20ema",
+   "detail": "https://www.facebook.com/1470032662849525/videos/2480023562823794"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v014_habit",
+   "detail": "https://www.instagram.com/reel/DfKGkh_oA9b/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v014_habit",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1668090338058167"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v203_edu_vwap",
+   "detail": "https://www.instagram.com/reel/DfKpC_1FYq2/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v203_edu_vwap",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1909681269996019"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram c202_car_20ema",
+   "detail": "https://www.instagram.com/p/DfMT8cgF1yg/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook c202_car_20ema",
+   "detail": "https://www.facebook.com/1470032662849525_122107227213520033"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v204_edu_sr_flip",
+   "detail": "https://www.instagram.com/reel/DfNNzwWieZg/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v204_edu_sr_flip",
+   "detail": "https://www.facebook.com/1470032662849525/videos/4746838468865577"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram c301_car_orb",
+   "detail": "https://www.instagram.com/p/DfO_To2FI2r/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook c301_car_orb",
+   "detail": "https://www.facebook.com/1470032662849525_122107708989520033"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v002_best_setup",
+   "detail": "https://www.instagram.com/reel/DfPSOGllCry/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v002_best_setup",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1555020663324239"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v205_edu_failed_breakout",
+   "detail": "https://www.instagram.com/reel/DfPxaEQj2YU/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v205_edu_failed_breakout",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1107526278708836"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram c311_car_gap_fill",
+   "detail": "https://www.instagram.com/p/DfRfaORDfnu/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook c311_car_gap_fill",
+   "detail": "https://www.facebook.com/1470032662849525_122108142567520033"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v206_edu_double_top",
+   "detail": "https://www.instagram.com/reel/DfSVLg3Cc8Q/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v206_edu_double_top",
+   "detail": "https://www.facebook.com/1470032662849525/videos/2054714411909602"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v004_profit_factor",
+   "detail": "https://www.instagram.com/reel/DfUbh6KDELR/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v004_profit_factor",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1486980910070113"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram storie attive ora",
+   "detail": "2 storie"
+  },
+  {
+   "status": "WARN",
+   "check": "Instagram insights (copertura, salvataggi)",
+   "detail": "(#10) Application does not have permission for this action"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube: rinnovo accesso",
+   "detail": "ok"
+  },
+  {
+   "status": "WARN",
+   "check": "YouTube: canale (OAuth)",
+   "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v008_ai_review",
+   "detail": "public/processed, canale Calm Edge, views 6"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v011_weekday",
+   "detail": "public/processed, canale Calm Edge, views 17"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v012_privacy",
+   "detail": "public/processed, canale Calm Edge, views 33"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v201_edu_rsi_70",
+   "detail": "public/processed, canale Calm Edge, views 31"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v202_edu_20ema",
+   "detail": "public/processed, canale Calm Edge, views 68"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v014_habit",
+   "detail": "public/processed, canale Calm Edge, views 77"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v203_edu_vwap",
+   "detail": "public/processed, canale Calm Edge, views 131"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v204_edu_sr_flip",
+   "detail": "public/processed, canale Calm Edge, views 25"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v002_best_setup",
+   "detail": "public/processed, canale Calm Edge, views 20"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v205_edu_failed_breakout",
+   "detail": "public/processed, canale Calm Edge, views 38"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v206_edu_double_top",
+   "detail": "public/processed, canale Calm Edge, views 11"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v004_profit_factor",
+   "detail": "public/processed, canale Calm Edge, views 3"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube API key (engage)",
+   "detail": "funziona"
+  }
+ ]
+}
