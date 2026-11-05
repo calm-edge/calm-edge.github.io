@@ -1,0 +1,383 @@
+{
+ "id": "v218_edu_pin_bar",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 104.54,
+     "h": 104.55,
+     "l": 104.38,
+     "c": 104.5,
+     "v": 1160
+    },
+    {
+     "o": 104.51,
+     "h": 104.53,
+     "l": 103.85,
+     "c": 103.92,
+     "v": 2324
+    },
+    {
+     "o": 103.89,
+     "h": 103.89,
+     "l": 103.63,
+     "c": 103.64,
+     "v": 1884
+    },
+    {
+     "o": 103.61,
+     "h": 103.94,
+     "l": 103.03,
+     "c": 103.14,
+     "v": 1985
+    },
+    {
+     "o": 103.15,
+     "h": 103.3,
+     "l": 102.88,
+     "c": 102.94,
+     "v": 1473
+    },
+    {
+     "o": 102.95,
+     "h": 102.98,
+     "l": 102.17,
+     "c": 102.34,
+     "v": 3263
+    },
+    {
+     "o": 102.36,
+     "h": 102.4,
+     "l": 101.63,
+     "c": 101.8,
+     "v": 2717
+    },
+    {
+     "o": 101.81,
+     "h": 102.8,
+     "l": 101.73,
+     "c": 102.58,
+     "v": 3163
+    },
+    {
+     "o": 102.58,
+     "h": 103.26,
+     "l": 102.48,
+     "c": 103.16,
+     "v": 3594
+    },
+    {
+     "o": 103.09,
+     "h": 103.35,
+     "l": 102.76,
+     "c": 102.9,
+     "v": 1882
+    },
+    {
+     "o": 102.94,
+     "h": 103.17,
+     "l": 102.21,
+     "c": 102.42,
+     "v": 2956
+    },
+    {
+     "o": 102.41,
+     "h": 102.43,
+     "l": 101.55,
+     "c": 101.84,
+     "v": 3005
+    },
+    {
+     "o": 101.87,
+     "h": 101.94,
+     "l": 101.21,
+     "c": 101.44,
+     "v": 2401
+    },
+    {
+     "o": 101.46,
+     "h": 101.49,
+     "l": 100.47,
+     "c": 100.66,
+     "v": 3749
+    },
+    {
+     "o": 100.66,
+     "h": 100.9,
+     "l": 100.0,
+     "c": 100.3,
+     "v": 3016
+    },
+    {
+     "o": 100.28,
+     "h": 100.58,
+     "l": 100.12,
+     "c": 100.49,
+     "v": 2289
+    },
+    {
+     "o": 100.45,
+     "h": 101.14,
+     "l": 100.36,
+     "c": 101.06,
+     "v": 3322
+    },
+    {
+     "o": 101.05,
+     "h": 101.72,
+     "l": 101.02,
+     "c": 101.6,
+     "v": 3138
+    },
+    {
+     "o": 101.6,
+     "h": 101.66,
+     "l": 101.26,
+     "c": 101.55,
+     "v": 1445
+    },
+    {
+     "o": 101.5,
+     "h": 101.7,
+     "l": 101.27,
+     "c": 101.3,
+     "v": 1672
+    },
+    {
+     "o": 101.32,
+     "h": 101.58,
+     "l": 101.27,
+     "c": 101.48,
+     "v": 1610
+    },
+    {
+     "o": 101.48,
+     "h": 101.6,
+     "l": 100.74,
+     "c": 100.9,
+     "v": 3425
+    },
+    {
+     "o": 100.65,
+     "h": 100.95,
+     "l": 99.55,
+     "c": 100.88,
+     "v": 1648
+    },
+    {
+     "o": 100.85,
+     "h": 100.94,
+     "l": 100.28,
+     "c": 100.55,
+     "v": 2525
+    },
+    {
+     "o": 100.61,
+     "h": 101.13,
+     "l": 100.55,
+     "c": 101.1,
+     "v": 2030
+    },
+    {
+     "o": 101.11,
+     "h": 101.92,
+     "l": 101.03,
+     "c": 101.92,
+     "v": 4362
+    },
+    {
+     "o": 101.93,
+     "h": 102.27,
+     "l": 101.77,
+     "c": 102.17,
+     "v": 1502
+    },
+    {
+     "o": 102.21,
+     "h": 102.6,
+     "l": 102.17,
+     "c": 102.47,
+     "v": 1917
+    },
+    {
+     "o": 102.47,
+     "h": 103.13,
+     "l": 102.42,
+     "c": 103.04,
+     "v": 2401
+    },
+    {
+     "o": 103.02,
+     "h": 103.58,
+     "l": 102.81,
+     "c": 103.52,
+     "v": 3437
+    },
+    {
+     "o": 103.52,
+     "h": 103.75,
+     "l": 103.32,
+     "c": 103.6,
+     "v": 1023
+    }
+   ],
+   "lines": [],
+   "bands": []
+  }
+ },
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Long tail at support. Who won?",
+   "big": true,
+   "options": [
+    "Sellers",
+    "Buyers"
+   ],
+   "reveal": [
+    6,
+    23
+   ],
+   "show": [],
+   "grow": 0.95,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Support",
+     "color": "gold",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "say": "Price dropped below support and left a long tail. Who won this candle? Decide before the reveal."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Long tail at support. Who won?",
+   "big": true,
+   "options": [
+    "Sellers",
+    "Buyers"
+   ],
+   "reveal": [
+    23,
+    23
+   ],
+   "show": [],
+   "zoom": [
+    16,
+    9
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Support",
+     "color": "gold",
+     "below": true,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Long tail at support. Who won?",
+   "big": true,
+   "options": [
+    "Sellers",
+    "Buyers"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    23,
+    25
+   ],
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Support",
+     "color": "gold",
+     "below": true
+    }
+   ],
+   "marks": [
+    {
+     "bar": 22,
+     "dir": "up",
+     "text": "Pin bar",
+     "color": "mint",
+     "at": 0.6
+    }
+   ],
+   "say": "Buyers. Price dropped below support, and buyers pushed it all the way back to close near the high. The tail is about five times the body.",
+   "sfx": "reveal",
+   "cont": true
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Long tail at support. Who won?",
+   "big": true,
+   "options": [
+    "Sellers",
+    "Buyers"
+   ],
+   "show": [],
+   "answer": 1,
+   "reveal": [
+    25,
+    31
+   ],
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Support",
+     "color": "gold",
+     "below": true
+    },
+    {
+     "price": 99.55,
+     "from": 22,
+     "label": "Tail's tip",
+     "color": "coral",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.3
+    }
+   ],
+   "say": "A pin bar tends to mean more at a level after a pullback, like here. Many traders put the stop just below the tip of the tail: if price goes back there, the rejection failed. Follow for tomorrow's chart.",
+   "cont": true
+  }
+ ],
+ "post": {
+  "instagram": "A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about 5x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#pinbar #candlestickpatterns #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "tiktok": "A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about 5x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail. Follow for one trading concept a day. #pinbar #candlestickpatterns #priceaction #tradingeducation #technicalanalysis #daytrading",
+  "youtube": {
+   "title": "The pin bar: buyers took it all back #shorts",
+   "description": "A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about 5x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail.\n\nFree guides and calculators: https://calm-edge.github.io/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#pinbar #candlestickpatterns #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade #shorts"
+  },
+  "facebook": "A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about 5x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/",
+  "pinterest": {
+   "title": "Pin bar candlestick explained",
+   "description": "A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about 5x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/"
+  }
+ },
+ "tagFrom": 7,
+ "format_v": 2,
+ "hook": "quiz",
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

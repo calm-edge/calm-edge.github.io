@@ -1,7 +1,7 @@
 """Educational videos (series "trading, explained"): one concept per video, an animated chart from the first frame,
 a follow call at the end. Every number said or shown is computed from the chart itself (see charts.py) and checked
 here with assertions, so a chart that doesn't show what the script says fails the build instead of being published."""
-from charts import path, closes, ema, rsi, vwap, atr, bollinger, macd, r2
+from charts import path, closes, ema, rsi, vwap, atr, bollinger, macd, r2, stochastic
 
 HANDLE = "@calmedgeofficial"
 EDU_TAG = "Illustrative chart · education, not financial advice"
@@ -550,3 +550,179 @@ V.append({"id": "v215_edu_drawdown_math", "tag": EDU_TAG, "site_path": "/learn/m
     FOLLOW],
     "post": post_edu("Down 50%, up 50%, still losing", "100 falls 50% to 50. A 50% gain from 50 is 75, still 25% below the start. The gain needed to recover is loss / (1 − loss): −10% needs +11.1%, −25% needs +33.3%, −50% needs +100%. That's why keeping drawdowns small matters.",
                      ["#drawdown", "#riskmanagement"], "Drawdown recovery math explained", "/learn/max-drawdown-explained/")})
+
+# ------------------------------------------------------------------ 16. Stochastic at range support
+
+
+def _sto(seed):
+    wp = [(0, 101.6), (5, 102.85), (10, 100.2), (16, 102.8), (22, 100.25), (28, 102.85), (33, 101.4), (38, 100.15), (47, 102.75)]
+    c = path(wp, seed=seed, noise=0.2, wick=0.18, force={10: {"l": 100.0}, 22: {"l": 100.02}, 38: {"l": 100.0}, 5: {"h": 103.0}, 16: {"h": 102.98}, 28: {"h": 103.0}})
+    k, d = stochastic(c)
+    cx = next((i for i in range(38, len(c)) if k[i] > d[i] and k[i - 1] <= d[i - 1]), None)
+    rng = all(b["l"] >= 100.0 and b["h"] <= 103.0 for b in c)
+    ok = (rng and k[38] < 20 and cx is not None and cx <= 40 and k[cx] < 30 and max(b["h"] for b in c[cx:]) >= 102.6
+          and all(k[i] >= 20 for i in range(30, 37)) and max(k[cx:]) > 80)
+    return dict(c=c, k=k, d=d, cx=cx, ok=ok)
+
+
+ST = pick(_sto, lambda d: d["ok"], seeds=range(1, 300))
+S = 15
+ch = export(ST["c"], S, panel={"id": "sto", "label": "Stochastic 14, 3", "min": 0, "max": 100, "levels": [{"y": 80, "label": "80", "color": "coral"}, {"y": 20, "label": "20", "color": "mint"}],
+                               "lines": [{"id": "k", "color": "blue", "values": ST["k"]}, {"id": "d", "color": "gold", "values": ST["d"]}]})
+n = len(ch["candles"]); cs = ST["cx"] - S
+assert min(b["l"] for b in ST["c"]) == 100.0 and max(b["h"] for b in ST["c"]) == 103.0 and ST["k"][ST["cx"]] < 20
+ST_LO = {"price": 100.0, "label": "Range low", "color": "mint", "below": True}
+ST_HI = {"price": 103.0, "label": "Range high", "color": "coral"}
+V.append({"id": "v216_edu_stochastic", "tag": EDU_TAG, "site_path": "/learn/", "charts": {"a": ch}, "scenes": [
+    {"type": "chart", "chart": "a", "headline": "Stochastic under 20 at support.", "big": True, "reveal": [6, 14], "show": ["sto"],
+     "levels": [{**ST_LO, "at": 0.3}], "say": "Stochastic under twenty, right at support. Here's how to read it."},
+    {"type": "chart", "chart": "a", "headline": "Where the close sits in its range.", "reveal": [14, cs + 1], "show": ["sto"],
+     "levels": [ST_LO, {**ST_HI, "at": 0.2}],
+     "marks": [{"bar": cs, "panel": True, "value": round(ST["k"][ST["cx"]], 1), "text": "Turns up", "color": "mint", "at": 0.6}],
+     "say": "Stochastic shows where the close sits inside the last fourteen bars' range, from zero to one hundred. Below twenty, price is near the bottom of that range."},
+    {"type": "chart", "chart": "a", "headline": "In a range, it often marks the bounce.", "reveal": [cs + 1, n], "show": ["sto"],
+     "levels": [ST_LO, ST_HI],
+     "marks": [{"bar": cs, "panel": True, "value": round(ST["k"][ST["cx"]], 1), "text": "Turns up", "color": "mint", "at": 0.0}],
+     "say": "In a sideways market, a turn up from below twenty near support often comes before a move back toward the top of the range. In a strong downtrend, though, it can stay below twenty for a long time."},
+    {"type": "rows", "title": "Stochastic below 20…", "head": ["", "", ""], "rows": [
+        {"cells": ["In a range, at support", "", "Watch for the turn"], "good": True, "hl": True}, {"cells": ["In a strong downtrend", "", "Can stay low"]}],
+     "say": "So read it with the market around it: useful in ranges, misleading in strong trends."},
+    FOLLOW],
+    "post": post_edu("Stochastic below 20 at support", "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time.",
+                     ["#stochastic", "#indicators", "#rangetrading"], "Stochastic oscillator explained: below 20 at support")})
+
+# ------------------------------------------------------------------ 17. RSI divergence
+
+
+def _div(seed):
+    wp = [(0, 100), (14, 103.2), (18, 102.3), (26, 106), (30, 104.4), (36, 106.8), (39, 106.1), (43, 107.8), (47, 106.3), (52, 103.8)]
+    c = path(wp, seed=seed, noise=0.24, wick=0.2, force={26: {"h": 106.3}, 36: {"h": 107.1}, 43: {"h": 108.0}})
+    r = rsi(closes(c))
+    h1 = max(range(20, 30), key=lambda i: c[i]["h"]); h2 = max(range(31, 40), key=lambda i: c[i]["h"]); h3 = max(range(40, 48), key=lambda i: c[i]["h"])
+    sw = min(range(h2, h3), key=lambda i: c[i]["l"])
+    brk = next((i for i in range(h3, len(c)) if c[i]["c"] < c[sw]["l"]), None)
+    ok = ((h1, h2, h3) == (26, 36, 43) and 66 <= r[h1] <= 86 and r[h2] < r[h1] - 5 and r[h3] < r[h1] - 5 and max(r[20:26]) < r[h1] + 3
+          and brk is not None and max(b["h"] for b in c) == c[43]["h"])
+    return dict(c=c, r=r, sw=sw, brk=brk, ok=ok)
+
+
+DV = pick(_div, lambda d: d["ok"])
+S = 14
+assert min(x for x in DV["r"][S:] if x is not None) > 30
+ch = export(DV["c"], S, panel={"id": "rsi", "label": "RSI 14", "min": 25, "max": 95, "levels": [{"y": 70, "label": "70", "color": "coral"}, {"y": 30, "label": "30", "color": "mint"}],
+                               "lines": [{"id": "rsi", "color": "violet", "values": DV["r"]}]})
+n = len(ch["candles"]); r1, r2_ = round(DV["r"][26]), round(DV["r"][36])
+assert DV["c"][36]["h"] > DV["c"][26]["h"] and r2_ < r1 and DV["c"][43]["h"] > DV["c"][36]["h"]
+later = 43 - 36
+DV_MARKS = [{"bar": 26 - S, "dir": "down", "text": "High", "color": "muted"}, {"bar": 36 - S, "dir": "down", "text": "Higher high", "color": "coral"},
+            {"bar": 26 - S, "panel": True, "value": round(DV["r"][26], 1), "text": str(r1), "color": "muted"}, {"bar": 36 - S, "panel": True, "value": round(DV["r"][36], 1), "text": str(r2_), "color": "coral"}]
+DV_SW = {"price": DV["c"][DV["sw"]]["l"], "from": DV["sw"] - S, "label": "Last swing low", "color": "gold", "below": True, "labelPos": "right"}
+V.append({"id": "v217_edu_rsi_divergence", "tag": EDU_TAG, "site_path": "/learn/", "charts": {"a": ch}, "scenes": [
+    {"type": "chart", "chart": "a", "headline": "Price higher, RSI lower.", "big": True, "reveal": [6, 13], "show": ["rsi"],
+     "say": "Price makes a higher high, but RSI makes a lower one."},
+    {"type": "chart", "chart": "a", "headline": "Bearish divergence.", "reveal": [13, 23], "show": ["rsi"],
+     "marks": [{**m, "at": 0.15 + 0.2 * k} for k, m in enumerate(DV_MARKS)],
+     "say": f"That's bearish divergence: price went higher, but the momentum behind it got weaker. RSI peaked at {words(r1)}, then only {words(r2_)}."},
+    {"type": "chart", "chart": "a", "headline": "A warning, not a trigger.", "reveal": [23, n], "show": ["rsi"],
+     "levels": [{**DV_SW, "at": 0.35}],
+     "marks": [{**m, "at": 0.0} for m in DV_MARKS[2:]] + [{"bar": 43 - S, "dir": "down", "text": "Another high", "color": "mint", "at": 0.2}, {"bar": DV["brk"] - S, "dir": "down", "color": "coral", "at": 0.7}],
+     "say": f"But it's a warning, not a trigger. Here price made one more high {words(later)} bars later before it turned. Wait for price to confirm, like a close below the last swing low."},
+    FOLLOW],
+    "post": post_edu("RSI divergence: a warning, not a trigger", f"Bearish divergence: price makes a higher high while RSI makes a lower one (here {r1}, then {r2_}), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high {later} bars later before it turned. Wait for price to confirm, like a close below the last swing low.",
+                     ["#rsi", "#divergence", "#indicators"], "RSI divergence explained")})
+
+# ------------------------------------------------------------------ 18. Pin bar at support
+
+
+def _pin(seed):
+    wp = [(0, 104.5), (6, 101.8), (9, 102.9), (14, 100.3), (17, 101.6), (21, 100.9), (22, 100.6), (30, 103.6)]
+    c = path(wp, seed=seed, noise=0.2, wick=0.16, force={14: {"l": 100.0}, 22: {"o": 100.65, "h": 100.95, "l": 99.55, "c": 100.88}})
+    p = c[22]
+    ok = (all(b["l"] > 100.0 for b in c[15:22]) and min(b["l"] for b in c[:22]) == 100.0 and all(b["l"] > p["l"] + 0.2 for b in c[23:])
+          and c[-1]["c"] > 103 and c[21]["c"] < c[21]["o"])
+    return dict(c=c, ok=ok)
+
+
+PB = pick(_pin, lambda d: d["ok"])
+ch = export(PB["c"]); n = len(ch["candles"]); pb = PB["c"][22]
+body = pb["c"] - pb["o"]; tail = pb["o"] - pb["l"]; ratio = tail / body
+assert body > 0 and 4.5 <= ratio <= 5.5 and pb["h"] - pb["c"] < body  # small body near the high, tail about 5x the body
+PB_SUP = {"price": 100.0, "label": "Support", "color": "gold", "below": True}
+V.append({"id": "v218_edu_pin_bar", "tag": EDU_TAG, "site_path": "/learn/", "charts": {"a": ch}, "scenes": [
+    {"type": "chart", "chart": "a", "headline": "The candle with a long tail.", "big": True, "reveal": [6, 18], "levels": [{**PB_SUP, "at": 0.3}],
+     "say": "This candle with a long tail is called a pin bar."},
+    {"type": "chart", "chart": "a", "headline": "Rejected below support.", "reveal": [18, 23], "levels": [PB_SUP],
+     "marks": [{"bar": 22, "dir": "up", "text": "Pin bar", "color": "mint", "at": 0.6}],
+     "say": f"Price dropped below support, and buyers pushed it all the way back to close near the high. The tail is about {words(round(ratio))} times the body."},
+    {"type": "chart", "chart": "a", "headline": "Stop below the tail's tip.", "reveal": [23, n],
+     "levels": [PB_SUP, {"price": pb["l"], "from": 22, "label": "Tail's tip", "color": "coral", "below": True, "labelPos": "right", "at": 0.3}],
+     "say": "A pin bar tends to mean more at a level after a pullback, like here. Many traders put the stop just below the tip of the tail: if price goes back there, the rejection failed."},
+    FOLLOW],
+    "post": post_edu("The pin bar: buyers took it all back", f"A pin bar has a small body and a long tail. Here price dropped below support and buyers pushed it back to close near the high, with a tail about {round(ratio)}x the body. It tends to mean more at a level after a pullback; many traders put the stop just below the tip of the tail.",
+                     ["#pinbar", "#candlestickpatterns", "#priceaction"], "Pin bar candlestick explained")})
+
+# ------------------------------------------------------------------ 19. Breakout volume
+
+
+def _vol(seed):
+    wp = [(0, 102.6), (5, 104.7), (9, 103.3), (14, 104.75), (18, 103.5), (21, 104.8), (22, 105.25), (24, 104.6), (27, 103.7), (31, 104.6), (33, 104.9), (34, 105.6), (44, 108.2)]
+    c = path(wp, seed=seed, noise=0.2, wick=0.18, force={5: {"h": 105.0}, 14: {"h": 104.98}, 22: {"o": 104.85, "h": 105.4, "c": 105.25, "v": 800},
+                                                          34: {"o": 104.95, "c": 105.6, "h": 105.75, "v": 5200}})
+    avg = lambda i: sum(b["v"] for b in c[i - 20:i]) / 20
+    pre = all(b["c"] < 105 and b["h"] <= 105.0 for b in c[:22])
+    back = next((i for i in range(23, 27) if c[i]["c"] < 105), None)
+    between = all(b["c"] < 105 for b in c[23:34]) and all(b["h"] < 105.4 for b in c[23:34])
+    after = all(b["l"] > 104.9 for b in c[36:]) and all(b["c"] > 105 for b in c[35:])
+    return dict(c=c, r1=c[22]["v"] / avg(22), r2=c[34]["v"] / avg(34), ok=pre and back == 23 and between and after)
+
+
+VO = pick(_vol, lambda d: d["ok"] and 0.28 <= d["r1"] < 0.4 and 2 <= d["r2"] < 3, seeds=range(1, 300))
+ch = export(VO["c"]); n = len(ch["candles"])
+VO_RES = {"price": 105.0, "label": "Resistance", "color": "coral", "below": True}
+V.append({"id": "v219_edu_breakout_volume", "tag": EDU_TAG, "site_path": "/learn/", "charts": {"a": ch}, "scenes": [
+    {"type": "chart", "chart": "a", "headline": "Two breakouts. One held.", "big": True, "reveal": [6, 21], "levels": [{**VO_RES, "at": 0.3}],
+     "say": "Two breakouts of the same level. Only one of them held. Watch the volume."},
+    {"type": "chart", "chart": "a", "headline": "Breakout on thin volume.", "reveal": [21, 28], "levels": [VO_RES],
+     "marks": [{"bar": 22, "dir": "up", "text": "Low volume", "color": "coral", "at": 0.3}],
+     "say": "The first one closed above resistance on about a third of the average volume, then fell straight back into the range."},
+    {"type": "chart", "chart": "a", "headline": "Breakout on heavy volume.", "reveal": [28, n], "levels": [VO_RES],
+     "marks": [{"bar": 34, "dir": "up", "text": f"{VO['r2']:.1f}x volume", "color": "mint", "at": 0.3}],
+     "say": "The second came on more than twice the average volume, and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing."},
+    FOLLOW],
+    "post": post_edu("Breakout volume: why one held and one failed", f"Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on {VO['r2']:.1f}x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing.",
+                     ["#volume", "#breakout", "#priceaction"], "Breakout volume explained")})
+
+# ------------------------------------------------------------------ 20. Head and shoulders
+
+
+def _hs(seed):
+    wp = [(0, 101.5), (10, 106), (14, 103.45), (19, 108.5), (24, 103.4), (29, 105.9), (33, 102.4), (35, 103.0), (44, 97.3)]
+    c = path(wp, seed=seed, noise=0.25, wick=0.22, force={10: {"h": 106.2}, 19: {"h": 108.7}, 29: {"h": 106.1}, 14: {"l": 102.9}, 24: {"l": 102.9}})
+    neck, head = 102.9, c[19]["h"]
+    piv = all(c[i]["h"] == max(b["h"] for b in c[i - 4:i + 5]) for i in (10, 19, 29)) and all(c[i]["l"] == min(b["l"] for b in c[i - 4:i + 5]) for i in (14, 24))
+    brk = next((i for i in range(30, len(c)) if c[i]["c"] < neck), None)
+    tgt = round(neck - (head - neck), 2)
+    bounce = c[29]["c"] > c[25]["c"] + 1.2 and sum(c[i]["c"] > c[i]["o"] for i in range(26, 30)) >= 3
+    ok = (piv and brk is not None and 31 <= brk <= 34 and all(b["c"] >= neck for b in c[10:brk]) and min(b["l"] for b in c[brk:]) <= tgt
+          and bounce and max(b["h"] for b in c) == head)
+    return dict(c=c, brk=brk, tgt=tgt, ok=ok)
+
+
+HS = pick(_hs, lambda d: d["ok"], seeds=range(1, 300))
+ch = export(HS["c"]); n = len(ch["candles"])
+HS_NECK = {"price": 102.9, "label": "Neckline", "color": "gold", "below": True}
+V.append({"id": "v220_edu_head_shoulders", "tag": EDU_TAG, "site_path": "/learn/", "charts": {"a": ch}, "scenes": [
+    {"type": "chart", "chart": "a", "headline": "The pattern at many trend tops.", "big": True, "reveal": [6, 20],
+     "say": "This pattern shows up at the end of many uptrends."},
+    {"type": "chart", "chart": "a", "headline": "Shoulder, head, shoulder.", "reveal": [20, 31],
+     "marks": [{"bar": 10, "dir": "down", "text": "Shoulder", "color": "coral", "at": 0.05}, {"bar": 19, "dir": "down", "text": "Head", "color": "coral", "at": 0.25},
+               {"bar": 29, "dir": "down", "text": "Shoulder", "color": "coral", "at": 0.75}],
+     "levels": [{**HS_NECK, "at": 0.45}],
+     "say": "A high, a higher high, then a lower high: left shoulder, head, right shoulder. The lows between them form the neckline."},
+    {"type": "chart", "chart": "a", "headline": "Confirmed below the neckline.", "reveal": [31, n],
+     "levels": [HS_NECK, {"price": HS["tgt"], "label": "Classic target", "color": "blue", "below": True, "at": 0.4}],
+     "marks": [{"bar": HS["brk"], "dir": "down", "text": "Close below", "color": "coral", "at": 0.15}],
+     "say": "It's confirmed when a candle closes below the neckline. The classic target is the head's height, measured down from the neckline. Here price got there, but many don't."},
+    FOLLOW],
+    "post": post_edu("Head and shoulders: when it's confirmed", "A high, a higher high, then a lower high: left shoulder, head, right shoulder, with the lows between them forming the neckline. It's confirmed only by a close below the neckline; the classic target is the head's height measured down from it. Many don't reach it.",
+                     ["#chartpatterns", "#headandshoulders", "#priceaction"], "Head and shoulders pattern explained")})

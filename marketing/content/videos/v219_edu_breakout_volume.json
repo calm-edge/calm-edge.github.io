@@ -1,0 +1,484 @@
+{
+ "id": "v219_edu_breakout_volume",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 102.64,
+     "h": 102.66,
+     "l": 102.46,
+     "c": 102.6,
+     "v": 1160
+    },
+    {
+     "o": 102.61,
+     "h": 102.91,
+     "l": 102.54,
+     "c": 102.89,
+     "v": 1449
+    },
+    {
+     "o": 102.86,
+     "h": 103.48,
+     "l": 102.85,
+     "c": 103.48,
+     "v": 3206
+    },
+    {
+     "o": 103.45,
+     "h": 104.22,
+     "l": 103.32,
+     "c": 103.85,
+     "v": 1795
+    },
+    {
+     "o": 103.86,
+     "h": 104.69,
+     "l": 103.79,
+     "c": 104.52,
+     "v": 2895
+    },
+    {
+     "o": 104.53,
+     "h": 105.0,
+     "l": 104.34,
+     "c": 104.7,
+     "v": 1646
+    },
+    {
+     "o": 104.72,
+     "h": 104.76,
+     "l": 104.22,
+     "c": 104.42,
+     "v": 1877
+    },
+    {
+     "o": 104.42,
+     "h": 104.67,
+     "l": 104.32,
+     "c": 104.41,
+     "v": 840
+    },
+    {
+     "o": 104.41,
+     "h": 104.53,
+     "l": 104.16,
+     "c": 104.27,
+     "v": 1716
+    },
+    {
+     "o": 104.21,
+     "h": 104.5,
+     "l": 103.14,
+     "c": 103.3,
+     "v": 4844
+    },
+    {
+     "o": 103.34,
+     "h": 103.89,
+     "l": 103.1,
+     "c": 103.63,
+     "v": 2098
+    },
+    {
+     "o": 103.62,
+     "h": 103.87,
+     "l": 103.3,
+     "c": 103.86,
+     "v": 1773
+    },
+    {
+     "o": 103.89,
+     "h": 104.35,
+     "l": 103.63,
+     "c": 104.27,
+     "v": 2258
+    },
+    {
+     "o": 104.29,
+     "h": 104.34,
+     "l": 104.07,
+     "c": 104.3,
+     "v": 966
+    },
+    {
+     "o": 104.3,
+     "h": 104.98,
+     "l": 104.22,
+     "c": 104.75,
+     "v": 3482
+    },
+    {
+     "o": 104.73,
+     "h": 104.84,
+     "l": 104.01,
+     "c": 104.19,
+     "v": 3895
+    },
+    {
+     "o": 104.16,
+     "h": 104.24,
+     "l": 103.92,
+     "c": 104.02,
+     "v": 1515
+    },
+    {
+     "o": 104.01,
+     "h": 104.15,
+     "l": 103.97,
+     "c": 104.01,
+     "v": 1045
+    },
+    {
+     "o": 104.01,
+     "h": 104.08,
+     "l": 103.17,
+     "c": 103.5,
+     "v": 3572
+    },
+    {
+     "o": 103.45,
+     "h": 104.21,
+     "l": 103.42,
+     "c": 103.98,
+     "v": 2878
+    },
+    {
+     "o": 104.0,
+     "h": 104.88,
+     "l": 103.95,
+     "c": 104.77,
+     "v": 3897
+    },
+    {
+     "o": 104.78,
+     "h": 104.93,
+     "l": 104.59,
+     "c": 104.8,
+     "v": 1174
+    },
+    {
+     "o": 104.85,
+     "h": 105.4,
+     "l": 104.76,
+     "c": 105.25,
+     "v": 800
+    },
+    {
+     "o": 105.22,
+     "h": 105.32,
+     "l": 104.19,
+     "c": 104.5,
+     "v": 4399
+    },
+    {
+     "o": 104.56,
+     "h": 104.63,
+     "l": 104.49,
+     "c": 104.6,
+     "v": 821
+    },
+    {
+     "o": 104.6,
+     "h": 104.6,
+     "l": 104.41,
+     "c": 104.5,
+     "v": 1501
+    },
+    {
+     "o": 104.51,
+     "h": 104.63,
+     "l": 103.88,
+     "c": 104.07,
+     "v": 2127
+    },
+    {
+     "o": 104.11,
+     "h": 104.27,
+     "l": 103.66,
+     "c": 103.7,
+     "v": 2512
+    },
+    {
+     "o": 103.7,
+     "h": 104.22,
+     "l": 103.65,
+     "c": 104.12,
+     "v": 1946
+    },
+    {
+     "o": 104.09,
+     "h": 104.51,
+     "l": 103.86,
+     "c": 104.45,
+     "v": 2767
+    },
+    {
+     "o": 104.45,
+     "h": 104.75,
+     "l": 104.22,
+     "c": 104.58,
+     "v": 1178
+    },
+    {
+     "o": 104.53,
+     "h": 104.72,
+     "l": 104.5,
+     "c": 104.6,
+     "v": 1607
+    },
+    {
+     "o": 104.57,
+     "h": 104.88,
+     "l": 104.31,
+     "c": 104.84,
+     "v": 1887
+    },
+    {
+     "o": 104.82,
+     "h": 104.94,
+     "l": 104.78,
+     "c": 104.9,
+     "v": 1131
+    },
+    {
+     "o": 104.95,
+     "h": 105.75,
+     "l": 104.55,
+     "c": 105.6,
+     "v": 5200
+    },
+    {
+     "o": 105.58,
+     "h": 106.47,
+     "l": 105.51,
+     "c": 106.35,
+     "v": 2746
+    },
+    {
+     "o": 106.35,
+     "h": 106.63,
+     "l": 105.93,
+     "c": 106.43,
+     "v": 1370
+    },
+    {
+     "o": 106.48,
+     "h": 107.02,
+     "l": 106.44,
+     "c": 106.74,
+     "v": 1975
+    },
+    {
+     "o": 106.76,
+     "h": 106.83,
+     "l": 106.45,
+     "c": 106.71,
+     "v": 1158
+    },
+    {
+     "o": 106.72,
+     "h": 107.04,
+     "l": 106.59,
+     "c": 106.97,
+     "v": 1935
+    },
+    {
+     "o": 107.02,
+     "h": 107.05,
+     "l": 106.99,
+     "c": 107.01,
+     "v": 850
+    },
+    {
+     "o": 107.09,
+     "h": 107.12,
+     "l": 106.9,
+     "c": 107.06,
+     "v": 917
+    },
+    {
+     "o": 107.01,
+     "h": 107.46,
+     "l": 106.94,
+     "c": 107.31,
+     "v": 2601
+    },
+    {
+     "o": 107.28,
+     "h": 107.78,
+     "l": 107.27,
+     "c": 107.65,
+     "v": 2711
+    },
+    {
+     "o": 107.66,
+     "h": 108.31,
+     "l": 107.59,
+     "c": 108.2,
+     "v": 3510
+    }
+   ],
+   "lines": [],
+   "bands": []
+  }
+ },
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Find the mistake in this trade.",
+   "big": true,
+   "reveal": [
+    6,
+    23
+   ],
+   "show": [],
+   "grow": 0.95,
+   "levels": [
+    {
+     "price": 105.25,
+     "from": 22,
+     "label": "Long",
+     "color": "blue",
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 105.0,
+     "label": "Resistance",
+     "color": "coral",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "say": "Long on the close above resistance. Find the mistake before the countdown ends."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Find the mistake in this trade.",
+   "big": true,
+   "reveal": [
+    23,
+    23
+   ],
+   "show": [],
+   "zoom": [
+    22,
+    12
+   ],
+   "countdown": 3,
+   "duration": 3,
+   "sfx": "countdown",
+   "cont": true,
+   "levels": [
+    {
+     "price": 105.25,
+     "from": 22,
+     "label": "Long",
+     "color": "blue",
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 105.0,
+     "label": "Resistance",
+     "color": "coral",
+     "below": true,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Find the mistake in this trade.",
+   "big": true,
+   "show": [],
+   "reveal": [
+    23,
+    28
+   ],
+   "levels": [
+    {
+     "price": 105.0,
+     "label": "Resistance",
+     "color": "coral",
+     "below": true
+    }
+   ],
+   "marks": [
+    {
+     "bar": 22,
+     "dir": "up",
+     "text": "Low volume",
+     "color": "coral",
+     "at": 0.3
+    }
+   ],
+   "say": "The volume. This breakout came on about a third of the average volume, and price fell straight back into the range.",
+   "cont": true,
+   "stamp": {
+    "text": "MISTAKE",
+    "at": 0.04
+   },
+   "sfx": "stamp",
+   "sfx_at": 0.04
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Find the mistake in this trade.",
+   "big": true,
+   "show": [],
+   "reveal": [
+    28,
+    45
+   ],
+   "levels": [
+    {
+     "price": 105.0,
+     "label": "Resistance",
+     "color": "coral",
+     "below": true
+    }
+   ],
+   "marks": [
+    {
+     "bar": 34,
+     "dir": "up",
+     "text": "2.4x volume",
+     "color": "mint",
+     "at": 0.3
+    }
+   ],
+   "say": "The second came on more than twice the average volume, and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing. Follow for tomorrow's chart.",
+   "cont": true
+  }
+ ],
+ "post": {
+  "instagram": "Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on 2.4x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#volume #breakout #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "tiktok": "Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on 2.4x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing. Follow for one trading concept a day. #volume #breakout #priceaction #tradingeducation #technicalanalysis #daytrading",
+  "youtube": {
+   "title": "Breakout volume: why one held and one failed #shorts",
+   "description": "Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on 2.4x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing.\n\nFree guides and calculators: https://calm-edge.github.io/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#volume #breakout #priceaction #tradingeducation #technicalanalysis #daytrading #trading #learntotrade #shorts"
+  },
+  "facebook": "Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on 2.4x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/",
+  "pinterest": {
+   "title": "Breakout volume explained",
+   "description": "Two breakouts of the same level. The first closed above resistance on about a third of the 20-bar average volume and fell straight back into the range. The second came on 2.4x the average volume and held. Volume guarantees nothing, but a breakout with real participation is generally considered more convincing. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/"
+  }
+ },
+ "tagFrom": 7,
+ "format_v": 2,
+ "hook": "spot",
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

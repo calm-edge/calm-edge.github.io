@@ -215,3 +215,37 @@ quiz("v215_edu_drawdown_math", "Down 50%, up 50%. Back to even?", ["Yes", "No"],
      {"levels": at0(lv("v215_edu_drawdown_math", 0)["levels"]), "marks": at0(lv("v215_edu_drawdown_math", 0)["marks"])},
      "Your account drops fifty percent, then gains fifty percent. Are you back to even? Decide before the reveal.",
      [({"reveal": [27, 43], **lv("v215_edu_drawdown_math", 1)}, chart_scenes("v215_edu_drawdown_math")[1]["say"])])
+
+# ---- stochastic: what happens next
+_cs = edu.ST["cx"] - 15
+next_up("v216_edu_stochastic", "Stochastic under 20 at support.", _cs + 1,
+        {"levels": at0(lv("v216_edu_stochastic", 1)["levels"])},
+        "Stochastic just turned up from below twenty, right at the bottom of the range. Watch what happens next.",
+        [({"reveal": [_cs + 1, 33], **lv("v216_edu_stochastic", 2), "headline": "Back to the top of the range."},
+          "Stochastic shows where the close sits inside the last fourteen bars' range. In a sideways market, a turn up from below twenty near support often comes before a move back toward the top. In a strong downtrend, it can stay low for a long time.")])
+# ---- RSI divergence: myth
+myth("v217_edu_rsi_divergence", "Divergence = sell now.", "A warning, not a trigger.",
+     {"from": 6, "to": 23, "marks": at0(lv("v217_edu_rsi_divergence", 1)["marks"])},
+     "Myth: when RSI diverges from price, the top is in.",
+     [({"reveal": [23, 39], **lv("v217_edu_rsi_divergence", 2)},
+       f"Price made a higher high while RSI made a lower one: momentum was fading. But price made one more high {words(edu.later)} bars later before it turned. Wait for price to confirm, like a close below the last swing low.")])
+# ---- pin bar: quiz
+quiz("v218_edu_pin_bar", "Long tail at support. Who won?", ["Sellers", "Buyers"], 1, 23,
+     {"levels": at0(lv("v218_edu_pin_bar", 1)["levels"])},
+     "Price dropped below support and left a long tail. Who won this candle? Decide before the reveal.",
+     [({"reveal": [23, 25], **lv("v218_edu_pin_bar", 1)}, chart_scenes("v218_edu_pin_bar")[1]["say"].replace("Price dropped", "Buyers. Price dropped")),
+      ({"reveal": [25, 31], **lv("v218_edu_pin_bar", 2)}, chart_scenes("v218_edu_pin_bar")[2]["say"])], zoom=(16, 9))
+# ---- breakout volume: spot the mistake
+spot("v219_edu_breakout_volume", "Find the mistake in this trade.", 23,
+     {"levels": [{"price": edu.VO["c"][22]["c"], "from": 22, "label": "Long", "color": "blue", "labelPos": "right", "at": 0.0}] + at0(lv("v219_edu_breakout_volume", 0)["levels"])},
+     "Long on the close above resistance. Find the mistake before the countdown ends.",
+     [({"reveal": [23, 28], **lv("v219_edu_breakout_volume", 1)},
+       "The volume. This breakout came on about a third of the average volume, and price fell straight back into the range."),
+      ({"reveal": [28, 45], **lv("v219_edu_breakout_volume", 2)},
+       chart_scenes("v219_edu_breakout_volume")[2]["say"])])
+# ---- head and shoulders: zoom out
+zoomout("v220_edu_head_shoulders", "Bouncing off support, right?", 29, 6,
+        "Price bounces off support, green candle after green candle. Looks bullish, right?", "Now zoom out.",
+        [({"reveal": [29, 31], **lv("v220_edu_head_shoulders", 1), "marks": at0(lv("v220_edu_head_shoulders", 1)["marks"]), "headline": "It's the right shoulder."},
+          chart_scenes("v220_edu_head_shoulders")[1]["say"]),
+         ({"reveal": [31, 45], **lv("v220_edu_head_shoulders", 2), "headline": "Then the neckline breaks."}, chart_scenes("v220_edu_head_shoulders")[2]["say"])])

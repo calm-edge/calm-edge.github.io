@@ -124,6 +124,16 @@ def macd(xs, fast=12, slow=26, signal=9):
     return line, sig, hist
 
 
+def stochastic(c, n=14, d=3):
+    """Stochastic oscillator: %K = (close - lowest low of n bars) / (highest high - lowest low) x 100; %D = SMA(d) of %K."""
+    k = [None] * len(c)
+    for i in range(n - 1, len(c)):
+        w = c[i - n + 1:i + 1]; lo, hi = min(b["l"] for b in w), max(b["h"] for b in w)
+        k[i] = 50.0 if hi == lo else (c[i]["c"] - lo) / (hi - lo) * 100
+    dl = [None if i < n + d - 2 else sum(k[i - d + 1:i + 1]) / d for i in range(len(c))]
+    return k, dl
+
+
 def r2(xs):
     return [None if x is None else round(x, 3) for x in xs]
 

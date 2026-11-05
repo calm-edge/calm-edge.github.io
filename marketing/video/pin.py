@@ -28,6 +28,8 @@ def main():
     charts = [s for s in spec["scenes"] if s["type"] == "chart"]
     if hook is None:  # chart lessons: the first headline is the pin's title
         hook = {"text": charts[0]["headline"], "kicker": "Trading, explained"}
+        if charts[0].get("kicker"):  # a myth hook: the pin must not state the false belief as if it were true
+            hook["text"] = f'{charts[0]["kicker"]}: {charts[0]["headline"]}' 
     visual = next((s for t in ("rows", "stat", "shot") for s in spec["scenes"] if s["type"] == t), None)
     chart_state = None
     if charts:

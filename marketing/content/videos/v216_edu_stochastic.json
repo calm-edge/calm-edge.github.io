@@ -1,0 +1,471 @@
+{
+ "id": "v216_edu_stochastic",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 102.18,
+     "h": 102.6,
+     "l": 102.16,
+     "c": 102.48,
+     "v": 2472
+    },
+    {
+     "o": 102.47,
+     "h": 102.98,
+     "l": 102.43,
+     "c": 102.8,
+     "v": 1672
+    },
+    {
+     "o": 102.79,
+     "h": 103.0,
+     "l": 102.66,
+     "c": 102.67,
+     "v": 1417
+    },
+    {
+     "o": 102.7,
+     "h": 102.82,
+     "l": 102.26,
+     "c": 102.27,
+     "v": 3145
+    },
+    {
+     "o": 102.27,
+     "h": 102.45,
+     "l": 101.61,
+     "c": 101.63,
+     "v": 4243
+    },
+    {
+     "o": 101.64,
+     "h": 101.81,
+     "l": 101.05,
+     "c": 101.1,
+     "v": 3507
+    },
+    {
+     "o": 101.1,
+     "h": 101.28,
+     "l": 100.38,
+     "c": 100.48,
+     "v": 3783
+    },
+    {
+     "o": 100.46,
+     "h": 100.47,
+     "l": 100.02,
+     "c": 100.25,
+     "v": 1879
+    },
+    {
+     "o": 100.31,
+     "h": 101.1,
+     "l": 100.1,
+     "c": 100.7,
+     "v": 1834
+    },
+    {
+     "o": 100.68,
+     "h": 101.18,
+     "l": 100.5,
+     "c": 101.18,
+     "v": 2470
+    },
+    {
+     "o": 101.19,
+     "h": 101.39,
+     "l": 101.16,
+     "c": 101.36,
+     "v": 1749
+    },
+    {
+     "o": 101.39,
+     "h": 101.78,
+     "l": 101.07,
+     "c": 101.67,
+     "v": 1722
+    },
+    {
+     "o": 101.7,
+     "h": 102.6,
+     "l": 101.61,
+     "c": 102.52,
+     "v": 3699
+    },
+    {
+     "o": 102.53,
+     "h": 103.0,
+     "l": 102.47,
+     "c": 102.85,
+     "v": 2294
+    },
+    {
+     "o": 102.83,
+     "h": 102.86,
+     "l": 102.28,
+     "c": 102.54,
+     "v": 2203
+    },
+    {
+     "o": 102.52,
+     "h": 102.53,
+     "l": 102.17,
+     "c": 102.23,
+     "v": 1846
+    },
+    {
+     "o": 102.28,
+     "h": 102.45,
+     "l": 101.68,
+     "c": 101.95,
+     "v": 1726
+    },
+    {
+     "o": 101.98,
+     "h": 102.0,
+     "l": 101.42,
+     "c": 101.62,
+     "v": 2997
+    },
+    {
+     "o": 101.63,
+     "h": 101.81,
+     "l": 101.28,
+     "c": 101.4,
+     "v": 2216
+    },
+    {
+     "o": 101.42,
+     "h": 101.55,
+     "l": 101.26,
+     "c": 101.34,
+     "v": 1200
+    },
+    {
+     "o": 101.38,
+     "h": 101.44,
+     "l": 101.2,
+     "c": 101.39,
+     "v": 1112
+    },
+    {
+     "o": 101.35,
+     "h": 101.56,
+     "l": 100.76,
+     "c": 100.91,
+     "v": 2700
+    },
+    {
+     "o": 100.96,
+     "h": 101.02,
+     "l": 100.3,
+     "c": 100.38,
+     "v": 3090
+    },
+    {
+     "o": 100.38,
+     "h": 100.4,
+     "l": 100.0,
+     "c": 100.15,
+     "v": 1955
+    },
+    {
+     "o": 100.14,
+     "h": 100.36,
+     "l": 100.03,
+     "c": 100.24,
+     "v": 1556
+    },
+    {
+     "o": 100.22,
+     "h": 100.83,
+     "l": 100.08,
+     "c": 100.74,
+     "v": 3044
+    },
+    {
+     "o": 100.78,
+     "h": 101.04,
+     "l": 100.68,
+     "c": 100.99,
+     "v": 2000
+    },
+    {
+     "o": 101.01,
+     "h": 101.49,
+     "l": 100.89,
+     "c": 101.26,
+     "v": 1848
+    },
+    {
+     "o": 101.29,
+     "h": 101.69,
+     "l": 101.29,
+     "c": 101.35,
+     "v": 1578
+    },
+    {
+     "o": 101.33,
+     "h": 102.11,
+     "l": 101.17,
+     "c": 102.0,
+     "v": 3092
+    },
+    {
+     "o": 102.0,
+     "h": 102.27,
+     "l": 101.95,
+     "c": 102.15,
+     "v": 1326
+    },
+    {
+     "o": 102.13,
+     "h": 102.69,
+     "l": 102.11,
+     "c": 102.6,
+     "v": 3001
+    },
+    {
+     "o": 102.61,
+     "h": 102.81,
+     "l": 102.56,
+     "c": 102.75,
+     "v": 1552
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "panel": {
+    "id": "sto",
+    "label": "Stochastic 14, 3",
+    "min": 0,
+    "max": 100,
+    "levels": [
+     {
+      "y": 80,
+      "label": "80",
+      "color": "coral"
+     },
+     {
+      "y": 20,
+      "label": "20",
+      "color": "mint"
+     }
+    ],
+    "lines": [
+     {
+      "id": "k",
+      "color": "blue",
+      "values": [
+       82.667,
+       93.333,
+       89.0,
+       75.667,
+       54.333,
+       36.667,
+       16.0,
+       8.333,
+       23.333,
+       38.926,
+       44.966,
+       55.369,
+       83.893,
+       94.966,
+       84.564,
+       74.161,
+       64.765,
+       53.691,
+       46.309,
+       44.295,
+       45.973,
+       27.931,
+       2.963,
+       5.0,
+       8.0,
+       24.667,
+       33.0,
+       44.056,
+       53.36,
+       81.633,
+       94.714,
+       96.654,
+       97.865
+      ]
+     },
+     {
+      "id": "d",
+      "color": "gold",
+      "values": [
+       70.333,
+       82.444,
+       88.333,
+       86.0,
+       73.0,
+       55.556,
+       35.667,
+       20.333,
+       15.889,
+       23.531,
+       35.742,
+       46.421,
+       61.409,
+       78.076,
+       87.808,
+       84.564,
+       74.497,
+       64.206,
+       54.922,
+       48.098,
+       45.526,
+       39.4,
+       25.622,
+       11.965,
+       5.321,
+       12.556,
+       21.889,
+       33.908,
+       43.472,
+       59.683,
+       76.569,
+       91.0,
+       96.411
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Stochastic under 20 at support.",
+   "big": true,
+   "reveal": [
+    6,
+    25
+   ],
+   "show": [
+    "sto"
+   ],
+   "grow": 0.95,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "mint",
+     "below": true,
+     "at": 0.0
+    },
+    {
+     "price": 103.0,
+     "label": "Range high",
+     "color": "coral",
+     "at": 0.0
+    }
+   ],
+   "say": "Stochastic just turned up from below twenty, right at the bottom of the range. Watch what happens next."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Stochastic under 20 at support.",
+   "big": true,
+   "reveal": [
+    25,
+    25
+   ],
+   "show": [
+    "sto"
+   ],
+   "zoom": [
+    22,
+    13
+   ],
+   "overlay": "What happens next?",
+   "duration": 2.4,
+   "sfx": "riser",
+   "cont": true,
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "mint",
+     "below": true,
+     "at": 0.0
+    },
+    {
+     "price": 103.0,
+     "label": "Range high",
+     "color": "coral",
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Back to the top of the range.",
+   "big": true,
+   "show": [
+    "sto"
+   ],
+   "reveal": [
+    25,
+    33
+   ],
+   "levels": [
+    {
+     "price": 100.0,
+     "label": "Range low",
+     "color": "mint",
+     "below": true
+    },
+    {
+     "price": 103.0,
+     "label": "Range high",
+     "color": "coral"
+    }
+   ],
+   "marks": [
+    {
+     "bar": 24,
+     "panel": true,
+     "value": 8.0,
+     "text": "Turns up",
+     "color": "mint",
+     "at": 0.0
+    }
+   ],
+   "say": "Stochastic shows where the close sits inside the last fourteen bars' range. In a sideways market, a turn up from below twenty near support often comes before a move back toward the top. In a strong downtrend, it can stay low for a long time. Follow for tomorrow's chart.",
+   "cont": true,
+   "sfx": "reveal"
+  }
+ ],
+ "post": {
+  "instagram": "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#stochastic #indicators #rangetrading #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "tiktok": "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time. Follow for one trading concept a day. #stochastic #indicators #rangetrading #tradingeducation #technicalanalysis #daytrading",
+  "youtube": {
+   "title": "Stochastic below 20 at support #shorts",
+   "description": "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time.\n\nFree guides and calculators: https://calm-edge.github.io/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#stochastic #indicators #rangetrading #tradingeducation #technicalanalysis #daytrading #trading #learntotrade #shorts"
+  },
+  "facebook": "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/",
+  "pinterest": {
+   "title": "Stochastic oscillator explained: below 20 at support",
+   "description": "The stochastic oscillator shows where the close sits inside the range of the last 14 bars, from 0 to 100. Below 20, price is near the bottom of that range. In a sideways market, a turn up from below 20 near support often comes before a move back toward the top of the range; in a strong downtrend it can stay below 20 for a long time. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/"
+  }
+ },
+ "tagFrom": 7,
+ "format_v": 2,
+ "hook": "next",
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

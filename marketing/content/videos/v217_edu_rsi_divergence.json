@@ -1,0 +1,489 @@
+{
+ "id": "v217_edu_rsi_divergence",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 103.07,
+     "h": 103.36,
+     "l": 103.03,
+     "c": 103.2,
+     "v": 1286
+    },
+    {
+     "o": 103.19,
+     "h": 103.32,
+     "l": 102.99,
+     "c": 103.03,
+     "v": 1317
+    },
+    {
+     "o": 103.04,
+     "h": 103.54,
+     "l": 102.12,
+     "c": 102.18,
+     "v": 2954
+    },
+    {
+     "o": 102.16,
+     "h": 102.54,
+     "l": 101.85,
+     "c": 102.41,
+     "v": 2224
+    },
+    {
+     "o": 102.42,
+     "h": 102.44,
+     "l": 102.12,
+     "c": 102.3,
+     "v": 1149
+    },
+    {
+     "o": 102.3,
+     "h": 103.32,
+     "l": 101.91,
+     "c": 102.9,
+     "v": 3739
+    },
+    {
+     "o": 102.9,
+     "h": 103.4,
+     "l": 102.59,
+     "c": 103.25,
+     "v": 2501
+    },
+    {
+     "o": 103.23,
+     "h": 103.81,
+     "l": 103.19,
+     "c": 103.59,
+     "v": 2290
+    },
+    {
+     "o": 103.68,
+     "h": 104.14,
+     "l": 103.6,
+     "c": 104.05,
+     "v": 1896
+    },
+    {
+     "o": 104.03,
+     "h": 104.92,
+     "l": 103.95,
+     "c": 104.69,
+     "v": 3436
+    },
+    {
+     "o": 104.67,
+     "h": 105.11,
+     "l": 104.52,
+     "c": 105.07,
+     "v": 2510
+    },
+    {
+     "o": 105.05,
+     "h": 105.65,
+     "l": 104.92,
+     "c": 105.49,
+     "v": 2000
+    },
+    {
+     "o": 105.53,
+     "h": 106.3,
+     "l": 105.43,
+     "c": 106.0,
+     "v": 3083
+    },
+    {
+     "o": 105.99,
+     "h": 106.22,
+     "l": 105.51,
+     "c": 105.64,
+     "v": 2571
+    },
+    {
+     "o": 105.6,
+     "h": 105.71,
+     "l": 105.14,
+     "c": 105.3,
+     "v": 2197
+    },
+    {
+     "o": 105.3,
+     "h": 105.41,
+     "l": 104.39,
+     "c": 104.81,
+     "v": 2960
+    },
+    {
+     "o": 104.77,
+     "h": 105.11,
+     "l": 104.32,
+     "c": 104.4,
+     "v": 1991
+    },
+    {
+     "o": 104.42,
+     "h": 105.4,
+     "l": 103.99,
+     "c": 105.22,
+     "v": 3895
+    },
+    {
+     "o": 105.21,
+     "h": 105.38,
+     "l": 104.93,
+     "c": 105.11,
+     "v": 1467
+    },
+    {
+     "o": 105.12,
+     "h": 105.55,
+     "l": 105.03,
+     "c": 105.41,
+     "v": 2095
+    },
+    {
+     "o": 105.42,
+     "h": 106.08,
+     "l": 105.13,
+     "c": 105.96,
+     "v": 3108
+    },
+    {
+     "o": 105.89,
+     "h": 106.11,
+     "l": 105.85,
+     "c": 106.08,
+     "v": 1572
+    },
+    {
+     "o": 106.08,
+     "h": 107.1,
+     "l": 105.92,
+     "c": 106.8,
+     "v": 2731
+    },
+    {
+     "o": 106.88,
+     "h": 107.07,
+     "l": 106.11,
+     "c": 106.12,
+     "v": 2915
+    },
+    {
+     "o": 106.16,
+     "h": 106.25,
+     "l": 105.72,
+     "c": 106.17,
+     "v": 1024
+    },
+    {
+     "o": 106.15,
+     "h": 106.41,
+     "l": 106.04,
+     "c": 106.1,
+     "v": 1375
+    },
+    {
+     "o": 106.14,
+     "h": 106.68,
+     "l": 105.84,
+     "c": 106.45,
+     "v": 1645
+    },
+    {
+     "o": 106.43,
+     "h": 106.75,
+     "l": 106.25,
+     "c": 106.51,
+     "v": 1368
+    },
+    {
+     "o": 106.51,
+     "h": 107.51,
+     "l": 106.34,
+     "c": 107.44,
+     "v": 4449
+    },
+    {
+     "o": 107.47,
+     "h": 108.0,
+     "l": 107.34,
+     "c": 107.8,
+     "v": 1579
+    },
+    {
+     "o": 107.84,
+     "h": 107.85,
+     "l": 107.36,
+     "c": 107.42,
+     "v": 2747
+    },
+    {
+     "o": 107.5,
+     "h": 107.66,
+     "l": 106.81,
+     "c": 106.92,
+     "v": 3444
+    },
+    {
+     "o": 106.9,
+     "h": 107.11,
+     "l": 106.57,
+     "c": 106.77,
+     "v": 1696
+    },
+    {
+     "o": 106.73,
+     "h": 106.97,
+     "l": 106.15,
+     "c": 106.3,
+     "v": 2021
+    },
+    {
+     "o": 106.32,
+     "h": 106.47,
+     "l": 105.32,
+     "c": 105.45,
+     "v": 4384
+    },
+    {
+     "o": 105.48,
+     "h": 105.49,
+     "l": 104.66,
+     "c": 105.19,
+     "v": 1924
+    },
+    {
+     "o": 105.21,
+     "h": 105.47,
+     "l": 104.9,
+     "c": 105.17,
+     "v": 1033
+    },
+    {
+     "o": 105.14,
+     "h": 105.4,
+     "l": 104.18,
+     "c": 104.48,
+     "v": 3658
+    },
+    {
+     "o": 104.56,
+     "h": 104.73,
+     "l": 103.77,
+     "c": 103.8,
+     "v": 2379
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "panel": {
+    "id": "rsi",
+    "label": "RSI 14",
+    "min": 25,
+    "max": 95,
+    "levels": [
+     {
+      "y": 70,
+      "label": "70",
+      "color": "coral"
+     },
+     {
+      "y": 30,
+      "label": "30",
+      "color": "mint"
+     }
+    ],
+    "lines": [
+     {
+      "id": "rsi",
+      "color": "violet",
+      "values": [
+       88.278,
+       84.573,
+       68.986,
+       70.567,
+       68.762,
+       72.843,
+       74.902,
+       76.747,
+       78.997,
+       81.656,
+       83.029,
+       84.418,
+       85.925,
+       80.042,
+       74.832,
+       67.965,
+       62.774,
+       68.033,
+       66.672,
+       68.521,
+       71.629,
+       72.272,
+       75.815,
+       67.095,
+       67.392,
+       66.488,
+       68.747,
+       69.131,
+       74.386,
+       76.084,
+       70.754,
+       64.364,
+       62.54,
+       57.08,
+       48.785,
+       46.556,
+       46.38,
+       40.682,
+       35.989
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "kicker": "Myth",
+   "kickerColor": "coral",
+   "headline": "Divergence = sell now.",
+   "big": true,
+   "show": [
+    "rsi"
+   ],
+   "grow": 0.95,
+   "reveal": [
+    6,
+    23
+   ],
+   "marks": [
+    {
+     "bar": 12,
+     "dir": "down",
+     "text": "High",
+     "color": "muted",
+     "at": 0.0
+    },
+    {
+     "bar": 22,
+     "dir": "down",
+     "text": "Higher high",
+     "color": "coral",
+     "at": 0.0
+    },
+    {
+     "bar": 12,
+     "panel": true,
+     "value": 85.9,
+     "text": "86",
+     "color": "muted",
+     "at": 0.0
+    },
+    {
+     "bar": 22,
+     "panel": true,
+     "value": 75.8,
+     "text": "76",
+     "color": "coral",
+     "at": 0.0
+    }
+   ],
+   "stamp": {
+    "text": "FALSE",
+    "at": 0.62
+   },
+   "sfx": "stamp",
+   "sfx_at": 0.62,
+   "hold": 0.4,
+   "say": "Myth: when RSI diverges from price, the top is in."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "kicker": "Truth",
+   "kickerColor": "mint",
+   "headline": "A warning, not a trigger.",
+   "big": true,
+   "show": [
+    "rsi"
+   ],
+   "reveal": [
+    23,
+    39
+   ],
+   "levels": [
+    {
+     "price": 105.72,
+     "from": 24,
+     "label": "Last swing low",
+     "color": "gold",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.35
+    }
+   ],
+   "marks": [
+    {
+     "bar": 12,
+     "panel": true,
+     "value": 85.9,
+     "text": "86",
+     "color": "muted",
+     "at": 0.0
+    },
+    {
+     "bar": 22,
+     "panel": true,
+     "value": 75.8,
+     "text": "76",
+     "color": "coral",
+     "at": 0.0
+    },
+    {
+     "bar": 29,
+     "dir": "down",
+     "text": "Another high",
+     "color": "mint",
+     "at": 0.2
+    },
+    {
+     "bar": 34,
+     "dir": "down",
+     "color": "coral",
+     "at": 0.7
+    }
+   ],
+   "say": "Price made a higher high while RSI made a lower one: momentum was fading. But price made one more high seven bars later before it turned. Wait for price to confirm, like a close below the last swing low. Follow for tomorrow's chart."
+  }
+ ],
+ "post": {
+  "instagram": "Bearish divergence: price makes a higher high while RSI makes a lower one (here 86, then 76), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high 7 bars later before it turned. Wait for price to confirm, like a close below the last swing low.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#rsi #divergence #indicators #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "tiktok": "Bearish divergence: price makes a higher high while RSI makes a lower one (here 86, then 76), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high 7 bars later before it turned. Wait for price to confirm, like a close below the last swing low. Follow for one trading concept a day. #rsi #divergence #indicators #tradingeducation #technicalanalysis #daytrading",
+  "youtube": {
+   "title": "RSI divergence: a warning, not a trigger #shorts",
+   "description": "Bearish divergence: price makes a higher high while RSI makes a lower one (here 86, then 76), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high 7 bars later before it turned. Wait for price to confirm, like a close below the last swing low.\n\nFree guides and calculators: https://calm-edge.github.io/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#rsi #divergence #indicators #tradingeducation #technicalanalysis #daytrading #trading #learntotrade #shorts"
+  },
+  "facebook": "Bearish divergence: price makes a higher high while RSI makes a lower one (here 86, then 76), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high 7 bars later before it turned. Wait for price to confirm, like a close below the last swing low.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/",
+  "pinterest": {
+   "title": "RSI divergence explained",
+   "description": "Bearish divergence: price makes a higher high while RSI makes a lower one (here 86, then 76), so the momentum behind the move is fading. It's a warning, not a sell signal: in this example price made one more high 7 bars later before it turned. Wait for price to confirm, like a close below the last swing low. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/"
+  }
+ },
+ "tagFrom": 7,
+ "format_v": 2,
+ "hook": "myth",
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

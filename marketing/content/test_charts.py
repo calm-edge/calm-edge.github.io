@@ -1,7 +1,7 @@
 """Indicator checks against published reference values. python3 marketing/content/test_charts.py"""
 import math, statistics, sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from charts import ema, sma, rsi, bollinger, vwap, atr, macd, path
+from charts import ema, sma, rsi, bollinger, vwap, atr, macd, path, stochastic
 
 fails = []
 def eq(a, b, tol, msg):
@@ -43,6 +43,13 @@ line, sig, hist = macd(ys)
 from charts import ema as E
 eq(line[40], E(ys, 12)[40] - E(ys, 26)[40], 1e-9, "MACD line")
 assert line[24] is None and line[25] is not None and sig[33] is not None and sig[32] is None, "MACD warm-up"
+
+# Stochastic on a tiny hand example (n=3, d=2): window highs/lows -> %K, %D = mean of the last 2 %K
+sc = [{"o": 10, "h": 12, "l": 9, "c": 11, "v": 1}, {"o": 11, "h": 13, "l": 10, "c": 12, "v": 1}, {"o": 12, "h": 14, "l": 11, "c": 13, "v": 1},
+      {"o": 13, "h": 13.5, "l": 10.5, "c": 11, "v": 1}]
+k, d = stochastic(sc, 3, 2)
+eq(k[2], (13 - 9) / (14 - 9) * 100, 1e-9, "Stochastic %K"); eq(k[3], (11 - 10) / (14 - 10) * 100, 1e-9, "Stochastic %K 2")
+eq(d[3], (k[2] + k[3]) / 2, 1e-9, "Stochastic %D"); assert k[1] is None and d[2] is None
 
 # paths: deterministic, turning points exact, candles consistent
 p1, p2 = path([(0, 100), (20, 110), (40, 104)], seed=3), path([(0, 100), (20, 110), (40, 104)], seed=3)
