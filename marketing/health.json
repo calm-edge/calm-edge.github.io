@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-04T17:25+01:00",
- "summary": "75 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-05T07:40+01:00",
+ "summary": "74 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -30,12 +30,12 @@
   {
    "status": "OK",
    "check": "sito /media/index.json",
-   "detail": "HTTP 200, 11270 byte"
+   "detail": "HTTP 200, 11262 byte"
   },
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 14564 byte"
+   "detail": "HTTP 200, 15351 byte"
   },
   {
    "status": "OK",
@@ -94,11 +94,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-04 17:30 v207_edu_atr_stop",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-05 17:30 v210_edu_position_size",
    "detail": "3 file presenti"
   },
@@ -120,7 +115,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "19 pin; ultimi titoli: Profit factor explained for traders | Double top pattern explained | Gap fill trading strategy in 4 steps"
+   "detail": "20 pin; ultimi titoli: ATR stop loss explained | Profit factor explained for traders | Double top pattern explained"
   },
   {
    "status": "OK",
@@ -155,17 +150,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "19 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v008_ai_review",
-   "detail": "https://www.instagram.com/reel/DfATDl8iX0p/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v008_ai_review",
-   "detail": "https://www.facebook.com/1470032662849525/videos/29288849837469868"
+   "detail": "20 post"
   },
   {
    "status": "OK",
@@ -309,6 +294,16 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v207_edu_atr_stop",
+   "detail": "https://www.instagram.com/reel/DfU6LE2gMxV/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v207_edu_atr_stop",
+   "detail": "https://www.facebook.com/1470032662849525/videos/4614573352116228"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
    "detail": "2 storie"
   },
@@ -326,11 +321,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v008_ai_review",
-   "detail": "public/processed, canale Calm Edge, views 6"
   },
   {
    "status": "OK",
@@ -355,7 +345,7 @@
   {
    "status": "OK",
    "check": "YouTube v014_habit",
-   "detail": "public/processed, canale Calm Edge, views 77"
+   "detail": "public/processed, canale Calm Edge, views 78"
   },
   {
    "status": "OK",
@@ -380,12 +370,17 @@
   {
    "status": "OK",
    "check": "YouTube v206_edu_double_top",
-   "detail": "public/processed, canale Calm Edge, views 11"
+   "detail": "public/processed, canale Calm Edge, views 14"
   },
   {
    "status": "OK",
    "check": "YouTube v004_profit_factor",
-   "detail": "public/processed, canale Calm Edge, views 3"
+   "detail": "public/processed, canale Calm Edge, views 5"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v207_edu_atr_stop",
+   "detail": "public/processed, canale Calm Edge, views 4"
   },
   {
    "status": "OK",
