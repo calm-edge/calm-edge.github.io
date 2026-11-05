@@ -1,0 +1,507 @@
+{
+ "id": "c319_car_fomo_chase",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 100.51,
+     "h": 100.56,
+     "l": 100.39,
+     "c": 100.5,
+     "v": 1205
+    },
+    {
+     "o": 100.53,
+     "h": 100.62,
+     "l": 100.34,
+     "c": 100.54,
+     "v": 1356
+    },
+    {
+     "o": 100.55,
+     "h": 100.63,
+     "l": 100.41,
+     "c": 100.48,
+     "v": 1576
+    },
+    {
+     "o": 100.5,
+     "h": 100.59,
+     "l": 100.42,
+     "c": 100.55,
+     "v": 1343
+    },
+    {
+     "o": 100.53,
+     "h": 101.0,
+     "l": 100.47,
+     "c": 100.9,
+     "v": 2938
+    },
+    {
+     "o": 100.91,
+     "h": 100.91,
+     "l": 100.48,
+     "c": 100.5,
+     "v": 2213
+    },
+    {
+     "o": 100.5,
+     "h": 100.95,
+     "l": 100.42,
+     "c": 100.61,
+     "v": 1571
+    },
+    {
+     "o": 100.61,
+     "h": 100.68,
+     "l": 100.18,
+     "c": 100.53,
+     "v": 1059
+    },
+    {
+     "o": 100.49,
+     "h": 100.88,
+     "l": 100.0,
+     "c": 100.1,
+     "v": 2895
+    },
+    {
+     "o": 100.1,
+     "h": 100.72,
+     "l": 100.05,
+     "c": 100.43,
+     "v": 1772
+    },
+    {
+     "o": 100.43,
+     "h": 100.49,
+     "l": 100.42,
+     "c": 100.48,
+     "v": 1086
+    },
+    {
+     "o": 100.48,
+     "h": 100.56,
+     "l": 100.43,
+     "c": 100.55,
+     "v": 1056
+    },
+    {
+     "o": 100.58,
+     "h": 100.98,
+     "l": 100.43,
+     "c": 100.85,
+     "v": 2391
+    },
+    {
+     "o": 100.84,
+     "h": 100.99,
+     "l": 100.57,
+     "c": 100.73,
+     "v": 1678
+    },
+    {
+     "o": 100.72,
+     "h": 100.79,
+     "l": 100.36,
+     "c": 100.41,
+     "v": 1840
+    },
+    {
+     "o": 100.42,
+     "h": 100.47,
+     "l": 100.14,
+     "c": 100.34,
+     "v": 1542
+    },
+    {
+     "o": 100.29,
+     "h": 100.51,
+     "l": 100.02,
+     "c": 100.2,
+     "v": 1121
+    },
+    {
+     "o": 100.21,
+     "h": 100.68,
+     "l": 100.18,
+     "c": 100.63,
+     "v": 2296
+    },
+    {
+     "o": 100.66,
+     "h": 100.83,
+     "l": 100.57,
+     "c": 100.7,
+     "v": 1063
+    },
+    {
+     "o": 100.73,
+     "h": 101.53,
+     "l": 100.61,
+     "c": 101.3,
+     "v": 3167
+    },
+    {
+     "o": 101.31,
+     "h": 101.98,
+     "l": 101.12,
+     "c": 101.85,
+     "v": 2900
+    },
+    {
+     "o": 101.82,
+     "h": 102.7,
+     "l": 101.54,
+     "c": 102.65,
+     "v": 4902
+    },
+    {
+     "o": 102.67,
+     "h": 103.14,
+     "l": 102.6,
+     "c": 103.14,
+     "v": 2861
+    },
+    {
+     "o": 103.14,
+     "h": 104.16,
+     "l": 103.13,
+     "c": 103.81,
+     "v": 4660
+    },
+    {
+     "o": 103.78,
+     "h": 104.31,
+     "l": 103.73,
+     "c": 104.2,
+     "v": 3382
+    },
+    {
+     "o": 104.22,
+     "h": 104.32,
+     "l": 103.48,
+     "c": 103.56,
+     "v": 4134
+    },
+    {
+     "o": 103.52,
+     "h": 103.6,
+     "l": 102.55,
+     "c": 102.7,
+     "v": 4069
+    },
+    {
+     "o": 102.69,
+     "h": 102.81,
+     "l": 102.34,
+     "c": 102.55,
+     "v": 1996
+    },
+    {
+     "o": 102.59,
+     "h": 102.7,
+     "l": 102.0,
+     "c": 102.2,
+     "v": 2875
+    },
+    {
+     "o": 102.15,
+     "h": 102.43,
+     "l": 101.83,
+     "c": 102.39,
+     "v": 1833
+    },
+    {
+     "o": 102.4,
+     "h": 102.61,
+     "l": 102.4,
+     "c": 102.6,
+     "v": 1630
+    },
+    {
+     "o": 102.56,
+     "h": 103.02,
+     "l": 102.32,
+     "c": 102.88,
+     "v": 2272
+    },
+    {
+     "o": 102.93,
+     "h": 103.53,
+     "l": 102.75,
+     "c": 103.52,
+     "v": 3516
+    },
+    {
+     "o": 103.49,
+     "h": 103.83,
+     "l": 103.22,
+     "c": 103.8,
+     "v": 1896
+    },
+    {
+     "o": 103.81,
+     "h": 104.52,
+     "l": 103.61,
+     "c": 104.44,
+     "v": 4665
+    },
+    {
+     "o": 104.46,
+     "h": 105.14,
+     "l": 104.32,
+     "c": 104.77,
+     "v": 2432
+    },
+    {
+     "o": 104.81,
+     "h": 105.68,
+     "l": 104.8,
+     "c": 105.4,
+     "v": 3230
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "tf": "15m"
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Trading psychology",
+   "title": "Price ran without you. Chase it?",
+   "chart": "a",
+   "chartH": 640,
+   "state": {
+    "bars": 25,
+    "show": [],
+    "levels": [],
+    "zones": [
+     {
+      "from": 0,
+      "to": 18,
+      "lo": 100.0,
+      "hi": 101.0,
+      "color": "blue",
+      "label": ""
+     }
+    ],
+    "marks": [
+     {
+      "bar": 24,
+      "dir": "down",
+      "text": "You buy here?",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   }
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 1 of 4",
+   "title": "The breakout you missed",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 20,
+    "show": [],
+    "levels": [],
+    "zones": [
+     {
+      "from": 0,
+      "to": 18,
+      "lo": 100.0,
+      "hi": 101.0,
+      "color": "blue",
+      "label": "Base"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 19,
+      "dir": "up",
+      "text": "Breakout",
+      "color": "mint"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "A close above the base at **101.30**. With a stop below the base, risk was **1.30**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 2 of 4",
+   "title": "Five candles later",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 25,
+    "show": [],
+    "levels": [],
+    "zones": [
+     {
+      "from": 0,
+      "to": 18,
+      "lo": 100.0,
+      "hi": 101.0,
+      "color": "blue",
+      "label": "Base"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 19,
+      "dir": "up",
+      "text": "Breakout",
+      "color": "mint"
+     },
+     {
+      "bar": 24,
+      "dir": "down",
+      "text": "You buy here?",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Now it's **104.20**. It feels like the train is leaving."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 3 of 4",
+   "title": "Same stop, 3.2× the risk",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 25,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Stop: below the base",
+      "color": "coral",
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [
+     {
+      "from": 0,
+      "to": 18,
+      "lo": 100.0,
+      "hi": 101.0,
+      "color": "blue",
+      "label": "Base"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 24,
+      "dir": "down",
+      "text": "You buy here?",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Risk from here: **4.20** vs **1.30**. Same dollars at risk means **less than a third** of the size."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 4 of 4",
+   "title": "Here, a pullback came",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 31,
+    "show": [],
+    "levels": [
+     {
+      "price": 100.0,
+      "label": "Stop: below the base",
+      "color": "coral",
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [
+     {
+      "from": 0,
+      "to": 18,
+      "lo": 100.0,
+      "hi": 101.0,
+      "color": "blue",
+      "label": "Base"
+     }
+    ],
+    "marks": [
+     {
+      "bar": 24,
+      "dir": "down",
+      "text": "You buy here?",
+      "color": "coral"
+     },
+     {
+      "bar": 29,
+      "dir": "up",
+      "text": "Pullback",
+      "color": "gold"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "A chaser sat through a **2.37** drop. Entry after it: risk **2.60**. Not every move gives one."
+  },
+  {
+   "type": "points",
+   "title": "Before you chase, ask",
+   "points": [
+    {
+     "b": "Where is my stop?",
+     "t": "If it's far away, the trade got worse, not better.",
+     "color": "coral"
+    },
+    {
+     "b": "Is my size smaller?",
+     "t": "Same dollars at risk means fewer contracts.",
+     "color": "gold"
+    },
+    {
+     "b": "Would I take it fresh?",
+     "t": "If not, it's FOMO, not a setup.",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Missing a move costs nothing.",
+   "text": "Chasing turns a good idea into **a bad price**. Another setup always comes."
+  }
+ ],
+ "post": {
+  "instagram": "The breakout closed at 101.30 with a stop below the base at 100.00: risk 1.30. Five candles later price was 104.20: the same stop now means 4.20 of risk, 3.2x more, so less than a third of the size for the same dollars. Before you chase, ask: where is my stop, is my size smaller, would I take this trade fresh?\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#fomo #tradingpsychology #riskmanagement #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "The breakout closed at 101.30 with a stop below the base at 100.00: risk 1.30. Five candles later price was 104.20: the same stop now means 4.20 of risk, 3.2x more, so less than a third of the size for the same dollars. Before you chase, ask: where is my stop, is my size smaller, would I take this trade fresh?\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/learn/",
+  "tiktok": "The breakout closed at 101.30 with a stop below the base at 100.00: risk 1.30. Five candles later price was 104.20: the same stop now means 4.20 of risk, 3.2x more, so less than a third of the size for the same dollars. Before you chase, ask: where is my stop, is my size smaller, would I take this trade fresh? Follow for one trading concept a day. #fomo #tradingpsychology #riskmanagement #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "FOMO in trading: chasing a move explained on a chart",
+   "description": "The breakout closed at 101.30 with a stop below the base at 100.00: risk 1.30. Five candles later price was 104.20: the same stop now means 4.20 of risk, 3.2x more, so less than a third of the size for the same dollars. Before you chase, ask: where is my stop, is my size smaller, would I take this trade fresh? Trading concepts explained simply.",
+   "link": "https://calm-edge.github.io/learn/"
+  },
+  "title": "FOMO: should you chase a move you missed?"
+ },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

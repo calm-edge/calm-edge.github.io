@@ -1,0 +1,423 @@
+{
+ "id": "c320_car_three_down_days",
+ "kind": "carousel",
+ "lesson": null,
+ "tag": "Illustrative chart · education, not financial advice",
+ "handle": "@calmedgeofficial",
+ "site_path": "/learn/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 103.93,
+     "h": 104.05,
+     "l": 103.32,
+     "c": 103.41,
+     "v": 1626
+    },
+    {
+     "o": 103.46,
+     "h": 104.94,
+     "l": 102.87,
+     "c": 104.46,
+     "v": 3494
+    },
+    {
+     "o": 104.47,
+     "h": 105.17,
+     "l": 103.99,
+     "c": 105.09,
+     "v": 2333
+    },
+    {
+     "o": 105.14,
+     "h": 105.21,
+     "l": 104.62,
+     "c": 104.84,
+     "v": 1658
+    },
+    {
+     "o": 104.86,
+     "h": 105.09,
+     "l": 103.58,
+     "c": 104.23,
+     "v": 2813
+    },
+    {
+     "o": 104.27,
+     "h": 105.07,
+     "l": 104.25,
+     "c": 104.84,
+     "v": 2121
+    },
+    {
+     "o": 104.73,
+     "h": 105.53,
+     "l": 104.45,
+     "c": 105.06,
+     "v": 1284
+    },
+    {
+     "o": 105.2,
+     "h": 106.19,
+     "l": 104.95,
+     "c": 106.0,
+     "v": 2007
+    },
+    {
+     "o": 106.06,
+     "h": 106.49,
+     "l": 105.61,
+     "c": 105.64,
+     "v": 1476
+    },
+    {
+     "o": 105.67,
+     "h": 105.89,
+     "l": 104.75,
+     "c": 105.15,
+     "v": 2050
+    },
+    {
+     "o": 105.14,
+     "h": 105.85,
+     "l": 104.61,
+     "c": 104.8,
+     "v": 2003
+    },
+    {
+     "o": 104.84,
+     "h": 105.59,
+     "l": 104.61,
+     "c": 105.54,
+     "v": 3099
+    },
+    {
+     "o": 105.56,
+     "h": 106.37,
+     "l": 104.85,
+     "c": 105.4,
+     "v": 1562
+    },
+    {
+     "o": 105.39,
+     "h": 106.37,
+     "l": 105.36,
+     "c": 106.3,
+     "v": 3121
+    },
+    {
+     "o": 106.28,
+     "h": 106.81,
+     "l": 106.26,
+     "c": 106.47,
+     "v": 1333
+    },
+    {
+     "o": 106.35,
+     "h": 106.61,
+     "l": 106.03,
+     "c": 106.52,
+     "v": 1733
+    },
+    {
+     "o": 106.59,
+     "h": 106.87,
+     "l": 106.14,
+     "c": 106.57,
+     "v": 1284
+    },
+    {
+     "o": 106.64,
+     "h": 107.56,
+     "l": 106.38,
+     "c": 107.2,
+     "v": 2834
+    },
+    {
+     "o": 107.19,
+     "h": 107.66,
+     "l": 106.83,
+     "c": 106.93,
+     "v": 1918
+    },
+    {
+     "o": 106.85,
+     "h": 107.57,
+     "l": 106.38,
+     "c": 106.46,
+     "v": 2106
+    },
+    {
+     "o": 106.39,
+     "h": 106.49,
+     "l": 105.82,
+     "c": 105.91,
+     "v": 2403
+    },
+    {
+     "o": 105.88,
+     "h": 106.61,
+     "l": 105.48,
+     "c": 106.6,
+     "v": 2080
+    },
+    {
+     "o": 106.57,
+     "h": 107.12,
+     "l": 106.37,
+     "c": 106.87,
+     "v": 1401
+    },
+    {
+     "o": 106.85,
+     "h": 107.26,
+     "l": 106.1,
+     "c": 107.04,
+     "v": 1053
+    },
+    {
+     "o": 107.04,
+     "h": 108.33,
+     "l": 106.67,
+     "c": 108.1,
+     "v": 3765
+    },
+    {
+     "o": 108.11,
+     "h": 108.52,
+     "l": 107.91,
+     "c": 108.4,
+     "v": 1625
+    }
+   ],
+   "lines": [
+    {
+     "id": "sma50",
+     "label": "SMA 50",
+     "color": "gold",
+     "values": [
+      null,
+      null,
+      null,
+      null,
+      100.159,
+      100.356,
+      100.543,
+      100.752,
+      100.931,
+      101.101,
+      101.258,
+      101.431,
+      101.593,
+      101.77,
+      101.942,
+      102.13,
+      102.297,
+      102.476,
+      102.636,
+      102.776,
+      102.914,
+      103.07,
+      103.231,
+      103.4,
+      103.595,
+      103.803
+     ]
+    }
+   ],
+   "bands": [],
+   "tf": "1D"
+  }
+ },
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "Strategy · 4 steps",
+   "title": "3 red days in an uptrend. Buy the dip?",
+   "chart": "a",
+   "chartH": 640,
+   "state": {
+    "bars": 11,
+    "show": [
+     "sma50"
+    ],
+    "levels": [],
+    "zones": [],
+    "marks": [],
+    "lastPrice": false
+   }
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 1 of 4",
+   "title": "Trend filter: 50-day SMA",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 8,
+    "show": [
+     "sma50"
+    ],
+    "levels": [],
+    "zones": [],
+    "marks": [],
+    "lastPrice": false
+   },
+   "text": "Trade it only when price is above the **50-day SMA**: the trend is up."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 2 of 4",
+   "title": "Wait for 3 lower closes",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 11,
+    "show": [
+     "sma50"
+    ],
+    "levels": [],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 8,
+      "dir": "down",
+      "text": "",
+      "color": "coral"
+     },
+     {
+      "bar": 9,
+      "dir": "down",
+      "text": "",
+      "color": "coral"
+     },
+     {
+      "bar": 10,
+      "dir": "down",
+      "text": "",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "Three closes in a row, each lower than the last. Entry on the third close: **104.80**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 3 of 4",
+   "title": "Stop: 1 ATR below the low",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 11,
+    "show": [
+     "sma50"
+    ],
+    "levels": [
+     {
+      "price": 103.58,
+      "from": 10,
+      "label": "Stop",
+      "color": "coral",
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 10,
+      "dir": "down",
+      "text": "Entry",
+      "color": "coral"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "The pullback's low minus one ATR: **103.58**. Risk: **1.22**."
+  },
+  {
+   "type": "chart",
+   "kicker": "Step 4 of 4",
+   "title": "Exit on the first strong close",
+   "chart": "a",
+   "chartH": 700,
+   "state": {
+    "bars": 15,
+    "show": [
+     "sma50"
+    ],
+    "levels": [
+     {
+      "price": 103.58,
+      "from": 10,
+      "label": "Stop",
+      "color": "coral",
+      "below": true,
+      "labelPos": "right"
+     }
+    ],
+    "zones": [],
+    "marks": [
+     {
+      "bar": 10,
+      "dir": "down",
+      "text": "Entry",
+      "color": "coral"
+     },
+     {
+      "bar": 14,
+      "dir": "up",
+      "text": "Exit",
+      "color": "mint"
+     }
+    ],
+    "lastPrice": false
+   },
+   "text": "A close above the previous day's high: **106.47**, about **1.4R**."
+  },
+  {
+   "type": "points",
+   "title": "Skip it when…",
+   "points": [
+    {
+     "b": "Price is below the 50-day",
+     "t": "Then a dip is often just the trend going down.",
+     "color": "coral"
+    },
+    {
+     "b": "News caused the drop",
+     "t": "That can be a real repricing, not a pullback.",
+     "color": "gold"
+    },
+    {
+     "b": "Three days turn into ten",
+     "t": "That's exactly what the stop is for.",
+     "color": "blue"
+    }
+   ]
+  },
+  {
+   "type": "end",
+   "title": "Buy weakness only inside strength.",
+   "text": "The trend filter does the heavy lifting. **No uptrend, no trade.**"
+  }
+ ],
+ "post": {
+  "instagram": "A pullback strategy in 4 steps: 1) only when price is above the 50-day SMA, 2) wait for three lower closes in a row and enter on the third, 3) stop at the pullback's low minus one ATR, 4) exit on the first close above the previous day's high. Example: entry 104.80, stop 103.58, exit 106.47, about 1.4R.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#pullback #swingtrading #meanreversion #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "facebook": "A pullback strategy in 4 steps: 1) only when price is above the 50-day SMA, 2) wait for three lower closes in a row and enter on the third, 3) stop at the pullback's low minus one ATR, 4) exit on the first close above the previous day's high. Example: entry 104.80, stop 103.58, exit 106.47, about 1.4R.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/learn/",
+  "tiktok": "A pullback strategy in 4 steps: 1) only when price is above the 50-day SMA, 2) wait for three lower closes in a row and enter on the third, 3) stop at the pullback's low minus one ATR, 4) exit on the first close above the previous day's high. Example: entry 104.80, stop 103.58, exit 106.47, about 1.4R. Follow for one trading concept a day. #pullback #swingtrading #meanreversion #tradingeducation #technicalanalysis #daytrading",
+  "pinterest": {
+   "title": "Three down days pullback strategy in 4 steps",
+   "description": "A pullback strategy in 4 steps: 1) only when price is above the 50-day SMA, 2) wait for three lower closes in a row and enter on the third, 3) stop at the pullback's low minus one ATR, 4) exit on the first close above the previous day's high. Example: entry 104.80, stop 103.58, exit 106.47, about 1.4R. Trading concepts explained simply.",
+   "link": "https://calm-edge.github.io/learn/"
+  },
+  "title": "3 down days in an uptrend: a pullback strategy"
+ },
+ "presenter": {
+  "front": "shots/presenter/front.png",
+  "side": "shots/presenter/side.png"
+ },
+ "voice": "andrew_up"
+}

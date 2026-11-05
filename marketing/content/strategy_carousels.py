@@ -3,7 +3,7 @@ Slide pattern: a hook cover with the chart, then "Step 1..4" slides where each s
 chart (a level, a zone, an arrow) with a title of a few words and one short caption, then what can go wrong, then the
 takeaway. Every number comes from the computed charts in strategies.py (asserted there) or is computed here.
 Ids: c3NN_car_<topic> (c311 onwards)."""
-from charts import path
+from charts import path, sma, closes, atr
 from edu import EDU_TAG, HANDLE, SITE, export, pick
 from carousels import post_car
 import strategies as S
@@ -219,3 +219,179 @@ carousel("c316_car_futures_math", mch, [
     {"type": "end", "title": "Know the point value before you click.", "text": "Points × $ per point × contracts = **the money on the line**."},
 ], post_car("Futures point values: ES, MES, NQ, MNQ", f"The same {move:.0f}-point move is ${SPEC['ES'] * move:,.0f} on one ES, ${SPEC['MES'] * move:,.0f} on one MES, ${SPEC['NQ'] * move:,.0f} on one NQ and ${SPEC['MNQ'] * move:,.0f} on one MNQ. Risk = stop in points × $ per point × contracts. Contract specs from CME Group.",
             ["#futurestrading", "#es", "#nq", "#microfutures"], "Futures point values explained: ES, MES, NQ, MNQ"))
+
+# ================================================================== 20-day breakout (trend following)
+
+
+def _don(seed):
+    wp = [(0, 100), (6, 103), (10, 100.8), (16, 103.4), (21, 101.2), (26, 103.2), (29, 102.6), (31, 104.4), (37, 108), (40, 106.8), (47, 111.5), (50, 110.3), (54, 113.4), (58, 110.5), (61, 109)]
+    c = path(wp, seed=seed, noise=0.45, wick=0.4)
+    hi20 = lambda i: max(b["h"] for b in c[i - 20:i]); lo10 = lambda i: min(b["l"] for b in c[i - 10:i])
+    brk = next((i for i in range(25, len(c)) if c[i]["c"] > hi20(i)), None)
+    if brk is None:
+        return dict(ok=False)
+    stop = lo10(brk); ex = next((i for i in range(brk + 1, len(c)) if c[i]["c"] < lo10(i)), None)
+    if ex is None:
+        return dict(ok=False)
+    stopped = any(b["l"] <= stop for b in c[brk + 1:ex])
+    R = (c[ex]["c"] - c[brk]["c"]) / (c[brk]["c"] - stop)
+    return dict(c=c, brk=brk, ex=ex, hi=hi20(brk), stop=stop, trail=lo10(ex), entry=c[brk]["c"], exit=c[ex]["c"], R=R,
+                ok=29 <= brk <= 32 and 55 <= ex <= 61 and not stopped and R >= 1.8 and all(c[i]["c"] <= hi20(i) for i in range(25, brk)))
+
+
+DN = pick(_don, lambda d: d["ok"], seeds=range(1, 400))
+dk, dx = DN["brk"], DN["ex"]; d_risk = DN["entry"] - DN["stop"]
+assert DN["entry"] > DN["hi"] and DN["exit"] < DN["trail"] and abs(DN["R"] - (DN["exit"] - DN["entry"]) / d_risk) < 1e-9
+dch = {"a": {**export(DN["c"]), "tf": "1D"}}
+D_hi = {"price": DN["hi"], "from": dk - 20, "to": dk, "label": "20-day high", "color": "blue", "labelAt": 1}
+D_stop = {"price": DN["stop"], "from": dk - 10, "label": "Stop: 10-day low", "color": "coral", "below": True, "labelPos": "right"}
+D_trail = {"price": DN["trail"], "from": dx - 10, "to": dx, "label": "10-day low", "color": "gold", "below": True, "labelAt": 1}
+M_dbrk = {"bar": dk, "dir": "up", "text": "Close above", "color": "mint"}
+M_dex = {"bar": dx, "dir": "down", "text": "Exit", "color": "gold"}
+carousel("c317_car_20day_breakout", dch, [
+    {"type": "cover", "kicker": "Strategy · 4 steps", "title": "Buy new 20-day highs? A trend system.", "chart": "a", "chartH": 640,
+     "state": st(dk + 4, [{**D_hi, "label": ""}], marks=[M_dbrk])},
+    step(1, 4, "Mark the 20-day high", st(dk, [D_hi]),
+         f"The highest high of the last **20 days**: **{DN['hi']:.2f}**."),
+    step(2, 4, "Buy a close above it", st(dk + 1, [D_hi], marks=[M_dbrk]),
+         f"Entry on the close: **{DN['entry']:.2f}**. New highs are what trends are made of."),
+    step(3, 4, "Stop at the 10-day low", st(dk + 1, [D_hi, D_stop], marks=[M_dbrk]),
+         f"The lowest low of the last 10 days: **{DN['stop']:.2f}**. Risk: **{d_risk:.2f}**."),
+    step(4, 4, "Exit below the 10-day low", st(dx + 1, [D_stop, D_trail], marks=[M_dbrk, M_dex]),
+         f"The exit follows the trend up. Out at **{DN['exit']:.2f}**: about **{DN['R']:.1f}R**."),
+    {"type": "points", "title": "Where it goes wrong", "points": [
+        {"b": "Sideways markets", "t": "Breakouts fail again and again: many small losses.", "color": "coral"},
+        {"b": "Giving profit back", "t": "The 10-day exit waits for the turn, so it gives some back.", "color": "gold"},
+        {"b": "A few trades pay for many", "t": "Most of the profit tends to come from a handful of big trends.", "color": "blue"}]},
+    {"type": "end", "title": "Lose small. Let the trend pay.", "text": "A breakout system lives on **a few big trends**. Skipping trades after a losing streak is how most people break it."},
+], post_car("20-day breakout system in 4 steps", f"A simple trend-following system in 4 steps: 1) mark the 20-day high, 2) buy a close above it, 3) stop at the 10-day low, 4) exit on a close below the 10-day low. Example: entry {DN['entry']:.2f}, stop {DN['stop']:.2f}, exit {DN['exit']:.2f}, about {DN['R']:.1f}R. It loses often in sideways markets; a few big trends tend to pay for the rest.",
+            ["#trendfollowing", "#breakouttrading", "#swingtrading"], "20-day breakout trend following system in 4 steps"))
+
+# ================================================================== Slippage on a stop (on a chart)
+
+
+def _slip(seed):
+    wp = [(0, 5001), (6, 5003.5), (10, 5002), (14, 5004.5), (16, 5004.0), (17, 4997.0), (19, 4995.5), (24, 4996.5)]
+    c = path(wp, seed=seed, noise=0.6, wick=0.5, force={14: {"c": 5004.0}, 17: {"o": 4997.0, "h": 4997.75, "c": 4995.25, "l": 4994.5}})
+    ok = c[14]["c"] == 5004.0 and all(b["l"] > 5000.75 for b in c[1:17]) and c[16]["c"] > 5001 and c[17]["o"] == 4997.0
+    return dict(c=c, ok=ok)
+
+
+SL = pick(_slip, lambda d: d["ok"])
+sch = {"a": {**export(SL["c"]), "tf": "5m", "time": {"start": "07:05", "step": 5}}}
+s_entry, s_stop, s_fill = SL["c"][14]["c"], 5000.0, SL["c"][17]["o"]
+s_plan, s_slip = s_entry - s_stop, s_stop - s_fill; s_lost = s_entry - s_fill; s_n = 5
+assert (s_plan, s_slip, s_lost) == (4, 3, 7) and SL["c"][16]["l"] > s_stop and 7 * 60 + 5 + 17 * 5 == 8 * 60 + 30  # the gap bar is the 08:30 bar
+usd_plan, usd_lost = round(s_plan * SPEC["MES"] * s_n), round(s_lost * SPEC["MES"] * s_n)
+assert (usd_plan, usd_lost) == (100, 175)
+S_entry = {"price": s_entry, "from": 14, "label": "Long", "color": "blue", "labelPos": "right"}
+S_stop = {"price": s_stop, "from": 6, "label": "Stop", "color": "coral", "below": True}
+S_fill = {"price": s_fill, "from": 17, "label": "Filled here", "color": "orange", "below": True, "labelPos": "right"}
+M_news = {"bar": 17, "dir": "down", "text": "08:30 data", "color": "coral"}
+carousel("c318_car_slippage", sch, [
+    {"type": "cover", "kicker": "Market mechanics", "title": "Stop 4 points away. Lost 7. Why?", "chart": "a", "chartH": 640,
+     "state": st(18, [{**S_entry, "label": ""}, {**S_stop, "label": ""}], marks=[M_news])},
+    step(1, 4, "Long, stop 4 points below", st(15, [S_entry, S_stop]),
+         f"Entry **{s_entry:,.2f}**, stop **{s_stop:,.2f}**. Planned risk: **{s_plan:.0f} points**."),
+    step(2, 4, "08:30: a data release", st(18, [S_entry, S_stop], marks=[M_news]),
+         f"The first trade after the news is **{s_fill:,.2f}**. Price jumped straight past the stop."),
+    step(3, 4, "The stop fills at the next price", st(18, [S_entry, S_stop, S_fill], marks=[M_news]),
+         f"A stop becomes a **market order** when it triggers. Fill: **{s_fill:,.2f}**, **{s_slip:.0f} points** of slippage."),
+    step(4, 4, f"Planned {s_plan:.0f} points, lost {s_lost:.0f}", st(len(SL["c"]), [S_entry, S_stop, S_fill], marks=[M_news]),
+         f"On {s_n} MES (${SPEC['MES']} a point): **${usd_plan}** planned, **${usd_lost}** lost."),
+    {"type": "points", "title": "How to limit it", "points": [
+        {"b": "Know the calendar", "t": "Scheduled data like CPI or payrolls can jump the price.", "color": "coral"},
+        {"b": "Trade liquid hours", "t": "Thin markets skip more prices.", "color": "gold"},
+        {"b": "Size for a bad fill", "t": "Assume a stop can cost more than planned.", "color": "blue"}]},
+    {"type": "end", "title": "A stop limits the loss. It can't fix the price.", "text": "Slippage is part of the cost of trading. **Plan for it before the news, not after.**"},
+], post_car("Slippage: stop 4 points away, lost 7", f"Long at {s_entry:,.2f} with a stop at {s_stop:,.2f}: 4 points of planned risk. At 08:30 a data release made price jump to {s_fill:,.2f}. A stop becomes a market order when triggered, so it filled there: 3 points of slippage. On {s_n} MES that's ${usd_plan} planned and ${usd_lost} lost. Know the calendar, trade liquid hours and size for a bad fill.",
+            ["#slippage", "#futurestrading", "#stoploss"], "Slippage on a stop loss explained on a chart"))
+
+# ================================================================== FOMO: chasing a move (on a chart)
+
+
+def _fomo(seed):
+    wp = [(0, 100.5), (4, 100.9), (8, 100.1), (12, 100.85), (16, 100.2), (18, 100.7), (19, 101.3), (24, 104.2), (28, 102.2), (30, 102.6), (36, 105.4)]
+    c = path(wp, seed=seed, noise=0.18, wick=0.16, force={4: {"h": 101.0}, 12: {"h": 100.98}, 8: {"l": 100.0}, 16: {"l": 100.02}})
+    base_hi = max(b["h"] for b in c[:19]); base_lo = min(b["l"] for b in c[:19])
+    brk = next((i for i in range(17, len(c)) if c[i]["c"] > base_hi), None)
+    green = sum(c[i]["c"] > c[i]["o"] for i in range(20, 25))
+    pb = min(range(25, 31), key=lambda i: c[i]["l"])
+    ok = (base_hi == 101.0 and base_lo == 100.0 and brk == 19 and green >= 4 and base_hi < c[pb]["l"] < 102.6
+          and max(b["h"] for b in c[:25]) == max(b["h"] for b in c[20:25]) and c[pb + 1]["c"] > c[pb + 1]["o"])
+    return dict(c=c, ok=ok, brk=brk, pb=pb)
+
+
+FO = pick(_fomo, lambda d: d["ok"], seeds=range(1, 400))
+fch = {"a": {**export(FO["c"]), "tf": "15m"}}
+f_brk, f_chase, f_pb = FO["c"][19]["c"], FO["c"][24]["c"], FO["pb"]
+f_stop = 100.0; r_brk, r_chase = f_brk - f_stop, f_chase - f_stop; mult = r_chase / r_brk
+f_re = FO["c"][f_pb + 1]["c"]; r_re = f_re - f_stop; f_dd = f_chase - FO["c"][f_pb]["l"]
+assert mult > 3 and r_re < r_chase and 1 / mult < 1 / 3
+Z_base = {"from": 0, "to": 18, "lo": 100.0, "hi": 101.0, "color": "blue", "label": "Base"}
+F_stop = {"price": f_stop, "label": "Stop: below the base", "color": "coral", "below": True, "labelPos": "right"}
+M_fbrk = {"bar": 19, "dir": "up", "text": "Breakout", "color": "mint"}
+M_chase = {"bar": 24, "dir": "down", "text": "You buy here?", "color": "coral"}
+M_pb = {"bar": f_pb, "dir": "up", "text": "Pullback", "color": "gold"}
+carousel("c319_car_fomo_chase", fch, [
+    {"type": "cover", "kicker": "Trading psychology", "title": "Price ran without you. Chase it?", "chart": "a", "chartH": 640,
+     "state": st(25, zones=[{**Z_base, "label": ""}], marks=[M_chase])},
+    step(1, 4, "The breakout you missed", st(20, zones=[Z_base], marks=[M_fbrk]),
+         f"A close above the base at **{f_brk:.2f}**. With a stop below the base, risk was **{r_brk:.2f}**."),
+    step(2, 4, "Five candles later", st(25, zones=[Z_base], marks=[M_fbrk, M_chase]),
+         f"Now it's **{f_chase:.2f}**. It feels like the train is leaving."),
+    step(3, 4, f"Same stop, {mult:.1f}× the risk", st(25, [F_stop], [Z_base], [M_chase]),
+         f"Risk from here: **{r_chase:.2f}** vs **{r_brk:.2f}**. Same dollars at risk means **less than a third** of the size."),
+    step(4, 4, "Here, a pullback came", st(f_pb + 2, [F_stop], [Z_base], [M_chase, M_pb]),
+         f"A chaser sat through a **{f_dd:.2f}** drop. Entry after it: risk **{r_re:.2f}**. Not every move gives one."),
+    {"type": "points", "title": "Before you chase, ask", "points": [
+        {"b": "Where is my stop?", "t": "If it's far away, the trade got worse, not better.", "color": "coral"},
+        {"b": "Is my size smaller?", "t": "Same dollars at risk means fewer contracts.", "color": "gold"},
+        {"b": "Would I take it fresh?", "t": "If not, it's FOMO, not a setup.", "color": "blue"}]},
+    {"type": "end", "title": "Missing a move costs nothing.", "text": "Chasing turns a good idea into **a bad price**. Another setup always comes."},
+], post_car("FOMO: should you chase a move you missed?", f"The breakout closed at {f_brk:.2f} with a stop below the base at {f_stop:.2f}: risk {r_brk:.2f}. Five candles later price was {f_chase:.2f}: the same stop now means {r_chase:.2f} of risk, {mult:.1f}x more, so less than a third of the size for the same dollars. Before you chase, ask: where is my stop, is my size smaller, would I take this trade fresh?",
+            ["#fomo", "#tradingpsychology", "#riskmanagement"], "FOMO in trading: chasing a move explained on a chart"))
+
+# ================================================================== Three down days in an uptrend
+
+
+def _tdd(seed):
+    wp = [(0, 95), (15, 99), (20, 98), (35, 103), (40, 102), (52, 106), (55, 104.8), (58, 106.3), (62, 107.2), (66, 106.6), (70, 108.4)]
+    c = path(wp, seed=seed, noise=0.35, wick=0.3); cl = closes(c); m = sma(cl, 50); a = atr(c)
+    d3 = [i for i in range(52, 62) if cl[i] < cl[i - 1] < cl[i - 2] < cl[i - 3]]
+    if not d3:
+        return dict(ok=False)
+    e = d3[0]; stop = round(min(b["l"] for b in c[e - 2:e + 1]) - a[e], 2)
+    ex = next((i for i in range(e + 1, len(c)) if cl[i] > c[i - 1]["h"]), None)
+    ok = all(cl[i] > m[i] for i in range(49, e + 1)) and ex is not None and 2 <= ex - e <= 5 and all(b["l"] > stop for b in c[e + 1:ex + 1]) and cl[ex] > cl[e]
+    return dict(c=c, m=m, a=a[e], e=e, stop=stop, ex=ex, ok=ok)
+
+
+TD = pick(_tdd, lambda d: d["ok"])
+S0 = 45
+tch = {"a": {**export(TD["c"], S0, lines=[{"id": "sma50", "label": "SMA 50", "color": "gold", "values": TD["m"]}]), "tf": "1D"}}
+te, tx = TD["e"] - S0, TD["ex"] - S0
+t_entry, t_exit = TD["c"][TD["e"]]["c"], TD["c"][TD["ex"]]["c"]; t_risk = t_entry - TD["stop"]; t_R = (t_exit - t_entry) / t_risk
+assert t_risk > 0 and t_R > 1 and all(TD["c"][i]["c"] < TD["c"][i - 1]["c"] for i in range(TD["e"] - 2, TD["e"] + 1))
+T_stop = {"price": TD["stop"], "from": te, "label": "Stop", "color": "coral", "below": True, "labelPos": "right"}
+M_d3 = [{"bar": te - k, "dir": "down", "text": "" if k else "Entry", "color": "coral"} for k in (2, 1, 0)]
+M_tx = {"bar": tx, "dir": "up", "text": "Exit", "color": "mint"}
+SH = ["sma50"]
+carousel("c320_car_three_down_days", tch, [
+    {"type": "cover", "kicker": "Strategy · 4 steps", "title": "3 red days in an uptrend. Buy the dip?", "chart": "a", "chartH": 640,
+     "state": st(te + 1, show=SH)},
+    step(1, 4, "Trend filter: 50-day SMA", st(te - 2, show=SH),
+         "Trade it only when price is above the **50-day SMA**: the trend is up."),
+    step(2, 4, "Wait for 3 lower closes", st(te + 1, marks=[{**m, "text": ""} for m in M_d3], show=SH),
+         f"Three closes in a row, each lower than the last. Entry on the third close: **{t_entry:.2f}**."),
+    step(3, 4, "Stop: 1 ATR below the low", st(te + 1, [T_stop], marks=[M_d3[2]], show=SH),
+         f"The pullback's low minus one ATR: **{TD['stop']:.2f}**. Risk: **{t_risk:.2f}**."),
+    step(4, 4, "Exit on the first strong close", st(tx + 1, [T_stop], marks=[M_d3[2], M_tx], show=SH),
+         f"A close above the previous day's high: **{t_exit:.2f}**, about **{t_R:.1f}R**."),
+    {"type": "points", "title": "Skip it when…", "points": [
+        {"b": "Price is below the 50-day", "t": "Then a dip is often just the trend going down.", "color": "coral"},
+        {"b": "News caused the drop", "t": "That can be a real repricing, not a pullback.", "color": "gold"},
+        {"b": "Three days turn into ten", "t": "That's exactly what the stop is for.", "color": "blue"}]},
+    {"type": "end", "title": "Buy weakness only inside strength.", "text": "The trend filter does the heavy lifting. **No uptrend, no trade.**"},
+], post_car("3 down days in an uptrend: a pullback strategy", f"A pullback strategy in 4 steps: 1) only when price is above the 50-day SMA, 2) wait for three lower closes in a row and enter on the third, 3) stop at the pullback's low minus one ATR, 4) exit on the first close above the previous day's high. Example: entry {t_entry:.2f}, stop {TD['stop']:.2f}, exit {t_exit:.2f}, about {t_R:.1f}R.",
+            ["#pullback", "#swingtrading", "#meanreversion"], "Three down days pullback strategy in 4 steps"))
