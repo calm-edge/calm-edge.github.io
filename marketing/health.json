@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-05T07:40+01:00",
- "summary": "74 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-06T07:40+01:00",
+ "summary": "73 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -30,12 +30,12 @@
   {
    "status": "OK",
    "check": "sito /media/index.json",
-   "detail": "HTTP 200, 11262 byte"
+   "detail": "HTTP 200, 13229 byte"
   },
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 15351 byte"
+   "detail": "HTTP 200, 16158 byte"
   },
   {
    "status": "OK",
@@ -60,17 +60,17 @@
   {
    "status": "OK",
    "check": "Gumroad Trading Journal AI",
-   "detail": "HTTP 200, 35881 byte"
+   "detail": "HTTP 200, 35885 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 38164 byte"
+   "detail": "HTTP 200, 38168 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Bundle",
-   "detail": "HTTP 200, 29832 byte"
+   "detail": "HTTP 200, 29836 byte"
   },
   {
    "status": "OK",
@@ -94,11 +94,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-05 17:30 v210_edu_position_size",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-06 17:30 v209_edu_risk_reward",
    "detail": "3 file presenti"
   },
@@ -115,7 +110,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "20 pin; ultimi titoli: ATR stop loss explained | Profit factor explained for traders | Double top pattern explained"
+   "detail": "21 pin; ultimi titoli: Futures position size in 3 numbers | ATR stop loss explained | Profit factor explained for traders"
   },
   {
    "status": "OK",
@@ -150,17 +145,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "20 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v011_weekday",
-   "detail": "https://www.instagram.com/reel/DfC8cE7jn5f/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v011_weekday",
-   "detail": "https://www.facebook.com/1470032662849525/videos/2175633230047996"
+   "detail": "21 post"
   },
   {
    "status": "OK",
@@ -304,8 +289,18 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v210_edu_position_size",
+   "detail": "https://www.instagram.com/reel/DfXgRKCihMy/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v210_edu_position_size",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1821126559218482"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "2 storie"
+   "detail": "1 storie"
   },
   {
    "status": "WARN",
@@ -321,11 +316,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v011_weekday",
-   "detail": "public/processed, canale Calm Edge, views 17"
   },
   {
    "status": "OK",
@@ -345,7 +335,7 @@
   {
    "status": "OK",
    "check": "YouTube v014_habit",
-   "detail": "public/processed, canale Calm Edge, views 78"
+   "detail": "public/processed, canale Calm Edge, views 80"
   },
   {
    "status": "OK",
@@ -365,7 +355,7 @@
   {
    "status": "OK",
    "check": "YouTube v205_edu_failed_breakout",
-   "detail": "public/processed, canale Calm Edge, views 38"
+   "detail": "public/processed, canale Calm Edge, views 39"
   },
   {
    "status": "OK",
@@ -375,12 +365,17 @@
   {
    "status": "OK",
    "check": "YouTube v004_profit_factor",
-   "detail": "public/processed, canale Calm Edge, views 5"
+   "detail": "public/processed, canale Calm Edge, views 6"
   },
   {
    "status": "OK",
    "check": "YouTube v207_edu_atr_stop",
    "detail": "public/processed, canale Calm Edge, views 4"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v210_edu_position_size",
+   "detail": "public/processed, canale Calm Edge, views 14"
   },
   {
    "status": "OK",
