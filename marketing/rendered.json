@@ -1,5 +1,5 @@
 {
- "run": "42165913698",
+ "run": "42262759704",
  "items": {
   "c202_car_20ema": {
    "id": "c202_car_20ema",
@@ -113,7 +113,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v001_rule_breaks",
-   "rendered_at": "2026-11-05T07:27:01Z",
+   "rendered_at": "2026-11-06T11:47:12Z",
    "seconds": 33.5,
    "voice": "andrew_up",
    "engines": [
@@ -126,7 +126,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v002_best_setup",
-   "rendered_at": "2026-11-05T07:26:47Z",
+   "rendered_at": "2026-11-06T11:46:57Z",
    "seconds": 27.34,
    "voice": "andrew_up",
    "engines": [
@@ -139,7 +139,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v003_emotions",
-   "rendered_at": "2026-11-05T07:27:50Z",
+   "rendered_at": "2026-11-06T11:48:02Z",
    "seconds": 24.51,
    "voice": "andrew_up",
    "engines": [
@@ -152,7 +152,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v004_profit_factor",
-   "rendered_at": "2026-11-05T07:27:59Z",
+   "rendered_at": "2026-11-06T11:48:13Z",
    "seconds": 22.42,
    "voice": "andrew_up",
    "engines": [
@@ -165,7 +165,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v005_r_multiple",
-   "rendered_at": "2026-11-05T07:28:46Z",
+   "rendered_at": "2026-11-06T11:49:02Z",
    "seconds": 22.42,
    "voice": "andrew_up",
    "engines": [
@@ -178,7 +178,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v006_time_of_day",
-   "rendered_at": "2026-11-05T07:29:01Z",
+   "rendered_at": "2026-11-06T11:49:17Z",
    "seconds": 22.66,
    "voice": "andrew_up",
    "engines": [
@@ -191,7 +191,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v007_drawdown",
-   "rendered_at": "2026-11-05T07:29:39Z",
+   "rendered_at": "2026-11-06T11:49:59Z",
    "seconds": 20.81,
    "voice": "andrew_up",
    "engines": [
@@ -204,7 +204,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v008_ai_review",
-   "rendered_at": "2026-11-05T07:29:55Z",
+   "rendered_at": "2026-11-06T11:50:15Z",
    "seconds": 21.39,
    "voice": "andrew_up",
    "engines": [
@@ -217,7 +217,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v009_calendar",
-   "rendered_at": "2026-11-05T07:30:18Z",
+   "rendered_at": "2026-11-06T11:50:39Z",
    "seconds": 14.74,
    "voice": "andrew_up",
    "engines": [
@@ -230,7 +230,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v010_position_size",
-   "rendered_at": "2026-11-05T07:30:45Z",
+   "rendered_at": "2026-11-06T11:51:08Z",
    "seconds": 20.14,
    "voice": "andrew_up",
    "engines": [
@@ -243,7 +243,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v011_weekday",
-   "rendered_at": "2026-11-05T07:31:16Z",
+   "rendered_at": "2026-11-06T11:51:40Z",
    "seconds": 22.52,
    "voice": "andrew_up",
    "engines": [
@@ -256,7 +256,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v012_privacy",
-   "rendered_at": "2026-11-05T07:31:27Z",
+   "rendered_at": "2026-11-06T11:51:52Z",
    "seconds": 15.73,
    "voice": "andrew_up",
    "engines": [
@@ -269,7 +269,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v013_long_short",
-   "rendered_at": "2026-11-05T07:32:09Z",
+   "rendered_at": "2026-11-06T11:52:38Z",
    "seconds": 20.6,
    "voice": "andrew_up",
    "engines": [
@@ -282,7 +282,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v014_habit",
-   "rendered_at": "2026-11-05T07:32:20Z",
+   "rendered_at": "2026-11-06T11:52:49Z",
    "seconds": 19.18,
    "voice": "andrew_up",
    "engines": [
@@ -295,7 +295,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v101_pfm_one_screen",
-   "rendered_at": "2026-11-05T07:33:13Z",
+   "rendered_at": "2026-11-06T11:53:45Z",
    "seconds": 22.83,
    "voice": "andrew_up",
    "engines": [
@@ -308,7 +308,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v102_pfm_eod_trailing",
-   "rendered_at": "2026-11-05T07:33:32Z",
+   "rendered_at": "2026-11-06T11:54:07Z",
    "seconds": 29.04,
    "voice": "andrew_up",
    "engines": [
@@ -321,7 +321,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v103_pfm_intraday",
-   "rendered_at": "2026-11-05T07:34:20Z",
+   "rendered_at": "2026-11-06T11:54:58Z",
    "seconds": 26.93,
    "voice": "andrew_up",
    "engines": [
@@ -334,7 +334,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v104_pfm_consistency",
-   "rendered_at": "2026-11-05T07:34:34Z",
+   "rendered_at": "2026-11-06T11:55:14Z",
    "seconds": 23.7,
    "voice": "andrew_up",
    "engines": [
@@ -347,7 +347,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v105_pfm_payout",
-   "rendered_at": "2026-11-05T07:35:32Z",
+   "rendered_at": "2026-11-06T11:56:12Z",
    "seconds": 25.23,
    "voice": "andrew_up",
    "engines": [
@@ -360,7 +360,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v106_pfm_is_it_paying",
-   "rendered_at": "2026-11-05T07:35:34Z",
+   "rendered_at": "2026-11-06T11:56:16Z",
    "seconds": 21.65,
    "voice": "andrew_up",
    "engines": [
@@ -373,7 +373,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v107_pfm_alerts_ai",
-   "rendered_at": "2026-11-05T07:36:22Z",
+   "rendered_at": "2026-11-06T11:57:06Z",
    "seconds": 19.11,
    "voice": "andrew_up",
    "engines": [
@@ -386,7 +386,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v108_pfm_rules",
-   "rendered_at": "2026-11-05T07:36:26Z",
+   "rendered_at": "2026-11-06T11:57:12Z",
    "seconds": 20.77,
    "voice": "andrew_up",
    "engines": [
@@ -399,7 +399,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v201_edu_rsi_70",
-   "rendered_at": "2026-11-05T07:37:48Z",
+   "rendered_at": "2026-11-06T11:58:38Z",
    "seconds": 31.95,
    "voice": "andrew_up",
    "engines": [
@@ -412,7 +412,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v202_edu_20ema",
-   "rendered_at": "2026-11-05T07:37:45Z",
+   "rendered_at": "2026-11-06T11:58:36Z",
    "seconds": 28.25,
    "voice": "andrew_up",
    "engines": [
@@ -425,7 +425,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v203_edu_vwap",
-   "rendered_at": "2026-11-05T07:39:12Z",
+   "rendered_at": "2026-11-06T12:00:01Z",
    "seconds": 29.24,
    "voice": "andrew_up",
    "engines": [
@@ -438,7 +438,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v204_edu_sr_flip",
-   "rendered_at": "2026-11-05T07:38:50Z",
+   "rendered_at": "2026-11-06T11:59:43Z",
    "seconds": 21.51,
    "voice": "andrew_up",
    "engines": [
@@ -451,7 +451,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v205_edu_failed_breakout",
-   "rendered_at": "2026-11-05T07:39:58Z",
+   "rendered_at": "2026-11-06T12:00:52Z",
    "seconds": 24.04,
    "voice": "andrew_up",
    "engines": [
@@ -464,7 +464,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v206_edu_double_top",
-   "rendered_at": "2026-11-05T07:40:19Z",
+   "rendered_at": "2026-11-06T12:01:08Z",
    "seconds": 23.05,
    "voice": "andrew_up",
    "engines": [
@@ -477,7 +477,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v207_edu_atr_stop",
-   "rendered_at": "2026-11-05T07:41:17Z",
+   "rendered_at": "2026-11-06T12:02:12Z",
    "seconds": 27.88,
    "voice": "andrew_up",
    "engines": [
@@ -490,7 +490,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v208_edu_bollinger_squeeze",
-   "rendered_at": "2026-11-05T07:41:10Z",
+   "rendered_at": "2026-11-06T12:01:59Z",
    "seconds": 17.08,
    "voice": "andrew_up",
    "engines": [
@@ -503,7 +503,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v209_edu_risk_reward",
-   "rendered_at": "2026-11-05T07:42:09Z",
+   "rendered_at": "2026-11-06T12:02:59Z",
    "seconds": 21.24,
    "voice": "andrew_up",
    "engines": [
@@ -516,7 +516,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v210_edu_position_size",
-   "rendered_at": "2026-11-05T07:42:30Z",
+   "rendered_at": "2026-11-06T12:03:28Z",
    "seconds": 26.65,
    "voice": "andrew_up",
    "engines": [
@@ -529,7 +529,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v211_edu_trend_structure",
-   "rendered_at": "2026-11-05T07:43:01Z",
+   "rendered_at": "2026-11-06T12:03:53Z",
    "seconds": 17.99,
    "voice": "andrew_up",
    "engines": [
@@ -542,7 +542,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v212_edu_macd_cross",
-   "rendered_at": "2026-11-05T07:43:30Z",
+   "rendered_at": "2026-11-06T12:04:30Z",
    "seconds": 21.06,
    "voice": "andrew_up",
    "engines": [
@@ -555,7 +555,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v213_edu_bull_flag",
-   "rendered_at": "2026-11-05T07:44:13Z",
+   "rendered_at": "2026-11-06T12:05:08Z",
    "seconds": 25.94,
    "voice": "andrew_up",
    "engines": [
@@ -568,7 +568,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v214_edu_engulfing",
-   "rendered_at": "2026-11-05T07:44:18Z",
+   "rendered_at": "2026-11-06T12:05:19Z",
    "seconds": 16.35,
    "voice": "andrew_up",
    "engines": [
@@ -581,7 +581,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v215_edu_drawdown_math",
-   "rendered_at": "2026-11-05T07:45:05Z",
+   "rendered_at": "2026-11-06T12:06:07Z",
    "seconds": 20.22,
    "voice": "andrew_up",
    "engines": [
@@ -594,7 +594,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v216_edu_stochastic",
-   "rendered_at": "2026-11-05T07:45:51Z",
+   "rendered_at": "2026-11-06T12:06:38Z",
    "seconds": 25.84,
    "voice": "andrew_up",
    "engines": [
@@ -607,7 +607,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v217_edu_rsi_divergence",
-   "rendered_at": "2026-11-05T07:46:21Z",
+   "rendered_at": "2026-11-06T12:07:05Z",
    "seconds": 18.56,
    "voice": "andrew_up",
    "engines": [
@@ -620,7 +620,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v218_edu_pin_bar",
-   "rendered_at": "2026-11-05T07:47:48Z",
+   "rendered_at": "2026-11-06T12:08:04Z",
    "seconds": 29.8,
    "voice": "andrew_up",
    "engines": [
@@ -633,7 +633,7 @@
    "chapters": [],
    "kind": "reel",
    "id": "v219_edu_breakout_volume",
-   "rendered_at": "2026-11-05T07:48:03Z",
+   "rendered_at": "2026-11-06T12:08:26Z",
    "seconds": 27.73,
    "voice": "andrew_up",
    "engines": [
@@ -646,8 +646,34 @@
    "chapters": [],
    "kind": "reel",
    "id": "v220_edu_head_shoulders",
-   "rendered_at": "2026-11-05T07:49:34Z",
+   "rendered_at": "2026-11-06T12:09:22Z",
    "seconds": 27.86,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v221_edu_trailing_drawdown": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v221_edu_trailing_drawdown",
+   "rendered_at": "2026-11-06T12:09:48Z",
+   "seconds": 20.72,
+   "voice": "andrew_up",
+   "engines": [
+    "edge"
+   ],
+   "problems": [],
+   "status": "cached"
+  },
+  "v222_edu_news_slippage": {
+   "chapters": [],
+   "kind": "reel",
+   "id": "v222_edu_news_slippage",
+   "rendered_at": "2026-11-06T12:10:26Z",
+   "seconds": 15.82,
    "voice": "andrew_up",
    "engines": [
     "edge"
@@ -696,7 +722,7 @@
    ],
    "kind": "long",
    "id": "y302_long_orb",
-   "rendered_at": "2026-11-05T08:00:04Z",
+   "rendered_at": "2026-11-06T12:22:15Z",
    "seconds": 335.36,
    "voice": "andrew_up",
    "engines": [
