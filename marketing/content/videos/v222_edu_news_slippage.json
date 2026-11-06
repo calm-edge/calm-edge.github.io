@@ -1,0 +1,351 @@
+{
+ "id": "v222_edu_news_slippage",
+ "style": "v3",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/tools/position-size-calculator/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 5001.13,
+     "h": 5001.16,
+     "l": 5000.62,
+     "c": 5001.0,
+     "v": 1160
+    },
+    {
+     "o": 5001.04,
+     "h": 5001.09,
+     "l": 5000.8,
+     "c": 5001.01,
+     "v": 741
+    },
+    {
+     "o": 5000.93,
+     "h": 5001.94,
+     "l": 5000.9,
+     "c": 5001.94,
+     "v": 2186
+    },
+    {
+     "o": 5001.88,
+     "h": 5003.24,
+     "l": 5001.51,
+     "c": 5002.23,
+     "v": 1038
+    },
+    {
+     "o": 5002.25,
+     "h": 5003.85,
+     "l": 5002.07,
+     "c": 5003.4,
+     "v": 2020
+    },
+    {
+     "o": 5003.41,
+     "h": 5003.5,
+     "l": 5002.83,
+     "c": 5003.36,
+     "v": 1060
+    },
+    {
+     "o": 5003.42,
+     "h": 5003.61,
+     "l": 5002.88,
+     "c": 5003.5,
+     "v": 960
+    },
+    {
+     "o": 5003.52,
+     "h": 5005.04,
+     "l": 5003.27,
+     "c": 5004.37,
+     "v": 1667
+    },
+    {
+     "o": 5004.36,
+     "h": 5004.95,
+     "l": 5004.05,
+     "c": 5004.62,
+     "v": 1505
+    },
+    {
+     "o": 5004.42,
+     "h": 5005.25,
+     "l": 5002.62,
+     "c": 5003.06,
+     "v": 2965
+    },
+    {
+     "o": 5003.18,
+     "h": 5003.89,
+     "l": 5001.35,
+     "c": 5002.0,
+     "v": 2479
+    },
+    {
+     "o": 5001.99,
+     "h": 5002.59,
+     "l": 5001.09,
+     "c": 5002.55,
+     "v": 1621
+    },
+    {
+     "o": 5002.65,
+     "h": 5003.78,
+     "l": 5001.94,
+     "c": 5003.56,
+     "v": 1975
+    },
+    {
+     "o": 5003.6,
+     "h": 5003.71,
+     "l": 5002.79,
+     "c": 5003.38,
+     "v": 1192
+    },
+    {
+     "o": 5003.39,
+     "h": 5005.25,
+     "l": 5003.18,
+     "c": 5004.0,
+     "v": 3087
+    },
+    {
+     "o": 5003.95,
+     "h": 5004.23,
+     "l": 5003.0,
+     "c": 5003.52,
+     "v": 1982
+    },
+    {
+     "o": 5003.41,
+     "h": 5004.23,
+     "l": 5003.13,
+     "c": 5004.0,
+     "v": 1753
+    },
+    {
+     "o": 4997.0,
+     "h": 4997.75,
+     "l": 4994.5,
+     "c": 4995.25,
+     "v": 9986
+    },
+    {
+     "o": 4995.25,
+     "h": 4996.83,
+     "l": 4994.34,
+     "c": 4996.63,
+     "v": 3366
+    },
+    {
+     "o": 4996.47,
+     "h": 4997.11,
+     "l": 4995.42,
+     "c": 4995.5,
+     "v": 2115
+    },
+    {
+     "o": 4995.56,
+     "h": 4997.22,
+     "l": 4995.42,
+     "c": 4996.92,
+     "v": 2701
+    },
+    {
+     "o": 4996.93,
+     "h": 4997.28,
+     "l": 4995.5,
+     "c": 4996.01,
+     "v": 2305
+    },
+    {
+     "o": 4995.94,
+     "h": 4996.3,
+     "l": 4995.59,
+     "c": 4995.65,
+     "v": 1098
+    },
+    {
+     "o": 4995.56,
+     "h": 4995.83,
+     "l": 4994.17,
+     "c": 4995.03,
+     "v": 1989
+    },
+    {
+     "o": 4995.2,
+     "h": 4996.6,
+     "l": 4995.02,
+     "c": 4996.5,
+     "v": 1864
+    }
+   ],
+   "lines": [],
+   "bands": [],
+   "tf": "5m",
+   "time": {
+    "start": "07:05",
+    "step": 5
+   }
+  }
+ },
+ "hook": "stake",
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Stop: 4 points. Loss: 7.",
+   "big": true,
+   "reveal": [
+    10,
+    15
+   ],
+   "grow": 0.95,
+   "punch": true,
+   "levels": [
+    {
+     "price": 5004.0,
+     "from": 14,
+     "label": "Long",
+     "color": "blue",
+     "labelPos": "right",
+     "at": 0.0
+    },
+    {
+     "price": 5000.0,
+     "from": 6,
+     "label": "Stop",
+     "color": "coral",
+     "below": true,
+     "at": 0.0
+    }
+   ],
+   "say": "Your stop was four points away. You lost seven."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "08:30. The data hits.",
+   "big": true,
+   "reveal": [
+    15,
+    18
+   ],
+   "cont": true,
+   "levels": [
+    {
+     "price": 5004.0,
+     "from": 14,
+     "label": "Long",
+     "color": "blue",
+     "labelPos": "right"
+    },
+    {
+     "price": 5000.0,
+     "from": 6,
+     "label": "Stop",
+     "color": "coral",
+     "below": true
+    }
+   ],
+   "marks": [
+    {
+     "bar": 17,
+     "dir": "down",
+     "text": "08:30",
+     "color": "coral",
+     "at": 0.5
+    }
+   ],
+   "pops": [
+    {
+     "text": "5,004 → 4,997",
+     "color": "coral",
+     "at": 0.55,
+     "y": 0.74
+    }
+   ],
+   "say": "Eight thirty data. Price jumps straight past your stop."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Your stop fills here.",
+   "big": true,
+   "reveal": [
+    18,
+    18
+   ],
+   "cont": true,
+   "levels": [
+    {
+     "price": 5004.0,
+     "from": 14,
+     "label": "Long",
+     "color": "blue",
+     "labelPos": "right"
+    },
+    {
+     "price": 5000.0,
+     "from": 6,
+     "label": "Stop",
+     "color": "coral",
+     "below": true
+    },
+    {
+     "price": 4997.0,
+     "from": 17,
+     "label": "Filled here",
+     "color": "orange",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.1
+    }
+   ],
+   "marks": [
+    {
+     "bar": 17,
+     "dir": "down",
+     "text": "08:30",
+     "color": "coral"
+    }
+   ],
+   "pops": [
+    {
+     "text": "−3 pts slippage",
+     "color": "gold",
+     "at": 0.3,
+     "y": 0.74
+    }
+   ],
+   "say": "A triggered stop is a market order. It fills at the next price."
+  },
+  {
+   "type": "comment",
+   "title": "Would you hold through 8:30?",
+   "options": [
+    "YES",
+    "NO"
+   ],
+   "sub": "Comment below. Send it to the friend who does.",
+   "say": "Would you hold through eight thirty? Yes or no, comment below."
+  }
+ ],
+ "post": {
+  "instagram": "Long at 5,004.00, stop at 5,000.00: 4 points of planned risk. At 08:30 economic data came out and the next trade printed at 4,997.00. A stop becomes a market order when triggered, so it filled there: 3 points of slippage, 7 points lost. Would you hold a trade through 8:30 data? Yes or no in the comments.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#slippage #futurestrading #stoploss #daytrading #tradingeducation #technicalanalysis #trading #learntotrade",
+  "tiktok": "Long at 5,004.00, stop at 5,000.00: 4 points of planned risk. At 08:30 economic data came out and the next trade printed at 4,997.00. A stop becomes a market order when triggered, so it filled there: 3 points of slippage, 7 points lost. Would you hold a trade through 8:30 data? Yes or no in the comments. Follow for one trading concept a day. #slippage #futurestrading #stoploss #daytrading #tradingeducation #technicalanalysis",
+  "youtube": {
+   "title": "Stop 4 points away, lost 7 #shorts",
+   "description": "Long at 5,004.00, stop at 5,000.00: 4 points of planned risk. At 08:30 economic data came out and the next trade printed at 4,997.00. A stop becomes a market order when triggered, so it filled there: 3 points of slippage, 7 points lost. Would you hold a trade through 8:30 data? Yes or no in the comments.\n\nFree guides and calculators: https://calm-edge.github.io/tools/position-size-calculator/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#slippage #futurestrading #stoploss #daytrading #tradingeducation #technicalanalysis #trading #learntotrade #shorts"
+  },
+  "facebook": "Long at 5,004.00, stop at 5,000.00: 4 points of planned risk. At 08:30 economic data came out and the next trade printed at 4,997.00. A stop becomes a market order when triggered, so it filled there: 3 points of slippage, 7 points lost. Would you hold a trade through 8:30 data? Yes or no in the comments.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/tools/position-size-calculator/",
+  "pinterest": {
+   "title": "Slippage on a stop loss explained",
+   "description": "Long at 5,004.00, stop at 5,000.00: 4 points of planned risk. At 08:30 economic data came out and the next trade printed at 4,997.00. A stop becomes a market order when triggered, so it filled there: 3 points of slippage, 7 points lost. Would you hold a trade through 8:30 data? Yes or no in the comments. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/tools/position-size-calculator/"
+  }
+ },
+ "voice": "andrew_up"
+}

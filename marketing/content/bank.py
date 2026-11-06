@@ -374,10 +374,13 @@ V.extend(_strat.Y)
 import strategy_carousels as _scar  # carousels v2: step by step on TradingView-style charts
 V.extend(_scar.C)
 import quiz as _quiz  # after carousels/longform, which read the original lesson scenes
+import viral as _viral  # reels v3: stake hooks, no presenter, comment CTA
+V.extend(_viral.V)
 # The Calm Edge presenter appears in every video and carousel (front view to open and close, side view explaining).
 PRESENTER = {"front": "shots/presenter/front.png", "side": "shots/presenter/side.png"}
 for _v in V:
-    _v["presenter"] = PRESENTER
+    if _v.get("style") != "v3":  # v3 reels: the chart takes the whole frame
+        _v["presenter"] = PRESENTER
 
 if __name__ == "__main__":
     OUT.mkdir(exist_ok=True)

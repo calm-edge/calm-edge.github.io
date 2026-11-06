@@ -1,0 +1,360 @@
+{
+ "id": "v221_edu_trailing_drawdown",
+ "style": "v3",
+ "tag": "Illustrative chart · education, not financial advice",
+ "site_path": "/learn/prop-firm-trailing-drawdown-explained/",
+ "charts": {
+  "a": {
+   "candles": [
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    },
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    },
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    },
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    },
+    {
+     "o": 50000.0,
+     "h": 50085.41,
+     "l": 49816.53,
+     "c": 50000.0
+    },
+    {
+     "o": 50005.17,
+     "h": 50170.7,
+     "l": 49991.89,
+     "c": 50148.44
+    },
+    {
+     "o": 50149.07,
+     "h": 50334.1,
+     "l": 50130.49,
+     "c": 50289.72
+    },
+    {
+     "o": 50288.35,
+     "h": 50497.69,
+     "l": 50223.27,
+     "c": 50463.01
+    },
+    {
+     "o": 50466.97,
+     "h": 50662.92,
+     "l": 50448.58,
+     "c": 50620.0
+    },
+    {
+     "o": 50620.25,
+     "h": 50633.46,
+     "l": 50482.66,
+     "c": 50512.48
+    },
+    {
+     "o": 50519.23,
+     "h": 50549.74,
+     "l": 50367.77,
+     "c": 50399.78
+    },
+    {
+     "o": 50408.97,
+     "h": 50438.6,
+     "l": 50397.21,
+     "c": 50430.0
+    },
+    {
+     "o": 50435.64,
+     "h": 50708.88,
+     "l": 50390.36,
+     "c": 50659.31
+    },
+    {
+     "o": 50672.52,
+     "h": 50920.91,
+     "l": 50655.3,
+     "c": 50903.91
+    },
+    {
+     "o": 50898.19,
+     "h": 51050.52,
+     "l": 50888.07,
+     "c": 51018.02
+    },
+    {
+     "o": 51020.72,
+     "h": 51179.16,
+     "l": 51008.76,
+     "c": 51143.67
+    },
+    {
+     "o": 51150.93,
+     "h": 51400,
+     "l": 51114.98,
+     "c": 51400.0
+    },
+    {
+     "o": 51396.26,
+     "h": 51397.18,
+     "l": 51209.39,
+     "c": 51216.53
+    },
+    {
+     "o": 51219.8,
+     "h": 51239.92,
+     "l": 51045.32,
+     "c": 51094.88
+    },
+    {
+     "o": 51094.38,
+     "h": 51115.45,
+     "l": 50956.18,
+     "c": 50980.0
+    },
+    {
+     "o": 50978.23,
+     "h": 51078.17,
+     "l": 50921.73,
+     "c": 50990.57
+    },
+    {
+     "o": 50995.91,
+     "h": 51080.36,
+     "l": 50978.39,
+     "c": 51077.73
+    },
+    {
+     "o": 51073.29,
+     "h": 51195.31,
+     "l": 51047.84,
+     "c": 51120.0
+    },
+    {
+     "o": 51122.34,
+     "h": 51152.65,
+     "l": 50917.29,
+     "c": 50935.89
+    },
+    {
+     "o": 50930.85,
+     "h": 50943.09,
+     "l": 50696.73,
+     "c": 50756.79
+    },
+    {
+     "o": 50758.14,
+     "h": 50769.49,
+     "l": 50496.28,
+     "c": 50526.95
+    },
+    {
+     "o": 50522.71,
+     "h": 50567.12,
+     "l": 50355.96,
+     "c": 50374.65
+    },
+    {
+     "o": 50385.49,
+     "h": 50421.81,
+     "l": 50175.69,
+     "c": 50180.0
+    },
+    {
+     "o": 50182.74,
+     "h": 50212.79,
+     "l": 50124.98,
+     "c": 50161.43
+    },
+    {
+     "o": 50175.16,
+     "h": 50181.58,
+     "l": 50006.63,
+     "c": 50043.88
+    },
+    {
+     "o": 50044.85,
+     "h": 50080.94,
+     "l": 49961.35,
+     "c": 50000
+    },
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    },
+    {
+     "o": 50000.0,
+     "h": 50000.0,
+     "l": 50000.0,
+     "c": 50000.0
+    }
+   ],
+   "lines": [
+    {
+     "id": "floor",
+     "label": "Loss limit",
+     "color": "coral",
+     "values": [
+      48000,
+      48000,
+      48000,
+      48000,
+      48085,
+      48171,
+      48334,
+      48498,
+      48663,
+      48663,
+      48663,
+      48663,
+      48709,
+      48921,
+      49051,
+      49179,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400,
+      49400
+     ]
+    }
+   ],
+   "bands": [],
+   "symbol": "50K ACCOUNT",
+   "tf": "5m"
+  }
+ },
+ "hook": "stake",
+ "scenes": [
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Break-even day. Still lost $1,400.",
+   "big": true,
+   "reveal": [
+    9,
+    13
+   ],
+   "grow": 0.95,
+   "punch": true,
+   "say": "Break-even day. And you still lost fourteen hundred dollars."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "The limit chases your high.",
+   "big": true,
+   "reveal": [
+    13,
+    17
+   ],
+   "add": [
+    "floor"
+   ],
+   "addAt": 0.0,
+   "cont": true,
+   "marks": [
+    {
+     "bar": 16,
+     "dir": "down",
+     "text": "Peak",
+     "color": "mint",
+     "at": 0.6
+    }
+   ],
+   "pops": [
+    {
+     "text": "+$1,400 open",
+     "color": "mint",
+     "at": 0.55,
+     "y": 0.6
+    }
+   ],
+   "say": "With an intraday trailing limit, it follows your highest balance, open profit included."
+  },
+  {
+   "type": "chart",
+   "chart": "a",
+   "headline": "Then it never comes down.",
+   "big": true,
+   "reveal": [
+    17,
+    33
+   ],
+   "show": [
+    "floor"
+   ],
+   "cont": true,
+   "levels": [
+    {
+     "price": 49400,
+     "from": 16,
+     "label": "Limit 49,400",
+     "color": "coral",
+     "below": true,
+     "labelPos": "right",
+     "at": 0.3
+    }
+   ],
+   "pops": [
+    {
+     "text": "Room: $600",
+     "color": "coral",
+     "at": 0.7,
+     "y": 0.9
+    }
+   ],
+   "say": "The trade goes back to zero. The limit doesn't. Two thousand of room is now six hundred."
+  },
+  {
+   "type": "comment",
+   "title": "Want the guide to every limit type?",
+   "keyword": "RULES",
+   "sub": "Comment it. I'll DM you the free guide.",
+   "say": "Comment rules, and I'll send you my free guide to every limit type."
+  }
+ ],
+ "post": {
+  "instagram": "On an intraday trailing drawdown the loss limit follows your highest balance, open profit included. A 50K account with a $2,000 limit runs to +$1,400 open: the limit rises to $49,400. The trade comes back to break-even and the limit stays there: $600 of room left instead of $2,000. Some firms trail end-of-day instead, and most limits lock at some point: check your firm's rules. Comment RULES for the free guide.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#propfirm #futurestrading #trailingdrawdown #fundedtrader #tradingeducation #technicalanalysis #daytrading #trading #learntotrade",
+  "tiktok": "On an intraday trailing drawdown the loss limit follows your highest balance, open profit included. A 50K account with a $2,000 limit runs to +$1,400 open: the limit rises to $49,400. The trade comes back to break-even and the limit stays there: $600 of room left instead of $2,000. Some firms trail end-of-day instead, and most limits lock at some point: check your firm's rules. Comment RULES for the free guide. Follow for one trading concept a day. #propfirm #futurestrading #trailingdrawdown #fundedtrader #tradingeducation #technicalanalysis #daytrading",
+  "youtube": {
+   "title": "Break-even day, still lost $1,400 #shorts",
+   "description": "On an intraday trailing drawdown the loss limit follows your highest balance, open profit included. A 50K account with a $2,000 limit runs to +$1,400 open: the limit rises to $49,400. The trade comes back to break-even and the limit stays there: $600 of room left instead of $2,000. Some firms trail end-of-day instead, and most limits lock at some point: check your firm's rules. Comment RULES for the free guide.\n\nFree guides and calculators: https://calm-edge.github.io/learn/prop-firm-trailing-drawdown-explained/\n\nEducational example on an illustrative chart. Not financial advice; trading involves risk of loss.\n\n#propfirm #futurestrading #trailingdrawdown #fundedtrader #tradingeducation #technicalanalysis #daytrading #trading #learntotrade #shorts"
+  },
+  "facebook": "On an intraday trailing drawdown the loss limit follows your highest balance, open profit included. A 50K account with a $2,000 limit runs to +$1,400 open: the limit rises to $49,400. The trade comes back to break-even and the limit stays there: $600 of room left instead of $2,000. Some firms trail end-of-day instead, and most limits lock at some point: check your firm's rules. Comment RULES for the free guide.\n\nSave this for later and follow @calmedgeofficial for one trading concept a day.\n\nFree guides and calculators: https://calm-edge.github.io/learn/prop-firm-trailing-drawdown-explained/",
+  "pinterest": {
+   "title": "Intraday trailing drawdown explained",
+   "description": "On an intraday trailing drawdown the loss limit follows your highest balance, open profit included. A 50K account with a $2,000 limit runs to +$1,400 open: the limit rises to $49,400. The trade comes back to break-even and the limit stays there: $600 of room left instead of $2,000. Some firms trail end-of-day instead, and most limits lock at some point: check your firm's rules. Comment RULES for the free guide. Trading concepts explained simply, one a day.",
+   "link": "https://calm-edge.github.io/learn/prop-firm-trailing-drawdown-explained/"
+  }
+ },
+ "voice": "andrew_up"
+}

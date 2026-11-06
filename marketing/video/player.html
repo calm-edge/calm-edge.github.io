@@ -74,6 +74,14 @@ body.land .chapter { font-size:40px; color:var(--muted); font-weight:700; letter
 .stamp { position:absolute; left:0; top:0; font-size:54px; font-weight:700; letter-spacing:5px; padding:8px 24px; white-space:nowrap; border:7px solid; border-radius:18px; transform-origin:center; background:rgba(15,23,32,.82); }
 .count { position:absolute; left:0; right:0; text-align:center; font-size:300px; font-weight:700; color:#fff; text-shadow:0 10px 60px rgba(0,0,0,.6); }
 .cta { background:var(--mint); color:#0F1720; font-weight:700; font-size:50px; border-radius:24px; padding:26px 44px; display:inline-block; }
+/* v3 ("scroll-stopper") reels: no presenter, bigger hook, bigger 3-word captions, pop-up numbers, comment CTA */
+body.v3 .big { font-size:100px; letter-spacing:-2.5px; }
+body.v3 .head { top:300px; }
+body.v3 .caption span.box { font-size:64px; padding:16px 30px; background:rgba(10,15,22,.92); }
+.pop { font-size:92px; letter-spacing:-3px; padding:10px 34px; border-radius:28px; background:rgba(15,23,32,.9); border:6px solid currentColor; left:50%; right:auto; white-space:nowrap; text-shadow:none; }
+.flash { position:absolute; inset:0; background:var(--coral); pointer-events:none; }
+.kw { display:inline-block; font-size:150px; font-weight:700; letter-spacing:4px; color:#0F1720; background:var(--gold); border-radius:32px; padding:10px 48px; }
+.yn { display:flex; gap:30px; } .yn div { flex:1; text-align:center; font-size:96px; font-weight:700; border-radius:28px; padding:22px 0; border:6px solid; }
 </style></head>
 <body>
 <div class="glow" style="width:1100px;height:1100px;left:-420px;top:-480px;background:#5FD3A0"></div>
@@ -102,6 +110,7 @@ window.load = (spec) => {
     (spec.presenter ? `<img class="presenter" id="pfront" src="${spec.presenter.front}" style="right:0px"><img class="presenter" id="pside" src="${spec.presenter.side}" style="right:-6px">` : "") +
     `<div class="caption"><span class="box" id="cap"></span></div>${spec.tag ? `<div class="tag">${esc(spec.tag)}</div>` : ""}`;
   if (spec.presenter) document.body.classList.add("host");
+  if (spec.style === "v3") document.body.classList.add("v3");
   const fit = () => spec.scenes.forEach((s, i) => { if (s.type !== "stat") return; // size the number for its final value
     const el = document.getElementById(`v${i}`), lay = document.getElementById(`s${i}`); lay.style.display = "block";
     el.style.fontSize = "220px"; el.textContent = fmtNum(s.value, s);
@@ -114,6 +123,7 @@ function build(s, i) {
   if (s.type === "chart") return `${s.headline ? `<div class="head" id="hd${i}">${s.kicker ? `<div class="kicker" style="margin-bottom:18px${s.kickerColor ? `;color:var(--${s.kickerColor})` : ""}">${esc(s.kicker)}</div>` : ""}<div class="${s.big ? "big" : "mid"}">${esc(s.headline)}</div>${s.options ? `<div class="opts">${s.options.map((o, k) => `<div class="opt ${s.answer === undefined ? "" : s.answer === k ? "right" : "wrong"}">${esc(o)}</div>`).join("")}</div>` : ""}</div>` : ""}
       <svg class="chart" id="cv${i}" width="1080" height="1920" viewBox="0 0 1080 1920"></svg>
       ${s.countdown ? `<div class="count" id="cd${i}"></div>` : ""}${s.overlay ? `<div class="ovl" id="ov${i}">${esc(s.overlay)}</div>` : ""}
+      ${(s.pops || []).map((q, k) => `<div class="ovl pop" id="pp${i}_${k}" style="color:var(--${q.color || "gold"})">${esc(q.text)}</div>`).join("")}${s.flash ? `<div class="flash" id="fl${i}"></div>` : ""}
       ${s.stamp ? `<div class="stamp" id="st${i}" style="color:var(--${s.stamp.color || "coral"});border-color:var(--${s.stamp.color || "coral"})">${esc(s.stamp.text)}</div>` : ""}`;
   if (s.type === "follow") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:44px">
       <div class="logo">${LOGO(130)}<div><div style="font-size:64px;font-weight:700;letter-spacing:-1px">${esc(s.handle || "@calmedgeofficial")}</div>
@@ -142,6 +152,11 @@ function build(s, i) {
   if (s.type === "chat") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;gap:30px">
       <div class="bubble me" id="me${i}">${esc(s.me)}</div>
       ${s.ai.map((p, k) => `<div class="bubble ai" id="ai${i}_${k}">${p}</div>`).join("")}</div>`;
+  if (s.type === "comment") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:44px">
+      <div class="big" style="font-size:84px">${esc(s.title)}</div>
+      ${s.keyword ? `<div class="kw" id="kw${i}">${esc(s.keyword)}</div>` : ""}
+      ${s.options ? `<div class="yn" id="kw${i}" style="width:100%">${s.options.map((o, k) => `<div style="color:var(--${k ? "coral" : "mint"});border-color:var(--${k ? "coral" : "mint"})">${esc(o)}</div>`).join("")}</div>` : ""}
+      ${s.sub ? `<div class="mid" style="font-size:52px;color:var(--muted)">${esc(s.sub)}</div>` : ""}</div>`;
   if (s.type === "cta") return `<div class="safe" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:46px">
       <div class="logo">${LOGO(150)}<div><div style="font-size:74px;font-weight:700;letter-spacing:-1.5px">${esc(s.title || "Trading Journal AI")}</div>
       <div class="label" style="font-size:38px">${esc(s.sub || "Desktop app · Windows & Mac")}</div></div></div>
@@ -216,6 +231,11 @@ function drawScene(i, s, local, d) {
   const ov = document.getElementById(`ov${i}`);
   if (ov) { ov.style.top = box.y + box.h / 2 - ov.offsetHeight / 2 + "px"; ov.style.opacity = ease(local / 0.3) * (0.75 + 0.25 * Math.sin(local * 6));
     ov.style.transform = `scale(${1 + 0.04 * Math.sin(local * 6)})`; }
+  // pops: a big number that bounces onto the middle of the chart at q.at (pattern interrupt)
+  (s.pops || []).forEach((q, k) => { const e = document.getElementById(`pp${i}_${k}`), a = clamp((p - (q.at || 0)) / 0.06);
+    e.style.top = box.y + box.h * (q.y === undefined ? 0.42 : q.y) - e.offsetHeight / 2 + "px";
+    e.style.opacity = q.until !== undefined && p > q.until ? 0 : a; e.style.transform = `translateX(-50%) scale(${a ? 1 + 0.12 * (1 - ease(clamp((p - (q.at || 0)) / 0.1))) : 1})`; });
+  const fl = document.getElementById(`fl${i}`); if (fl) fl.style.opacity = 0.32 * (1 - ease(local / 0.35));
   // stamp: a label that slams onto the headline at s.stamp.at (0..1 of the scene): MYTH, MISTAKE, ...
   const sp = document.getElementById(`st${i}`);
   if (sp) { const q = clamp((p - (s.stamp.at || 0)) / 0.08);
@@ -266,6 +286,7 @@ window.render = (t) => {
     if (!vis) return;
     el.style.opacity = Math.min(fadeIn, fadeOut);
     el.style.transform = s.cont ? "none" : `translateY(${(1 - ease(local / 0.45)) * 40}px)`;
+    if (s.punch) { const cv = el.querySelector("svg.chart"); cv.style.transformOrigin = "540px 900px"; cv.style.transform = `scale(${1.08 - 0.08 * ease(local / 0.6)})`; }  // v3 hook: the chart punches in from frame one
     if (s.type === "hook") el.querySelectorAll(".w").forEach((w, k, all) => {
       const st = (k / all.length) * Math.min(1.1, d * 0.45); w.style.opacity = ease((local - st) / 0.22);
       w.style.transform = `translateY(${(1 - ease((local - st) / 0.3)) * 26}px)`; });
@@ -278,6 +299,7 @@ window.render = (t) => {
       <div class="rows ${s.two ? "two" : ""}">${s.nohead ? "" : `<div class="hd">${s.head.map((h) => `<div>${esc(h)}</div>`).join("")}</div>`}
       ${s.rows.map((r, k) => `<div class="r ${r.hl ? "hl" : ""} ${r.good ? "good" : ""}" id="row${i}_${k}">${r.cells.map((c, j) => `<div class="${j === r.cells.length - 1 ? (String(c).startsWith("−") || String(c).startsWith("-") ? "neg" : String(c).startsWith("+") ? "pos" : "") : ""}">${esc(c)}</div>`).join("")}</div>`).join("")}</div>
       ${s.note ? `<div class="label" style="font-size:38px">${esc(s.note)}</div>` : ""}</div>`;
+    if (s.type === "comment") { const k = document.getElementById(`kw${i}`); if (k) k.style.transform = `scale(${(0.6 + 0.4 * ease(local / 0.25)) * (1 + 0.035 * Math.sin(local * 7))})`; }
   if (s.type === "stat") document.getElementById(`v${i}`).textContent = fmtNum(s.value * ease((local - 0.2) / Math.min(1.2, d * 0.5)), s);
     if (s.type === "chat") {
       document.getElementById(`me${i}`).style.opacity = ease(local / 0.3);
@@ -294,18 +316,18 @@ window.render = (t) => {
     const sw = cur === prev ? 1 : ease((t - TIMES[si][0]) / 0.4);
     ["front", "side"].forEach((pz) => { document.getElementById("p" + pz).style.opacity = pz === cur ? sw : pz === prev ? 1 - sw : 0; });
   }
-  const tg = document.querySelector(".tag"); if (tg) tg.style.opacity = SPEC.tagFrom ? clamp((t - SPEC.tagFrom) / 0.4) : 1;
+  const tg = document.querySelector(".tag"); if (tg) tg.style.opacity = SPEC.style === "v3" ? (t >= TIMES[TIMES.length - 1][0] ? 1 : 0) : SPEC.tagFrom ? clamp((t - SPEC.tagFrom) / 0.4) : 1;
   // Captions: the line being spoken, a few words at a time, current word in mint.
   const i = Math.max(0, TIMES.findIndex(([a, b]) => t >= a && t < b));
   const s = SPEC.scenes[i === -1 ? SPEC.scenes.length - 1 : i], [a] = TIMES[i];
   const cap = document.getElementById("cap");
-  if (!s.say || SPEC.captions === false || s.captions === false || s.type === "hook" || s.type === "cta" || s.type === "follow") { cap.parentElement.style.display = "none"; return; }
+  if (!s.say || SPEC.captions === false || s.captions === false || s.type === "hook" || s.type === "cta" || s.type === "follow" || s.type === "comment") { cap.parentElement.style.display = "none"; return; }
   cap.parentElement.style.display = "flex";
   const words = s.say.split(/\s+/), weights = words.map((w) => w.length + 2), total = weights.reduce((x, y) => x + y, 0);
   const speech = s.speech || (s.duration - 0.35), lt = (t - a - (s.lead || 0.12)) / speech;
   let acc = 0, cur = words.length - 1;
   for (let k = 0; k < words.length; k++) { acc += weights[k] / total; if (lt < acc) { cur = k; break; } }
-  const per = 4, g = Math.floor(cur / per) * per;
+  const per = SPEC.style === "v3" ? 3 : 4, g = Math.floor(cur / per) * per;
   cap.innerHTML = words.slice(g, g + per).map((w, k) => `<span class="${g + k === cur && lt >= 0 ? "on" : ""}">${esc(w)}</span>`).join(" ");
 };
 </script>
