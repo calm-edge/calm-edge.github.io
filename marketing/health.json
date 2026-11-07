@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-06T07:40+01:00",
- "summary": "73 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-07T07:28+01:00",
+ "summary": "71 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -30,12 +30,12 @@
   {
    "status": "OK",
    "check": "sito /media/index.json",
-   "detail": "HTTP 200, 13229 byte"
+   "detail": "HTTP 200, 13751 byte"
   },
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 16158 byte"
+   "detail": "HTTP 200, 17678 byte"
   },
   {
    "status": "OK",
@@ -74,11 +74,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-06 12:30 v006_time_of_day",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-08 12:30 v009_calendar",
    "detail": "3 file presenti"
   },
@@ -94,11 +89,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-06 17:30 v209_edu_risk_reward",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-14 12:30 v101_pfm_one_screen",
    "detail": "3 file presenti"
   },
@@ -110,7 +100,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "21 pin; ultimi titoli: Futures position size in 3 numbers | ATR stop loss explained | Profit factor explained for traders"
+   "detail": "23 pin; ultimi titoli: Win rate vs risk reward explained | Best time of day to trade? Check your jo | Futures position size in 3 numbers"
   },
   {
    "status": "OK",
@@ -145,27 +135,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "21 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v012_privacy",
-   "detail": "https://www.instagram.com/reel/DfE97uTEUHB/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v012_privacy",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1096719402981793"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v201_edu_rsi_70",
-   "detail": "https://www.instagram.com/reel/DfFhfHplVfQ/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v201_edu_rsi_70",
-   "detail": "https://www.facebook.com/1470032662849525/videos/4388581488118529"
+   "detail": "23 post"
   },
   {
    "status": "OK",
@@ -299,8 +269,28 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v006_time_of_day",
+   "detail": "https://www.instagram.com/reel/DfZk7_qD__r/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v006_time_of_day",
+   "detail": "https://www.facebook.com/1470032662849525/videos/2218541405359390"
+  },
+  {
+   "status": "OK",
+   "check": "Instagram v209_edu_risk_reward",
+   "detail": "https://www.instagram.com/reel/DfaDVrzj0hd/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v209_edu_risk_reward",
+   "detail": "https://www.facebook.com/1470032662849525/videos/2648481948935758"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "1 storie"
+   "detail": "2 storie"
   },
   {
    "status": "WARN",
@@ -319,23 +309,13 @@
   },
   {
    "status": "OK",
-   "check": "YouTube v012_privacy",
-   "detail": "public/processed, canale Calm Edge, views 33"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v201_edu_rsi_70",
-   "detail": "public/processed, canale Calm Edge, views 31"
-  },
-  {
-   "status": "OK",
    "check": "YouTube v202_edu_20ema",
-   "detail": "public/processed, canale Calm Edge, views 68"
+   "detail": "public/processed, canale Calm Edge, views 69"
   },
   {
    "status": "OK",
    "check": "YouTube v014_habit",
-   "detail": "public/processed, canale Calm Edge, views 80"
+   "detail": "public/processed, canale Calm Edge, views 81"
   },
   {
    "status": "OK",
@@ -375,7 +355,17 @@
   {
    "status": "OK",
    "check": "YouTube v210_edu_position_size",
-   "detail": "public/processed, canale Calm Edge, views 14"
+   "detail": "public/processed, canale Calm Edge, views 29"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v006_time_of_day",
+   "detail": "public/processed, canale Calm Edge, views 7"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v209_edu_risk_reward",
+   "detail": "public/processed, canale Calm Edge, views 4"
   },
   {
    "status": "OK",
