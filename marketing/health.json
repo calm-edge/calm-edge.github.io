@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-07T07:28+01:00",
- "summary": "71 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-08T07:29+01:00",
+ "summary": "68 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -136,16 +136,6 @@
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
    "detail": "23 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v202_edu_20ema",
-   "detail": "https://www.instagram.com/reel/DfIFJ3rFf2q/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v202_edu_20ema",
-   "detail": "https://www.facebook.com/1470032662849525/videos/2480023562823794"
   },
   {
    "status": "OK",
@@ -290,7 +280,7 @@
   {
    "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "2 storie"
+   "detail": "0 storie"
   },
   {
    "status": "WARN",
@@ -306,11 +296,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v202_edu_20ema",
-   "detail": "public/processed, canale Calm Edge, views 69"
   },
   {
    "status": "OK",
@@ -345,7 +330,7 @@
   {
    "status": "OK",
    "check": "YouTube v004_profit_factor",
-   "detail": "public/processed, canale Calm Edge, views 6"
+   "detail": "public/processed, canale Calm Edge, views 7"
   },
   {
    "status": "OK",
@@ -355,12 +340,12 @@
   {
    "status": "OK",
    "check": "YouTube v210_edu_position_size",
-   "detail": "public/processed, canale Calm Edge, views 29"
+   "detail": "public/processed, canale Calm Edge, views 30"
   },
   {
    "status": "OK",
    "check": "YouTube v006_time_of_day",
-   "detail": "public/processed, canale Calm Edge, views 7"
+   "detail": "public/processed, canale Calm Edge, views 8"
   },
   {
    "status": "OK",
