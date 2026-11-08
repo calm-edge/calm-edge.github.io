@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-07T06:53Z",
+ "checked_at": "2026-11-08T06:55Z",
  "media": [
   {
    "id": "18128634841914784",
@@ -7,7 +7,7 @@
    "type": "REELS",
    "timestamp": "2026-11-06T16:37:51+0000",
    "first_line": "With a 2:1 reward to risk you only need to win 1 trade in 3 to break even (33.3%, before c",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -17,7 +17,7 @@
    "type": "REELS",
    "timestamp": "2026-11-06T12:12:07+0000",
    "first_line": "Split your results by hour. In this example journal, 13 afternoon trades made more than 39",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -27,7 +27,7 @@
    "type": "REELS",
    "timestamp": "2026-11-05T16:53:17+0000",
    "first_line": "1) Max loss: 1% of $50,000 = $500. 2) Risk per contract: a 4-point stop is $20 on the Micr",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -37,7 +37,7 @@
    "type": "REELS",
    "timestamp": "2026-11-04T16:41:33+0000",
    "first_line": "ATR, the average true range, is how far price normally moves in one bar. A stop at half an",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -47,7 +47,7 @@
    "type": "REELS",
    "timestamp": "2026-11-04T12:13:49+0000",
    "first_line": "Win rate alone tells you almost nothing. Profit factor = gross profit / gross loss. Below ",
-   "likes": 1,
+   "likes": 2,
    "comments": 2,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -57,7 +57,7 @@
    "type": "REELS",
    "timestamp": "2026-11-03T16:39:40+0000",
    "first_line": "Two highs at about the same price and a low between them, the neckline. The pattern is onl",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -67,7 +67,7 @@
    "type": "FEED",
    "timestamp": "2026-11-03T08:49:32+0000",
    "first_line": "Gap fill in 4 steps: 1) mark yesterday's close, 2) let the first 15 minutes trade, 3) ente",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -77,7 +77,7 @@
    "type": "REELS",
    "timestamp": "2026-11-02T16:48:46+0000",
    "first_line": "Price pokes above resistance, buyers jump in, and the candle closes back below: a failed b",
-   "likes": 1,
+   "likes": 2,
    "comments": 2,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -87,7 +87,7 @@
    "type": "REELS",
    "timestamp": "2026-11-02T12:16:17+0000",
    "first_line": "Rank your setups by average R, not by feel. In this example journal, one setup made +0.89R",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -97,7 +97,7 @@
    "type": "FEED",
    "timestamp": "2026-11-02T09:30:31+0000",
    "first_line": "The opening range breakout in 7 slides. Mark the high and low of the first 30 minutes, wai",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -107,7 +107,7 @@
    "type": "REELS",
    "timestamp": "2026-11-01T16:59:14+0000",
    "first_line": "A level that rejected price three times breaks, and on the retest it holds from above. Buy",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -117,7 +117,7 @@
    "type": "FEED",
    "timestamp": "2026-11-01T08:33:13+0000",
    "first_line": "The 20 EMA is an average of recent closes that weighs the newest ones more. Rising with pr",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -127,7 +127,7 @@
    "type": "REELS",
    "timestamp": "2026-10-31T16:59:30+0000",
    "first_line": "VWAP is the average price everyone paid today, weighted by volume. Above it, today's avera",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -137,7 +137,7 @@
    "type": "REELS",
    "timestamp": "2026-10-31T11:58:16+0000",
    "first_line": "Ten fields per trade, about 30 seconds. Dashboard, calendar, setups and mistakes fill in b",
-   "likes": 3,
+   "likes": 4,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -147,7 +147,7 @@
    "type": "REELS",
    "timestamp": "2026-10-30T17:07:26+0000",
    "first_line": "The 20 EMA is an average of recent closes that weighs the newest ones more. Price above a ",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -157,7 +157,7 @@
    "type": "REELS",
    "timestamp": "2026-10-29T17:17:15+0000",
    "first_line": "RSI above 70 is called overbought, but in a strong trend it can stay there for a long time",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -167,7 +167,7 @@
    "type": "REELS",
    "timestamp": "2026-10-29T12:06:37+0000",
    "first_line": "No account, no cloud. Your trading journal lives on your computer, with daily backups and ",
-   "likes": 2,
+   "likes": 3,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -177,7 +177,7 @@
    "type": "REELS",
    "timestamp": "2026-10-28T17:15:00+0000",
    "first_line": "Split your results by weekday, and always check the sample size. In this example journal, ",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -197,7 +197,7 @@
    "type": "REELS",
    "timestamp": "2026-10-26T16:52:02+0000",
    "first_line": "Max drawdown is the biggest drop from a peak in your account. Track it, together with your",
-   "likes": 3,
+   "likes": 4,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -207,7 +207,7 @@
    "type": "REELS",
    "timestamp": "2026-10-25T16:54:12+0000",
    "first_line": "R = what a trade made / what you risked. Risk $40, make $80: +2R. It lets you compare ever",
-   "likes": 2,
+   "likes": 3,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -217,7 +217,7 @@
    "type": "REELS",
    "timestamp": "2026-10-24T15:53:53+0000",
    "first_line": "Tag each trade with how you felt. In this example journal, 55 calm trades made +$1,994 and",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
@@ -227,7 +227,7 @@
    "type": "REELS",
    "timestamp": "2026-10-23T10:24:26+0000",
    "first_line": "Breaking your own rules has a price. In this example journal, 16 rule breaks cost $555, an",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   }

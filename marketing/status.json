@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-07T06:53Z",
+ "checked_at": "2026-11-08T06:55Z",
  "instagram": {
   "username": "calmedgeofficial",
   "name": "Calm Edge | Trading Journal",
-  "followers_count": 5,
+  "followers_count": 6,
   "publishing_limit": [
    {
-    "quota_usage": 4,
+    "quota_usage": 0,
     "config": {
      "quota_total": 100,
      "quota_duration": 86400
