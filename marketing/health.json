@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-08T07:29+01:00",
- "summary": "68 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-09T07:43+01:00",
+ "summary": "64 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -35,7 +35,7 @@
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 17678 byte"
+   "detail": "HTTP 200, 18320 byte"
   },
   {
    "status": "OK",
@@ -60,22 +60,17 @@
   {
    "status": "OK",
    "check": "Gumroad Trading Journal AI",
-   "detail": "HTTP 200, 35885 byte"
+   "detail": "HTTP 200, 35881 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 38168 byte"
+   "detail": "HTTP 200, 38164 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Bundle",
-   "detail": "HTTP 200, 29836 byte"
-  },
-  {
-   "status": "OK",
-   "check": "media 2026-11-08 12:30 v009_calendar",
-   "detail": "3 file presenti"
+   "detail": "HTTP 200, 29832 byte"
   },
   {
    "status": "OK",
@@ -100,7 +95,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "23 pin; ultimi titoli: Win rate vs risk reward explained | Best time of day to trade? Check your jo | Futures position size in 3 numbers"
+   "detail": "24 pin; ultimi titoli: Trading P&L calendar | Win rate vs risk reward explained | Best time of day to trade? Check your jo"
   },
   {
    "status": "OK",
@@ -135,27 +130,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "23 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v014_habit",
-   "detail": "https://www.instagram.com/reel/DfKGkh_oA9b/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v014_habit",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1668090338058167"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v203_edu_vwap",
-   "detail": "https://www.instagram.com/reel/DfKpC_1FYq2/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v203_edu_vwap",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1909681269996019"
+   "detail": "24 post"
   },
   {
    "status": "OK",
@@ -279,8 +254,18 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v009_calendar",
+   "detail": "https://www.instagram.com/reel/DfetKR0itkF/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v009_calendar",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1835745091098846"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "0 storie"
+   "detail": "1 storie"
   },
   {
    "status": "WARN",
@@ -296,16 +281,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v014_habit",
-   "detail": "public/processed, canale Calm Edge, views 81"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v203_edu_vwap",
-   "detail": "public/processed, canale Calm Edge, views 131"
   },
   {
    "status": "OK",
@@ -330,7 +305,7 @@
   {
    "status": "OK",
    "check": "YouTube v004_profit_factor",
-   "detail": "public/processed, canale Calm Edge, views 7"
+   "detail": "public/processed, canale Calm Edge, views 8"
   },
   {
    "status": "OK",
@@ -340,17 +315,22 @@
   {
    "status": "OK",
    "check": "YouTube v210_edu_position_size",
-   "detail": "public/processed, canale Calm Edge, views 30"
+   "detail": "public/processed, canale Calm Edge, views 35"
   },
   {
    "status": "OK",
    "check": "YouTube v006_time_of_day",
-   "detail": "public/processed, canale Calm Edge, views 8"
+   "detail": "public/processed, canale Calm Edge, views 9"
   },
   {
    "status": "OK",
    "check": "YouTube v209_edu_risk_reward",
    "detail": "public/processed, canale Calm Edge, views 4"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v009_calendar",
+   "detail": "public/processed, canale Calm Edge, views 135"
   },
   {
    "status": "OK",
