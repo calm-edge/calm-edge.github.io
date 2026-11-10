@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-09T07:43+01:00",
- "summary": "64 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-10T07:36+01:00",
+ "summary": "59 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7742 byte"
+   "detail": "HTTP 200, 7764 byte"
   },
   {
    "status": "OK",
@@ -20,7 +20,7 @@
   {
    "status": "OK",
    "check": "sito /learn/",
-   "detail": "HTTP 200, 5808 byte"
+   "detail": "HTTP 200, 6139 byte"
   },
   {
    "status": "OK",
@@ -60,17 +60,17 @@
   {
    "status": "OK",
    "check": "Gumroad Trading Journal AI",
-   "detail": "HTTP 200, 35881 byte"
+   "detail": "HTTP 200, 35885 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 38164 byte"
+   "detail": "HTTP 200, 38168 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Bundle",
-   "detail": "HTTP 200, 29832 byte"
+   "detail": "HTTP 200, 29836 byte"
   },
   {
    "status": "OK",
@@ -131,26 +131,6 @@
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
    "detail": "24 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram c202_car_20ema",
-   "detail": "https://www.instagram.com/p/DfMT8cgF1yg/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook c202_car_20ema",
-   "detail": "https://www.facebook.com/1470032662849525_122107227213520033"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v204_edu_sr_flip",
-   "detail": "https://www.instagram.com/reel/DfNNzwWieZg/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v204_edu_sr_flip",
-   "detail": "https://www.facebook.com/1470032662849525/videos/4746838468865577"
   },
   {
    "status": "OK",
@@ -265,7 +245,7 @@
   {
    "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "1 storie"
+   "detail": "0 storie"
   },
   {
    "status": "WARN",
@@ -281,11 +261,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v204_edu_sr_flip",
-   "detail": "public/processed, canale Calm Edge, views 25"
   },
   {
    "status": "OK",
@@ -320,7 +295,7 @@
   {
    "status": "OK",
    "check": "YouTube v006_time_of_day",
-   "detail": "public/processed, canale Calm Edge, views 9"
+   "detail": "public/processed, canale Calm Edge, views 10"
   },
   {
    "status": "OK",
@@ -330,7 +305,7 @@
   {
    "status": "OK",
    "check": "YouTube v009_calendar",
-   "detail": "public/processed, canale Calm Edge, views 135"
+   "detail": "public/processed, canale Calm Edge, views 143"
   },
   {
    "status": "OK",
