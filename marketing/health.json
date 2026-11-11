@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-10T07:36+01:00",
- "summary": "59 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-11T07:38+01:00",
+ "summary": "53 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -35,7 +35,7 @@
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 18320 byte"
+   "detail": "HTTP 200, 19041 byte"
   },
   {
    "status": "OK",
@@ -74,11 +74,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-10 12:30 v010_position_size",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-12 12:30 v013_long_short",
    "detail": "3 file presenti"
   },
@@ -95,7 +90,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "24 pin; ultimi titoli: Trading P&L calendar | Win rate vs risk reward explained | Best time of day to trade? Check your jo"
+   "detail": "25 pin; ultimi titoli: How to calculate position size for futur | Trading P&L calendar | Win rate vs risk reward explained"
   },
   {
    "status": "OK",
@@ -130,37 +125,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "24 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram c301_car_orb",
-   "detail": "https://www.instagram.com/p/DfO_To2FI2r/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook c301_car_orb",
-   "detail": "https://www.facebook.com/1470032662849525_122107708989520033"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v002_best_setup",
-   "detail": "https://www.instagram.com/reel/DfPSOGllCry/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v002_best_setup",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1555020663324239"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v205_edu_failed_breakout",
-   "detail": "https://www.instagram.com/reel/DfPxaEQj2YU/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v205_edu_failed_breakout",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1107526278708836"
+   "detail": "25 post"
   },
   {
    "status": "OK",
@@ -244,8 +209,18 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v010_position_size",
+   "detail": "https://www.instagram.com/reel/Dfj0bvzD_eS/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v010_position_size",
+   "detail": "https://www.facebook.com/1470032662849525/videos/1003322639480473"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "0 storie"
+   "detail": "1 storie"
   },
   {
    "status": "WARN",
@@ -261,16 +236,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v002_best_setup",
-   "detail": "public/processed, canale Calm Edge, views 20"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v205_edu_failed_breakout",
-   "detail": "public/processed, canale Calm Edge, views 39"
   },
   {
    "status": "OK",
@@ -290,7 +255,7 @@
   {
    "status": "OK",
    "check": "YouTube v210_edu_position_size",
-   "detail": "public/processed, canale Calm Edge, views 35"
+   "detail": "public/processed, canale Calm Edge, views 38"
   },
   {
    "status": "OK",
@@ -305,7 +270,12 @@
   {
    "status": "OK",
    "check": "YouTube v009_calendar",
-   "detail": "public/processed, canale Calm Edge, views 143"
+   "detail": "public/processed, canale Calm Edge, views 151"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v010_position_size",
+   "detail": "public/processed, canale Calm Edge, views 5"
   },
   {
    "status": "OK",
