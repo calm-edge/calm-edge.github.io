@@ -1,13 +1,23 @@
 {
- "checked_at": "2026-11-10T07:03Z",
+ "checked_at": "2026-11-11T07:10Z",
  "media": [
+  {
+   "id": "18096197237678027",
+   "permalink": "https://www.instagram.com/reel/Dfj0bvzD_eS/",
+   "type": "REELS",
+   "timestamp": "2026-11-10T11:39:54+0000",
+   "first_line": "Contracts = risk / (stop distance x point value). $100 risk, 4-point stop on MES ($5/point",
+   "likes": 2,
+   "comments": 1,
+   "insights_error": "(#10) Application does not have permission for this action"
+  },
   {
    "id": "18090562898300865",
    "permalink": "https://www.instagram.com/reel/DfetKR0itkF/",
    "type": "REELS",
    "timestamp": "2026-11-08T12:00:16+0000",
    "first_line": "Green days, red days and weekly totals, built from your trades automatically.",
-   "likes": 0,
+   "likes": 1,
    "comments": 0,
    "insights_error": "(#10) Application does not have permission for this action"
   },
