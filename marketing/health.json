@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-12T07:41+01:00",
- "summary": "48 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-13T07:39+01:00",
+ "summary": "44 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7764 byte"
+   "detail": "HTTP 200, 7747 byte"
   },
   {
    "status": "OK",
@@ -35,7 +35,7 @@
   {
    "status": "OK",
    "check": "sito /pins.xml",
-   "detail": "HTTP 200, 19041 byte"
+   "detail": "HTTP 200, 19722 byte"
   },
   {
    "status": "OK",
@@ -74,11 +74,6 @@
   },
   {
    "status": "OK",
-   "check": "media 2026-11-12 12:30 v013_long_short",
-   "detail": "3 file presenti"
-  },
-  {
-   "status": "OK",
    "check": "media 2026-11-14 12:30 v101_pfm_one_screen",
    "detail": "3 file presenti"
   },
@@ -90,7 +85,7 @@
   {
    "status": "OK",
    "check": "feed Pinterest pins.xml",
-   "detail": "25 pin; ultimi titoli: How to calculate position size for futur | Trading P&L calendar | Win rate vs risk reward explained"
+   "detail": "26 pin; ultimi titoli: Long vs short trading edge | How to calculate position size for futur | Trading P&L calendar"
   },
   {
    "status": "OK",
@@ -125,27 +120,7 @@
   {
    "status": "OK",
    "check": "Instagram: lettura post dell'account",
-   "detail": "25 post"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v004_profit_factor",
-   "detail": "https://www.instagram.com/reel/DfUbh6KDELR/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v004_profit_factor",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1486980910070113"
-  },
-  {
-   "status": "OK",
-   "check": "Instagram v207_edu_atr_stop",
-   "detail": "https://www.instagram.com/reel/DfU6LE2gMxV/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v207_edu_atr_stop",
-   "detail": "https://www.facebook.com/1470032662849525/videos/4614573352116228"
+   "detail": "26 post"
   },
   {
    "status": "OK",
@@ -199,8 +174,18 @@
   },
   {
    "status": "OK",
+   "check": "Instagram v013_long_short",
+   "detail": "https://www.instagram.com/reel/DfpCa1LiA0V/"
+  },
+  {
+   "status": "OK",
+   "check": "Facebook v013_long_short",
+   "detail": "https://www.facebook.com/1470032662849525/videos/977392511655723"
+  },
+  {
+   "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "0 storie"
+   "detail": "1 storie"
   },
   {
    "status": "WARN",
@@ -219,16 +204,6 @@
   },
   {
    "status": "OK",
-   "check": "YouTube v004_profit_factor",
-   "detail": "public/processed, canale Calm Edge, views 8"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v207_edu_atr_stop",
-   "detail": "public/processed, canale Calm Edge, views 4"
-  },
-  {
-   "status": "OK",
    "check": "YouTube v210_edu_position_size",
    "detail": "public/processed, canale Calm Edge, views 39"
   },
@@ -240,17 +215,22 @@
   {
    "status": "OK",
    "check": "YouTube v209_edu_risk_reward",
-   "detail": "public/processed, canale Calm Edge, views 4"
+   "detail": "public/processed, canale Calm Edge, views 5"
   },
   {
    "status": "OK",
    "check": "YouTube v009_calendar",
-   "detail": "public/processed, canale Calm Edge, views 157"
+   "detail": "public/processed, canale Calm Edge, views 161"
   },
   {
    "status": "OK",
    "check": "YouTube v010_position_size",
-   "detail": "public/processed, canale Calm Edge, views 9"
+   "detail": "public/processed, canale Calm Edge, views 15"
+  },
+  {
+   "status": "OK",
+   "check": "YouTube v013_long_short",
+   "detail": "public/processed, canale Calm Edge, views 1"
   },
   {
    "status": "OK",
