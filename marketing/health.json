@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-13T07:39+01:00",
- "summary": "44 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-14T07:30+01:00",
+ "summary": "41 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7747 byte"
+   "detail": "HTTP 200, 7764 byte"
   },
   {
    "status": "OK",
@@ -124,16 +124,6 @@
   },
   {
    "status": "OK",
-   "check": "Instagram v210_edu_position_size",
-   "detail": "https://www.instagram.com/reel/DfXgRKCihMy/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v210_edu_position_size",
-   "detail": "https://www.facebook.com/1470032662849525/videos/1821126559218482"
-  },
-  {
-   "status": "OK",
    "check": "Instagram v006_time_of_day",
    "detail": "https://www.instagram.com/reel/DfZk7_qD__r/"
   },
@@ -185,7 +175,7 @@
   {
    "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "1 storie"
+   "detail": "0 storie"
   },
   {
    "status": "WARN",
@@ -204,11 +194,6 @@
   },
   {
    "status": "OK",
-   "check": "YouTube v210_edu_position_size",
-   "detail": "public/processed, canale Calm Edge, views 39"
-  },
-  {
-   "status": "OK",
    "check": "YouTube v006_time_of_day",
    "detail": "public/processed, canale Calm Edge, views 10"
   },
@@ -220,7 +205,7 @@
   {
    "status": "OK",
    "check": "YouTube v009_calendar",
-   "detail": "public/processed, canale Calm Edge, views 161"
+   "detail": "public/processed, canale Calm Edge, views 165"
   },
   {
    "status": "OK",
@@ -230,7 +215,7 @@
   {
    "status": "OK",
    "check": "YouTube v013_long_short",
-   "detail": "public/processed, canale Calm Edge, views 1"
+   "detail": "public/processed, canale Calm Edge, views 3"
   },
   {
    "status": "OK",
