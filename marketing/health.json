@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-15T07:33+01:00",
+ "checked_at": "2026-11-16T08:19+01:00",
  "summary": "37 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7747 byte"
+   "detail": "HTTP 200, 7793 byte"
   },
   {
    "status": "OK",
@@ -20,7 +20,7 @@
   {
    "status": "OK",
    "check": "sito /learn/",
-   "detail": "HTTP 200, 6139 byte"
+   "detail": "HTTP 200, 6494 byte"
   },
   {
    "status": "OK",
@@ -160,7 +160,7 @@
   {
    "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "1 storie"
+   "detail": "0 storie"
   },
   {
    "status": "WARN",
@@ -185,7 +185,7 @@
   {
    "status": "OK",
    "check": "YouTube v010_position_size",
-   "detail": "public/processed, canale Calm Edge, views 16"
+   "detail": "public/processed, canale Calm Edge, views 17"
   },
   {
    "status": "OK",
