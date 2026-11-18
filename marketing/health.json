@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-17T07:42+01:00",
+ "checked_at": "2026-11-18T07:41+01:00",
  "summary": "36 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
@@ -155,7 +155,7 @@
   {
    "status": "OK",
    "check": "Instagram storie attive ora",
-   "detail": "1 storie"
+   "detail": "0 storie"
   },
   {
    "status": "WARN",
@@ -175,7 +175,7 @@
   {
    "status": "OK",
    "check": "YouTube v010_position_size",
-   "detail": "public/processed, canale Calm Edge, views 18"
+   "detail": "public/processed, canale Calm Edge, views 19"
   },
   {
    "status": "OK",
@@ -190,7 +190,7 @@
   {
    "status": "OK",
    "check": "YouTube v105_pfm_payout",
-   "detail": "public/processed, canale Calm Edge, views 4"
+   "detail": "public/processed, canale Calm Edge, views 5"
   },
   {
    "status": "OK",
