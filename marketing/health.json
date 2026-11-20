@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-19T07:39+01:00",
+ "checked_at": "2026-11-20T07:39+01:00",
  "summary": "33 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7793 byte"
+   "detail": "HTTP 200, 7794 byte"
   },
   {
    "status": "OK",
@@ -65,7 +65,7 @@
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 40991 byte"
+   "detail": "HTTP 200, 40993 byte"
   },
   {
    "status": "OK",
@@ -170,12 +170,12 @@
   {
    "status": "OK",
    "check": "YouTube v101_pfm_one_screen",
-   "detail": "public/processed, canale Calm Edge, views 3"
+   "detail": "public/processed, canale Calm Edge, views 4"
   },
   {
    "status": "OK",
    "check": "YouTube v105_pfm_payout",
-   "detail": "public/processed, canale Calm Edge, views 5"
+   "detail": "public/processed, canale Calm Edge, views 7"
   },
   {
    "status": "OK",
