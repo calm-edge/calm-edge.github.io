@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-20T07:39+01:00",
- "summary": "33 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-21T07:39+01:00",
+ "summary": "30 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7794 byte"
+   "detail": "HTTP 200, 7793 byte"
   },
   {
    "status": "OK",
@@ -114,16 +114,6 @@
   },
   {
    "status": "OK",
-   "check": "Instagram v013_long_short",
-   "detail": "https://www.instagram.com/reel/DfpCa1LiA0V/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v013_long_short",
-   "detail": "https://www.facebook.com/1470032662849525/videos/977392511655723"
-  },
-  {
-   "status": "OK",
    "check": "Instagram v101_pfm_one_screen",
    "detail": "https://www.instagram.com/reel/DfuJ_i4kttF/"
   },
@@ -161,11 +151,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v013_long_short",
-   "detail": "public/processed, canale Calm Edge, views 8"
   },
   {
    "status": "OK",
