@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-11-22T14:36+01:00",
+ "checked_at": "2026-11-23T17:29+01:00",
  "summary": "27 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
    "check": "sito /",
-   "detail": "HTTP 200, 7794 byte"
+   "detail": "HTTP 200, 7823 byte"
   },
   {
    "status": "OK",
@@ -20,7 +20,7 @@
   {
    "status": "OK",
    "check": "sito /learn/",
-   "detail": "HTTP 200, 6494 byte"
+   "detail": "HTTP 200, 6849 byte"
   },
   {
    "status": "OK",
@@ -65,7 +65,7 @@
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 40993 byte"
+   "detail": "HTTP 200, 40991 byte"
   },
   {
    "status": "OK",
