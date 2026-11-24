@@ -1,6 +1,6 @@
 {
- "checked_at": "2026-11-23T17:29+01:00",
- "summary": "27 OK, 3 WARN, 0 FAIL",
+ "checked_at": "2026-11-24T17:26+01:00",
+ "summary": "24 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
    "status": "OK",
@@ -60,17 +60,17 @@
   {
    "status": "OK",
    "check": "Gumroad Trading Journal AI",
-   "detail": "HTTP 200, 38438 byte"
+   "detail": "HTTP 200, 38434 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 40991 byte"
+   "detail": "HTTP 200, 40989 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Bundle",
-   "detail": "HTTP 200, 30162 byte"
+   "detail": "HTTP 200, 30158 byte"
   },
   {
    "status": "OK",
@@ -114,16 +114,6 @@
   },
   {
    "status": "OK",
-   "check": "Instagram v105_pfm_payout",
-   "detail": "https://www.instagram.com/reel/DfzRh0YEuhm/"
-  },
-  {
-   "status": "OK",
-   "check": "Facebook v105_pfm_payout",
-   "detail": "https://www.facebook.com/1470032662849525/videos/4117521031882143"
-  },
-  {
-   "status": "OK",
    "check": "Instagram storie attive ora",
    "detail": "0 storie"
   },
@@ -141,11 +131,6 @@
    "status": "WARN",
    "check": "YouTube: canale (OAuth)",
    "detail": "HTTP 403: {'code': 403, 'message': 'Request had insufficient authentication scopes.', 'errors': [{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}], 'status': 'PERMISSION_DENIED', 'details': [{'@type': 'type.google"
-  },
-  {
-   "status": "OK",
-   "check": "YouTube v105_pfm_payout",
-   "detail": "public/processed, canale Calm Edge, views 7"
   },
   {
    "status": "OK",
