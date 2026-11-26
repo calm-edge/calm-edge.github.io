@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-11-24T17:26+01:00",
+ "checked_at": "2026-11-26T16:47+01:00",
  "summary": "24 OK, 3 WARN, 0 FAIL",
  "checks": [
   {
@@ -60,17 +60,17 @@
   {
    "status": "OK",
    "check": "Gumroad Trading Journal AI",
-   "detail": "HTTP 200, 38434 byte"
+   "detail": "HTTP 200, 38438 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Prop Firm Manager",
-   "detail": "HTTP 200, 40989 byte"
+   "detail": "HTTP 200, 40993 byte"
   },
   {
    "status": "OK",
    "check": "Gumroad Bundle",
-   "detail": "HTTP 200, 30158 byte"
+   "detail": "HTTP 200, 30162 byte"
   },
   {
    "status": "OK",
